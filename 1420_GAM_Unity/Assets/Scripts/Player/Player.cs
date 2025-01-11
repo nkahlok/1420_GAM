@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     #region[Player Components]
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Animator anim;
-    [HideInInspector] public int facingDir = 1;
+    public int facingDir = 1;
+    public bool isBusy;
     #endregion
 
     #region[States]
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
     public P_FallState fall { get; private set; }
     public P_DashState dash { get; private set; }
     public P_AttackState attack { get; private set; }
+    public P_ManHoleAimingState manHoleAim {  get; private set; }
 
     #endregion
 
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public Vector2[] attackMovement;
+
 
     #endregion
 
@@ -47,6 +50,9 @@ public class Player : MonoBehaviour
     [Space]
     public Transform meleeAttackChecker;
     public float meleeAttackRange;
+    [Space]
+    public Transform manholeThrowChecker;
+    public float manHoleThrowRange;
     #endregion
     [Space]
 
@@ -70,6 +76,8 @@ public class Player : MonoBehaviour
         fall = new P_FallState(this, stateMachine, "Jump");
         dash = new P_DashState(this, stateMachine, "Dash");
         attack = new P_AttackState(this, stateMachine, "Attack");
+        manHoleAim = new P_ManHoleAimingState(this, stateMachine, "Aiming");
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();    
     }
@@ -102,7 +110,7 @@ public class Player : MonoBehaviour
         FlipControl(_xVelo);
     }
 
-    private void FlipControl(float _x)
+    public void FlipControl(float _x)
     {
         if(_x > 0 && facingDir == -1)
         {
@@ -120,8 +128,9 @@ public class Player : MonoBehaviour
 
     private void UseSkill()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isBusy && isGround)
         {
+            Debug.Log("First skill casted");
             SkillManager.instance.skill1.SkillAvailable();
         }
 
@@ -131,13 +140,28 @@ public class Player : MonoBehaviour
             
         }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
+        {
+            gameObject.transform.SetParent(collision.gameObject.transform);
+        }
+    }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
+        {
+            gameObject.transform.SetParent(null);
+        }
+    }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(new Vector2(groundChecker.position.x, groundChecker.position.y), new Vector2(groundChecker.position.x, groundChecker.position.y - groundDistance));
         Gizmos.DrawLine(new Vector2(wallChecker.position.x, wallChecker.position.y), new Vector2(wallChecker.position.x + wallDistance * facingDir, wallChecker.position.y));
         Gizmos.DrawWireSphere(new Vector2(meleeAttackChecker.position.x, meleeAttackChecker.position.y), meleeAttackRange);
+        Gizmos.DrawLine(new Vector2(manholeThrowChecker.position.x, manholeThrowChecker.position.y), new Vector2(manholeThrowChecker.position.x + manHoleThrowRange * manHoleAim.xDir, manholeThrowChecker.position.y + manHoleThrowRange*manHoleAim.yDir));
     }
 
 }

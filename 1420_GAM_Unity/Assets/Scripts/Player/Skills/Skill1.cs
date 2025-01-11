@@ -10,9 +10,9 @@ public class Skill1 : Skill
 
    
     public GameObject prefab;
-    private GameObject newPrefab;
-    public float bulletSpeed;
-    public float bulletDur;
+    [HideInInspector] public GameObject newPrefab;
+    public float manHoleDur;
+    public float manholeSpeed;
 
   
 
@@ -22,11 +22,22 @@ public class Skill1 : Skill
 
         Debug.Log("Skill 1 is used");
 
-        newPrefab = (GameObject)Instantiate(prefab);
+        PlayerManager.instance.player.stateMachine.Changestate(PlayerManager.instance.player.manHoleAim);
         
-        newPrefab.transform.position = new Vector2(player.transform.position.x + player.facingDir * 2,player.transform.position.y);
+       
 
-        newPrefab.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(bulletSpeed * player.facingDir, 0);
+        //newPrefab.transform.position = new Vector2(player.transform.position.x + player.facingDir * 2,player.transform.position.y);
+
+        //newPrefab.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(bulletSpeed * player.facingDir, 0);
+    }
+
+    public void ThrowManHole()
+    {
+        newPrefab = prefab;
+        Instantiate(newPrefab, player.manholeThrowChecker.position, player.manholeThrowChecker.rotation);
+        //newPrefab.transform.position = new Vector2(player.transform.position.x + player.facingDir*2f, player.transform.position.y);
+        //newPrefab.transform.position = new Vector2(player.manholeThrowChecker.position.x, player.manholeThrowChecker.position.y);
+        //newPrefab.transform.position = player.manholeThrowChecker.transform.position;
     }
 
     protected override void Update()
@@ -34,7 +45,7 @@ public class Skill1 : Skill
         base.Update();  
 
         
-        Destroy(newPrefab, bulletDur);
+
 
       
 

@@ -13,7 +13,9 @@ public class PlayerAnimationEvents : MonoBehaviour
     public void EndAttack()
     {
         player.stateMachine.Changestate(player.idle);
+        player.anim.SetBool("Throw", false);
         Debug.Log("Attack ended");
+        player.isBusy = false;  
     }
 
 

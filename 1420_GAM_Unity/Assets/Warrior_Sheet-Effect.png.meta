@@ -382,7 +382,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -396,7 +396,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -420,7 +420,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -448,20 +448,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 704
-        width: 20
-        height: 35
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 28af876736d63f1d0800000000000000
-      internalID: -3318188226485093758
+      spriteID: ed1c1627ab72e7e4fb8c4b26997f8075
+      internalID: 1249545678
       vertices: []
       indices: 
       edges: []
@@ -470,20 +470,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_1
       rect:
         serializedVersion: 2
-        x: 86
+        x: 69
         y: 704
-        width: 20
-        height: 35
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a9672340d649915e0800000000000000
-      internalID: -1938354968663525734
+      spriteID: 25a283b74c72e4842a5c285b4c4e5a79
+      internalID: 1846488544
       vertices: []
       indices: 
       edges: []
@@ -492,20 +492,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_2
       rect:
         serializedVersion: 2
-        x: 154
+        x: 138
         y: 704
-        width: 22
-        height: 34
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d0b93aa9b13fdb1c0800000000000000
-      internalID: -4486162353907066099
+      spriteID: 1cf49029a24a20d44a32f33646c7b9e6
+      internalID: -1816185225
       vertices: []
       indices: 
       edges: []
@@ -514,20 +514,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_3
       rect:
         serializedVersion: 2
-        x: 223
+        x: 207
         y: 704
-        width: 22
-        height: 33
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d9e7649d81936d90800000000000000
-      internalID: -7105675749794256429
+      spriteID: 157011ae373df0f429a9d67dc61dfe51
+      internalID: -151302184
       vertices: []
       indices: 
       edges: []
@@ -536,20 +536,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_4
       rect:
         serializedVersion: 2
-        x: 293
+        x: 276
         y: 704
-        width: 20
-        height: 33
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b3d315ca9d21fc00800000000000000
-      internalID: 932576740597027765
+      spriteID: 25afb55ae814d97499bfd243a2efad9c
+      internalID: -412028733
       vertices: []
       indices: 
       edges: []
@@ -558,20 +558,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_5
       rect:
         serializedVersion: 2
-        x: 362
+        x: 345
         y: 704
-        width: 20
-        height: 34
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 66c0993b9f255cf60800000000000000
-      internalID: 8053934741035486310
+      spriteID: bccd9f8c4894408478833e5a35bd0ca9
+      internalID: -1254063493
       vertices: []
       indices: 
       edges: []
@@ -580,20 +580,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_6
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 660
-        width: 27
-        height: 31
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81a1e28d80d19db30800000000000000
-      internalID: 4312510042007804440
+      spriteID: 8dc9716e06fa22c4ab7dd62ba5522293
+      internalID: -538273984
       vertices: []
       indices: 
       edges: []
@@ -602,20 +602,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_7
       rect:
         serializedVersion: 2
-        x: 81
-        y: 663
-        width: 26
-        height: 28
+        x: 69
+        y: 660
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7229272f7c3d38dc0800000000000000
-      internalID: -3637831218265681369
+      spriteID: dbd2efdcef571dc4199a2051dc350ef9
+      internalID: -1699688337
       vertices: []
       indices: 
       edges: []
@@ -624,20 +624,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_8
       rect:
         serializedVersion: 2
-        x: 149
-        y: 662
-        width: 31
-        height: 28
+        x: 138
+        y: 660
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 428aaa15dfb1f7d60800000000000000
-      internalID: 7890055846987212836
+      spriteID: d04a6866b43c38742ac303c9e811c000
+      internalID: -249811978
       vertices: []
       indices: 
       edges: []
@@ -646,20 +646,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_9
       rect:
         serializedVersion: 2
-        x: 217
+        x: 207
         y: 660
-        width: 28
-        height: 29
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c5a6bdca8802a7e0800000000000000
-      internalID: -1755831512471263806
+      spriteID: f5ed114d7b597354dba5510dacf0f8c4
+      internalID: -1369639585
       vertices: []
       indices: 
       edges: []
@@ -668,20 +668,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_10
       rect:
         serializedVersion: 2
-        x: 287
+        x: 276
         y: 660
-        width: 31
-        height: 30
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd7edc5ca617bac90800000000000000
-      internalID: -7157502479376193569
+      spriteID: 2fc390e13ea21fd48930adb296087b0e
+      internalID: 1915916992
       vertices: []
       indices: 
       edges: []
@@ -690,20 +690,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_11
       rect:
         serializedVersion: 2
-        x: 357
-        y: 663
-        width: 30
-        height: 30
+        x: 345
+        y: 660
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d95cf1ed4516f3aa0800000000000000
-      internalID: -6179113146597259875
+      spriteID: e99e0790f33d1ff4d8b059eea189f6ac
+      internalID: 149986770
       vertices: []
       indices: 
       edges: []
@@ -712,20 +712,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_12
       rect:
         serializedVersion: 2
-        x: 10
-        y: 618
-        width: 31
-        height: 30
+        x: 0
+        y: 616
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1bcf9e4afca652c90800000000000000
-      internalID: -7195227389596926799
+      spriteID: cd6f85b65227c254d86e9f8f11d080ef
+      internalID: -2049873143
       vertices: []
       indices: 
       edges: []
@@ -734,20 +734,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_13
       rect:
         serializedVersion: 2
-        x: 83
+        x: 69
         y: 616
-        width: 24
-        height: 29
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1dc07d1b2db11bd90800000000000000
-      internalID: -7083850147136336687
+      spriteID: a8eeefdb524ce6941b7af00db9b02c53
+      internalID: 1021266905
       vertices: []
       indices: 
       edges: []
@@ -756,9 +756,9 @@ TextureImporter:
       name: Warrior_Sheet-Effect_14
       rect:
         serializedVersion: 2
-        x: 149
+        x: 138
         y: 616
-        width: 29
+        width: 69
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -766,10 +766,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2cd1023a08e36a290800000000000000
-      internalID: -7879541775824577086
+      spriteID: c8433f8e74e95394284b792cc784b555
+      internalID: -688661755
       vertices: []
       indices: 
       edges: []
@@ -778,20 +778,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_15
       rect:
         serializedVersion: 2
-        x: 215
-        y: 607
-        width: 38
-        height: 48
+        x: 207
+        y: 616
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb9d2597326b696a0800000000000000
-      internalID: -6442761953431332421
+      spriteID: ee4d3fc0d3903674da626b948c9cbad2
+      internalID: -377126190
       vertices: []
       indices: 
       edges: []
@@ -800,20 +800,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_16
       rect:
         serializedVersion: 2
-        x: 286
+        x: 276
         y: 616
-        width: 30
-        height: 34
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d7f424508e75d6390800000000000000
-      internalID: -7823500323640422531
+      spriteID: f2bf076aa444a4a4788b56bf71ff9c1c
+      internalID: -256914307
       vertices: []
       indices: 
       edges: []
@@ -822,20 +822,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_17
       rect:
         serializedVersion: 2
-        x: 357
+        x: 345
         y: 616
-        width: 31
-        height: 34
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7e6b084927a7b6d20800000000000000
-      internalID: 3272844186751121127
+      spriteID: ff53e2205c0a3774d89d778edf1a290d
+      internalID: 693881194
       vertices: []
       indices: 
       edges: []
@@ -844,20 +844,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_18
       rect:
         serializedVersion: 2
-        x: 14
+        x: 0
         y: 572
-        width: 29
-        height: 34
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a3502cb876160c770800000000000000
-      internalID: 8629003983396144442
+      spriteID: 31973e277470af549ad55e9774a2c92e
+      internalID: 1786365122
       vertices: []
       indices: 
       edges: []
@@ -866,20 +866,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_19
       rect:
         serializedVersion: 2
-        x: 81
+        x: 69
         y: 572
-        width: 50
-        height: 42
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8f537281f6acbc9a0800000000000000
-      internalID: -6211648682532063752
+      spriteID: 3d5cd38dc0b970f46b0cf1813b888858
+      internalID: 799566086
       vertices: []
       indices: 
       edges: []
@@ -888,20 +888,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_20
       rect:
         serializedVersion: 2
-        x: 151
+        x: 138
         y: 572
-        width: 52
-        height: 41
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc3766cb7748ea240800000000000000
-      internalID: 4804923502247703499
+      spriteID: 9dd6807ee363915478dc935e918e1123
+      internalID: -1878538495
       vertices: []
       indices: 
       edges: []
@@ -910,20 +910,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_21
       rect:
         serializedVersion: 2
-        x: 223
+        x: 207
         y: 572
-        width: 42
-        height: 28
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3dd1845f242839a0800000000000000
-      internalID: -6253208296904073923
+      spriteID: 2918b3744d5eaed44ac3b7b5058a2605
+      internalID: 1190997834
       vertices: []
       indices: 
       edges: []
@@ -932,20 +932,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_22
       rect:
         serializedVersion: 2
-        x: 256
-        y: 596
-        width: 7
-        height: 11
+        x: 276
+        y: 572
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e0a648cc7a0c4baf0800000000000000
-      internalID: -381468241496348146
+      spriteID: 5537348565c791e40890848da2b16a1c
+      internalID: -80672075
       vertices: []
       indices: 
       edges: []
@@ -954,20 +954,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_23
       rect:
         serializedVersion: 2
-        x: 295
+        x: 345
         y: 572
-        width: 25
-        height: 31
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0f206b18a5127f1e0800000000000000
-      internalID: -2164224423321271568
+      spriteID: 552861976e134ce49b98a91f87ab3b80
+      internalID: -657779406
       vertices: []
       indices: 
       edges: []
@@ -976,20 +976,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_24
       rect:
         serializedVersion: 2
-        x: 344
-        y: 569
-        width: 57
-        height: 47
+        x: 0
+        y: 528
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b0af8262980376660800000000000000
-      internalID: 7378919880078719499
+      spriteID: 52cb55e143412e74a8aa3202f4d0d500
+      internalID: 545260112
       vertices: []
       indices: 
       edges: []
@@ -998,9 +998,9 @@ TextureImporter:
       name: Warrior_Sheet-Effect_25
       rect:
         serializedVersion: 2
-        x: 0
+        x: 69
         y: 528
-        width: 44
+        width: 69
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1008,10 +1008,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ba56cd503dbec4ff0800000000000000
-      internalID: -50406204238961237
+      spriteID: 0066681902be6694aa40da7960d0e031
+      internalID: 1437483140
       vertices: []
       indices: 
       edges: []
@@ -1020,20 +1020,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_26
       rect:
         serializedVersion: 2
-        x: 70
+        x: 138
         y: 528
-        width: 41
-        height: 42
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4034e57e4a1e05720800000000000000
-      internalID: 2833012263988642564
+      spriteID: 0a3f64e9c22794b469e873a15dc67ea1
+      internalID: -1965253545
       vertices: []
       indices: 
       edges: []
@@ -1042,20 +1042,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_27
       rect:
         serializedVersion: 2
-        x: 151
+        x: 207
         y: 528
-        width: 25
-        height: 35
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 76f40d9af97487610800000000000000
-      internalID: 1619122817114066791
+      spriteID: 037cd740dbbaa2142a710cf91eb31b17
+      internalID: 47739822
       vertices: []
       indices: 
       edges: []
@@ -1064,20 +1064,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_28
       rect:
         serializedVersion: 2
-        x: 215
-        y: 530
-        width: 33
-        height: 39
+        x: 276
+        y: 528
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c53ec4bd95e234cc0800000000000000
-      internalID: -3728085103066422436
+      spriteID: c440cd3d6845fc04aa77bfd2fda20098
+      internalID: -667523321
       vertices: []
       indices: 
       edges: []
@@ -1086,20 +1086,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_29
       rect:
         serializedVersion: 2
-        x: 292
-        y: 563
-        width: 9
-        height: 9
+        x: 345
+        y: 528
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2f907b0ec978ea940800000000000000
-      internalID: 5309330118571133426
+      spriteID: e1bc270b1b676114297c76164a132c64
+      internalID: 493332001
       vertices: []
       indices: 
       edges: []
@@ -1108,20 +1108,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_30
       rect:
         serializedVersion: 2
-        x: 301
-        y: 556
-        width: 19
-        height: 17
+        x: 0
+        y: 484
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e8059943f813dad10800000000000000
-      internalID: 2138419889203400846
+      spriteID: 8814da96c2f98ee47a854e567915a675
+      internalID: 532830752
       vertices: []
       indices: 
       edges: []
@@ -1130,20 +1130,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_31
       rect:
         serializedVersion: 2
-        x: 365
-        y: 557
-        width: 10
-        height: 16
+        x: 69
+        y: 484
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 53d64a44a088b5bc0800000000000000
-      internalID: -3793288683446833867
+      spriteID: ae2eec5a35a9ec54aafa6327b432b3c7
+      internalID: -1201366240
       vertices: []
       indices: 
       edges: []
@@ -1152,20 +1152,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_32
       rect:
         serializedVersion: 2
-        x: 378
-        y: 550
-        width: 9
-        height: 20
+        x: 138
+        y: 484
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9d16141b268426c60800000000000000
-      internalID: 7809884292531708377
+      spriteID: a0af18e38ac8be34d8628cc4df11984f
+      internalID: 558447262
       vertices: []
       indices: 
       edges: []
@@ -1174,20 +1174,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_33
       rect:
         serializedVersion: 2
-        x: 44
-        y: 547
-        width: 8
-        height: 11
+        x: 207
+        y: 484
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ce9c1b92cf54d8970800000000000000
-      internalID: 8758733799639075308
+      spriteID: 7468ae0b4976bd143bef0ecfd33cbfef
+      internalID: 1080427661
       vertices: []
       indices: 
       edges: []
@@ -1196,20 +1196,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_34
       rect:
         serializedVersion: 2
-        x: 44
-        y: 537
-        width: 7
-        height: 9
+        x: 276
+        y: 484
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 54eab98a8b60e4b30800000000000000
-      internalID: 4273360486593703493
+      spriteID: 9a7022331321406438a5fca6ce2da5e7
+      internalID: -1087563769
       vertices: []
       indices: 
       edges: []
@@ -1218,20 +1218,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_35
       rect:
         serializedVersion: 2
-        x: 111
-        y: 543
-        width: 9
-        height: 16
+        x: 345
+        y: 484
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 39bed2425d10b4970800000000000000
-      internalID: 8740081516789230483
+      spriteID: ca339bdbeefd8c742916e23bbb8053bf
+      internalID: -1144694301
       vertices: []
       indices: 
       edges: []
@@ -1240,20 +1240,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_36
       rect:
         serializedVersion: 2
-        x: 280
-        y: 529
-        width: 33
-        height: 33
+        x: 0
+        y: 440
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b89a2a0c56689ea30800000000000000
-      internalID: 4245071895355107723
+      spriteID: 6de752c4a7c27e340a9fb68bb8a31efa
+      internalID: 559909615
       vertices: []
       indices: 
       edges: []
@@ -1262,20 +1262,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_37
       rect:
         serializedVersion: 2
-        x: 348
-        y: 532
-        width: 31
-        height: 23
+        x: 69
+        y: 440
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1c07c820a8627e170800000000000000
-      internalID: 8207571220096118977
+      spriteID: 72fc8d36939cb674dbaa437f3893f6ab
+      internalID: -450992712
       vertices: []
       indices: 
       edges: []
@@ -1284,20 +1284,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_38
       rect:
         serializedVersion: 2
-        x: 3
-        y: 484
-        width: 29
-        height: 40
+        x: 138
+        y: 440
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cc49522796f97cd60800000000000000
-      internalID: 7910466545735013580
+      spriteID: d7a4a3f20e10a80489edd9a67eb98740
+      internalID: 1618632638
       vertices: []
       indices: 
       edges: []
@@ -1306,20 +1306,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_39
       rect:
         serializedVersion: 2
-        x: 32
-        y: 503
-        width: 12
-        height: 20
+        x: 207
+        y: 440
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 781c339b55b4d73c0800000000000000
-      internalID: -4360246032673291897
+      spriteID: e5b291918439b474294a08d9d1d95eef
+      internalID: 798643273
       vertices: []
       indices: 
       edges: []
@@ -1328,20 +1328,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_40
       rect:
         serializedVersion: 2
-        x: 87
-        y: 513
-        width: 9
-        height: 9
+        x: 276
+        y: 440
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1fce387fd4d1beaa0800000000000000
-      internalID: -6130774247032492815
+      spriteID: 24fa673b764d0f44783d8a0a971d6044
+      internalID: -685493249
       vertices: []
       indices: 
       edges: []
@@ -1350,20 +1350,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_41
       rect:
         serializedVersion: 2
-        x: 96
-        y: 506
-        width: 19
-        height: 17
+        x: 345
+        y: 440
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fdc7b1ab88ea8f390800000000000000
-      internalID: -7784280053648753441
+      spriteID: f27d6786dd4fd2e4e8fe7c854893f14e
+      internalID: 236630284
       vertices: []
       indices: 
       edges: []
@@ -1372,20 +1372,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_42
       rect:
         serializedVersion: 2
-        x: 158
-        y: 501
-        width: 13
-        height: 17
+        x: 0
+        y: 396
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5c2b0a2eb85748f80800000000000000
-      internalID: -8105224185696963899
+      spriteID: b2a97adccd78ede4f892079f4e836a67
+      internalID: 1039791644
       vertices: []
       indices: 
       edges: []
@@ -1394,20 +1394,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_43
       rect:
         serializedVersion: 2
-        x: 175
-        y: 491
-        width: 6
-        height: 24
+        x: 69
+        y: 396
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: df897b2b4fba7d700800000000000000
-      internalID: 565109345717033213
+      spriteID: 3e9e901cd77065d409b39d844687c3fc
+      internalID: -684998818
       vertices: []
       indices: 
       edges: []
@@ -1416,20 +1416,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_44
       rect:
         serializedVersion: 2
-        x: 207
-        y: 484
-        width: 42
-        height: 33
+        x: 138
+        y: 396
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ca890c403cb9aa130800000000000000
-      internalID: 3578844115799939244
+      spriteID: 924f9f7949e32a44685d6b98c32ca37b
+      internalID: 876328499
       vertices: []
       indices: 
       edges: []
@@ -1438,20 +1438,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_45
       rect:
         serializedVersion: 2
-        x: 72
-        y: 484
-        width: 35
-        height: 28
+        x: 207
+        y: 396
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8b985510d08992c80800000000000000
-      internalID: -8346973252730123848
+      spriteID: 5e230a78faafcfb4292a0bc320e61143
+      internalID: 2054238550
       vertices: []
       indices: 
       edges: []
@@ -1460,20 +1460,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_46
       rect:
         serializedVersion: 2
-        x: 139
-        y: 484
-        width: 39
-        height: 19
+        x: 276
+        y: 396
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d1e2c46836b20330800000000000000
-      internalID: 3675700599212663255
+      spriteID: f4e070b84484284479e8492ab55b1b1b
+      internalID: -146056761
       vertices: []
       indices: 
       edges: []
@@ -1482,20 +1482,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_47
       rect:
         serializedVersion: 2
-        x: 162
-        y: 503
-        width: 7
-        height: 7
+        x: 345
+        y: 396
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 746fd5814a085f9a0800000000000000
-      internalID: -6199907869733816761
+      spriteID: 2a811e313bd3aef48adc0366e591faae
+      internalID: -2033096473
       vertices: []
       indices: 
       edges: []
@@ -1504,20 +1504,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_48
       rect:
         serializedVersion: 2
-        x: 276
-        y: 484
-        width: 44
-        height: 24
+        x: 0
+        y: 352
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abcd9374842152280800000000000000
-      internalID: -9068822172998705990
+      spriteID: 7845024af047a0141b63995ec430f1d7
+      internalID: 1178796989
       vertices: []
       indices: 
       edges: []
@@ -1526,20 +1526,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_49
       rect:
         serializedVersion: 2
-        x: 345
-        y: 484
-        width: 42
-        height: 21
+        x: 69
+        y: 352
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6bf5543a18d815240800000000000000
-      internalID: 4778756267546337206
+      spriteID: 858709908dd9ad24c93e4e065837ee76
+      internalID: 1563336201
       vertices: []
       indices: 
       edges: []
@@ -1548,20 +1548,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_50
       rect:
         serializedVersion: 2
-        x: 0
-        y: 440
-        width: 42
-        height: 20
+        x: 138
+        y: 352
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8f872d5bac302d4b0800000000000000
-      internalID: -5417263232604538632
+      spriteID: 6c04c034e945ff0408618497f70b15f8
+      internalID: -1168199953
       vertices: []
       indices: 
       edges: []
@@ -1570,20 +1570,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_51
       rect:
         serializedVersion: 2
-        x: 89
-        y: 440
-        width: 21
-        height: 34
+        x: 207
+        y: 352
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc6e86ace69dc7e80800000000000000
-      internalID: -8179423753346160949
+      spriteID: 7880b586b940eea49a3077ff0886dcc9
+      internalID: -1309898923
       vertices: []
       indices: 
       edges: []
@@ -1592,20 +1592,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_52
       rect:
         serializedVersion: 2
-        x: 154
-        y: 440
-        width: 23
-        height: 33
+        x: 276
+        y: 352
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0a64c88b1be6b9e0800000000000000
-      internalID: -1605837713619785204
+      spriteID: f74676fd3a1d4f94fae5bc83c9f4c36b
+      internalID: -1437776721
       vertices: []
       indices: 
       edges: []
@@ -1614,20 +1614,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_53
       rect:
         serializedVersion: 2
-        x: 224
-        y: 440
-        width: 22
-        height: 33
+        x: 345
+        y: 352
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 935bf077f9031fa70800000000000000
-      internalID: 8858915403469927737
+      spriteID: eaa0746c0d3bf54479746b6e60b0b866
+      internalID: -2030014077
       vertices: []
       indices: 
       edges: []
@@ -1636,20 +1636,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_54
       rect:
         serializedVersion: 2
-        x: 294
-        y: 440
-        width: 23
-        height: 34
+        x: 0
+        y: 308
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 798169dd708d90a40800000000000000
-      internalID: 5335032761891035287
+      spriteID: 1c01fb75069ff1a42a66bbde393c1ad2
+      internalID: 1682426236
       vertices: []
       indices: 
       edges: []
@@ -1658,20 +1658,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_55
       rect:
         serializedVersion: 2
-        x: 363
-        y: 442
-        width: 22
-        height: 35
+        x: 69
+        y: 308
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d4a8a850ab543d670800000000000000
-      internalID: 8562263981820643917
+      spriteID: 762a400d5cb47594c827b0d51058d62b
+      internalID: 531183843
       vertices: []
       indices: 
       edges: []
@@ -1680,20 +1680,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_56
       rect:
         serializedVersion: 2
-        x: 18
-        y: 398
-        width: 22
-        height: 35
+        x: 138
+        y: 308
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5085d29494f66b60800000000000000
-      internalID: 7739141928638578783
+      spriteID: ab1f492c63cf1444e98008e9a24b956a
+      internalID: 458867912
       vertices: []
       indices: 
       edges: []
@@ -1702,20 +1702,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_57
       rect:
         serializedVersion: 2
-        x: 87
-        y: 398
-        width: 22
-        height: 35
+        x: 207
+        y: 308
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e71208d73461e77e0800000000000000
-      internalID: -1765949524758486658
+      spriteID: d4073ed949f2c7c46b0c7d287d1de966
+      internalID: 71447412
       vertices: []
       indices: 
       edges: []
@@ -1724,20 +1724,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_58
       rect:
         serializedVersion: 2
-        x: 156
-        y: 399
-        width: 22
-        height: 34
+        x: 276
+        y: 308
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b58cb2f062b6a7ce0800000000000000
-      internalID: -1406694122392401829
+      spriteID: d500a202ddf31b84b9f5ca3abfd48359
+      internalID: -1708704840
       vertices: []
       indices: 
       edges: []
@@ -1746,20 +1746,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_59
       rect:
         serializedVersion: 2
-        x: 224
-        y: 399
-        width: 23
-        height: 34
+        x: 345
+        y: 308
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d0c86b6a224e15630800000000000000
-      internalID: 3914160388638673933
+      spriteID: 77c99c0156ac9f44684c5d76be901df8
+      internalID: 1996181435
       vertices: []
       indices: 
       edges: []
@@ -1768,20 +1768,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_60
       rect:
         serializedVersion: 2
-        x: 293
-        y: 396
-        width: 23
-        height: 36
+        x: 0
+        y: 264
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8e224b55cd31ad900800000000000000
-      internalID: 709901728315876072
+      spriteID: 2dcb9c90078729d4e93a0644e94453d0
+      internalID: -1126463102
       vertices: []
       indices: 
       edges: []
@@ -1790,20 +1790,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_61
       rect:
         serializedVersion: 2
-        x: 362
-        y: 396
-        width: 23
-        height: 36
+        x: 69
+        y: 264
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8346cc3ce2c70a1b0800000000000000
-      internalID: -5647377392427310024
+      spriteID: bf1375149f388564785bad460e7a7be8
+      internalID: 658104981
       vertices: []
       indices: 
       edges: []
@@ -1812,20 +1812,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_62
       rect:
         serializedVersion: 2
-        x: 17
-        y: 352
-        width: 23
-        height: 36
+        x: 138
+        y: 264
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48b04ab55e2a219b0800000000000000
-      internalID: -5110843521143403644
+      spriteID: 1f37e493937144843b106dfb13a18950
+      internalID: -1960085782
       vertices: []
       indices: 
       edges: []
@@ -1834,20 +1834,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_63
       rect:
         serializedVersion: 2
-        x: 82
-        y: 360
-        width: 21
-        height: 35
+        x: 207
+        y: 264
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b148136d414974880800000000000000
-      internalID: -8626763743991069669
+      spriteID: b7b389c365f850e4fbba6dc37d07ec0f
+      internalID: 1349128757
       vertices: []
       indices: 
       edges: []
@@ -1856,20 +1856,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_64
       rect:
         serializedVersion: 2
-        x: 154
-        y: 353
-        width: 18
-        height: 40
+        x: 276
+        y: 264
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a5b9631516570b780800000000000000
-      internalID: -8669300221853394086
+      spriteID: 997a15b24576e8d42937cc8682d36555
+      internalID: -1714148821
       vertices: []
       indices: 
       edges: []
@@ -1878,20 +1878,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_65
       rect:
         serializedVersion: 2
-        x: 224
-        y: 353
-        width: 17
-        height: 40
+        x: 345
+        y: 264
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6f83b1682b4ee8880800000000000000
-      internalID: -8606690382453196554
+      spriteID: 893fc413725c8764380687cfad84dacc
+      internalID: -295445238
       vertices: []
       indices: 
       edges: []
@@ -1900,20 +1900,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_66
       rect:
         serializedVersion: 2
-        x: 292
-        y: 353
-        width: 18
-        height: 40
+        x: 0
+        y: 220
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6c59f171cc5a112f0800000000000000
-      internalID: -1003838945947052602
+      spriteID: 8c2ea74a4eca7f84e801dafd2415f416
+      internalID: 1114033384
       vertices: []
       indices: 
       edges: []
@@ -1922,20 +1922,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_67
       rect:
         serializedVersion: 2
-        x: 363
-        y: 353
-        width: 16
-        height: 40
+        x: 69
+        y: 220
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 148bd2c1ae6f9c810800000000000000
-      internalID: 1786230212584650817
+      spriteID: f74e8e8200cf6eb49965f0353b11a917
+      internalID: -1096197307
       vertices: []
       indices: 
       edges: []
@@ -1944,20 +1944,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_68
       rect:
         serializedVersion: 2
-        x: 18
-        y: 309
-        width: 16
-        height: 40
+        x: 138
+        y: 220
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 267d86d93a0a13820800000000000000
-      internalID: 2896272659956946786
+      spriteID: 1b237c557efbae744bdaad3b453780ff
+      internalID: 1864902010
       vertices: []
       indices: 
       edges: []
@@ -1966,20 +1966,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_69
       rect:
         serializedVersion: 2
-        x: 87
-        y: 309
-        width: 16
-        height: 40
+        x: 207
+        y: 220
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a6c5bc4b423468d10800000000000000
-      internalID: 2127461698910248042
+      spriteID: 3bec680dc22d6d240ab4dd834e33897e
+      internalID: -1879593033
       vertices: []
       indices: 
       edges: []
@@ -1988,20 +1988,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_70
       rect:
         serializedVersion: 2
-        x: 154
-        y: 309
-        width: 18
-        height: 40
+        x: 276
+        y: 220
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 89ad6163d86c92b70800000000000000
-      internalID: 8874842850510428824
+      spriteID: 7432279bfcfde53469f74498e6d562a0
+      internalID: -1509192380
       vertices: []
       indices: 
       edges: []
@@ -2010,20 +2010,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_71
       rect:
         serializedVersion: 2
-        x: 223
-        y: 309
-        width: 18
-        height: 40
+        x: 345
+        y: 220
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aaf81ae6efa51bfe0800000000000000
-      internalID: -1175057978942713942
+      spriteID: dcb3d7eb61b654243acd56d2c83da020
+      internalID: 1269544732
       vertices: []
       indices: 
       edges: []
@@ -2032,20 +2032,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_72
       rect:
         serializedVersion: 2
-        x: 293
-        y: 309
-        width: 17
-        height: 40
+        x: 0
+        y: 176
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 693da9a5792e48470800000000000000
-      internalID: 8396084745013482390
+      spriteID: 86bf9f868e5c5d44890d9c0eac8bc55d
+      internalID: 2134190738
       vertices: []
       indices: 
       edges: []
@@ -2054,20 +2054,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_73
       rect:
         serializedVersion: 2
-        x: 363
-        y: 309
-        width: 16
-        height: 40
+        x: 69
+        y: 176
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ff1e5edd937b197b0800000000000000
-      internalID: -5219189033981844993
+      spriteID: 45917dd224bf0d94397e8571ae5857b0
+      internalID: -2006538925
       vertices: []
       indices: 
       edges: []
@@ -2076,20 +2076,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_74
       rect:
         serializedVersion: 2
-        x: 15
-        y: 265
-        width: 18
-        height: 37
+        x: 138
+        y: 176
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 742ea1bca44f0bf60800000000000000
-      internalID: 8048201136183370311
+      spriteID: f1750171199b071418163aa10f4f0912
+      internalID: 2093799215
       vertices: []
       indices: 
       edges: []
@@ -2098,20 +2098,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_75
       rect:
         serializedVersion: 2
-        x: 84
-        y: 265
-        width: 18
-        height: 38
+        x: 207
+        y: 176
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 339d734b988af7ab0800000000000000
-      internalID: -5008098951225157325
+      spriteID: 5c7acd89ede99b5479b8e03670b447c5
+      internalID: -1341520141
       vertices: []
       indices: 
       edges: []
@@ -2120,20 +2120,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_76
       rect:
         serializedVersion: 2
-        x: 153
-        y: 265
-        width: 18
-        height: 37
+        x: 276
+        y: 176
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a8d7ab7f311e59030800000000000000
-      internalID: 3500951761227251082
+      spriteID: 98fcf377d033c5a42988206065186ed5
+      internalID: -350395052
       vertices: []
       indices: 
       edges: []
@@ -2142,20 +2142,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_77
       rect:
         serializedVersion: 2
-        x: 223
-        y: 264
-        width: 22
-        height: 31
+        x: 345
+        y: 176
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 593bc6e4c31d934f0800000000000000
-      internalID: -848416997838638187
+      spriteID: e8e7d5cc7e9e7814fa838cd791e60789
+      internalID: 883494163
       vertices: []
       indices: 
       edges: []
@@ -2164,20 +2164,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_78
       rect:
         serializedVersion: 2
-        x: 291
-        y: 264
-        width: 23
-        height: 25
+        x: 0
+        y: 132
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9503c4ce172afd9e0800000000000000
-      internalID: -1594377132886445991
+      spriteID: 411fa429c9bba1a4f910355495207e1e
+      internalID: -65915614
       vertices: []
       indices: 
       edges: []
@@ -2186,20 +2186,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_79
       rect:
         serializedVersion: 2
-        x: 360
-        y: 264
-        width: 23
-        height: 25
+        x: 69
+        y: 132
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1568b6af19270d190800000000000000
-      internalID: -7939720171757009327
+      spriteID: 7b9c13fa9f6db7b4d86a3300b9173b23
+      internalID: 889836096
       vertices: []
       indices: 
       edges: []
@@ -2208,20 +2208,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_80
       rect:
         serializedVersion: 2
-        x: 15
-        y: 220
-        width: 23
-        height: 24
+        x: 138
+        y: 132
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e27c419a384216b30800000000000000
-      internalID: 4278741268874708782
+      spriteID: 2e5920b84ae43304b98f7980610468c3
+      internalID: -1380487249
       vertices: []
       indices: 
       edges: []
@@ -2230,20 +2230,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_81
       rect:
         serializedVersion: 2
-        x: 84
-        y: 220
-        width: 23
-        height: 24
+        x: 207
+        y: 132
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 50b4d50d28ac6f2b0800000000000000
-      internalID: -5551026827497223419
+      spriteID: 89e3631a6cf276e48b4936c84a0a3520
+      internalID: -1510895134
       vertices: []
       indices: 
       edges: []
@@ -2252,20 +2252,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_82
       rect:
         serializedVersion: 2
-        x: 154
-        y: 220
-        width: 22
-        height: 31
+        x: 276
+        y: 132
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cbb887f04413d2ed0800000000000000
-      internalID: -2437237654950474820
+      spriteID: 6a1d6bfe025d20447a97953e6dcf1d48
+      internalID: 1449942859
       vertices: []
       indices: 
       edges: []
@@ -2274,20 +2274,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_83
       rect:
         serializedVersion: 2
-        x: 219
-        y: 220
-        width: 31
-        height: 30
+        x: 345
+        y: 132
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d86d1e2f0b705cea0800000000000000
-      internalID: -5853263684127566195
+      spriteID: b39116031f2f6bf4981ea6691126a10e
+      internalID: 504922402
       vertices: []
       indices: 
       edges: []
@@ -2296,20 +2296,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_84
       rect:
         serializedVersion: 2
-        x: 289
-        y: 220
-        width: 30
-        height: 30
+        x: 0
+        y: 88
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d9bc0f5ef0e03b00800000000000000
-      internalID: 806391716420303315
+      spriteID: 35ce19b56b47b1d4d81c20d5b27c44bb
+      internalID: 1271811883
       vertices: []
       indices: 
       edges: []
@@ -2318,20 +2318,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_85
       rect:
         serializedVersion: 2
-        x: 358
-        y: 220
-        width: 30
-        height: 30
+        x: 69
+        y: 88
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 34b0cb28dd9a71590800000000000000
-      internalID: -7703501868747715773
+      spriteID: 97611bcd89109ce449084f2feef653c8
+      internalID: -211444281
       vertices: []
       indices: 
       edges: []
@@ -2340,20 +2340,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_86
       rect:
         serializedVersion: 2
-        x: 13
-        y: 176
-        width: 30
-        height: 30
+        x: 138
+        y: 88
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7e306862485cc40b0800000000000000
-      internalID: -5742998253431553049
+      spriteID: 1918c1d7f488594478d90f97a5432655
+      internalID: -1815887405
       vertices: []
       indices: 
       edges: []
@@ -2362,20 +2362,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_87
       rect:
         serializedVersion: 2
-        x: 76
-        y: 176
-        width: 7
-        height: 7
+        x: 207
+        y: 88
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d6cd346a0f1e38510800000000000000
-      internalID: 1550331120443448429
+      spriteID: cb792cc635c07b3488b12cf74e925bb2
+      internalID: 1583955195
       vertices: []
       indices: 
       edges: []
@@ -2384,20 +2384,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_88
       rect:
         serializedVersion: 2
-        x: 81
-        y: 176
-        width: 25
-        height: 30
+        x: 276
+        y: 88
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 77ef422fa4b5711d0800000000000000
-      internalID: -3380132617870049673
+      spriteID: fbac70fb841f8f4438cabca9704f9b56
+      internalID: -1590284789
       vertices: []
       indices: 
       edges: []
@@ -2406,20 +2406,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_89
       rect:
         serializedVersion: 2
-        x: 145
-        y: 176
-        width: 30
-        height: 30
+        x: 345
+        y: 88
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 27e4569fda911a3a0800000000000000
-      internalID: -6656010539272679822
+      spriteID: cd39cfbb23b0f9743b7d38cf9db4222f
+      internalID: 1160909800
       vertices: []
       indices: 
       edges: []
@@ -2428,20 +2428,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_90
       rect:
         serializedVersion: 2
-        x: 213
-        y: 176
-        width: 32
-        height: 33
+        x: 0
+        y: 44
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8ccc45819b6f822a0800000000000000
-      internalID: -6761883565659206456
+      spriteID: a86dcb3d89e6ffc45a1380b611dd72c9
+      internalID: -964859750
       vertices: []
       indices: 
       edges: []
@@ -2450,20 +2450,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_91
       rect:
         serializedVersion: 2
-        x: 283
-        y: 176
-        width: 7
-        height: 7
+        x: 69
+        y: 44
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: da8647e23a2e2c2e0800000000000000
-      internalID: -2106872485169043283
+      spriteID: 016577c55b1633a4fbe9d4d471d3108f
+      internalID: 2017431185
       vertices: []
       indices: 
       edges: []
@@ -2472,20 +2472,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_92
       rect:
         serializedVersion: 2
-        x: 288
-        y: 176
-        width: 25
-        height: 30
+        x: 138
+        y: 44
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9f599fc00bc8401b0800000000000000
-      internalID: -5691269341329648135
+      spriteID: 9f766ad29a7860a459d38700013059bd
+      internalID: -858205851
       vertices: []
       indices: 
       edges: []
@@ -2494,20 +2494,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_93
       rect:
         serializedVersion: 2
-        x: 352
-        y: 176
-        width: 31
-        height: 30
+        x: 207
+        y: 44
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 042ae976164a82a80800000000000000
-      internalID: -8491356359149837760
+      spriteID: 9d23bacebc64b7244a1dde68242cca17
+      internalID: -1513164184
       vertices: []
       indices: 
       edges: []
@@ -2516,20 +2516,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_94
       rect:
         serializedVersion: 2
-        x: 6
-        y: 132
-        width: 33
-        height: 30
+        x: 276
+        y: 44
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a9b1958327d24d1c0800000000000000
-      internalID: -4479905760731915366
+      spriteID: 3718c7e7578cf0345bd9f36f705c397b
+      internalID: -1691413436
       vertices: []
       indices: 
       edges: []
@@ -2538,20 +2538,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_95
       rect:
         serializedVersion: 2
-        x: 79
-        y: 132
-        width: 60
-        height: 39
+        x: 345
+        y: 44
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6ac7f8412a8710490800000000000000
-      internalID: -7781806043594523482
+      spriteID: 4fc9cd874b2102a4eb14cd7c181621e7
+      internalID: -1428790313
       vertices: []
       indices: 
       edges: []
@@ -2560,20 +2560,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_96
       rect:
         serializedVersion: 2
-        x: 152
-        y: 132
-        width: 56
-        height: 38
+        x: 0
+        y: 0
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: be2e68227f0c56dd0800000000000000
-      internalID: -2493374651010981141
+      spriteID: ef2df7b24a0475845be02ca54de71e76
+      internalID: -1822591113
       vertices: []
       indices: 
       edges: []
@@ -2582,20 +2582,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_97
       rect:
         serializedVersion: 2
-        x: 222
-        y: 132
-        width: 45
-        height: 28
+        x: 69
+        y: 0
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fce9377960ec75590800000000000000
-      internalID: -7685447711378399537
+      spriteID: e9bc77248a32cdf469b9f9e09bb743b0
+      internalID: -805182983
       vertices: []
       indices: 
       edges: []
@@ -2604,394 +2604,20 @@ TextureImporter:
       name: Warrior_Sheet-Effect_98
       rect:
         serializedVersion: 2
-        x: 291
-        y: 132
-        width: 45
-        height: 28
+        x: 138
+        y: 0
+        width: 69
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 167ca87256ecdea00800000000000000
-      internalID: 787512443710130017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_99
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 132
-        width: 44
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e80a87bfb47a32710800000000000000
-      internalID: 1667360231840587918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_100
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 88
-        width: 18
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5e7e88b4549aa1f80800000000000000
-      internalID: -8135003661806278683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_101
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 88
-        width: 22
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 690fd9a548e3a9100800000000000000
-      internalID: 115473478628274326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_102
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 88
-        width: 33
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc60ec8d8208c99b0800000000000000
-      internalID: -5072038167401593141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_103
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 88
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5f66d8d79148c010800000000000000
-      internalID: 1209288620382777180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_104
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 88
-        width: 32
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a477c7723c6f44750800000000000000
-      internalID: 6288422297757579082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_105
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 88
-        width: 37
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65956f36180df9970800000000000000
-      internalID: 8763952654032722262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_106
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 48
-        width: 21
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d616d82e4d710b60800000000000000
-      internalID: 7710581811681040085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_107
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 88
-        width: 34
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce8ce836245a695c0800000000000000
-      internalID: -4208995097174423316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_108
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 44
-        width: 26
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acad70441d528ef20800000000000000
-      internalID: 3452050695099243210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_109
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 50
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 73a9bd473478d8d10800000000000000
-      internalID: 2129506922609220151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_110
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 47
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cee9295aebe49a380800000000000000
-      internalID: -8959543402948288788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_111
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 46
-        width: 20
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d2bde57414664ac0800000000000000
-      internalID: -3871296790637727015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_112
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 50
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a4b5ccfe6b12c600800000000000000
-      internalID: 486981873210602661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_113
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 3
-        width: 20
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27599584f37abad40800000000000000
-      internalID: 5596750852176582002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_114
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 2
-        width: 20
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc4ba90313174fdf0800000000000000
-      internalID: -147368431713602355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Warrior_Sheet-Effect_115
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 4
-        width: 20
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 811fb62ccc1c55a50800000000000000
-      internalID: 6509321921613263128
+      spriteID: dc2cdce17f7e8d5438cdde50462d5513
+      internalID: -1144097883
       vertices: []
       indices: 
       edges: []
@@ -3000,7 +2626,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3a1845b780c4efc4089bd1b692801afc
     internalID: 0
     vertices: []
     indices: 
@@ -3010,122 +2636,105 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Warrior_Sheet-Effect_0: -3318188226485093758
-      Warrior_Sheet-Effect_1: -1938354968663525734
-      Warrior_Sheet-Effect_10: -7157502479376193569
-      Warrior_Sheet-Effect_100: -8135003661806278683
-      Warrior_Sheet-Effect_101: 115473478628274326
-      Warrior_Sheet-Effect_102: -5072038167401593141
-      Warrior_Sheet-Effect_103: 1209288620382777180
-      Warrior_Sheet-Effect_104: 6288422297757579082
-      Warrior_Sheet-Effect_105: 8763952654032722262
-      Warrior_Sheet-Effect_106: 7710581811681040085
-      Warrior_Sheet-Effect_107: -4208995097174423316
-      Warrior_Sheet-Effect_108: 3452050695099243210
-      Warrior_Sheet-Effect_109: 2129506922609220151
-      Warrior_Sheet-Effect_11: -6179113146597259875
-      Warrior_Sheet-Effect_110: -8959543402948288788
-      Warrior_Sheet-Effect_111: -3871296790637727015
-      Warrior_Sheet-Effect_112: 486981873210602661
-      Warrior_Sheet-Effect_113: 5596750852176582002
-      Warrior_Sheet-Effect_114: -147368431713602355
-      Warrior_Sheet-Effect_115: 6509321921613263128
-      Warrior_Sheet-Effect_12: -7195227389596926799
-      Warrior_Sheet-Effect_13: -7083850147136336687
-      Warrior_Sheet-Effect_14: -7879541775824577086
-      Warrior_Sheet-Effect_15: -6442761953431332421
-      Warrior_Sheet-Effect_16: -7823500323640422531
-      Warrior_Sheet-Effect_17: 3272844186751121127
-      Warrior_Sheet-Effect_18: 8629003983396144442
-      Warrior_Sheet-Effect_19: -6211648682532063752
-      Warrior_Sheet-Effect_2: -4486162353907066099
-      Warrior_Sheet-Effect_20: 4804923502247703499
-      Warrior_Sheet-Effect_21: -6253208296904073923
-      Warrior_Sheet-Effect_22: -381468241496348146
-      Warrior_Sheet-Effect_23: -2164224423321271568
-      Warrior_Sheet-Effect_24: 7378919880078719499
-      Warrior_Sheet-Effect_25: -50406204238961237
-      Warrior_Sheet-Effect_26: 2833012263988642564
-      Warrior_Sheet-Effect_27: 1619122817114066791
-      Warrior_Sheet-Effect_28: -3728085103066422436
-      Warrior_Sheet-Effect_29: 5309330118571133426
-      Warrior_Sheet-Effect_3: -7105675749794256429
-      Warrior_Sheet-Effect_30: 2138419889203400846
-      Warrior_Sheet-Effect_31: -3793288683446833867
-      Warrior_Sheet-Effect_32: 7809884292531708377
-      Warrior_Sheet-Effect_33: 8758733799639075308
-      Warrior_Sheet-Effect_34: 4273360486593703493
-      Warrior_Sheet-Effect_35: 8740081516789230483
-      Warrior_Sheet-Effect_36: 4245071895355107723
-      Warrior_Sheet-Effect_37: 8207571220096118977
-      Warrior_Sheet-Effect_38: 7910466545735013580
-      Warrior_Sheet-Effect_39: -4360246032673291897
-      Warrior_Sheet-Effect_4: 932576740597027765
-      Warrior_Sheet-Effect_40: -6130774247032492815
-      Warrior_Sheet-Effect_41: -7784280053648753441
-      Warrior_Sheet-Effect_42: -8105224185696963899
-      Warrior_Sheet-Effect_43: 565109345717033213
-      Warrior_Sheet-Effect_44: 3578844115799939244
-      Warrior_Sheet-Effect_45: -8346973252730123848
-      Warrior_Sheet-Effect_46: 3675700599212663255
-      Warrior_Sheet-Effect_47: -6199907869733816761
-      Warrior_Sheet-Effect_48: -9068822172998705990
-      Warrior_Sheet-Effect_49: 4778756267546337206
-      Warrior_Sheet-Effect_5: 8053934741035486310
-      Warrior_Sheet-Effect_50: -5417263232604538632
-      Warrior_Sheet-Effect_51: -8179423753346160949
-      Warrior_Sheet-Effect_52: -1605837713619785204
-      Warrior_Sheet-Effect_53: 8858915403469927737
-      Warrior_Sheet-Effect_54: 5335032761891035287
-      Warrior_Sheet-Effect_55: 8562263981820643917
-      Warrior_Sheet-Effect_56: 7739141928638578783
-      Warrior_Sheet-Effect_57: -1765949524758486658
-      Warrior_Sheet-Effect_58: -1406694122392401829
-      Warrior_Sheet-Effect_59: 3914160388638673933
-      Warrior_Sheet-Effect_6: 4312510042007804440
-      Warrior_Sheet-Effect_60: 709901728315876072
-      Warrior_Sheet-Effect_61: -5647377392427310024
-      Warrior_Sheet-Effect_62: -5110843521143403644
-      Warrior_Sheet-Effect_63: -8626763743991069669
-      Warrior_Sheet-Effect_64: -8669300221853394086
-      Warrior_Sheet-Effect_65: -8606690382453196554
-      Warrior_Sheet-Effect_66: -1003838945947052602
-      Warrior_Sheet-Effect_67: 1786230212584650817
-      Warrior_Sheet-Effect_68: 2896272659956946786
-      Warrior_Sheet-Effect_69: 2127461698910248042
-      Warrior_Sheet-Effect_7: -3637831218265681369
-      Warrior_Sheet-Effect_70: 8874842850510428824
-      Warrior_Sheet-Effect_71: -1175057978942713942
-      Warrior_Sheet-Effect_72: 8396084745013482390
-      Warrior_Sheet-Effect_73: -5219189033981844993
-      Warrior_Sheet-Effect_74: 8048201136183370311
-      Warrior_Sheet-Effect_75: -5008098951225157325
-      Warrior_Sheet-Effect_76: 3500951761227251082
-      Warrior_Sheet-Effect_77: -848416997838638187
-      Warrior_Sheet-Effect_78: -1594377132886445991
-      Warrior_Sheet-Effect_79: -7939720171757009327
-      Warrior_Sheet-Effect_8: 7890055846987212836
-      Warrior_Sheet-Effect_80: 4278741268874708782
-      Warrior_Sheet-Effect_81: -5551026827497223419
-      Warrior_Sheet-Effect_82: -2437237654950474820
-      Warrior_Sheet-Effect_83: -5853263684127566195
-      Warrior_Sheet-Effect_84: 806391716420303315
-      Warrior_Sheet-Effect_85: -7703501868747715773
-      Warrior_Sheet-Effect_86: -5742998253431553049
-      Warrior_Sheet-Effect_87: 1550331120443448429
-      Warrior_Sheet-Effect_88: -3380132617870049673
-      Warrior_Sheet-Effect_89: -6656010539272679822
-      Warrior_Sheet-Effect_9: -1755831512471263806
-      Warrior_Sheet-Effect_90: -6761883565659206456
-      Warrior_Sheet-Effect_91: -2106872485169043283
-      Warrior_Sheet-Effect_92: -5691269341329648135
-      Warrior_Sheet-Effect_93: -8491356359149837760
-      Warrior_Sheet-Effect_94: -4479905760731915366
-      Warrior_Sheet-Effect_95: -7781806043594523482
-      Warrior_Sheet-Effect_96: -2493374651010981141
-      Warrior_Sheet-Effect_97: -7685447711378399537
-      Warrior_Sheet-Effect_98: 787512443710130017
-      Warrior_Sheet-Effect_99: 1667360231840587918
+      Warrior_Sheet-Effect_0: 1249545678
+      Warrior_Sheet-Effect_1: 1846488544
+      Warrior_Sheet-Effect_10: 1915916992
+      Warrior_Sheet-Effect_11: 149986770
+      Warrior_Sheet-Effect_12: -2049873143
+      Warrior_Sheet-Effect_13: 1021266905
+      Warrior_Sheet-Effect_14: -688661755
+      Warrior_Sheet-Effect_15: -377126190
+      Warrior_Sheet-Effect_16: -256914307
+      Warrior_Sheet-Effect_17: 693881194
+      Warrior_Sheet-Effect_18: 1786365122
+      Warrior_Sheet-Effect_19: 799566086
+      Warrior_Sheet-Effect_2: -1816185225
+      Warrior_Sheet-Effect_20: -1878538495
+      Warrior_Sheet-Effect_21: 1190997834
+      Warrior_Sheet-Effect_22: -80672075
+      Warrior_Sheet-Effect_23: -657779406
+      Warrior_Sheet-Effect_24: 545260112
+      Warrior_Sheet-Effect_25: 1437483140
+      Warrior_Sheet-Effect_26: -1965253545
+      Warrior_Sheet-Effect_27: 47739822
+      Warrior_Sheet-Effect_28: -667523321
+      Warrior_Sheet-Effect_29: 493332001
+      Warrior_Sheet-Effect_3: -151302184
+      Warrior_Sheet-Effect_30: 532830752
+      Warrior_Sheet-Effect_31: -1201366240
+      Warrior_Sheet-Effect_32: 558447262
+      Warrior_Sheet-Effect_33: 1080427661
+      Warrior_Sheet-Effect_34: -1087563769
+      Warrior_Sheet-Effect_35: -1144694301
+      Warrior_Sheet-Effect_36: 559909615
+      Warrior_Sheet-Effect_37: -450992712
+      Warrior_Sheet-Effect_38: 1618632638
+      Warrior_Sheet-Effect_39: 798643273
+      Warrior_Sheet-Effect_4: -412028733
+      Warrior_Sheet-Effect_40: -685493249
+      Warrior_Sheet-Effect_41: 236630284
+      Warrior_Sheet-Effect_42: 1039791644
+      Warrior_Sheet-Effect_43: -684998818
+      Warrior_Sheet-Effect_44: 876328499
+      Warrior_Sheet-Effect_45: 2054238550
+      Warrior_Sheet-Effect_46: -146056761
+      Warrior_Sheet-Effect_47: -2033096473
+      Warrior_Sheet-Effect_48: 1178796989
+      Warrior_Sheet-Effect_49: 1563336201
+      Warrior_Sheet-Effect_5: -1254063493
+      Warrior_Sheet-Effect_50: -1168199953
+      Warrior_Sheet-Effect_51: -1309898923
+      Warrior_Sheet-Effect_52: -1437776721
+      Warrior_Sheet-Effect_53: -2030014077
+      Warrior_Sheet-Effect_54: 1682426236
+      Warrior_Sheet-Effect_55: 531183843
+      Warrior_Sheet-Effect_56: 458867912
+      Warrior_Sheet-Effect_57: 71447412
+      Warrior_Sheet-Effect_58: -1708704840
+      Warrior_Sheet-Effect_59: 1996181435
+      Warrior_Sheet-Effect_6: -538273984
+      Warrior_Sheet-Effect_60: -1126463102
+      Warrior_Sheet-Effect_61: 658104981
+      Warrior_Sheet-Effect_62: -1960085782
+      Warrior_Sheet-Effect_63: 1349128757
+      Warrior_Sheet-Effect_64: -1714148821
+      Warrior_Sheet-Effect_65: -295445238
+      Warrior_Sheet-Effect_66: 1114033384
+      Warrior_Sheet-Effect_67: -1096197307
+      Warrior_Sheet-Effect_68: 1864902010
+      Warrior_Sheet-Effect_69: -1879593033
+      Warrior_Sheet-Effect_7: -1699688337
+      Warrior_Sheet-Effect_70: -1509192380
+      Warrior_Sheet-Effect_71: 1269544732
+      Warrior_Sheet-Effect_72: 2134190738
+      Warrior_Sheet-Effect_73: -2006538925
+      Warrior_Sheet-Effect_74: 2093799215
+      Warrior_Sheet-Effect_75: -1341520141
+      Warrior_Sheet-Effect_76: -350395052
+      Warrior_Sheet-Effect_77: 883494163
+      Warrior_Sheet-Effect_78: -65915614
+      Warrior_Sheet-Effect_79: 889836096
+      Warrior_Sheet-Effect_8: -249811978
+      Warrior_Sheet-Effect_80: -1380487249
+      Warrior_Sheet-Effect_81: -1510895134
+      Warrior_Sheet-Effect_82: 1449942859
+      Warrior_Sheet-Effect_83: 504922402
+      Warrior_Sheet-Effect_84: 1271811883
+      Warrior_Sheet-Effect_85: -211444281
+      Warrior_Sheet-Effect_86: -1815887405
+      Warrior_Sheet-Effect_87: 1583955195
+      Warrior_Sheet-Effect_88: -1590284789
+      Warrior_Sheet-Effect_89: 1160909800
+      Warrior_Sheet-Effect_9: -1369639585
+      Warrior_Sheet-Effect_90: -964859750
+      Warrior_Sheet-Effect_91: 2017431185
+      Warrior_Sheet-Effect_92: -858205851
+      Warrior_Sheet-Effect_93: -1513164184
+      Warrior_Sheet-Effect_94: -1691413436
+      Warrior_Sheet-Effect_95: -1428790313
+      Warrior_Sheet-Effect_96: -1822591113
+      Warrior_Sheet-Effect_97: -805182983
+      Warrior_Sheet-Effect_98: -1144097883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

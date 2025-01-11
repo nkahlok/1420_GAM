@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class P_GroundedState : PlayerState
@@ -22,7 +23,9 @@ public class P_GroundedState : PlayerState
     {
         base.Update();
 
-        if (xInput != 0)
+
+
+        if (xInput != 0 && !player.isBusy)
         {
             stateMachine.Changestate(player.move);
             Debug.Log(xInput);
@@ -55,6 +58,9 @@ public class P_GroundedState : PlayerState
         {
             stateMachine.Changestate(player.attack);
         }
+
+      
+     
      
     }
 }

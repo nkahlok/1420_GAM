@@ -13,7 +13,7 @@ public class Parallax : MonoBehaviour
         //Getting the starting X position of sprite.
         startingPos = transform.position.x;
         //length of sprites
-        lengthOfSprite = GetComponent<SpriteRenderer>().bounds.size.x;
+        lengthOfSprite = GetComponentInChildren<SpriteRenderer>().bounds.size.x;
     }
 
     // Update is called once per frame
