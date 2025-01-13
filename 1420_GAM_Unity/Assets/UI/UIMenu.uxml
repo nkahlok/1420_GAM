@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UIStyles.uss?fileID=7433441132597879392&amp;guid=9e9aa7db528d969499f857ca1c07d526&amp;type=3#UIStyles" />
+    <ui:VisualElement name="Overlay" class="overlay" style="flex-grow: 1;" />
+    <ui:VisualElement name="BG" style="flex-grow: 1; background-color: rgb(21, 185, 188);" />
+    <ui:VisualElement name="Menu" style="flex-grow: 1; padding-top: 32px; padding-right: 32px; padding-bottom: 32px; padding-left: 32px; background-color: rgba(5, 216, 228, 0.96); width: 100%; height: 100%;">
+        <ui:Label text="Menu" name="TxtTitle" style="height: 101px; width: 327px; font-size: 100px; -unity-text-align: middle-center; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=93e1edf44430a56479347d4aa7ae0bbb&amp;type=3#NotInter-Regular&quot;); align-self: center; margin-bottom: 20px;" />
+        <ui:Button text="LOAD" name="BtnLoad" parse-escape-sequences="false" class="MainMenuButton" />
+        <ui:Button text="LOAD" name="BtnLoad" parse-escape-sequences="false" class="MainMenuButton" style="width: 256px; height: 98px; padding-top: 0; padding-right: 32px; padding-bottom: 0; padding-left: 32px; margin-top: 0; margin-right: 0; margin-bottom: 32px; margin-left: 0; -unity-font-style: bold; font-size: 40px; align-items: flex-start; justify-content: flex-start; align-self: center; align-content: center;" />
+        <ui:Button text="LOAD" name="BtnLoad" parse-escape-sequences="false" class="MainMenuButton" style="width: 256px; height: 98px; padding-top: 0; padding-right: 32px; padding-bottom: 0; padding-left: 32px; margin-top: 0; margin-right: 0; margin-bottom: 32px; margin-left: 0; -unity-font-style: bold; font-size: 40px; align-items: flex-start; justify-content: flex-start; align-self: center; align-content: center;" />
+        <ui:Button text="LOAD" name="BtnLoad" parse-escape-sequences="false" class="MainMenuButton" style="width: 256px; height: 98px; padding-top: 0; padding-right: 32px; padding-bottom: 0; padding-left: 32px; margin-top: 0; margin-right: 0; margin-bottom: 32px; margin-left: 0; -unity-font-style: bold; font-size: 40px; align-items: flex-start; justify-content: flex-start; align-self: center; align-content: center;" />
+    </ui:VisualElement>
+</ui:UXML>

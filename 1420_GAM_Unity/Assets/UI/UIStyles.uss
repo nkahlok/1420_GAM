@@ -1,3 +1,22 @@
+.MainMenuButton {
+    width: 256px;
+    height: 98px;
+    padding-top: 0;
+    padding-right: 32px;
+    padding-bottom: 0;
+    padding-left: 32px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 32px;
+    margin-left: 0;
+    -unity-font-style: bold;
+    font-size: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: center;
+    align-content: center;
+}
+
 .overlay {
     position: absolute;
     flex-grow: 0;
@@ -5,4 +24,24 @@
     height: 100%;
     background-color: rgb(0, 0, 0);
     flex-shrink: 0;
+}
+
+.MainMenuButton:hover {
+    width: 256px;
+    height: 98px;
+    padding-top: 0;
+    padding-right: 32px;
+    padding-bottom: 0;
+    padding-left: 32px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 32px;
+    margin-left: 0;
+    -unity-font-style: bold;
+    font-size: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: center;
+    align-content: center;
+    background-color: rgba(73, 226, 18, 0.97);
 }
