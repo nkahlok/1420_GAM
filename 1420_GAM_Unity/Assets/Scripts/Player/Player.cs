@@ -144,15 +144,17 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
         {
-            gameObject.transform.SetParent(collision.gameObject.transform);
+            //gameObject.transform.SetParent(collision.gameObject.transform);
         }
     }
+
+
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
         {
-            gameObject.transform.SetParent(null);
+            //gameObject.transform.SetParent(null);
         }
     }
 

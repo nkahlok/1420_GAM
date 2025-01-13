@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 81262762}
   - component: {fileID: 81262763}
   - component: {fileID: 81262764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 639652749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268792337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1542,7 +1542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1523476875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ManHoleThrowChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ Transform:
   m_GameObject: {fileID: 1523476874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1, y: 0, z: 0}
+  m_LocalPosition: {x: 2.22, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1663,7 +1663,7 @@ GameObject:
   - component: {fileID: 1649786298}
   - component: {fileID: 1649786302}
   - component: {fileID: 1649786301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1983,7 +1983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1989927121}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MeleeAttackerChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
