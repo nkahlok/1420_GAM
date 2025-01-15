@@ -54,11 +54,19 @@ public class P_GroundedState : PlayerState
             stateMachine.Changestate(player.fall);  
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && player.caneWpn)
         {
             stateMachine.Changestate(player.attack);
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            player.caneWpn = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            player.caneWpn = false;
+        }
       
      
      

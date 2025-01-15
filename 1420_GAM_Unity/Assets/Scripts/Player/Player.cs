@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public Animator anim;
     public int facingDir = 1;
     public bool isBusy;
+    public bool caneWpn;
     #endregion
 
     #region[States]
@@ -87,6 +88,7 @@ public class Player : MonoBehaviour
     {
      
         stateMachine.Initialize(idle);
+        caneWpn = true;
         
     }
 
