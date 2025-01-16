@@ -14,6 +14,13 @@ public class Player : MonoBehaviour
     public int facingDir = 1;
     public bool isBusy;
     public bool caneWpn;
+    public bool doubleJumpEnabled;
+    #endregion
+
+    [Space]
+    #region [Graphics]
+    [Header("Graphics")]
+    public GameObject manholeIndicator;
     #endregion
 
     #region[States]
@@ -98,6 +105,13 @@ public class Player : MonoBehaviour
         stateMachine.currentState.Update();
         CollisionChecks();
         UseSkill();
+
+
+        if(Input.mouseScrollDelta.y != 0 && !isBusy) 
+        { 
+            caneWpn = !caneWpn;
+        }
+
     }
 
     public void CollisionChecks()
@@ -130,9 +144,9 @@ public class Player : MonoBehaviour
 
     private void UseSkill()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !isBusy && isGround)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !isBusy && isGround && !caneWpn)
         {
-            Debug.Log("First skill casted");
+            
             SkillManager.instance.skill1.SkillAvailable();
         }
 

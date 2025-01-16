@@ -24,7 +24,7 @@ public class EnemyMoveState : EnemyState
 
         enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
 
-        if(enemy.isWall)
+        if(enemy.isWall || !enemy.isGround)
         {
             enemyStateMachine.Changestate(enemy.enemyIdleState);
         }

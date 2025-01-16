@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkillManager : MonoBehaviour
 {
     public static SkillManager instance;
-    public Skill1 skill1;
+    public ManHoleSkill skill1;
     public DashSkill dashSkill;   
     private void Awake()
     {
@@ -14,7 +14,7 @@ public class SkillManager : MonoBehaviour
 
     private void Start()
     {
-        skill1 = GetComponent<Skill1>();
+        skill1 = GetComponent<ManHoleSkill>();
         dashSkill = GetComponent<DashSkill>();
     }
 }

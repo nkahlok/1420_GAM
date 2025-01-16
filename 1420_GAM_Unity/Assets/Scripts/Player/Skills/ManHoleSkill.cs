@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class Skill1 : Skill
+public class ManHoleSkill : Skill
 {
 
    

@@ -7,6 +7,9 @@ public class P_ManHoleAimingState : PlayerState
     public float yDir;
     public float xThrow;
     public float yThrow;
+    protected GameObject indicator;
+    protected bool keyDown;
+
     public P_ManHoleAimingState(Player _player, StateMachine _stateMachine, string _animBool) : base(_player, _stateMachine, _animBool)
     {
     }
@@ -14,7 +17,11 @@ public class P_ManHoleAimingState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.isBusy = true;   
+        player.isBusy = true;
+        indicator = player.manholeIndicator;
+        indicator.SetActive(false);
+        keyDown = true;
+
     }
 
     public override void Exit()
@@ -47,8 +54,9 @@ public class P_ManHoleAimingState : PlayerState
             yThrow = 0;
         }
 
-           
- 
+        indicator.SetActive(false);
+
+
     }
 
     public override void Update()
@@ -69,15 +77,61 @@ public class P_ManHoleAimingState : PlayerState
 
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {
-            stateMachine.Changestate(player.idle);
+            keyDown = false;
+            indicator.SetActive(false);
+            stateMachine.Changestate(player.idle);           
             player.isBusy = false;
         }
 
         player.FlipControl(xInput);
-       
 
-     
- 
+        IndicatorRotate();
+
+        if ((xInput != 0 && keyDown) || (yInput != 0 && keyDown))
+        {
+            indicator.SetActive(true);
+        }
+        else
+        {
+            indicator.SetActive(false);
+        }
+
+    }
+
+    protected void IndicatorRotate()
+    {
+        if (xInput == 0 && yInput == 1)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, 90);
+        }
+        else if (xInput == 0 && yInput == -1)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, -90);
+        }
+        else if (xInput == 1 && yInput == 1)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, 45);
+        }
+        else if (xInput == 1 && yInput == -1)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, -45);
+        }
+        else if (xInput == 1 && yInput == 0)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (xInput == -1 && yInput == 1)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, 135);
+        }
+        else if (xInput == -1 && yInput == 0)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        else if (xInput == -1 && yInput == -1)
+        {
+            indicator.transform.rotation = Quaternion.Euler(0, 0, 225);
+        }
     }
 
     private void OnDrawGizmos()

@@ -6,7 +6,7 @@ public class ManHolePhysics : MonoBehaviour
 {
     private Rigidbody2D rb;
     Player player;
-    Skill1 skill1;
+    ManHoleSkill skill1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

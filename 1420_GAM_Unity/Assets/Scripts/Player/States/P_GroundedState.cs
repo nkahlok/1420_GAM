@@ -12,6 +12,7 @@ public class P_GroundedState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        player.doubleJumpEnabled = false;
     }
 
     public override void Exit()
@@ -58,17 +59,7 @@ public class P_GroundedState : PlayerState
         {
             stateMachine.Changestate(player.attack);
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            player.caneWpn = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            player.caneWpn = false;
-        }
-      
-     
+  
      
     }
 }

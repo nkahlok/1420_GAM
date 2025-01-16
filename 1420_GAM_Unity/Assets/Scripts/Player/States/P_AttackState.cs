@@ -36,6 +36,7 @@ public class P_AttackState : PlayerState
     {
         base.Exit();
         comboCounter++;
+        player.isBusy = false;
     }
 
     public override void Update()
@@ -51,6 +52,7 @@ public class P_AttackState : PlayerState
             player.SetVelocity(0, 0);
         }
 
+        player.isBusy = true;
 
     }
 }

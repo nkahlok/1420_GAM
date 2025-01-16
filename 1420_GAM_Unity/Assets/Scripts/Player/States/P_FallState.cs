@@ -29,7 +29,7 @@ public class P_FallState : PlayerState
 
         if (xInput != 0)
         {
-            player.SetVelocity(xInput * player.moveSpeed * 0.7f, rb.linearVelocity.y);
+            player.SetVelocity(xInput * player.moveSpeed * 0.5f, rb.linearVelocity.y);
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -45,6 +45,11 @@ public class P_FallState : PlayerState
             {
                 stateMachine.Changestate(player.jump);
             }
+        }
+
+        if (Input.GetButtonDown("Jump") && player.doubleJumpEnabled == true)
+        {
+            stateMachine.Changestate(player.jump);
         }
     }
 }

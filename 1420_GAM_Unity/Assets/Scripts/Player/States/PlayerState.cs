@@ -14,6 +14,7 @@ public class PlayerState
 
     protected Rigidbody2D rb;    
     protected Animator anim;
+
     
 
     public PlayerState(Player _player, StateMachine _stateMachine, string _animBool)
