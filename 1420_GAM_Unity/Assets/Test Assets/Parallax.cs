@@ -10,7 +10,7 @@ public class Parallax : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Getting the starting X position of sprite.
+        //Getting the starting X position of sprite
         startingPos = transform.position.x;
         //length of sprites
         lengthOfSprite = GetComponentInChildren<SpriteRenderer>().bounds.size.x;
