@@ -28,5 +28,10 @@ public class EnemyIdleState : EnemyState
         {
             enemyStateMachine.Changestate(enemy.enemyMoveState);
         }
+
+        if (enemy.isPlayer)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+        }
     }
 }
