@@ -51,5 +51,10 @@ public class P_FallState : PlayerState
         {
             stateMachine.Changestate(player.jump);
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && player.caneWpn)
+        {
+            stateMachine.Changestate(player.attack);
+        }
     }
 }

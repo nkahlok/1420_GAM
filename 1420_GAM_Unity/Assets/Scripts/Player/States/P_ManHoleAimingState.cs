@@ -69,8 +69,9 @@ public class P_ManHoleAimingState : PlayerState
 
         if (Input.GetKeyUp(KeyCode.Mouse0) && (xDir!=0||yDir!=0))
         {
-
-            SkillManager.instance.skill1.ThrowManHole();
+            keyDown = false;
+            indicator.SetActive(false);
+            SkillManager.instance.manholeSkill.ThrowManHole();
             anim.SetBool("Throw", true);
             stateMachine.Changestate(player.idle);
         }

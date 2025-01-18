@@ -18,7 +18,6 @@ public class DashSkill : Skill
     protected override void Update()
     {
         base.Update();
-        DashDurCount -= Time.deltaTime;
-       
+        DashDurCount -= Time.deltaTime;      
     }
 }

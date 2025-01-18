@@ -25,7 +25,6 @@ public class Skill : MonoBehaviour
             CastSkill();
             cooldownTimer = cooldown;
             return true;
-
         }
         else
         {

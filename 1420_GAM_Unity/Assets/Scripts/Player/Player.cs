@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public bool isBusy;
     public bool caneWpn;
     public bool doubleJumpEnabled;
+    public GameObject caneEquipped;
+    public GameObject manholeEquipped;
     #endregion
 
     [Space]
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
     public P_DashState dash { get; private set; }
     public P_AttackState attack { get; private set; }
     public P_ManHoleAimingState manHoleAim {  get; private set; }
+    public P_LaunchAttackState launchAttack { get; private set; }   
 
     #endregion
 
@@ -85,6 +88,7 @@ public class Player : MonoBehaviour
         dash = new P_DashState(this, stateMachine, "Dash");
         attack = new P_AttackState(this, stateMachine, "Attack");
         manHoleAim = new P_ManHoleAimingState(this, stateMachine, "Aiming");
+        launchAttack = new P_LaunchAttackState(this, stateMachine, "Launch");
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();    
@@ -96,6 +100,8 @@ public class Player : MonoBehaviour
      
         stateMachine.Initialize(idle);
         caneWpn = true;
+        caneEquipped.SetActive(false);
+        manholeEquipped.SetActive(false);
         
     }
 
@@ -110,6 +116,17 @@ public class Player : MonoBehaviour
         if(Input.mouseScrollDelta.y != 0 && !isBusy) 
         { 
             caneWpn = !caneWpn;
+        }
+
+        if(caneWpn)
+        {
+            caneEquipped.SetActive(true);
+            manholeEquipped.SetActive(false) ;
+        }
+        else
+        {
+            caneEquipped.SetActive(false);
+            manholeEquipped.SetActive(true);
         }
 
     }
@@ -147,13 +164,18 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1) && !isBusy && isGround && !caneWpn)
         {
             
-            SkillManager.instance.skill1.SkillAvailable();
+            SkillManager.instance.manholeSkill.SkillAvailable();
         }
 
         if (Input.GetButtonDown("Fire3"))
         {
             SkillManager.instance.dashSkill.SkillAvailable();
             
+        }
+
+        if((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround)|| (Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && SkillManager.instance.launchSkill.launchDown))
+        {
+            SkillManager.instance.launchSkill.SkillAvailable();
         }
     }
     void OnCollisionEnter2D(Collision2D collision)

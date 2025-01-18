@@ -37,6 +37,7 @@ public class P_AttackState : PlayerState
         base.Exit();
         comboCounter++;
         player.isBusy = false;
+        rb.gravityScale = 3;
     }
 
     public override void Update()
@@ -45,7 +46,14 @@ public class P_AttackState : PlayerState
 
         stateDur -= Time.deltaTime;
 
-        player.SetVelocity(player.attackMovement[comboCounter].x * player.facingDir, player.attackMovement[comboCounter].y);
+        if(player.isGround)
+        {
+            player.SetVelocity(player.attackMovement[comboCounter].x * player.facingDir, player.attackMovement[comboCounter].y);
+        }
+        else
+        {
+            player.SetVelocity(0,0);
+        }
 
         if (stateDur < 0)
         {
@@ -53,6 +61,8 @@ public class P_AttackState : PlayerState
         }
 
         player.isBusy = true;
+
+        rb.gravityScale = 0;
 
     }
 }

@@ -14,7 +14,7 @@ public class ManHolePhysics : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = PlayerManager.instance.player;
-        skill1 = SkillManager.instance.skill1;
+        skill1 = SkillManager.instance.manholeSkill;
         
         //skill1.newPrefab.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
         if (player.manHoleAim.xThrow == 1 && player.manHoleAim.yThrow == 1|| player.manHoleAim.xThrow == -1 && player.manHoleAim.yThrow == 1 )
@@ -42,6 +42,6 @@ public class ManHolePhysics : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(skill1.manholeSpeed * player.manHoleAim.xThrow, skill1.manholeSpeed * player.manHoleAim.yThrow);
 
-        Destroy(gameObject, SkillManager.instance.skill1.manHoleDur);
+        Destroy(gameObject, SkillManager.instance.manholeSkill.manHoleDur);
     }
 }
