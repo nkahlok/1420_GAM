@@ -10,6 +10,7 @@ public class EnemyState
     public EnemyStateMachine enemyStateMachine;
     public string animBool;
     public Rigidbody2D rb;
+    public Player player;
 
     public EnemyState(Enemy _enemy, EnemyStateMachine _enemyStateMachine, string _animBool)
     {
@@ -22,6 +23,7 @@ public class EnemyState
     public virtual void Enter()
     {
         rb = enemy.rb;
+        player = PlayerManager.instance.player;
     }
 
     public virtual void Exit()

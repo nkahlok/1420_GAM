@@ -30,5 +30,11 @@ public class EnemyMoveState : EnemyState
         }
 
         Debug.Log("Am moving");
+
+        if(enemy.isPlayer)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+        }
+    
     }
 }
