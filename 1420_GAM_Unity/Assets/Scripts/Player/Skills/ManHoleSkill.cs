@@ -33,8 +33,20 @@ public class ManHoleSkill : Skill
 
     public void ThrowManHole()
     {
+        GameObject[] currentmanHole = GameObject.FindGameObjectsWithTag("ManHole");
+
+        if(currentmanHole != null )
+        {
+            foreach(GameObject manhole in currentmanHole)
+            {
+                Destroy(manhole);
+            }
+        }
+
         newPrefab = prefab;
         Instantiate(newPrefab, player.manholeThrowChecker.position, player.manholeThrowChecker.rotation);
+
+        
         //newPrefab.transform.position = new Vector2(player.transform.position.x + player.facingDir*2f, player.transform.position.y);
         //newPrefab.transform.position = new Vector2(player.manholeThrowChecker.position.x, player.manholeThrowChecker.position.y);
         //newPrefab.transform.position = player.manholeThrowChecker.transform.position;

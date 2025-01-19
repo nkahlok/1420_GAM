@@ -18,6 +18,17 @@ public class PlayerAnimationEvents : MonoBehaviour
         player.isBusy = false;  
     }
 
+    public void Attack()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if(collider.GetComponent<EnemyTypeModifier>() != null)
+            {
+                collider.GetComponent<EnemyTypeModifier>().Damage(1);
+            }
+        }
+    }
 
 
 }

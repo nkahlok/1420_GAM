@@ -64,6 +64,7 @@ public class Player : MonoBehaviour
     [Space]
     public Transform manholeThrowChecker;
     public float manHoleThrowRange;
+
     #endregion
     [Space]
 
@@ -201,7 +202,7 @@ public class Player : MonoBehaviour
         Gizmos.DrawLine(new Vector2(groundChecker.position.x, groundChecker.position.y), new Vector2(groundChecker.position.x, groundChecker.position.y - groundDistance));
         Gizmos.DrawLine(new Vector2(wallChecker.position.x, wallChecker.position.y), new Vector2(wallChecker.position.x + wallDistance * facingDir, wallChecker.position.y));
         Gizmos.DrawWireSphere(new Vector2(meleeAttackChecker.position.x, meleeAttackChecker.position.y), meleeAttackRange);
-        Gizmos.DrawLine(new Vector2(manholeThrowChecker.position.x, manholeThrowChecker.position.y), new Vector2(manholeThrowChecker.position.x + manHoleThrowRange * manHoleAim.xDir, manholeThrowChecker.position.y + manHoleThrowRange*manHoleAim.yDir));
+        //Gizmos.DrawLine(new Vector2(manholeThrowChecker.position.x, manholeThrowChecker.position.y), new Vector2(manholeThrowChecker.position.x + manHoleThrowRange * manHoleAim.xDir, manholeThrowChecker.position.y + manHoleThrowRange*manHoleAim.yDir));
     }
 
 }

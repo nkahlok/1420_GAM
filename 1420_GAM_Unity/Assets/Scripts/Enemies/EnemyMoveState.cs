@@ -31,7 +31,7 @@ public class EnemyMoveState : EnemyState
 
         Debug.Log("Am moving");
 
-        if(enemy.isPlayer)
+        if(enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }

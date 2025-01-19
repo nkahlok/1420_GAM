@@ -30,6 +30,9 @@ public class P_AttackState : PlayerState
         
 
         player.comboCount = player.comboTime;
+
+        
+    
     }
 
     public override void Exit()
@@ -38,11 +41,25 @@ public class P_AttackState : PlayerState
         comboCounter++;
         player.isBusy = false;
         rb.gravityScale = 3;
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null)
+            {
+                Enemy enemy = collider.GetComponent<Enemy>();
+                enemy.rb.gravityScale = 3;
+                enemy.SetVelocity(enemy.rb.linearVelocityX, enemy.rb.linearVelocityY);
+            }
+        }
     }
 
     public override void Update()
     {
         base.Update();
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
 
         stateDur -= Time.deltaTime;
 
@@ -64,5 +81,16 @@ public class P_AttackState : PlayerState
 
         rb.gravityScale = 0;
 
+        if (!player.isGround)
+        {
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.GetComponent<Enemy>() != null)
+                {
+                    collider.GetComponent<Enemy>().SetVelocity(0, 0);
+                    collider.GetComponent<Enemy>().rb.gravityScale = 0;
+                }
+            }
+        }
     }
 }

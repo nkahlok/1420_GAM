@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public float facingDir;
     public float aggroDur;
     public float attackCD;
+    //public Vector2 knockbackForce;
     [HideInInspector] public float idleCount;
     [HideInInspector] public float aggroCount;
     [HideInInspector] public float attackCount;
@@ -36,19 +37,24 @@ public class Enemy : MonoBehaviour
     public LayerMask playerLayer;
     public float playerAggroDistance;
     public float playerAttackDistance;
+    public float playerAboveDistance;
 
     [HideInInspector] public RaycastHit2D isWall;
     [HideInInspector] public RaycastHit2D isGround;
     [HideInInspector] public RaycastHit2D isPlayer;
+    [HideInInspector] public RaycastHit2D isPlayerAbove;
     #endregion
 
 
     [HideInInspector] public Rigidbody2D rb;
+    protected Player player;
+    protected bool isBusy;
    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = PlayerManager.instance.player;
         enemyStateMachine = new EnemyStateMachine();
         enemyMoveState = new EnemyMoveState(this, enemyStateMachine, "Move");
         enemyIdleState = new EnemyIdleState(this, enemyStateMachine, "Idle");
@@ -66,13 +72,17 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyStateMachine.currentState.Update();
+        if(isBusy) 
+            return;
+        else
+            enemyStateMachine.currentState.Update();
+
         CollisionChecks();
     }
 
     public void Flip()
     {
-            this.transform.Rotate(0, 180, 0);
+        this.transform.Rotate(0, 180, 0);
         facingDir *= -1;     
     }
 
@@ -99,6 +109,63 @@ public class Enemy : MonoBehaviour
         isWall = Physics2D.Raycast(wallChecker.position, Vector2.right*facingDir, wallCheckDistance, wallLayer);
         isGround = Physics2D.Raycast(groundChecker.position, Vector2.down, groundCheckDistance, groundLayer);
         isPlayer = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance, playerLayer);
+        isPlayerAbove = Physics2D.Raycast(playerChecker.position, Vector2.up, playerAboveDistance, playerLayer);    
+    }
+    public void KnockBack(string attackType)
+    {
+        if (isBusy)
+        {
+            return;  
+        }
+        else
+        {
+            if(attackType == "Launch Up")
+            {
+                SetVelocity(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
+                StartCoroutine("BusySwitch", 1);
+            }
+            else if (attackType == "Launch Down")
+            {
+                SetVelocity(SkillManager.instance.launchSkill.launchVelocity[1].x, SkillManager.instance.launchSkill.launchVelocity[1].y * -1);
+                StartCoroutine("BusySwitch", 1);
+            }
+            else if (attackType == "Forward")
+            {
+                if (player.transform.position.x < this.transform.position.x)
+                {
+                    Debug.Log("KnockedBack");
+                    SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x, SkillManager.instance.launchSkill.launchVelocity[2].y);
+                    StartCoroutine("BusySwitch", 1);
+                }
+                else if (player.transform.position.x > this.transform.position.x)
+                {
+                    Debug.Log("KnockedBack");
+                    SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x * -1, SkillManager.instance.launchSkill.launchVelocity[2].y);
+                    StartCoroutine("BusySwitch", 1);
+                }
+            }
+            /*else if (player.transform.position.x < this.transform.position.x)
+            {
+                Debug.Log("KnockedBack");
+                SetVelocity(knockbackForce.x, knockbackForce.y);
+                StartCoroutine("BusySwitch", 1);
+            }
+            else if (player.transform.position.x > this.transform.position.x)
+            {
+                Debug.Log("KnockedBack");
+                SetVelocity(knockbackForce.x * -1, knockbackForce.y);
+                StartCoroutine("BusySwitch", 1);
+            }*/
+        }
+     
+        
+    }
+
+    IEnumerator BusySwitch(float seconds)
+    {
+        isBusy = true; 
+        yield return new WaitForSeconds(seconds);
+        isBusy = false;
     }
 
     private void OnDrawGizmos()
@@ -106,7 +173,9 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawLine(new Vector2(wallChecker.position.x, wallChecker.position.y), new Vector2(wallChecker.position.x + wallCheckDistance * facingDir, wallChecker.position.y));
         Gizmos.DrawLine(new Vector2(groundChecker.position.x, groundChecker.position.y), new Vector2(groundChecker.position.x, groundChecker.position.y - groundCheckDistance));
         Gizmos.DrawLine(new Vector2(playerChecker.position.x, playerChecker.position.y), new Vector2(playerChecker.position.x + playerAggroDistance * facingDir, playerChecker.position.y));
+        Gizmos.DrawLine(new Vector2(playerChecker.position.x, playerChecker.position.y), new Vector2(playerChecker.position.x, playerChecker.position.y + playerAboveDistance));
        
     }
+
     
 }

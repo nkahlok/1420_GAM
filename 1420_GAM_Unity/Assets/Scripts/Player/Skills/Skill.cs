@@ -8,9 +8,11 @@ public class Skill : MonoBehaviour
     protected float cooldownTimer;
     [HideInInspector] public Player player;
 
+
     protected virtual void Start()
     {
         player = PlayerManager.instance.player;
+        
     }
 
     protected virtual void Update()

@@ -34,13 +34,14 @@ public class ManHolePhysics : MonoBehaviour
             gameObject.transform.Rotate(0, 0, 90);
         }
 
+        rb.linearVelocity = new Vector2(skill1.manholeSpeed * player.manHoleAim.xThrow, skill1.manholeSpeed * player.manHoleAim.yThrow);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = new Vector2(skill1.manholeSpeed * player.manHoleAim.xThrow, skill1.manholeSpeed * player.manHoleAim.yThrow);
+       // rb.linearVelocity = new Vector2(skill1.manholeSpeed * player.manHoleAim.xThrow, skill1.manholeSpeed * player.manHoleAim.yThrow);
 
         Destroy(gameObject, SkillManager.instance.manholeSkill.manHoleDur);
     }

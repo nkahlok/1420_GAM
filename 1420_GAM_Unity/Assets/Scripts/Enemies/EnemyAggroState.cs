@@ -33,6 +33,11 @@ public class EnemyAggroState : EnemyState
             moveDir = -1;
         }
 
+        if(player.transform.position.y > enemy.transform.position.y && enemy.isPlayerAbove)
+        {
+            moveDir = 0;
+        }
+
         if(!enemy.isPlayer) 
         {
             //Debug.Log("I do not detect anyone");
