@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ae223bd72913234fb4722db0353013d
+guid: df88cb5915efcc941940cde9c39faa7e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4188382103830281143
-    second: Ext_Train_Asset_0
+      213: -2864708453039126863
+    second: Chandelier_Asset_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ext_Train_Asset_0
+      name: Chandelier_Asset_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 0
-        width: 871
-        height: 796
+        x: 0
+        y: 14
+        width: 255
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 944c795eaa0efd5c0800000000000000
-      internalID: -4188382103830281143
+      spriteID: 1b64b8ff6d28e38d0800000000000000
+      internalID: -2864708453039126863
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Ext_Train_Asset_0: -4188382103830281143
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

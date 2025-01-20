@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e06c1cbe43f26c47997275cba9f6ec4
+guid: 5d6b79e6153cbfc428d382b3f1c47880
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7706877707155251073
-    second: Train_Top_Asset_1_0
+      213: 880369706662745077
+    second: Ext_Train_Asset 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Train_Top_Asset_1_0
+      name: Ext_Train_Asset 2_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 275
-        width: 788
-        height: 393
+        x: 0
+        y: 0
+        width: 870
+        height: 796
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7062a1ee8bab0590800000000000000
-      internalID: -7706877707155251073
+      spriteID: 5f3d5a47593b73c00800000000000000
+      internalID: 880369706662745077
       vertices: []
       indices: 
       edges: []
