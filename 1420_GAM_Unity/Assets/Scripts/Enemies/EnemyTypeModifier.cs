@@ -21,27 +21,27 @@ public class EnemyTypeModifier : MonoBehaviour
         {
             case 2:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 1.5f, this.transform.localScale.y * 1.5f);
-                hits = 4;
+                hits = 8;
                 D.SetActive(true);
                 break;
             case 3:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2f, this.transform.localScale.y * 2f);
-                hits = 6;
+                hits = 12;
                 C.SetActive(true);
                 break;
             case 4:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2.5f, this.transform.localScale.y * 2.5f);
-                hits = 8;
+                hits = 16;
                 B.SetActive(true);
                 break;
             case 5:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 3f, this.transform.localScale.y * 3f);
-                hits = 10;
+                hits = 20;
                 A.SetActive(true);
                 break;
             default:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x, this.transform.localScale.y);
-                hits = 3;
+                hits = 6;
                 E.SetActive(true);
                 break;
         }
@@ -50,7 +50,10 @@ public class EnemyTypeModifier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(hits == 0)
+
+        //Debug.Log($"hits:{hits}");
+
+        if(hits == 0)
         {
             Destroy(this.gameObject); 
         }
@@ -58,6 +61,6 @@ public class EnemyTypeModifier : MonoBehaviour
 
     public void Damage(int hitsMultiplier)
     {
-        hits -= 1*hitsMultiplier;
+        hits = hits - hitsMultiplier;
     }
 }

@@ -12197,8 +12197,8 @@ MonoBehaviour:
   moveSpeed: 7
   jumpForce: 12
   attackMovement:
+  - {x: 0.5, y: 0}
   - {x: 1, y: 0}
-  - {x: 2, y: 0}
   - {x: 0.5, y: 0}
   ground:
     serializedVersion: 2
