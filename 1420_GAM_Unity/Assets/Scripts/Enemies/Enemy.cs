@@ -144,6 +144,12 @@ public class Enemy : MonoBehaviour
                     StartCoroutine("BusySwitch", 1);
                 }
             }
+            else if (attackType == "Manhole")
+            {
+               
+                SetVelocity(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
+                StartCoroutine("BusySwitch", 1);
+            }
             /*else if (player.transform.position.x < this.transform.position.x)
             {
                 Debug.Log("KnockedBack");

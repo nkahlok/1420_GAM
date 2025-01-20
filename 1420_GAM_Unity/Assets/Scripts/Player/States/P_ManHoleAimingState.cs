@@ -74,6 +74,7 @@ public class P_ManHoleAimingState : PlayerState
             SkillManager.instance.manholeSkill.ThrowManHole();
             anim.SetBool("Throw", true);
             stateMachine.Changestate(player.idle);
+            player.caneWpn = !player.caneWpn;   
         }
 
         if (Input.GetKeyUp(KeyCode.Mouse1))

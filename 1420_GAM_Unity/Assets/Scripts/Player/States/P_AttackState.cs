@@ -60,6 +60,18 @@ public class P_AttackState : PlayerState
         base.Update();
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<ManHolePhysics>() != null)
+            {
+                Debug.Log("Hit manhole");
+                if (!collider.GetComponent<ManHolePhysics>().canHitEnemy)
+                {
+                    collider.GetComponent<ManHolePhysics>().Bounce();
+
+                }
+            }
+        }
 
         stateDur -= Time.deltaTime;
 

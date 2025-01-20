@@ -12,9 +12,11 @@ public class ManHoleSkill : Skill
     public GameObject prefab;
     [HideInInspector] public GameObject newPrefab;
     public float manHoleDur;
+    [HideInInspector] public float manHoleCount;
     public float manholeSpeed;
+    public Vector2 knockBackForce;
+    public int maxBounces;
 
-  
 
     public override void CastSkill()
     {
@@ -33,7 +35,13 @@ public class ManHoleSkill : Skill
 
     public void ThrowManHole()
     {
+
         GameObject[] currentmanHole = GameObject.FindGameObjectsWithTag("ManHole");
+
+        if(knockBackForce.x < 0)
+        {
+          knockBackForce.x *= -1;
+        }
 
         if(currentmanHole != null )
         {
@@ -45,6 +53,7 @@ public class ManHoleSkill : Skill
 
         newPrefab = prefab;
         Instantiate(newPrefab, player.manholeThrowChecker.position, player.manholeThrowChecker.rotation);
+        
 
         
         //newPrefab.transform.position = new Vector2(player.transform.position.x + player.facingDir*2f, player.transform.position.y);

@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerAnimationEvents : MonoBehaviour
 {
     Player player;
+    ManHoleSkill skill1;
     public void Start()
     {
         player = PlayerManager.instance.player;
+        skill1 = SkillManager.instance.manholeSkill;
     }
 
     public void EndAttack()
@@ -27,7 +29,20 @@ public class PlayerAnimationEvents : MonoBehaviour
             {
                 collider.GetComponent<EnemyTypeModifier>().Damage(1);
             }
+
+            /*if(collider.GetComponent<ManHolePhysics>() != null)
+            {
+                Debug.Log("Hit manhole");
+                if (!collider.GetComponent<ManHolePhysics>().canHitEnemy)
+                {
+                     collider.GetComponent<ManHolePhysics>().Bounce();
+
+                }
+            }*/
+
         }
+
+        
     }
 
 
