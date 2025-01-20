@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5fd1c4b5d73646c47aeed93d53cca3ff
+guid: 6ae223bd72913234fb4722db0353013d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8241626618673724656
-    second: IMG_0973_0
+      213: -4188382103830281143
+    second: Ext_Train_Asset_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,10 +100,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0973_0
+      name: Ext_Train_Asset_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 20
         y: 0
         width: 871
         height: 796
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0138c8e914cdf9d80800000000000000
-      internalID: -8241626618673724656
+      spriteID: 944c795eaa0efd5c0800000000000000
+      internalID: -4188382103830281143
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_0973_0: -8241626618673724656
+      Ext_Train_Asset_0: -4188382103830281143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
