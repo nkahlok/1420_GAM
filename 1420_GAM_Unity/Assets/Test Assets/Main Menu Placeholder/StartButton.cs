@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class StartButton : MonoBehaviour
 {
-    public Animation anim;
+    public Animator anim;
     public BoxCollider box;
     private void Start()
     {
         box = GetComponent<BoxCollider>();
-        anim = GetComponent<Animation>();
+        anim = GetComponent<Animator>();
     }
     private void OnMouseEnter()
     {
@@ -16,7 +16,9 @@ public class StartButton : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        anim.Play("MainMenuIdleAnim");
+        anim.Play("IStart");
         Debug.Log("I am not being hovered over");
     }
+
+    
 }

@@ -20,4 +20,9 @@ public class ButtonAnimScript : MonoBehaviour
         anim.Play("MainMenuIdleAnim");
         Debug.Log("I am not being hovered over");
     }
+
+    private void OnMouseDown()
+    {
+        Debug.Log("I am being pressed");
+    }
 }
