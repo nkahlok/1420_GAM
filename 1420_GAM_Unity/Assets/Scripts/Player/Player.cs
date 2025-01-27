@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     public bool doubleJumpEnabled;
     public GameObject caneEquipped;
     public GameObject manholeEquipped;
+    public ParticleSystem jumpFeathers;
     #endregion
 
     [Space]
@@ -204,5 +206,4 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(new Vector2(meleeAttackChecker.position.x, meleeAttackChecker.position.y), meleeAttackRange);
         //Gizmos.DrawLine(new Vector2(manholeThrowChecker.position.x, manholeThrowChecker.position.y), new Vector2(manholeThrowChecker.position.x + manHoleThrowRange * manHoleAim.xDir, manholeThrowChecker.position.y + manHoleThrowRange*manHoleAim.yDir));
     }
-
 }

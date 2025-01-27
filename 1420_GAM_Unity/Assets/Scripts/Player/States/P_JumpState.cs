@@ -14,6 +14,7 @@ public class P_JumpState : PlayerState
         player.SetVelocity(rb.linearVelocity.x, player.jumpForce);
         player.coyoteEnabled = false;
         player.doubleJumpEnabled = !player.doubleJumpEnabled;
+        player.jumpFeathers.Play();
     }
 
     public override void Exit()
