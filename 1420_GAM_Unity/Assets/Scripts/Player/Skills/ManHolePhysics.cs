@@ -60,6 +60,7 @@ public class ManHolePhysics : MonoBehaviour
 
         if(bounceCount >= skill1.maxBounces)
         {
+            player.manholeAvailable = true;
             Destroy(gameObject);
         }
 
@@ -101,10 +102,18 @@ public class ManHolePhysics : MonoBehaviour
             }
             collision.gameObject.GetComponent<Enemy>().KnockBack("Manhole");
             canHitEnemy = !canHitEnemy;
+            
+        }
+        if (collision.gameObject.GetComponent<EnemyTypeModifier>())
+        {
+            player.comboHitCount = player.comboTime;
+            collision.gameObject.GetComponent<EnemyTypeModifier>().Damage(1);
+            
         }
 
         if (collision.gameObject.GetComponent<Player>() && !canHitEnemy)
         {
+            player.manholeAvailable = true;
             Destroy(gameObject);
         }
 

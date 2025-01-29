@@ -1,49 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyTypeModifier : MonoBehaviour
 {
 
-    public int rankModifier;
+    [Range(1,4)]public int rankModifier;
     private int hits;
-    public GameObject E;
-    public GameObject D;
+    public Text rankName;
+    /*public GameObject D;
     public GameObject C;
     public GameObject B;
-    public GameObject A;
+    public GameObject A;*/
 
     // Start is called before the first frame update
     void Start()
     {
+        Player player = PlayerManager.instance.player;
         
         switch (rankModifier)
         {
-            case 2:
+            case 1:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 1.5f, this.transform.localScale.y * 1.5f);
                 hits = 8;
-                D.SetActive(true);
+                rankName.text = player.comboNames[0];
+                //D.SetActive(true);
                 break;
-            case 3:
+            case 23:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2f, this.transform.localScale.y * 2f);
                 hits = 12;
-                C.SetActive(true);
+                rankName.text = player.comboNames[1];
+                //C.SetActive(true);
                 break;
-            case 4:
+            case 3:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2.5f, this.transform.localScale.y * 2.5f);
                 hits = 16;
-                B.SetActive(true);
+                rankName.text = player.comboNames[2];
+                //B.SetActive(true);
                 break;
-            case 5:
+            case 4:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 3f, this.transform.localScale.y * 3f);
                 hits = 20;
-                A.SetActive(true);
+                rankName.text = player.comboNames[3];
+                //A.SetActive(true);
                 break;
-            default:
-                //this.transform.localScale = new Vector2(this.transform.localScale.x, this.transform.localScale.y);
-                hits = 6;
-                E.SetActive(true);
-                break;
+
         }
     }
 
@@ -57,10 +59,14 @@ public class EnemyTypeModifier : MonoBehaviour
         {
             Destroy(this.gameObject); 
         }
+
+        rankName.gameObject.transform.rotation = Quaternion.identity;   
+
     }
 
     public void Damage(int hitsMultiplier)
     {
+        PlayerManager.instance.player.comboHits++;
         hits = hits - hitsMultiplier;
     }
 }

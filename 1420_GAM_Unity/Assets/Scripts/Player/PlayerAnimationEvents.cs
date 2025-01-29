@@ -14,7 +14,7 @@ public class PlayerAnimationEvents : MonoBehaviour
 
     public void EndAttack()
     {
-        player.stateMachine.Changestate(player.idle);
+        player.stateMachine.Changestate(player.fall);
         player.anim.SetBool("Throw", false);
         Debug.Log("Attack ended");
         player.isBusy = false;  
@@ -28,22 +28,10 @@ public class PlayerAnimationEvents : MonoBehaviour
             if(collider.GetComponent<EnemyTypeModifier>() != null)
             {
                 collider.GetComponent<EnemyTypeModifier>().Damage(1);
+                player.comboHitCount = player.comboTime;
+                
             }
 
-            /*if(collider.GetComponent<ManHolePhysics>() != null)
-            {
-                Debug.Log("Hit manhole");
-                if (!collider.GetComponent<ManHolePhysics>().canHitEnemy)
-                {
-                     collider.GetComponent<ManHolePhysics>().Bounce();
-
-                }
-            }*/
-
-        }
-
-        
+        }        
     }
-
-
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
@@ -12,6 +13,10 @@ public class Player : MonoBehaviour
     #region[Player Components]
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Animator anim;
+    public int comboHits = 0;
+    [HideInInspector] public bool manholeAvailable;
+    public Text comboUI;
+    public Text comboNamesUI;
     public int facingDir = 1;
     public bool isBusy;
     public bool caneWpn;
@@ -20,6 +25,9 @@ public class Player : MonoBehaviour
     public GameObject manholeEquipped;
     public ParticleSystem jumpFeathers;
     #endregion
+
+    [Space]
+    public string[] comboNames;
 
     [Space]
     #region [Graphics]
@@ -79,6 +87,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool coyoteEnabled = false;
     public float comboTime;
     [HideInInspector] public float comboCount;
+    [HideInInspector] public float comboHitCount;
     #endregion
 
     void Awake()
@@ -94,7 +103,7 @@ public class Player : MonoBehaviour
         launchAttack = new P_LaunchAttackState(this, stateMachine, "Launch");
 
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();    
+        anim = GetComponentInChildren<Animator>();  
     }
 
 
@@ -103,9 +112,11 @@ public class Player : MonoBehaviour
      
         stateMachine.Initialize(idle);
         caneWpn = true;
+        manholeAvailable = true;
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
-        
+      
+
     }
 
     
@@ -114,24 +125,8 @@ public class Player : MonoBehaviour
         stateMachine.currentState.Update();
         CollisionChecks();
         UseSkill();
-
-
-        if(Input.mouseScrollDelta.y != 0 && !isBusy) 
-        { 
-            caneWpn = !caneWpn;
-        }
-
-        if(caneWpn)
-        {
-            caneEquipped.SetActive(true);
-            manholeEquipped.SetActive(false) ;
-        }
-        else
-        {
-            caneEquipped.SetActive(false);
-            manholeEquipped.SetActive(true);
-        }
-
+        WeaponSwap();
+        ComboCounterUI();      
     }
 
     public void CollisionChecks()
@@ -181,6 +176,66 @@ public class Player : MonoBehaviour
             SkillManager.instance.launchSkill.SkillAvailable();
         }
     }
+
+    private void WeaponSwap()
+    {
+
+        if (Input.mouseScrollDelta.y != 0 && !isBusy && manholeAvailable)
+        {
+            caneWpn = !caneWpn;
+        }
+
+        if (caneWpn)
+        {
+            caneEquipped.SetActive(true);
+            manholeEquipped.SetActive(false);
+        }
+        else
+        {
+            caneEquipped.SetActive(false);
+            manholeEquipped.SetActive(true);
+        }
+    }
+
+    private void ComboCounterUI()
+    {
+        if (comboHitCount < 0)
+            comboHits = 0;
+
+        switch (comboHits) 
+        {
+            case int x when x>= 8 && x<12:
+                comboNamesUI.gameObject.SetActive(true);
+                comboNamesUI.text = comboNames[0];
+                break;
+            case int x when x >= 12 && x < 16:
+                comboNamesUI.gameObject.SetActive(true);
+                comboNamesUI.text = comboNames[1];
+                break;
+            case int x when x >= 16 && x < 20:
+                comboNamesUI.gameObject.SetActive(true);
+                comboNamesUI.text = comboNames[2];
+                break;
+            case >=20:
+                comboNamesUI.gameObject.SetActive(true);
+                comboNamesUI.text = comboNames[3];
+                break;
+                default:
+                comboNamesUI.gameObject.SetActive(false);   
+                break;
+
+        }
+
+        if(comboHits == 0)
+            comboUI.gameObject.SetActive(false);
+        else 
+            comboUI.gameObject.SetActive(true);
+
+        comboUI.text = $"Combo {comboHits / 2}";
+
+        comboHitCount -= Time.deltaTime;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
@@ -188,8 +243,6 @@ public class Player : MonoBehaviour
             //gameObject.transform.SetParent(collision.gameObject.transform);
         }
     }
-
-
 
     private void OnCollisionExit2D(Collision2D collision)
     {
