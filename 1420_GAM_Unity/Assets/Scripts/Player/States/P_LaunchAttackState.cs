@@ -12,6 +12,7 @@ public class P_LaunchAttackState : PlayerState
     {
         base.Enter();
         player.isBusy = true;
+        comboCounter = 0;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
      
@@ -24,7 +25,12 @@ public class P_LaunchAttackState : PlayerState
             {
                 if (collider.GetComponent<Enemy>() != null)
                 {
-                    collider.GetComponent<Enemy>().KnockBack("Launch Up");
+                    Enemy enemy = collider.GetComponent<Enemy>();
+                    enemy.KnockBack("Launch Up");
+                    enemy.airlock = true;   
+                    enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
+                   
+
                 }
             }
         }
@@ -59,6 +65,14 @@ public class P_LaunchAttackState : PlayerState
     public override void Exit()
     {
         base.Exit();
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach(Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null)
+            {
+                collider.GetComponent<Enemy>().AirlockCoroutine();
+            }
+        }
     }
 
     public override void Update()

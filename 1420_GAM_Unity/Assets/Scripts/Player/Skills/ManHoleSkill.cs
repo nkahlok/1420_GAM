@@ -22,7 +22,7 @@ public class ManHoleSkill : Skill
     {
         base.CastSkill();
 
-        Debug.Log("Skill 1 is used");
+        //Debug.Log("Skill 1 is used");
 
         PlayerManager.instance.player.stateMachine.Changestate(PlayerManager.instance.player.manHoleAim);
         

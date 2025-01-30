@@ -29,7 +29,7 @@ public class EnemyMoveState : EnemyState
             enemyStateMachine.Changestate(enemy.enemyIdleState);
         }
 
-        Debug.Log("Am moving");
+        //Debug.Log("Am moving");
 
         if(enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
         {

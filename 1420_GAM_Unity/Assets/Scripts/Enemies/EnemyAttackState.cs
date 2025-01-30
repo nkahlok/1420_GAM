@@ -14,14 +14,14 @@ public class EnemyAttackState : EnemyState
         base.Enter();
         stateDur = 1f;
         stateCount = stateDur;
-        Debug.Log("attack executed");
+        //Debug.Log("attack executed");
     }
 
     public override void Exit()
     {
         base.Exit();
         enemy.attackCount = enemy.attackCD;
-        Debug.Log("attack finish");
+        //Debug.Log("attack finish");
     }
 
     public override void Update()

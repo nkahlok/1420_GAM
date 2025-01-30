@@ -29,7 +29,7 @@ public class P_GroundedState : PlayerState
         if (xInput != 0 && !player.isBusy)
         {
             stateMachine.Changestate(player.move);
-            Debug.Log(xInput);
+            //Debug.Log(xInput);
         }
 
         if (rb.linearVelocity.x == 0 && xInput == 0)
@@ -42,12 +42,12 @@ public class P_GroundedState : PlayerState
             
             player.jumpBufferCount = 0;
             stateMachine.Changestate(player.jump);
-            Debug.Log("Jump buffered");
+            //Debug.Log("Jump buffered");
         }
         else if (Input.GetButtonDown("Jump") && player.isGround)
         {
             stateMachine.Changestate(player.jump);
-            Debug.Log("jumped");
+           // Debug.Log("jumped");
         }
 
         if (rb.linearVelocity.y < 0)

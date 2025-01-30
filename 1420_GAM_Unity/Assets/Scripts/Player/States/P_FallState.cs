@@ -36,7 +36,7 @@ public class P_FallState : PlayerState
         {
            
             player.jumpBufferCount = player.jumpBufferTime;
-            Debug.Log("Space bar pressed");
+           // Debug.Log("Space bar pressed");
         }
 
        if (player.coyoteEnabled == true && player.coyoteCount > 0)
@@ -54,7 +54,7 @@ public class P_FallState : PlayerState
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && player.caneWpn)
         {
-            stateMachine.Changestate(player.attack);
+            stateMachine.Changestate(player.aerialAttack);
         }
     }
 }

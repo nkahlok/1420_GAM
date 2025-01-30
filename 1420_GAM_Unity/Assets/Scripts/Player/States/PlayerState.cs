@@ -10,7 +10,8 @@ public class PlayerState
 
     public float xInput;
     public float yInput;
-   
+    public int comboCounter;
+
 
     protected Rigidbody2D rb;    
     protected Animator anim;

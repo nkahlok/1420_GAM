@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     public StateMachine stateMachine { get; private set; }
     private PlayerState playerState;
+    private IEnumerator defaultGravity;
 
     #region[Player Components]
     [HideInInspector] public Rigidbody2D rb;
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
     public P_AttackState attack { get; private set; }
     public P_ManHoleAimingState manHoleAim {  get; private set; }
     public P_LaunchAttackState launchAttack { get; private set; }   
+    public P_AerialAttackState aerialAttack { get; private set; }
 
     #endregion
 
@@ -99,11 +101,14 @@ public class Player : MonoBehaviour
         fall = new P_FallState(this, stateMachine, "Jump");
         dash = new P_DashState(this, stateMachine, "Dash");
         attack = new P_AttackState(this, stateMachine, "Attack");
+        aerialAttack = new P_AerialAttackState(this, stateMachine, "Attack");
         manHoleAim = new P_ManHoleAimingState(this, stateMachine, "Aiming");
         launchAttack = new P_LaunchAttackState(this, stateMachine, "Launch");
 
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();  
+        anim = GetComponentInChildren<Animator>();
+        defaultGravity = DefaultGravity(0.2f);
+
     }
 
 
@@ -115,8 +120,9 @@ public class Player : MonoBehaviour
         manholeAvailable = true;
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
-      
-
+ 
+       
+        
     }
 
     
@@ -127,6 +133,7 @@ public class Player : MonoBehaviour
         UseSkill();
         WeaponSwap();
         ComboCounterUI();      
+     
     }
 
     public void CollisionChecks()
@@ -234,6 +241,23 @@ public class Player : MonoBehaviour
         comboUI.text = $"Combo {comboHits / 2}";
 
         comboHitCount -= Time.deltaTime;
+    }
+
+
+    public void GravityCoroutine()
+    {
+        StopCoroutine(defaultGravity);
+        defaultGravity = DefaultGravity(0.2f);
+        StartCoroutine(defaultGravity);
+    }
+
+    private IEnumerator DefaultGravity(float seconds)
+    {
+        rb.gravityScale = 0;
+        yield return new WaitForSeconds(seconds);
+        rb.gravityScale = 3;
+        isBusy = false; 
+        
     }
 
     void OnCollisionEnter2D(Collision2D collision)

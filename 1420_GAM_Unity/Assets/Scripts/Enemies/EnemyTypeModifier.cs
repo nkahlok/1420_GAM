@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyTypeModifier : MonoBehaviour
 {
 
-    [Range(1,4)]public int rankModifier;
+    [Range(1,5)]public int rankModifier;
     private int hits;
     public Text rankName;
     /*public GameObject D;
@@ -27,7 +27,7 @@ public class EnemyTypeModifier : MonoBehaviour
                 rankName.text = player.comboNames[0];
                 //D.SetActive(true);
                 break;
-            case 23:
+            case 2:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2f, this.transform.localScale.y * 2f);
                 hits = 12;
                 rankName.text = player.comboNames[1];
@@ -44,6 +44,9 @@ public class EnemyTypeModifier : MonoBehaviour
                 hits = 20;
                 rankName.text = player.comboNames[3];
                 //A.SetActive(true);
+                break;
+                default:
+                hits = 1000;
                 break;
 
         }

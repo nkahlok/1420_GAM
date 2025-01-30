@@ -79,7 +79,7 @@ public class ManHolePhysics : MonoBehaviour
         {
             skill1.knockBackForce.x *= -1;
         }
-        Debug.Log("Bounced");
+        //Debug.Log("Bounced");
 
         canHitEnemy = !canHitEnemy;
         
@@ -93,7 +93,7 @@ public class ManHolePhysics : MonoBehaviour
         {
             //skill1.manHoleCount = skill1.manHoleDur;
             bounceCount++;  
-            Debug.Log("Manhole entered");
+            //Debug.Log("Manhole entered");
             newSpeed *= 1.2f;
             rb.linearVelocity = new Vector2(newSpeed * player.manHoleAim.xThrow * -1, newSpeed * player.manHoleAim.yThrow * -1);
             if (this.gameObject.transform.position.x > collision.gameObject.GetComponent<Enemy>().gameObject.transform.position.x)

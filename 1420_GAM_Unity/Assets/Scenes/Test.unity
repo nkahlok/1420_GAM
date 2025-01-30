@@ -1816,6 +1816,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &240722653
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3122,6 +3123,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &503440403
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4812,6 +4814,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &792126248
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6026,7 +6029,7 @@ MonoBehaviour:
   player: {fileID: 0}
   launchVelocity:
   - {x: 0, y: 15}
-  - {x: 0, y: 20}
+  - {x: 0, y: 40}
   - {x: 5, y: 0}
   launchUp: 0
   launchDown: 0
@@ -6474,6 +6477,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &959321176
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -6802,6 +6806,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &972759477
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9635,6 +9640,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &1363551668
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9963,6 +9969,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &1406487596
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11138,6 +11145,7 @@ MonoBehaviour:
   playerAttackDistance: 0
   playerAboveDistance: 0
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &1624785624
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -12111,10 +12119,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1696851853}
   - component: {fileID: 1696851852}
+  - component: {fileID: 1696851849}
   - component: {fileID: 1696851851}
   - component: {fileID: 1696851850}
   - component: {fileID: 1696851855}
-  - component: {fileID: 1696851849}
   - component: {fileID: 1696851854}
   m_Layer: 8
   m_Name: Enemy
@@ -12161,6 +12169,7 @@ MonoBehaviour:
   playerAttackDistance: 1
   playerAboveDistance: 5.41
   rb: {fileID: 0}
+  airlock: 0
 --- !u!70 &1696851850
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -12312,12 +12321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37288db0f67f07949bf4b4bc733fe390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rankModifier: 4
+  rankModifier: 5
   rankName: {fileID: 306778331}
-  D: {fileID: 2118962107}
-  C: {fileID: 479727965}
-  B: {fileID: 2099223982}
-  A: {fileID: 373139523}
 --- !u!70 &1696851855
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

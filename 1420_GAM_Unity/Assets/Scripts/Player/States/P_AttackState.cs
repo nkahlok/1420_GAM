@@ -5,7 +5,7 @@ using UnityEngine;
 public class P_AttackState : PlayerState
 
 {
-    protected int comboCounter;
+    
     protected float stateDur;
 
 
@@ -39,20 +39,24 @@ public class P_AttackState : PlayerState
     {
         base.Exit();
         comboCounter++;
-        player.isBusy = false;
-        rb.gravityScale = 3;
+        
+        if(player.isGround)
+            player.isBusy = false;
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        //player.GravityCoroutine();
+
+        /*Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
 
         foreach (Collider2D collider in colliders)
         {
             if (collider.GetComponent<Enemy>() != null)
             {
                 Enemy enemy = collider.GetComponent<Enemy>();
-                enemy.rb.gravityScale = 3;
-                enemy.SetVelocity(enemy.rb.linearVelocityX, enemy.rb.linearVelocityY);
+
+                //enemy.AirlockCoroutine();
+               
             }
-        }
+        }*/
     }
 
     public override void Update()
@@ -60,11 +64,12 @@ public class P_AttackState : PlayerState
         base.Update();
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+
         foreach (Collider2D collider in colliders)
         {
             if (collider.GetComponent<ManHolePhysics>() != null)
             {
-                Debug.Log("Hit manhole");
+                //Debug.Log("Hit manhole");
                 if (!collider.GetComponent<ManHolePhysics>().canHitEnemy)
                 {
                     collider.GetComponent<ManHolePhysics>().Bounce();
@@ -72,6 +77,21 @@ public class P_AttackState : PlayerState
                 }
             }
         }
+
+        /*if (!player.isGround)
+        {
+            player.SetVelocity(0,0);    
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.GetComponent<Enemy>() != null)
+                {
+                    Enemy enemy = collider.GetComponent<Enemy>();
+                    enemy.airlock = true;
+                    //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
+
+                }
+            }
+        }*/
 
         stateDur -= Time.deltaTime;
 
@@ -91,18 +111,9 @@ public class P_AttackState : PlayerState
 
         player.isBusy = true;
 
-        rb.gravityScale = 0;
+        //rb.gravityScale = 0;
 
-        if (!player.isGround)
-        {
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.GetComponent<Enemy>() != null)
-                {
-                    collider.GetComponent<Enemy>().SetVelocity(0, 0);
-                    collider.GetComponent<Enemy>().rb.gravityScale = 0;
-                }
-            }
-        }
     }
+
+  
 }

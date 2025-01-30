@@ -48,7 +48,7 @@ public class P_JumpState : PlayerState
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && player.caneWpn)
         {
-            stateMachine.Changestate(player.attack);
+            stateMachine.Changestate(player.aerialAttack);
         }
 
     }

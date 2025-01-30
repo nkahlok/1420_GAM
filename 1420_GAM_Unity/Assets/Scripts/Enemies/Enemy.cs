@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    #region[Enemy States]
     public EnemyStateMachine enemyStateMachine { get; private set; }
 
     private EnemyState enemyState;
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour
     public EnemyMoveState enemyMoveState { get; private set; }
     public EnemyAggroState enemyAggroState { get; private set;}
     public EnemyAttackState enemyAttackState { get; private set;}
+    public EnemyKnockDownState enemyKnockDownState { get; set; }
+    #endregion
 
     #region[Enemy Stats]
     [Header("Enemy stats")]
@@ -47,6 +50,7 @@ public class Enemy : MonoBehaviour
 
 
     [HideInInspector] public Rigidbody2D rb;
+    public bool airlock;
     protected Player player;
     protected bool isBusy;
    
@@ -60,11 +64,13 @@ public class Enemy : MonoBehaviour
         enemyIdleState = new EnemyIdleState(this, enemyStateMachine, "Idle");
         enemyAggroState = new EnemyAggroState(this, enemyStateMachine, "Move");
         enemyAttackState = new EnemyAttackState(this, enemyStateMachine, "Attack");
+        enemyKnockDownState = new EnemyKnockDownState(this, enemyStateMachine, "Knock");
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        airlock = false;
         enemyStateMachine.Initialize(enemyMoveState);
     
     }
@@ -133,13 +139,13 @@ public class Enemy : MonoBehaviour
             {
                 if (player.transform.position.x < this.transform.position.x)
                 {
-                    Debug.Log("KnockedBack");
+                    //Debug.Log("KnockedBack");
                     SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x, SkillManager.instance.launchSkill.launchVelocity[2].y);
                     StartCoroutine("BusySwitch", 1);
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
-                    Debug.Log("KnockedBack");
+                    //Debug.Log("KnockedBack");
                     SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x * -1, SkillManager.instance.launchSkill.launchVelocity[2].y);
                     StartCoroutine("BusySwitch", 1);
                 }
@@ -167,12 +173,23 @@ public class Enemy : MonoBehaviour
         
     }
 
+    public void AirlockCoroutine()
+    {
+        StartCoroutine("AirlockOff", 0.2f);
+    }
+    IEnumerator AirlockOff(float seconds) 
+    { 
+        yield return new WaitForSeconds(seconds);
+        airlock = false;
+    }
+
     IEnumerator BusySwitch(float seconds)
     {
         isBusy = true; 
         yield return new WaitForSeconds(seconds);
         isBusy = false;
     }
+
 
     private void OnDrawGizmos()
     {
