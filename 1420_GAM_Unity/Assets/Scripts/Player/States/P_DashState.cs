@@ -19,6 +19,7 @@ public class P_DashState : PlayerState
 
     public override void Exit()
     {
+        player.SetVelocity(0, rb.linearVelocityY);
         base.Exit();
     }
 

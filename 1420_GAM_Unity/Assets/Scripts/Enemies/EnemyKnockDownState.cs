@@ -26,7 +26,6 @@ public class EnemyKnockDownState : EnemyState
         if (!enemy.airlock)
         {
 
-            //enemy.SetVelocity(20, 20);
             rb.gravityScale = 3;
 
         }
@@ -36,6 +35,10 @@ public class EnemyKnockDownState : EnemyState
             rb.gravityScale = 0;
         }
 
+        if(!enemy.airlock && enemy.isGround)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+        }
 
     }
 }

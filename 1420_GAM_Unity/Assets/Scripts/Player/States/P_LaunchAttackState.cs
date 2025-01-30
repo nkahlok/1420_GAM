@@ -12,7 +12,7 @@ public class P_LaunchAttackState : PlayerState
     {
         base.Enter();
         player.isBusy = true;
-        comboCounter = 0;
+
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
      

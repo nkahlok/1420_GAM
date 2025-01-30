@@ -18,30 +18,28 @@ public class P_AttackState : PlayerState
         base.Enter();
 
         stateDur = 0.2f;
+
         
-        if(comboCounter > 2 || player.comboCount < 0)
+
+        if (player.comboCounter > 2 || player.comboCount < 0)
         {
-            comboCounter = 0;
+            player.comboCounter = 0;
         }
 
-        //player.SetVelocity(0,0);    
 
-        anim.SetInteger("ComboCounter1", comboCounter);
+        anim.SetInteger("ComboCounter1", player.comboCounter);
         
 
         player.comboCount = player.comboTime;
 
-        
-    
+          
     }
 
     public override void Exit()
     {
         base.Exit();
-        comboCounter++;
-        
-        if(player.isGround)
-            player.isBusy = false;
+
+        //++player.comboCounter;        
 
         //player.GravityCoroutine();
 
@@ -97,7 +95,7 @@ public class P_AttackState : PlayerState
 
         if(player.isGround)
         {
-            player.SetVelocity(player.attackMovement[comboCounter].x * player.facingDir, player.attackMovement[comboCounter].y);
+            player.SetVelocity(player.attackMovement[player.comboCounter].x * player.facingDir, player.attackMovement[player.comboCounter].y);
         }
         else
         {

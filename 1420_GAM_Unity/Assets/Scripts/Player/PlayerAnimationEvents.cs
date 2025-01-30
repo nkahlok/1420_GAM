@@ -16,22 +16,51 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         player.stateMachine.Changestate(player.fall);
         player.anim.SetBool("Throw", false);
-        //Debug.Log("Attack ended");
-        player.isBusy = false;  
+        player.isBusy = false;
+
     }
 
     public void Attack()
     {
+        ComboHardCode();
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
         foreach (Collider2D collider in colliders)
         {
             if(collider.GetComponent<EnemyTypeModifier>() != null)
             {
                 collider.GetComponent<EnemyTypeModifier>().Damage(1);
-                player.comboHitCount = player.comboTime;
-                
+                player.comboHitCount = player.comboTime;               
             }
 
         }        
+    }
+
+    public void KnockBack()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null && player.isGround)
+            {
+                collider.GetComponent<Enemy>().KnockBack("Normal");
+            }
+        }
+    }
+
+    public void ComboHardCode()
+    {
+        if(player.comboCounter == 0)
+        {
+            player.comboCounter = 1;
+        }
+        else if(player.comboCounter == 1)
+        {
+            player.comboCounter = 2;
+        }
+        else if(player.comboCounter == 2)
+        {
+            player.comboCounter = 0;
+        }
     }
 }

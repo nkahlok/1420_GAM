@@ -12,7 +12,7 @@ public class EnemyAttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateDur = 1f;
+        stateDur = 0.5f;
         stateCount = stateDur;
         //Debug.Log("attack executed");
     }

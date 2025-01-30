@@ -8,13 +8,14 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour
 {
     public StateMachine stateMachine { get; private set; }
-    private PlayerState playerState;
+    public PlayerState playerState { get; private set; }
     private IEnumerator defaultGravity;
 
     #region[Player Components]
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Animator anim;
-    public int comboHits = 0;
+    [HideInInspector] public int comboHits = 0;
+    [HideInInspector] public int comboCounter = 0;
     [HideInInspector] public bool manholeAvailable;
     public Text comboUI;
     public Text comboNamesUI;
@@ -55,7 +56,7 @@ public class Player : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public Vector2[] attackMovement;
-
+    
 
     #endregion
 

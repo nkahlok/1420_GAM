@@ -107,6 +107,7 @@ public class Enemy : MonoBehaviour
     public void SetVelocity(float _x, float _y)
     {
         rb.linearVelocity = new Vector2(_x, _y);
+  
         FlipControl(_x);
     }
 
@@ -151,10 +152,25 @@ public class Enemy : MonoBehaviour
                 }
             }
             else if (attackType == "Manhole")
-            {
-               
+            {               
                 SetVelocity(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
                 StartCoroutine("BusySwitch", 1);
+            }
+            else if(attackType == "Normal")
+            {
+                if (player.transform.position.x < this.transform.position.x)
+                {
+                    rb.linearVelocity = new Vector2(0.5f, 5);
+                    //SetVelocity(0.5f, 5);
+                    StartCoroutine("BusySwitch", 0.5);
+                }
+                else if (player.transform.position.x > this.transform.position.x)
+                {
+                    rb.linearVelocity = new Vector2(0.5f * -1, 5);
+                    //SetVelocity(0.5f * -1, 5);
+                    StartCoroutine("BusySwitch", 0.5);
+                }
+               
             }
             /*else if (player.transform.position.x < this.transform.position.x)
             {
@@ -175,7 +191,7 @@ public class Enemy : MonoBehaviour
 
     public void AirlockCoroutine()
     {
-        StartCoroutine("AirlockOff", 0.2f);
+        StartCoroutine("AirlockOff", 0.1f);
     }
     IEnumerator AirlockOff(float seconds) 
     { 
