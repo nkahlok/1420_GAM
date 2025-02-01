@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyAggroState : EnemyState
@@ -25,12 +26,15 @@ public class EnemyAggroState : EnemyState
 
         if(enemy.isCat)
             CatUpdate();
+        else if(enemy.isRat)
+            RatUpdate();
 
 
     }
 
     protected void CatUpdate()
     {
+        //move direction changes based on where the player is, moving them left and right
         if (player.transform.position.x > enemy.transform.position.x)
         {
             moveDir = 1;
@@ -87,6 +91,39 @@ public class EnemyAggroState : EnemyState
             enemy.SetVelocity(0, rb.linearVelocity.y);
         }
 
+    }
+
+    protected void RatUpdate()
+    {
+        if (player.transform.position.x > enemy.transform.position.x)
+        {
+            moveDir = 1;
+        }
+        else if (player.transform.position.x < enemy.transform.position.x)
+        {
+            moveDir = -1;
+        }
+
+        if (player.transform.position.y > enemy.transform.position.y && enemy.isPlayerAbove)
+        {
+            moveDir = 0;
+        }
+
+        if ((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1) || (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
+        {
+            enemy.Flip();
+        }     
+
+        if (enemy.isPlayer.distance <= enemy.playerAttackDistance && enemy.isPlayer)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAttackState);
+        }
+
+
+        if (!enemy.isPlayer)
+        {
+            enemyStateMachine.Changestate(enemy.enemyMoveState);
+        }
     }
 
 }

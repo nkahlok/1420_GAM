@@ -46,12 +46,29 @@ public class EnemyMoveState : EnemyState
 
         //Debug.Log("Am moving");
 
-        if(enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance*2)
-        {
-            enemyStateMachine.Changestate(enemy.enemyAggroState);
-        }
+        if (enemy.isCat)
+            CatUpdate();
+        else if (enemy.isRat)
+            RatUpdate();
 
 
     
     }
+
+    public void CatUpdate()
+    {
+        if (enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance * 2)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+        }
+    }
+
+    public void RatUpdate() 
+    { 
+        if(enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < 1)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+        }
+    }
+
 }

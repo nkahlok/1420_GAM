@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public EnemyAggroState enemyAggroState { get; private set;}
     public EnemyAttackState enemyAttackState { get; private set;}
     public EnemyKnockDownState enemyKnockDownState { get; set; }
+    public RatEnemyReloadState ratEnemyReloadState { get; set; }    
     #endregion
 
     #region[Enemy type]
@@ -54,6 +55,15 @@ public class Enemy : MonoBehaviour
     public float playerAttackDistance;
     public float playerAboveDistance;
 
+    [Space]
+
+    #region[Bullets]
+    [Header("Bullets")]
+    public float bulletSpeed;
+    public GameObject bulletPrefab;
+    public Transform bulletSpawner;
+    #endregion
+
     [HideInInspector] public RaycastHit2D isWall;
     [HideInInspector] public RaycastHit2D isGround;
     [HideInInspector] public RaycastHit2D isPlayer;
@@ -62,27 +72,28 @@ public class Enemy : MonoBehaviour
 
 
     [HideInInspector] public Rigidbody2D rb;
-    protected Player player;
+    [HideInInspector] public Player player;
     [HideInInspector] public bool isBusy;
    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
-        player = PlayerManager.instance.player;
+        anim = GetComponentInChildren<Animator>();       
         enemyStateMachine = new EnemyStateMachine();
         enemyMoveState = new EnemyMoveState(this, enemyStateMachine, "Move");
         enemyIdleState = new EnemyIdleState(this, enemyStateMachine, "Idle");
         enemyAggroState = new EnemyAggroState(this, enemyStateMachine, "Aggro");
         enemyAttackState = new EnemyAttackState(this, enemyStateMachine, "Attack");
         enemyKnockDownState = new EnemyKnockDownState(this, enemyStateMachine, "Knocked");
+        ratEnemyReloadState = new RatEnemyReloadState(this, enemyStateMachine, "Reload");
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
+        player = PlayerManager.instance.player;
         enemyStateMachine.Initialize(enemyMoveState);
         knockedDown = false;
         launchDown = false;
@@ -127,6 +138,14 @@ public class Enemy : MonoBehaviour
         rb.linearVelocity = new Vector2(_x, _y);
 
         FlipControl(_x);
+    }
+
+    public void SpawnBullets()
+    {
+        GameObject newBulletPrefab = Instantiate(bulletPrefab, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+
+        newBulletPrefab.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(bulletSpeed * facingDir, 0);
+
     }
 
     public void CollisionChecks()
@@ -197,6 +216,7 @@ public class Enemy : MonoBehaviour
             else if(attackType == "Aerial")
             {
                 rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
+
             }
        
         }
@@ -222,5 +242,5 @@ public class Enemy : MonoBehaviour
        
     }
 
-    
 }
+
