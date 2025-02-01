@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [HideInInspector] public Animator anim;
+    [HideInInspector] public bool wasAttacked;
+    [HideInInspector] public bool knockedDown;
+    [HideInInspector] public bool launchDown;
 
     #region[Enemy States]
     public EnemyStateMachine enemyStateMachine { get; private set; }
@@ -54,7 +57,6 @@ public class Enemy : MonoBehaviour
 
 
     [HideInInspector] public Rigidbody2D rb;
-    public bool airlock;
     protected Player player;
     protected bool isBusy;
    
@@ -75,8 +77,10 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        airlock = false;
+
         enemyStateMachine.Initialize(enemyMoveState);
+        knockedDown = false;
+        launchDown = false;
     
     }
 
@@ -87,6 +91,10 @@ public class Enemy : MonoBehaviour
             return;
         else
             enemyStateMachine.currentState.Update();
+
+    
+        if(knockedDown)//only up launch attacks activate this bool
+            enemyStateMachine.Changestate(enemyKnockDownState);
 
         CollisionChecks();
     }
@@ -112,7 +120,7 @@ public class Enemy : MonoBehaviour
     public void SetVelocity(float _x, float _y)
     {
         rb.linearVelocity = new Vector2(_x, _y);
-  
+
         FlipControl(_x);
     }
 
@@ -133,76 +141,64 @@ public class Enemy : MonoBehaviour
         {
             if(attackType == "Launch Up")
             {
-                SetVelocity(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
-                StartCoroutine("BusySwitch", 1);
+                rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
+                StartCoroutine("BusySwitch", 0);
             }
             else if (attackType == "Launch Down")
             {
-                SetVelocity(SkillManager.instance.launchSkill.launchVelocity[1].x, SkillManager.instance.launchSkill.launchVelocity[1].y * -1);
-                StartCoroutine("BusySwitch", 1);
+                Debug.Log("Down");
+                airborneCount = -1;
+                launchDown = true;
+                //move this velocity code over to knockdown state if using anti gravity
+                rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[1].x, SkillManager.instance.launchSkill.launchVelocity[1].y * -1);
+                StartCoroutine("BusySwitch", 0);
             }
             else if (attackType == "Forward")
             {
                 if (player.transform.position.x < this.transform.position.x)
                 {
                     //Debug.Log("KnockedBack");
-                    SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x, SkillManager.instance.launchSkill.launchVelocity[2].y);
+                    rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[2].x, SkillManager.instance.launchSkill.launchVelocity[2].y);
                     StartCoroutine("BusySwitch", 1);
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
                     //Debug.Log("KnockedBack");
-                    SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x * -1, SkillManager.instance.launchSkill.launchVelocity[2].y);
+                    rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[2].x * -1, SkillManager.instance.launchSkill.launchVelocity[2].y);
                     StartCoroutine("BusySwitch", 1);
                 }
             }
             else if (attackType == "Manhole")
-            {               
-                SetVelocity(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
-                StartCoroutine("BusySwitch", 1);
+            {
+                rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
+                StartCoroutine("BusySwitch", 0.2);
             }
             else if(attackType == "Normal")
             {
                 if (player.transform.position.x < this.transform.position.x)
                 {
-                    rb.linearVelocity = new Vector2(0.5f, 3);
+                    rb.linearVelocity = new Vector2(player.attackMovement[0].x, 3);
                     //SetVelocity(0.5f, 5);
                     StartCoroutine("BusySwitch", 0.5);
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
-                    rb.linearVelocity = new Vector2(0.5f * -1, 3);
+                    rb.linearVelocity = new Vector2(player.attackMovement[0].x * -1, 3);
                     //SetVelocity(0.5f * -1, 5);
                     StartCoroutine("BusySwitch", 0.5);
                 }
                
-            }
-            /*else if (player.transform.position.x < this.transform.position.x)
+            }//this is the aerrial bounce code
+            else if(attackType == "Aerial")
             {
-                Debug.Log("KnockedBack");
-                SetVelocity(knockbackForce.x, knockbackForce.y);
-                StartCoroutine("BusySwitch", 1);
+                rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
             }
-            else if (player.transform.position.x > this.transform.position.x)
-            {
-                Debug.Log("KnockedBack");
-                SetVelocity(knockbackForce.x * -1, knockbackForce.y);
-                StartCoroutine("BusySwitch", 1);
-            }*/
+       
         }
      
         
     }
 
-    public void AirlockCoroutine()
-    {
-        StartCoroutine("AirlockOff", 0.1f);
-    }
-    IEnumerator AirlockOff(float seconds) 
-    { 
-        yield return new WaitForSeconds(seconds);
-        airlock = false;
-    }
 
     IEnumerator BusySwitch(float seconds)
     {

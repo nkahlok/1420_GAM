@@ -11,6 +11,8 @@ public class EnemyMoveState : EnemyState
     public override void Enter()
     {
         base.Enter();
+       
+
     }
 
     public override void Exit()
@@ -22,12 +24,13 @@ public class EnemyMoveState : EnemyState
     {
         base.Update();
 
-        if(wasAttacked)
+        if(enemy.wasAttacked == true)
         {
+
             if((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1)|| (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
             {
                 enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir *-1, rb.linearVelocity.y);
-                wasAttacked = false;
+                enemy.wasAttacked = false;
             }
    
         }
@@ -47,6 +50,8 @@ public class EnemyMoveState : EnemyState
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }
+
+
     
     }
 }

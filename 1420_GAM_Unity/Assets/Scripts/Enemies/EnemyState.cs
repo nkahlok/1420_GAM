@@ -12,7 +12,7 @@ public class EnemyState
     public string animBool;
     public Rigidbody2D rb;
     public Player player;
-    public bool wasAttacked = false;
+
 
     public EnemyState(Enemy _enemy, EnemyStateMachine _enemyStateMachine, string _animBool)
     {
@@ -41,5 +41,6 @@ public class EnemyState
         enemy.aggroCount -= Time.deltaTime;   
         enemy.airborneCount -= Time.deltaTime;  
         anim.SetFloat("xVelocity", rb.linearVelocityX);
+        anim.SetFloat("yVelocity", rb.linearVelocityY);
     }
 }

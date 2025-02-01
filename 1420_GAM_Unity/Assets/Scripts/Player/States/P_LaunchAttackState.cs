@@ -27,10 +27,10 @@ public class P_LaunchAttackState : PlayerState
                 {
                     Enemy enemy = collider.GetComponent<Enemy>();
                     enemy.KnockBack("Launch Up");
-                    enemy.airlock = true;   
-                    enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
                     enemy.airborneCount = enemy.airborneTime;
-                    enemy.AirlockCoroutine();
+                    enemy.knockedDown = true;
+                    //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
+                    //Debug.Log("Knocked dis bitch up");
 
 
                 }
@@ -67,12 +67,13 @@ public class P_LaunchAttackState : PlayerState
     public override void Exit()
     {
         base.Exit();
+        //put this here just incase need to use
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
         foreach(Collider2D collider in colliders)
         {
             if (collider.GetComponent<Enemy>() != null)
             {
-                collider.GetComponent<Enemy>().AirlockCoroutine();
+
             }
         }
     }

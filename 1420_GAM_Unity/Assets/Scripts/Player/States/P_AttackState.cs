@@ -76,21 +76,6 @@ public class P_AttackState : PlayerState
             }
         }
 
-        /*if (!player.isGround)
-        {
-            player.SetVelocity(0,0);    
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.GetComponent<Enemy>() != null)
-                {
-                    Enemy enemy = collider.GetComponent<Enemy>();
-                    enemy.airlock = true;
-                    //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
-
-                }
-            }
-        }*/
-
         stateDur -= Time.deltaTime;
 
         if(player.isGround)

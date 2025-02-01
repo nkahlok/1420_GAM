@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     [Header("Forces")]
     public float moveSpeed;
     public float jumpForce;
+    public float aerialBounceForce;
     public Vector2[] attackMovement;
     
 
@@ -92,6 +93,8 @@ public class Player : MonoBehaviour
     public float comboTime;
     [HideInInspector] public float comboCount;
     [HideInInspector] public float comboHitCount;
+    public float airBorneTime;
+    [HideInInspector] public float airBorneCount;
     #endregion
 
     void Awake()
@@ -134,8 +137,20 @@ public class Player : MonoBehaviour
         CollisionChecks();
         UseSkill();
         WeaponSwap();
-        ComboCounterUI();      
+        ComboCounterUI();     
+        AirBorneNoMovement();
+      
      
+    }
+
+    public void AirBorneNoMovement()
+    {
+        if (airBorneCount > 0)
+        {
+            SetVelocity(0, rb.linearVelocityY);
+        }
+
+        airBorneCount -= Time.deltaTime;
     }
 
     public void CollisionChecks()

@@ -48,6 +48,10 @@ public class EnemyAggroState : EnemyState
             {
                 Debug.Log("I detect wall");
                 enemy.SetVelocity(0,rb.linearVelocityY);
+                if((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1)|| (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
+                {
+                    enemy.Flip();   
+                }
             }
 
             if (enemy.aggroCount < 0)
