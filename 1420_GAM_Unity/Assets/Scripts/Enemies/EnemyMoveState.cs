@@ -22,7 +22,19 @@ public class EnemyMoveState : EnemyState
     {
         base.Update();
 
-        enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
+        if(wasAttacked)
+        {
+            if((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1)|| (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
+            {
+                enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir *-1, rb.linearVelocity.y);
+                wasAttacked = false;
+            }
+   
+        }
+        else
+        {
+            enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
+        }
 
         if(enemy.isWall || !enemy.isGround)
         {
@@ -31,7 +43,7 @@ public class EnemyMoveState : EnemyState
 
         //Debug.Log("Am moving");
 
-        if(enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
+        if(enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance*2)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }

@@ -46,6 +46,7 @@ public class P_AerialAttackState : P_AttackState
             {
                 Enemy enemy = collider.GetComponent<Enemy>();
                 enemy.airlock = true;
+                enemy.airborneCount = enemy.airborneTime;
                 //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
 
             }

@@ -29,7 +29,9 @@ public class P_LaunchAttackState : PlayerState
                     enemy.KnockBack("Launch Up");
                     enemy.airlock = true;   
                     enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
-                   
+                    enemy.airborneCount = enemy.airborneTime;
+                    enemy.AirlockCoroutine();
+
 
                 }
             }

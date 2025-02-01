@@ -44,6 +44,12 @@ public class EnemyAggroState : EnemyState
 
             enemy.aggroCount -= Time.deltaTime;
 
+            if(enemy.isWall)
+            {
+                Debug.Log("I detect wall");
+                enemy.SetVelocity(0,rb.linearVelocityY);
+            }
+
             if (enemy.aggroCount < 0)
             {
                 enemyStateMachine.Changestate(enemy.enemyIdleState);
@@ -56,7 +62,10 @@ public class EnemyAggroState : EnemyState
 
         enemy.attackCount -= Time.deltaTime;
 
-        enemy.SetVelocity(enemy.moveSpeed * 1.5f * moveDir, rb.linearVelocity.y);
+        if (!enemy.isWall)
+        {
+            enemy.SetVelocity(enemy.moveSpeed * 1.5f * moveDir, rb.linearVelocity.y);
+        }
 
         if (enemy.isPlayer.distance <= enemy.playerAttackDistance && enemy.isPlayer && enemy.attackCount < 0)
         {
@@ -66,5 +75,7 @@ public class EnemyAggroState : EnemyState
         {
             enemy.SetVelocity(0, rb.linearVelocity.y);
         }
+
+
     }
 }

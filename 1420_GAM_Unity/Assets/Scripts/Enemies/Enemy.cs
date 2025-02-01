@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [HideInInspector] public Animator anim;
+
     #region[Enemy States]
     public EnemyStateMachine enemyStateMachine { get; private set; }
 
@@ -22,10 +24,12 @@ public class Enemy : MonoBehaviour
     public float facingDir;
     public float aggroDur;
     public float attackCD;
+    public float airborneTime;
     //public Vector2 knockbackForce;
     [HideInInspector] public float idleCount;
     [HideInInspector] public float aggroCount;
     [HideInInspector] public float attackCount;
+    [HideInInspector] public float airborneCount;
     #endregion
 
     #region[Raycasts]
@@ -58,13 +62,14 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
         player = PlayerManager.instance.player;
         enemyStateMachine = new EnemyStateMachine();
         enemyMoveState = new EnemyMoveState(this, enemyStateMachine, "Move");
         enemyIdleState = new EnemyIdleState(this, enemyStateMachine, "Idle");
-        enemyAggroState = new EnemyAggroState(this, enemyStateMachine, "Move");
+        enemyAggroState = new EnemyAggroState(this, enemyStateMachine, "Aggro");
         enemyAttackState = new EnemyAttackState(this, enemyStateMachine, "Attack");
-        enemyKnockDownState = new EnemyKnockDownState(this, enemyStateMachine, "Knock");
+        enemyKnockDownState = new EnemyKnockDownState(this, enemyStateMachine, "Knocked");
     }
 
     // Start is called before the first frame update
@@ -160,13 +165,13 @@ public class Enemy : MonoBehaviour
             {
                 if (player.transform.position.x < this.transform.position.x)
                 {
-                    rb.linearVelocity = new Vector2(0.5f, 5);
+                    rb.linearVelocity = new Vector2(0.5f, 3);
                     //SetVelocity(0.5f, 5);
                     StartCoroutine("BusySwitch", 0.5);
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
-                    rb.linearVelocity = new Vector2(0.5f * -1, 5);
+                    rb.linearVelocity = new Vector2(0.5f * -1, 3);
                     //SetVelocity(0.5f * -1, 5);
                     StartCoroutine("BusySwitch", 0.5);
                 }
