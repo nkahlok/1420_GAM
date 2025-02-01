@@ -30,7 +30,8 @@ public class PlayerAnimationEvents : MonoBehaviour
             if(collider.GetComponent<EnemyTypeModifier>() != null)
             {
                 collider.GetComponent<EnemyTypeModifier>().Damage(1);
-                player.comboHitCount = player.comboTime;               
+                player.comboHitCount = player.comboTime;
+                player.hitEffect.Play();
             }
 
         }        
