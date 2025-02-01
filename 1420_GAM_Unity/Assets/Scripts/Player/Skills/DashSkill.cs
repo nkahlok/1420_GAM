@@ -12,6 +12,7 @@ public class DashSkill : Skill
     public override void CastSkill()
     {
         base.CastSkill();
+
         player.stateMachine.Changestate(player.dash);
     }
 

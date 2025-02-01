@@ -22,7 +22,7 @@ public class Skill : MonoBehaviour
 
     public virtual bool SkillAvailable()
     {
-        if (cooldownTimer < 0)
+        if (cooldownTimer < 0 && !player.isBusy)
         {
             CastSkill();
             cooldownTimer = cooldown;
