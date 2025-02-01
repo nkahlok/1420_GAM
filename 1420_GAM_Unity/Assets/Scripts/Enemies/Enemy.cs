@@ -20,6 +20,11 @@ public class Enemy : MonoBehaviour
     public EnemyKnockDownState enemyKnockDownState { get; set; }
     #endregion
 
+    #region[Enemy type]
+    public bool isCat;
+    public bool isRat;
+    #endregion
+
     #region[Enemy Stats]
     [Header("Enemy stats")]
     public float moveSpeed;
@@ -58,7 +63,7 @@ public class Enemy : MonoBehaviour
 
     [HideInInspector] public Rigidbody2D rb;
     protected Player player;
-    protected bool isBusy;
+    [HideInInspector] public bool isBusy;
    
 
     private void Awake()

@@ -26,6 +26,7 @@ public class P_LaunchAttackState : PlayerState
                 if (collider.GetComponent<Enemy>() != null)
                 {
                     Enemy enemy = collider.GetComponent<Enemy>();
+                    enemy.isBusy = false;
                     enemy.KnockBack("Launch Up");
                     enemy.airborneCount = enemy.airborneTime;
                     enemy.knockedDown = true;

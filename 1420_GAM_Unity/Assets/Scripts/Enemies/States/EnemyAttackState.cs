@@ -28,10 +28,10 @@ public class EnemyAttackState : EnemyState
     {
         base.Update();
         stateCount -= Time.deltaTime;
-        if(stateCount < 0 )
+        /*if(stateCount < 0 )
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
-        }
+        }*/
 
         enemy.SetVelocity(0, rb.linearVelocity.y);
     }

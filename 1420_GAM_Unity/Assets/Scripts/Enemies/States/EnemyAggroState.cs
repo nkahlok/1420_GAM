@@ -23,34 +23,41 @@ public class EnemyAggroState : EnemyState
     {
         base.Update();
 
-       
-        if(player.transform.position.x > enemy.transform.position.x)
+        if(enemy.isCat)
+            CatUpdate();
+
+
+    }
+
+    protected void CatUpdate()
+    {
+        if (player.transform.position.x > enemy.transform.position.x)
         {
             moveDir = 1;
         }
-        else if(player.transform.position.x < enemy.transform.position.x)
+        else if (player.transform.position.x < enemy.transform.position.x)
         {
             moveDir = -1;
         }
 
-        if(player.transform.position.y > enemy.transform.position.y && enemy.isPlayerAbove)
+        if (player.transform.position.y > enemy.transform.position.y && enemy.isPlayerAbove)
         {
             moveDir = 0;
         }
 
-        if(!enemy.isPlayer) 
+        if (!enemy.isPlayer)
         {
             //Debug.Log("I do not detect anyone");
 
             enemy.aggroCount -= Time.deltaTime;
 
-            if(enemy.isWall)
+            if (enemy.isWall)
             {
                 Debug.Log("I detect wall");
-                enemy.SetVelocity(0,rb.linearVelocityY);
-                if((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1)|| (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
+                enemy.SetVelocity(0, rb.linearVelocityY);
+                if ((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1) || (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
                 {
-                    enemy.Flip();   
+                    enemy.Flip();
                 }
             }
 
@@ -80,6 +87,6 @@ public class EnemyAggroState : EnemyState
             enemy.SetVelocity(0, rb.linearVelocity.y);
         }
 
-
     }
+
 }
