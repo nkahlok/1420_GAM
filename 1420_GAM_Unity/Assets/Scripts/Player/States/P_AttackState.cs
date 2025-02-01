@@ -31,7 +31,6 @@ public class P_AttackState : PlayerState
         
 
         player.comboCount = player.comboTime;
-
           
     }
 
