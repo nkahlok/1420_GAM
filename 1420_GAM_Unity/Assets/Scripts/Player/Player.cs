@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     public GameObject manholeEquipped;
     public ParticleSystem jumpFeathers;
     public ParticleSystem hitEffect;
+    public ParticleSystem dustEffect;
     #endregion
 
     [Space]
