@@ -50,7 +50,7 @@ public class P_GroundedState : PlayerState
            // Debug.Log("jumped");
         }
 
-        if (rb.linearVelocity.y < 0)
+        if (rb.linearVelocity.y < 0 && !player.isGround)
         {
             stateMachine.Changestate(player.fall);  
         }
