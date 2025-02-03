@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3289678419441393289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109783867016553737}
+  - component: {fileID: 397224623455934815}
+  - component: {fileID: 8901730977778363452}
+  - component: {fileID: 3189425016150229521}
+  - component: {fileID: 6066607707874331943}
+  m_Layer: 0
+  m_Name: SkillManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109783867016553737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289678419441393289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6834159, y: -1.1437573, z: 0.023653768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &397224623455934815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289678419441393289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6ea18b8dcee4a4b924f4cad40f9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manholeSkill: {fileID: 0}
+  dashSkill: {fileID: 0}
+  launchSkill: {fileID: 0}
+--- !u!114 &8901730977778363452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289678419441393289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ef095328b613840a36391531bca9ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  player: {fileID: 0}
+  prefab: {fileID: 6953259422134094000, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+  newPrefab: {fileID: 0}
+  manHoleDur: 15
+  manHoleCount: 0
+  manholeSpeed: 2
+  knockBackForce: {x: 5, y: 5}
+  maxBounces: 5
+--- !u!114 &3189425016150229521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289678419441393289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8ecdc89a5779e48b71981c083de3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 2
+  player: {fileID: 0}
+  DashDur: 0.2
+  dashSpeed: 15
+  DashDurCount: 0
+--- !u!114 &6066607707874331943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289678419441393289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fbd494adafbd54895275f79bfb24a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  player: {fileID: 0}
+  launchVelocity:
+  - {x: 0, y: 15}
+  - {x: 0, y: 40}
+  - {x: 8, y: 0}
+  launchUp: 0
+  launchDown: 0
