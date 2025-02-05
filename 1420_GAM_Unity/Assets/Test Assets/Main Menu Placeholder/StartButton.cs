@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
@@ -19,6 +21,9 @@ public class StartButton : MonoBehaviour
         anim.Play("IStart");
         Debug.Log("I am not being hovered over");
     }
+    private void OnMouseDown()
+    {
+        SceneManager.LoadScene(sceneName: "Level 2");
+    }
 
-    
 }

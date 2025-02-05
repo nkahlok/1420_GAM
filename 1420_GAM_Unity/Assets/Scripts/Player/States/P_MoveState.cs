@@ -11,7 +11,6 @@ public class P_MoveState : P_GroundedState
     public override void Enter()
     {
         base.Enter();
-        player.dustEffect.Play();
     }
 
     public override void Exit()
@@ -23,7 +22,7 @@ public class P_MoveState : P_GroundedState
     public override void Update()
     {
         base.Update();
-
+        player.dustEffect.Play();
         player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
 
         if (rb.linearVelocity.y < 0)

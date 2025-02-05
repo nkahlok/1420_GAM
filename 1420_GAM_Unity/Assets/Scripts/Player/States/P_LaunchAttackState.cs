@@ -30,6 +30,7 @@ public class P_LaunchAttackState : PlayerState
                     enemy.KnockBack("Launch Up");
                     enemy.airborneCount = enemy.airborneTime;
                     enemy.knockedDown = true;
+                    anim.SetBool("LaunchUp", true);
                     //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
                     //Debug.Log("Knocked dis bitch up");
 
@@ -68,6 +69,9 @@ public class P_LaunchAttackState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
+        anim.SetBool("LaunchUp", false);
+
         //put this here just incase need to use
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
         foreach(Collider2D collider in colliders)
