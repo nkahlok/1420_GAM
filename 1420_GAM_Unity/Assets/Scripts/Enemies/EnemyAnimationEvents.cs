@@ -11,10 +11,18 @@ public class EnemyAnimationEvents : MonoBehaviour
         enemy = GetComponentInParent<Enemy>();
     }
 
+    private void Attack()
+    {
+
+    }
+
     private void EndAttack()
     {
         enemy.enemyStateMachine.Changestate(enemy.enemyAggroState);
     }
 
+    private void CounterWindowOn() => enemy.CounterWindowOn();
+
+    private void CounterWindowOff() => enemy.CounterWindowOff();
 
 }

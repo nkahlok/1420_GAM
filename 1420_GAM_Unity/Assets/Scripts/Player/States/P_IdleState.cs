@@ -11,6 +11,7 @@ public class P_IdleState : P_GroundedState
     public override void Enter()
     {
         base.Enter();
+        
     }
 
     public override void Exit()

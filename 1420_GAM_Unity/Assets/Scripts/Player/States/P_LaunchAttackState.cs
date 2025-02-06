@@ -20,7 +20,7 @@ public class P_LaunchAttackState : PlayerState
         if (SkillManager.instance.launchSkill.launchUp == true)
         {
             player.SetVelocity(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
-
+            anim.SetBool("LaunchUp", true);
             foreach (Collider2D collider in colliders)
             {
                 if (collider.GetComponent<Enemy>() != null)
@@ -29,8 +29,7 @@ public class P_LaunchAttackState : PlayerState
                     enemy.isBusy = false;
                     enemy.KnockBack("Launch Up");
                     enemy.airborneCount = enemy.airborneTime;
-                    enemy.knockedDown = true;
-                    anim.SetBool("LaunchUp", true);
+                    enemy.knockedDown = true;                   
                     //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
                     //Debug.Log("Knocked dis bitch up");
 
@@ -59,7 +58,17 @@ public class P_LaunchAttackState : PlayerState
             {
                 if (collider.GetComponent<Enemy>() != null)
                 {
-                    collider.GetComponent<Enemy>().KnockBack("Forward");
+                    Enemy enemy = collider.GetComponent<Enemy>();
+                    if(enemy.canBeCountered)
+                    {
+                        enemy.KnockBack("Countered");
+                        enemy.canBeCountered = false;
+                        return;
+                    }
+                    else
+                    {
+                        enemy.KnockBack("Forward");
+                    }
                 }
             }
         }

@@ -81,6 +81,10 @@ public class EnemyAggroState : EnemyState
         {
             enemy.SetVelocity(enemy.moveSpeed * 1.5f * moveDir, rb.linearVelocity.y);
         }
+        if (!enemy.isGround)
+        {
+            enemyStateMachine.Changestate(enemy.enemyIdleState);
+        }
 
         if (enemy.isPlayer.distance <= enemy.playerAttackDistance && enemy.isPlayer && enemy.attackCount < 0)
         {

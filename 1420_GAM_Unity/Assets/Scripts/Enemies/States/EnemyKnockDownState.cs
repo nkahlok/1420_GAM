@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyKnockDownState : EnemyState
 {
     private float stateDur;
-
+    private float stayKnockedDown;
 
     public EnemyKnockDownState(Enemy _enemy, EnemyStateMachine _enemyStateMachine, string _animBool) : base(_enemy, _enemyStateMachine, _animBool)
     {
@@ -14,7 +14,11 @@ public class EnemyKnockDownState : EnemyState
         base.Enter();
         Debug.Log("knocked up");
         stateDur = enemy.airborneTime - 0.1f;
+        stayKnockedDown = enemy.airborneTime * 2;
         enemy.knockedDown = false;
+
+        if(enemy.countered)
+            rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * enemy.facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
         
     }
 
@@ -24,7 +28,8 @@ public class EnemyKnockDownState : EnemyState
         Debug.Log("out");
         enemy.wasAttacked = true;     
         enemy.launchDown = false;   
-        rb.gravityScale = 3;
+        enemy.countered = false;
+        //rb.gravityScale = 3;
 
     }
 
@@ -55,7 +60,12 @@ public class EnemyKnockDownState : EnemyState
             }
         }*/
 
-        if(enemy.isGround && stateDur < 0)
+        if (enemy.countered && enemy.isGround)
+        {
+            stayKnockedDown -= Time.deltaTime;
+        }
+
+        if(enemy.isGround && stateDur < 0 && !enemy.countered || stayKnockedDown < 0)
         {
 
             enemy.enemyStateMachine.Changestate(enemy.enemyMoveState); 

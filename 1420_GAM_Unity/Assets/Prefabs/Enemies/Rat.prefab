@@ -368,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 1783374901920292646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.046, y: -1.14, z: 0}
+  m_LocalPosition: {x: 0.56, y: -1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -490,7 +490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2398054369358401820}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.01, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -520,6 +520,8 @@ MonoBehaviour:
   wasAttacked: 0
   knockedDown: 0
   launchDown: 0
+  canBeCountered: 0
+  countered: 0
   isCat: 0
   isRat: 1
   moveSpeed: 3

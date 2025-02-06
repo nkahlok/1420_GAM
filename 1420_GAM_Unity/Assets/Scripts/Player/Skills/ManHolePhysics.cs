@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -51,10 +52,12 @@ public class ManHolePhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // rb.linearVelocity = new Vector2(skill1.manholeSpeed * player.manHoleAim.xThrow, skill1.manholeSpeed * player.manHoleAim.yThrow);
+        // rb.linearVelocity = new Vector2(skill1.manholeSpeed * player.manHoleAim.xThrow, skill1.manholeSpeed * player.manHoleAim.yThrow);
 
         //if(skill1.manHoleCount < 0)
         //{
+
+        StartCoroutine("SetTrue", skill1.manHoleDur - 0.1f);
 
         Destroy(gameObject, skill1.manHoleDur);
 
@@ -68,6 +71,12 @@ public class ManHolePhysics : MonoBehaviour
 
         //skill1.manHoleCount -= Time.deltaTime;  
 
+    }
+
+    IEnumerator SetTrue(float second)
+    {
+        yield return new WaitForSeconds(second);
+        player.manholeAvailable = true;
     }
 
     public void Bounce()

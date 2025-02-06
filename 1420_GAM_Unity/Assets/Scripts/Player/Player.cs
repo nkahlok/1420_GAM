@@ -19,16 +19,18 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool manholeAvailable;
     public Text comboUI;
     public Text comboNamesUI;
-    public int facingDir = 1;
-    public bool isBusy;
-    public bool caneWpn;
-    public bool doubleJumpEnabled;
-    public GameObject caneEquipped;
-    public GameObject manholeEquipped;
+    [HideInInspector] public int facingDir = 1;
+    [HideInInspector] public bool isBusy;
+    [HideInInspector] public bool caneWpn;
+    [HideInInspector] public bool doubleJumpEnabled;
+
+    [Space]
+    [Header("VFX")]
     public ParticleSystem jumpFeathers;
     public ParticleSystem hitEffect;
     public ParticleSystem dustEffect;
     #endregion
+
 
     [Space]
     public string[] comboNames;
@@ -37,6 +39,8 @@ public class Player : MonoBehaviour
     #region [Graphics]
     [Header("Graphics")]
     public GameObject manholeIndicator;
+    public GameObject caneEquipped;
+    public GameObject manholeEquipped;
     #endregion
 
     #region[States]
@@ -126,9 +130,8 @@ public class Player : MonoBehaviour
         manholeAvailable = true;
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
- 
-       
-        
+        //dustEffect.SetActive(false);
+
     }
 
     
@@ -140,6 +143,11 @@ public class Player : MonoBehaviour
         WeaponSwap();
         ComboCounterUI();     
         AirBorneNoMovement();
+
+       
+      
+         
+     
       
      
     }

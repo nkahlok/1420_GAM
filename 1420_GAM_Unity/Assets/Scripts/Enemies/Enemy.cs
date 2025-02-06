@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool wasAttacked;
     [HideInInspector] public bool knockedDown;
     [HideInInspector] public bool launchDown;
+    [HideInInspector] public bool canBeCountered;
+    [HideInInspector] public bool countered;
 
     #region[Enemy States]
     public EnemyStateMachine enemyStateMachine { get; private set; }
@@ -97,6 +99,8 @@ public class Enemy : MonoBehaviour
         enemyStateMachine.Initialize(enemyMoveState);
         knockedDown = false;
         launchDown = false;
+        canBeCountered = false;
+        countered = false;  
     
     }
 
@@ -192,6 +196,15 @@ public class Enemy : MonoBehaviour
                     StartCoroutine("BusySwitch", 1);
                 }
             }
+            else if (attackType == "Countered")
+            {
+                Debug.Log("Countered");
+                //velocity code moved to knock down state
+                //rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
+                countered = true;
+                knockedDown = true;
+                StartCoroutine("BusySwitch", 0);
+            }
             else if (attackType == "Manhole")
             {
                 rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
@@ -223,7 +236,14 @@ public class Enemy : MonoBehaviour
      
         
     }
-
+    public void CounterWindowOn()
+    {
+        canBeCountered = true;
+    }
+    public void CounterWindowOff()
+    {
+        canBeCountered = false;
+    }
 
     IEnumerator BusySwitch(float seconds)
     {

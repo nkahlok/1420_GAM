@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class P_GroundedState : PlayerState
 {
+    protected bool moving;
     public P_GroundedState(Player _player, StateMachine _stateMachine, string _animBool) : base(_player, _stateMachine, _animBool)
     {
     }
@@ -18,16 +19,18 @@ public class P_GroundedState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
     }
 
     public override void Update()
     {
         base.Update();
 
+        
 
-
-        if (xInput != 0 && !player.isBusy)
+        if (xInput != 0 && !player.isBusy && !moving)
         {
+            
             stateMachine.Changestate(player.move);
             //Debug.Log(xInput);
         }
