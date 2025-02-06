@@ -10,12 +10,14 @@ public class RatEnemyReloadState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateDur = 2f;
+        stateDur = enemy.reloadTime;
+        enemy.aggroImg.SetActive(true);
     }
 
     public override void Exit()
     {
         base.Exit();
+        enemy.aggroImg.SetActive(false);
     }
 
     public override void Update()

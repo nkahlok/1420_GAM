@@ -1,3 +1,4 @@
+//using System.Drawing;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -12,25 +13,55 @@ public class TrainExtScript : MonoBehaviour
         tilemap = GetComponent<Tilemap>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Color color = tilemap.color;
-            color.a = 0;
-            Debug.Log("collided");
+            if(PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
+            {
+                return;
+            }
+            else
+            {
+                tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0f);  
+            }
+    
         }
-        //if there's a gameobject with the tag "Player" then the train exterior's alpha value goes to 0
+
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Color color = tilemap.color;
-            color.a = 255;
-            Debug.Log("not collided");
+            if (PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
+            {
+                return;
+            }
+            else
+            {
+
+                tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0f);
+            }
+
         }
-        //opposite happens when player exits
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
+            {
+                return;
+            }
+            else
+            {
+                tilemap.color = tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 1f);
+            }
+
+        }
+
     }
 }

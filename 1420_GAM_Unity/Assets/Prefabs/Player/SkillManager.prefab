@@ -86,7 +86,7 @@ MonoBehaviour:
   cooldown: 2
   player: {fileID: 0}
   DashDur: 0.2
-  dashSpeed: 15
+  dashSpeed: 30
   DashDurCount: 0
 --- !u!114 &6066607707874331943
 MonoBehaviour:
@@ -106,5 +106,6 @@ MonoBehaviour:
   - {x: 0, y: 15}
   - {x: 0, y: 40}
   - {x: 8, y: 0}
+  - {x: 10, y: 10}
   launchUp: 0
   launchDown: 0

@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateDur = 3f;
+        stateDur = enemy.firingDur;
         bulletIntervals = -1;
 
         //Debug.Log("attack executed");

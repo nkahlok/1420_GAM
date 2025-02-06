@@ -13,11 +13,13 @@ public class EnemyAggroState : EnemyState
     {
         base.Enter();
         enemy.aggroCount = enemy.aggroDur;
+        enemy.aggroImg.SetActive(true);
     }
 
     public override void Exit()
     {
         base.Exit();
+        enemy.aggroImg.SetActive(false);
     }
 
     public override void Update()

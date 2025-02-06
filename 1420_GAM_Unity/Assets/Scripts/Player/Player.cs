@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
         manholeAvailable = true;
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
-        //dustEffect.SetActive(false);
+
 
     }
 

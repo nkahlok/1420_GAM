@@ -61,6 +61,13 @@ public class P_LaunchAttackState : PlayerState
                     Enemy enemy = collider.GetComponent<Enemy>();
                     if(enemy.canBeCountered)
                     {
+                        if (collider.GetComponent<EnemyTypeModifier>() != null)
+                        {
+                            collider.GetComponent<EnemyTypeModifier>().Damage(1);
+                            player.comboHitCount = player.comboTime;
+                            player.hitEffect.Play();
+                        }
+
                         enemy.KnockBack("Countered");
                         enemy.canBeCountered = false;
                         return;

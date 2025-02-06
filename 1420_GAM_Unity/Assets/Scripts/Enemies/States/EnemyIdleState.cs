@@ -38,7 +38,7 @@ public class EnemyIdleState : EnemyState
 
     public void CatUpdate()
     {
-        if (enemy.isPlayer && enemy.isGround|| Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance * 2 && enemy.isGround)
+        if (enemy.isPlayer && enemy.isGround|| Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance * 4 && enemy.isGround)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }
@@ -47,7 +47,7 @@ public class EnemyIdleState : EnemyState
 
     public void RatUpdate()
     {
-        if (enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < 1)
+        if (enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < 4)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }

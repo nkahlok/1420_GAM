@@ -22,7 +22,7 @@ public class P_FallState : PlayerState
     {
         base.Update();
 
-        if (player.isGround && rb.linearVelocity.y == 0)
+        if (player.isGround)
         {
             stateMachine.Changestate(player.idle);
         }

@@ -56,22 +56,33 @@ public class Enemy : MonoBehaviour
     public float playerAggroDistance;
     public float playerAttackDistance;
     public float playerAboveDistance;
-
-    [Space]
-
-    #region[Bullets]
-    [Header("Bullets")]
-    public float bulletSpeed;
-    public GameObject bulletPrefab;
-    public Transform bulletSpawner;
-    #endregion
-
     [HideInInspector] public RaycastHit2D isWall;
     [HideInInspector] public RaycastHit2D isGround;
     [HideInInspector] public RaycastHit2D isPlayer;
     [HideInInspector] public RaycastHit2D isPlayerAbove;
     #endregion
 
+    [Space]
+    #region[Graphics & VFX]
+    [Header("Graphics")]
+    public GameObject aggroImg;
+    public GameObject counterWindowImg;
+    #endregion
+
+
+    #region Rat
+    [Header("Rat specific")]
+    [Space]
+    [Header("Rat stats")]
+    public float firingDur;
+    public float reloadTime;
+    #region[Bullets]
+    [Header("Bullets")]
+    public float bulletSpeed;
+    public GameObject bulletPrefab;
+    public Transform bulletSpawner;
+    #endregion
+    #endregion
 
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Player player;
@@ -100,7 +111,9 @@ public class Enemy : MonoBehaviour
         knockedDown = false;
         launchDown = false;
         canBeCountered = false;
-        countered = false;  
+        countered = false;
+        aggroImg.SetActive(false); 
+        counterWindowImg.SetActive(false);  
     
     }
 
@@ -216,13 +229,13 @@ public class Enemy : MonoBehaviour
                 {
                     rb.linearVelocity = new Vector2(player.attackMovement[0].x, 3);
                     //SetVelocity(0.5f, 5);
-                    StartCoroutine("BusySwitch", 0.5);
+                    StartCoroutine("BusySwitch", 0.2);
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
                     rb.linearVelocity = new Vector2(player.attackMovement[0].x * -1, 3);
                     //SetVelocity(0.5f * -1, 5);
-                    StartCoroutine("BusySwitch", 0.5);
+                    StartCoroutine("BusySwitch", 0.2);
                 }
                
             }//this is the aerrial bounce code
@@ -239,10 +252,12 @@ public class Enemy : MonoBehaviour
     public void CounterWindowOn()
     {
         canBeCountered = true;
+        counterWindowImg.SetActive(true);
     }
     public void CounterWindowOff()
     {
         canBeCountered = false;
+        counterWindowImg.SetActive(false);
     }
 
     IEnumerator BusySwitch(float seconds)

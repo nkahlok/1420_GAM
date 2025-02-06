@@ -11055,6 +11055,10 @@ MonoBehaviour:
   playerAggroDistance: 13.55
   playerAttackDistance: 13.55
   playerAboveDistance: 5.41
+  aggroImg: {fileID: 0}
+  counterWindowImg: {fileID: 0}
+  firingDur: 0
+  reloadTime: 0
   bulletSpeed: 15
   bulletPrefab: {fileID: 1006088605159862120, guid: b151d93d9ed259d4fb0622eca73ed4d9, type: 3}
   bulletSpawner: {fileID: 5254817928763542786}
@@ -11379,10 +11383,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4794121605515537864, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Name
-      value: Combo Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 92.58
@@ -12149,29 +12149,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3189425016150229521, guid: 46f3115b2c0d8804987440ff22ce8065, type: 3}
-      propertyPath: DashDur
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3189425016150229521, guid: 46f3115b2c0d8804987440ff22ce8065, type: 3}
-      propertyPath: dashSpeed
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 3289678419441393289, guid: 46f3115b2c0d8804987440ff22ce8065, type: 3}
       propertyPath: m_Name
       value: SkillManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066607707874331943, guid: 46f3115b2c0d8804987440ff22ce8065, type: 3}
-      propertyPath: launchVelocity.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066607707874331943, guid: 46f3115b2c0d8804987440ff22ce8065, type: 3}
-      propertyPath: launchVelocity.Array.data[3].x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066607707874331943, guid: 46f3115b2c0d8804987440ff22ce8065, type: 3}
-      propertyPath: launchVelocity.Array.data[3].y
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12508,6 +12488,10 @@ MonoBehaviour:
   playerAggroDistance: 13.55
   playerAttackDistance: 0.8
   playerAboveDistance: 5.41
+  aggroImg: {fileID: 0}
+  counterWindowImg: {fileID: 0}
+  firingDur: 0
+  reloadTime: 0
   bulletSpeed: 0
   bulletPrefab: {fileID: 0}
   bulletSpawner: {fileID: 0}

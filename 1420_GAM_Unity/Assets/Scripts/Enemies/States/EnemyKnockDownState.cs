@@ -16,6 +16,7 @@ public class EnemyKnockDownState : EnemyState
         stateDur = enemy.airborneTime - 0.1f;
         stayKnockedDown = enemy.airborneTime * 2;
         enemy.knockedDown = false;
+        enemy.counterWindowImg.SetActive(false);
 
         if(enemy.countered)
             rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * enemy.facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
@@ -60,7 +61,7 @@ public class EnemyKnockDownState : EnemyState
             }
         }*/
 
-        if (enemy.countered && enemy.isGround)
+        if (enemy.countered && enemy.isGround || rb.linearVelocityY == 0)
         {
             stayKnockedDown -= Time.deltaTime;
         }
