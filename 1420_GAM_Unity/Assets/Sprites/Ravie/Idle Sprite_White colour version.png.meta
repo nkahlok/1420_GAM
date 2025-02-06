@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Idle Sprite_White colour version_0: -6275060526966947170
+      Idle Sprite_White colour version_1: 69931877754165918
+      Idle Sprite_White colour version_2: -4159298612312479370
+      Idle Sprite_White colour version_3: -3780201702127608858
+      Idle Sprite_White colour version_4: -796715462878342470
+      Idle Sprite_White colour version_5: 61481918020692883
+      Idle Sprite_White colour version_6: -4755187806884598971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
