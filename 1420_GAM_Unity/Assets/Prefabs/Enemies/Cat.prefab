@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37288db0f67f07949bf4b4bc733fe390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rankModifier: 5
+  rankModifier: 4
   rankName: {fileID: 1349833166190512603}
 --- !u!1 &3807374398224282644
 GameObject:

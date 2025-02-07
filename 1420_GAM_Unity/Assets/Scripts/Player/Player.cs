@@ -30,11 +30,14 @@ public class Player : MonoBehaviour
     public ParticleSystem jumpFeathers;
     public ParticleSystem hitEffect;
     public ParticleSystem dustEffect;
+    public ParticleSystem dashEffect;
     #endregion
 
 
     [Space]
+    [Header("Combo Names & Counter")]
     public string[] comboNames;
+    public int[] comboNum;
 
     [Space]
     #region [Graphics]
@@ -149,11 +152,6 @@ public class Player : MonoBehaviour
         ComboCounterUI();     
         AirBorneNoMovement();
 
-       
-      
-         
-     
-      
      
     }
 
@@ -242,19 +240,19 @@ public class Player : MonoBehaviour
 
         switch (comboHits) 
         {
-            case int x when x>= 8 && x<12:
+            case int x when x>= comboNum[0] && x< comboNum[1]:
                 comboNamesUI.gameObject.SetActive(true);
                 comboNamesUI.text = comboNames[0];
                 break;
-            case int x when x >= 12 && x < 16:
+            case int x when x >= comboNum[1] && x < comboNum[2]:
                 comboNamesUI.gameObject.SetActive(true);
                 comboNamesUI.text = comboNames[1];
                 break;
-            case int x when x >= 16 && x < 20:
+            case int x when x >= comboNum[2] && x < comboNum[3]:
                 comboNamesUI.gameObject.SetActive(true);
                 comboNamesUI.text = comboNames[2];
                 break;
-            case >=20:
+            case int x when x >= comboNum[3]:
                 comboNamesUI.gameObject.SetActive(true);
                 comboNamesUI.text = comboNames[3];
                 break;

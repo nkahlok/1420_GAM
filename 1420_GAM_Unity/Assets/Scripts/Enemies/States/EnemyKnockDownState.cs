@@ -14,7 +14,7 @@ public class EnemyKnockDownState : EnemyState
         base.Enter();
         Debug.Log("knocked up");
         stateDur = enemy.airborneTime - 0.1f;
-        stayKnockedDown = enemy.airborneTime * 2;
+        stayKnockedDown = enemy.airborneTime/2;
         enemy.knockedDown = false;
         enemy.counterWindowImg.SetActive(false);
 

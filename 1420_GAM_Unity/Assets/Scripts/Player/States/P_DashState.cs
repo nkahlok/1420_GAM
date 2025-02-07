@@ -14,6 +14,7 @@ public class P_DashState : PlayerState
     {
         skill2 = SkillManager.instance.dashSkill;
         skill2.DashDurCount = skill2.DashDur;
+        player.dashEffect.Play();
         base.Enter();
     }
 
@@ -26,6 +27,8 @@ public class P_DashState : PlayerState
     public override void Update()
     {
         base.Update();
+
+        
 
         player.SetVelocity(player.facingDir * skill2.dashSpeed, 0);
 
