@@ -10,6 +10,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         player = PlayerManager.instance.player;
         skill1 = SkillManager.instance.manholeSkill;
+        
     }
 
     public void EndAttack()
@@ -32,10 +33,51 @@ public class PlayerAnimationEvents : MonoBehaviour
                 collider.GetComponent<EnemyTypeModifier>().Damage(1);
                 player.comboHitCount = player.comboTime;
                 player.hitEffect.Play();
+                player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
             }
 
         }        
     }
+
+    public void NormalHitStop()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null) 
+            {
+                Enemy enemy = collider.GetComponent<Enemy>();
+                enemy.HitStop(player.normalHitStop);
+            }
+        }
+    }
+
+    public void KnockUpHitStop()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null)
+            {
+                Enemy enemy = collider.GetComponent<Enemy>();
+                enemy.HitStop(player.knockUpHitStop);
+            }
+        }
+    }
+
+    public void ForwardHitStop()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Enemy>() != null)
+            {
+                Enemy enemy = collider.GetComponent<Enemy>();
+                enemy.HitStop(player.forwardHitStop);
+            }
+        }
+    }
+
 
     public void KnockBack()
     {
@@ -45,6 +87,7 @@ public class PlayerAnimationEvents : MonoBehaviour
             if (collider.GetComponent<Enemy>() != null && player.isGround)
             {
                 collider.GetComponent<Enemy>().KnockBack("Normal");
+
             }
         }
     }

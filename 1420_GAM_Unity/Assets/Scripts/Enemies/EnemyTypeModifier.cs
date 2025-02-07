@@ -8,6 +8,8 @@ public class EnemyTypeModifier : MonoBehaviour
 
     [Range(1,5)]public int rankModifier;
     private int hits;
+    private SpriteRenderer spriteRenderer;
+    private Color color;
     public Text rankName;
     /*public GameObject D;
     public GameObject C;
@@ -17,6 +19,9 @@ public class EnemyTypeModifier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        color = spriteRenderer.color;
+
         Player player = PlayerManager.instance.player;
         
         switch (rankModifier)
@@ -69,7 +74,17 @@ public class EnemyTypeModifier : MonoBehaviour
 
     public void Damage(int hitsMultiplier)
     {
+        Debug.Log("Damaged");
         PlayerManager.instance.player.comboHits++;
         hits = hits - hitsMultiplier;
+        StartCoroutine("SpriteHit", 0.2f);
     }
+
+    IEnumerator SpriteHit(float seconds)
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(seconds);
+        spriteRenderer.color = color;
+    }
+
 }

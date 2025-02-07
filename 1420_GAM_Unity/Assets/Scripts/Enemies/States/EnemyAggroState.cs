@@ -126,9 +126,14 @@ public class EnemyAggroState : EnemyState
         }
 
 
-        if (!enemy.isPlayer)
+        if (!enemy.isPlayer && !enemy.isPlayerAbove)
         {
             enemyStateMachine.Changestate(enemy.enemyMoveState);
+        }
+
+        if (!enemy.isGround)
+        {
+            enemyStateMachine.Changestate(enemy.enemyIdleState);
         }
     }
 

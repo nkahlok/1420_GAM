@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool manholeAvailable;
     public Text comboUI;
     public Text comboNamesUI;
+    public GameObject mainCam;
     [HideInInspector] public int facingDir = 1;
     [HideInInspector] public bool isBusy;
     [HideInInspector] public bool caneWpn;
@@ -63,7 +64,11 @@ public class Player : MonoBehaviour
     public float jumpForce;
     public float aerialBounceForce;
     public Vector2[] attackMovement;
-    
+    public float normalHitStop;
+    public float knockUpHitStop;
+    public float forwardHitStop;
+    public float counterHitStop;
+
 
     #endregion
 
@@ -264,7 +269,7 @@ public class Player : MonoBehaviour
         else 
             comboUI.gameObject.SetActive(true);
 
-        comboUI.text = $"Combo {comboHits / 2}";
+        comboUI.text = $"Combo {comboHits}";
 
         comboHitCount -= Time.deltaTime;
     }

@@ -47,7 +47,7 @@ public class EnemyIdleState : EnemyState
 
     public void RatUpdate()
     {
-        if (enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < 4)
+        if (enemy.isPlayer && enemy.isGround || Vector2.Distance(player.transform.position, enemy.transform.position) < 2 && enemy.isGround)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }

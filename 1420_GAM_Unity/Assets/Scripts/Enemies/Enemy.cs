@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool launchDown;
     [HideInInspector] public bool canBeCountered;
     [HideInInspector] public bool countered;
+    private bool waitingForHitStop;
 
     #region[Enemy States]
     public EnemyStateMachine enemyStateMachine { get; private set; }
@@ -112,6 +113,7 @@ public class Enemy : MonoBehaviour
         launchDown = false;
         canBeCountered = false;
         countered = false;
+        waitingForHitStop = false;
         aggroImg.SetActive(false); 
         counterWindowImg.SetActive(false);  
     
@@ -184,6 +186,7 @@ public class Enemy : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
                 StartCoroutine("BusySwitch", 0);
+                //HitStop(player.knockUpHitStop);
             }
             else if (attackType == "Launch Down")
             {
@@ -201,12 +204,15 @@ public class Enemy : MonoBehaviour
                     //Debug.Log("KnockedBack");
                     rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[2].x, SkillManager.instance.launchSkill.launchVelocity[2].y);
                     StartCoroutine("BusySwitch", 1);
+                    //HitStop(player.forwardHitStop);
+
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
                     //Debug.Log("KnockedBack");
                     rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[2].x * -1, SkillManager.instance.launchSkill.launchVelocity[2].y);
                     StartCoroutine("BusySwitch", 1);
+                    //HitStop(player.forwardHitStop);
                 }
             }
             else if (attackType == "Countered")
@@ -217,38 +223,65 @@ public class Enemy : MonoBehaviour
                 countered = true;
                 knockedDown = true;
                 StartCoroutine("BusySwitch", 0);
-            }
-            else if (attackType == "Manhole")
-            {
-                rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
-                StartCoroutine("BusySwitch", 0.2);
-            }
+                player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
+                HitStop(player.counterHitStop);
+
+            }          
             else if(attackType == "Normal")
             {
                 if (player.transform.position.x < this.transform.position.x)
                 {
                     rb.linearVelocity = new Vector2(player.attackMovement[0].x, 3);
                     //SetVelocity(0.5f, 5);
+                    //HitStop(player.normalHitStop);
                     StartCoroutine("BusySwitch", 0.2);
                 }
                 else if (player.transform.position.x > this.transform.position.x)
                 {
                     rb.linearVelocity = new Vector2(player.attackMovement[0].x * -1, 3);
                     //SetVelocity(0.5f * -1, 5);
+                    //HitStop(player.normalHitStop);
                     StartCoroutine("BusySwitch", 0.2);
+
                 }
-               
+
             }//this is the aerrial bounce code
             else if(attackType == "Aerial")
             {
                 rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
-
             }
-       
+            else if (attackType == "Manhole")
+            {
+                rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
+                StartCoroutine("BusySwitch", 0.2);
+            }
+
         }
      
         
     }
+
+    public void HitStop(float duration)
+    {
+        if(waitingForHitStop) 
+            return;
+
+        Time.timeScale = 0.0f;
+        StartCoroutine(HitStopCorountine(duration));
+    }
+
+    IEnumerator HitStopCorountine(float seconds)
+    {
+        if (!waitingForHitStop)
+        {
+            waitingForHitStop = true;
+            yield return new WaitForSecondsRealtime(seconds);
+            Time.timeScale = 1f;
+            waitingForHitStop = false;
+        }
+    
+    }
+
     public void CounterWindowOn()
     {
         canBeCountered = true;

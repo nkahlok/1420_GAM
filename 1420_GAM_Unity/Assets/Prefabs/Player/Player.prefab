@@ -747,6 +747,7 @@ MonoBehaviour:
   manholeAvailable: 0
   comboUI: {fileID: 2134945300906071289}
   comboNamesUI: {fileID: 1285286835175377002}
+  mainCam: {fileID: 0}
   facingDir: 1
   isBusy: 0
   caneWpn: 0
@@ -764,11 +765,15 @@ MonoBehaviour:
   manholeEquipped: {fileID: 4436985141279143235}
   moveSpeed: 7
   jumpForce: 12
-  aerialBounceForce: 1
+  aerialBounceForce: 1.5
   attackMovement:
   - {x: 0.7, y: 0}
   - {x: 0.7, y: 0}
   - {x: 0.7, y: 0}
+  normalHitStop: 0.1
+  knockUpHitStop: 0.2
+  forwardHitStop: 0.1
+  counterHitStop: 0.2
   ground:
     serializedVersion: 2
     m_Bits: 8
