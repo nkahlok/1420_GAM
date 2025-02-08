@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
+
     public StateMachine stateMachine { get; private set; }
     public PlayerState playerState { get; private set; }
     private IEnumerator defaultGravity;
@@ -16,14 +17,20 @@ public class Player : MonoBehaviour
     [HideInInspector] public Animator anim;
     [HideInInspector] public int comboHits = 0;
     [HideInInspector] public int comboCounter = 0;
-    [HideInInspector] public bool manholeAvailable;
-    public Text comboUI;
-    public Text comboNamesUI;
-    public GameObject mainCam;
+    [HideInInspector] public bool manholeAvailable;   
     [HideInInspector] public int facingDir = 1;
     [HideInInspector] public bool isBusy;
     [HideInInspector] public bool caneWpn;
     [HideInInspector] public bool doubleJumpEnabled;
+    [HideInInspector] public bool isShield;
+    [HideInInspector] public bool cannotBeKnocked;
+    private bool waitingForHitStop;
+    private SpriteRenderer sprite;
+    private Color color;
+
+    public Text comboUI;
+    public Text comboNamesUI;
+    public GameObject mainCam;
 
     [Space]
     [Header("VFX")]
@@ -57,6 +64,7 @@ public class Player : MonoBehaviour
     public P_ManHoleAimingState manHoleAim {  get; private set; }
     public P_LaunchAttackState launchAttack { get; private set; }   
     public P_AerialAttackState aerialAttack { get; private set; }
+    public P_ShieldingState shielding { get; private set; }
 
     #endregion
 
@@ -112,6 +120,7 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+
         stateMachine = new StateMachine();
         idle = new P_IdleState(this, stateMachine, "Idle");
         move = new P_MoveState(this, stateMachine, "Move");
@@ -122,9 +131,11 @@ public class Player : MonoBehaviour
         aerialAttack = new P_AerialAttackState(this, stateMachine, "Attack");
         manHoleAim = new P_ManHoleAimingState(this, stateMachine, "Aiming");
         launchAttack = new P_LaunchAttackState(this, stateMachine, "Launch");
+        shielding = new P_ShieldingState(this, stateMachine, "Shield");
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         defaultGravity = DefaultGravity(0.2f);
 
     }
@@ -132,7 +143,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-     
+        color = sprite.color;
         stateMachine.Initialize(idle);
         caneWpn = true;
         manholeAvailable = true;
@@ -155,6 +166,42 @@ public class Player : MonoBehaviour
      
     }
 
+    public void Damage()
+    {
+        StartCoroutine("SpriteHit", 0.2f);
+        HitStop(normalHitStop);
+        mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake2");
+
+    }
+
+    public void HitStop(float duration)
+    {
+        if (waitingForHitStop)
+            return;
+
+        Time.timeScale = 0.0f;
+        StartCoroutine(HitStopCorountine(duration));
+    }
+
+    IEnumerator HitStopCorountine(float seconds)
+    {
+        if (!waitingForHitStop)
+        {
+            waitingForHitStop = true;
+            yield return new WaitForSecondsRealtime(seconds);
+            Time.timeScale = 1f;
+            waitingForHitStop = false;
+        }
+
+    }
+
+    IEnumerator SpriteHit(float seconds)
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(seconds);
+        sprite.color = color;
+    }
+
     public void AirBorneNoMovement()
     {
         if (airBorneCount > 0)
@@ -175,6 +222,23 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(_xVelo, _yVelo);
         FlipControl(_xVelo);
+    }
+
+    public void KnockBack(float _x, float _y)
+    {
+        if (cannotBeKnocked)
+            return;
+
+        Debug.Log("Knocked");
+        rb.linearVelocity = new Vector2(_x * facingDir * -1, _y);
+        StartCoroutine("CannotBeKnockedCoroutine", 0.3f);
+    }
+
+    IEnumerator CannotBeKnockedCoroutine(float seconds)
+    {
+        cannotBeKnocked = true;
+        yield return new WaitForSeconds(seconds);
+        cannotBeKnocked = false;
     }
 
     public void FlipControl(float _x)
@@ -291,18 +355,12 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
-        {
-            //gameObject.transform.SetParent(collision.gameObject.transform);
-        }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<ManHolePhysics>() != null)
-        {
-            //gameObject.transform.SetParent(null);
-        }
+
     }
 
     private void OnDrawGizmos()

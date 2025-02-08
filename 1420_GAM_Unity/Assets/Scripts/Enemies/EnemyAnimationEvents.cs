@@ -13,7 +13,19 @@ public class EnemyAnimationEvents : MonoBehaviour
 
     private void Attack()
     {
-
+        player.Damage();
+        if(this.gameObject.transform.position.x > player.transform.position.x && player.facingDir == -1)
+        {
+            player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+        }
+        else if (this.gameObject.transform.position.x < player.transform.position.x && player.facingDir == 1)
+        {
+            player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+        }
+        else
+        {
+            player.KnockBack(enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+        }
     }
 
     private void EndAttack()

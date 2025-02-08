@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f6bee00182b61c6488b6e4dc88ad385b
+guid: d751cfa8f721dea4f9c932139d47552e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6088024569445824998
-    second: Air_Ship_1_0
+      213: -1928198312689296960
+    second: Shielding_0
+  - first:
+      213: 6338802433965906778
+    second: Shielding_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,10 +75,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Air_Ship_1_0
+      name: Shielding_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 64
-        width: 384
-        height: 382
+        x: 64
+        y: 94
+        width: 32
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a16c45ae8edf28ba0800000000000000
-      internalID: -6088024569445824998
+      spriteID: 0c995a3c9d9ad35e0800000000000000
+      internalID: -1928198312689296960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shielding_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 58
+        width: 133
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b5be1ba33f7f750800000000000000
+      internalID: 6338802433965906778
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Air_Ship_1_0: -6088024569445824998
+      Shielding_0: -1928198312689296960
+      Shielding_1: 6338802433965906778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

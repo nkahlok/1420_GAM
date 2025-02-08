@@ -32,9 +32,11 @@ public class P_MoveState : P_GroundedState
 
         Debug.Log("Im moving");
 
-        
 
-        player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
+        if (player.cannotBeKnocked)
+            player.rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocity.y);
+        else
+            player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
 
         if (rb.linearVelocity.y < 0)
         {

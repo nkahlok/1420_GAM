@@ -63,6 +63,10 @@ public class P_GroundedState : PlayerState
             stateMachine.Changestate(player.attack);
         }
 
+        if (!player.caneWpn && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            stateMachine.Changestate(player.shielding);
+        }
 
   
      

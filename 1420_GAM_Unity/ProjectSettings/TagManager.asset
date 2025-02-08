@@ -9,6 +9,7 @@ TagManager:
   - FlapObstacle
   - AudioManager
   - ManHole
+  - Bullet
   layers:
   - Default
   - TransparentFX

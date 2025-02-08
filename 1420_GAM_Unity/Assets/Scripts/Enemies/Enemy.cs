@@ -70,6 +70,10 @@ public class Enemy : MonoBehaviour
     public GameObject counterWindowImg;
     #endregion
 
+    [Header("Cat specific")]
+    [Space]
+    [Header("Cat stats")]
+    public Vector2 normalAttackKnockBack;
 
     #region Rat
     [Header("Rat specific")]

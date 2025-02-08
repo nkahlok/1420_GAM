@@ -12,6 +12,7 @@ public class P_IdleState : P_GroundedState
     {
         base.Enter();
         
+
     }
 
     public override void Exit()
@@ -22,7 +23,11 @@ public class P_IdleState : P_GroundedState
     public override void Update()
     {
         base.Update();
-        player.SetVelocity(0, rb.linearVelocity.y);
-     
+
+        if(player.cannotBeKnocked)
+            player.rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocity.y);
+        else
+            player.SetVelocity(0, rb.linearVelocity.y);
+
     }
 }

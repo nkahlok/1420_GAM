@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Air_Ship_2_Blurred_0: -7903846793250014189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

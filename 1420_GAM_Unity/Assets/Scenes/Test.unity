@@ -3054,6 +3054,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 2690973137974688169, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207866079529116979, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207866079529116979, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
+      propertyPath: normalAttackKnockBack.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207866079529116979, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
+      propertyPath: normalAttackKnockBack.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6554412526708470699, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.04
@@ -7438,6 +7454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rat
       objectReference: {fileID: 0}
+    - target: {fileID: 2398054369358401820, guid: 598a70cf5a9a1c04380c7d9b001fee16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7409917015422925383, guid: 598a70cf5a9a1c04380c7d9b001fee16, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.29
@@ -10710,6 +10730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 3034425093459181623, guid: 025fe1bc848d52648a2d6500f0cfea2e, type: 3}
+      propertyPath: yOffset
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3716933842971963320, guid: 025fe1bc848d52648a2d6500f0cfea2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11103,6 +11127,7 @@ MonoBehaviour:
   playerAboveDistance: 5.41
   aggroImg: {fileID: 0}
   counterWindowImg: {fileID: 0}
+  normalAttackKnockBack: {x: 0, y: 0}
   firingDur: 0
   reloadTime: 0
   bulletSpeed: 15
@@ -11429,13 +11454,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4716453856194917909, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716453856194917909, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716453856194917909, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 87.58
+      value: 76.4
       objectReference: {fileID: 0}
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: 7.84
       objectReference: {fileID: 0}
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11477,6 +11514,14 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 146092485}
+    - target: {fileID: 7111812626490515750, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: normalHitStop
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443333137562124473, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12492,6 +12537,7 @@ MonoBehaviour:
   playerAboveDistance: 5.41
   aggroImg: {fileID: 0}
   counterWindowImg: {fileID: 0}
+  normalAttackKnockBack: {x: 0, y: 0}
   firingDur: 0
   reloadTime: 0
   bulletSpeed: 0

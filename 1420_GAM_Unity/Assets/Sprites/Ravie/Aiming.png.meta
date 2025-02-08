@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f6bee00182b61c6488b6e4dc88ad385b
+guid: 90df5a55491dc7e4c90462ef97c486fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6088024569445824998
-    second: Air_Ship_1_0
+      213: 6733444028530690107
+    second: Aiming_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Air_Ship_1_0
+      name: Aiming_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 64
-        width: 384
-        height: 382
+        x: 62
+        y: 57
+        width: 133
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a16c45ae8edf28ba0800000000000000
-      internalID: -6088024569445824998
+      spriteID: b380c8b2baff17d50800000000000000
+      internalID: 6733444028530690107
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Air_Ship_1_0: -6088024569445824998
+      Aiming_0: 6733444028530690107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
