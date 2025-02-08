@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     public ParticleSystem hitEffect;
     public ParticleSystem dustEffect;
     public ParticleSystem dashEffect;
+    public ParticleSystem slashEffect;
     #endregion
 
 

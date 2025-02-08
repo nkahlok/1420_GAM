@@ -19,7 +19,7 @@ public class P_AttackState : PlayerState
 
         stateDur = 0.2f;
 
-        
+        //player.slashEffect.Play();
 
         if (player.comboCounter > 2 || player.comboCount < 0)
         {

@@ -556,6 +556,7 @@ MonoBehaviour:
   playerAboveDistance: 5.41
   aggroImg: {fileID: 4146724151562305676}
   counterWindowImg: {fileID: 9131702220972726643}
+  normalAttackKnockBack: {x: 0, y: 0}
   firingDur: 5
   reloadTime: 3
   bulletSpeed: 15
