@@ -3,25 +3,24 @@ using UnityEngine;
 
 public class BG_RepeatSelf : MonoBehaviour
 {
-    private float startingPos; //starting position of sprites
-    private float lengthOfSprite;    //length of sprites
-    public PlayerCam MainCamera;   //reference of the camera
+    Vector3 startingPos; //starting position of sprites
+    Vector3 lengthOfSprite;    //length of sprites
     void Start()
     {
         //Getting the starting X position of sprite
-        startingPos = transform.position.x;
+        startingPos = transform.position;
         //length of sprites
-        lengthOfSprite = GetComponent<SpriteRenderer>().bounds.size.x;
+        lengthOfSprite = GetComponent<SpriteRenderer>().bounds.size;
     }
 
     void Update()
     {
         float movementX = transform.position.x;
-        if (movementX > startingPos + lengthOfSprite)
+        if (movementX > startingPos.x + lengthOfSprite.x)
         {
-            startingPos += lengthOfSprite;
+            transform.position += lengthOfSprite;
         }
-        else if (movementX < startingPos - lengthOfSprite)
+        else if (movementX < startingPos.x - lengthOfSprite.x)
         {
             startingPos -= lengthOfSprite;
 
