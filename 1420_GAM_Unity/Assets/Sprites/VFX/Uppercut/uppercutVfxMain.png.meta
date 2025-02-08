@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 61bcf6c61e859c341a659720398d74e3
+guid: 55e3045af80dedd4e860483a8f7f5dbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7101102987982789819
-    second: Cloud_2_Back_0
-  - first:
-      213: -3281381161912716829
-    second: Cloud_2_Back_1
+      213: 689243655269168585
+    second: uppercutVfxMain_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,7 +54,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 1
+  alphaUsage: 2
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cloud_2_Back_0
+      name: uppercutVfxMain_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 275
-        width: 51
-        height: 29
+        x: 0
+        y: 0
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbcdd285b8f2c8260800000000000000
-      internalID: 7101102987982789819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cloud_2_Back_1
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 136
-        width: 631
-        height: 253
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e1b88ff7313672d0800000000000000
-      internalID: -3281381161912716829
+      spriteID: 9c5b204e37fa09900800000000000000
+      internalID: 689243655269168585
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cloud_2_Back_0: 7101102987982789819
-      Cloud_2_Back_1: -3281381161912716829
+      uppercutVfxMain_0: 689243655269168585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
