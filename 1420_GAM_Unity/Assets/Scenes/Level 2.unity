@@ -38316,6 +38316,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 990105644}
     - target: {fileID: 7111812626490515750, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 1061439855}
+    - target: {fileID: 7111812626490515750, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: dustEffect
       value: 
       objectReference: {fileID: 276601641}
