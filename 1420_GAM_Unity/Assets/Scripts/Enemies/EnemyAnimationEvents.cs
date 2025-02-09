@@ -13,18 +13,28 @@ public class EnemyAnimationEvents : MonoBehaviour
 
     private void Attack()
     {
-        player.Damage();
-        if(this.gameObject.transform.position.x > player.transform.position.x && player.facingDir == -1)
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(enemy.meleeAttackChecker.position, enemy.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
         {
-            player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
-        }
-        else if (this.gameObject.transform.position.x < player.transform.position.x && player.facingDir == 1)
-        {
-            player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
-        }
-        else
-        {
-            player.KnockBack(enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+            if (collider.GetComponent<Player>() != null)
+            {
+                player.Damage();
+                if (this.gameObject.transform.position.x > player.transform.position.x && player.facingDir == -1)
+                {
+                    player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+                }
+                else if (this.gameObject.transform.position.x < player.transform.position.x && player.facingDir == 1)
+                {
+                    player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+                }
+                else
+                {
+                    player.KnockBack(enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);
+                }
+
+            }
+
         }
     }
 

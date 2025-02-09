@@ -49,14 +49,19 @@ public class Enemy : MonoBehaviour
     public Transform wallChecker;
     public LayerMask wallLayer;
     public float wallCheckDistance;
+    [Space]
     public Transform groundChecker;
     public LayerMask groundLayer;
     public float groundCheckDistance;
+    [Space]
     public Transform playerChecker;
     public LayerMask playerLayer;
     public float playerAggroDistance;
     public float playerAttackDistance;
     public float playerAboveDistance;
+    [Space]
+    public Transform meleeAttackChecker;
+    public float meleeAttackRange;
     [HideInInspector] public RaycastHit2D isWall;
     [HideInInspector] public RaycastHit2D isGround;
     [HideInInspector] public RaycastHit2D isPlayer;
@@ -311,7 +316,7 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawLine(new Vector2(groundChecker.position.x, groundChecker.position.y), new Vector2(groundChecker.position.x, groundChecker.position.y - groundCheckDistance));
         Gizmos.DrawLine(new Vector2(playerChecker.position.x, playerChecker.position.y), new Vector2(playerChecker.position.x + playerAggroDistance * facingDir, playerChecker.position.y));
         Gizmos.DrawLine(new Vector2(playerChecker.position.x, playerChecker.position.y), new Vector2(playerChecker.position.x, playerChecker.position.y + playerAboveDistance));
-       
+        Gizmos.DrawWireSphere(new Vector2(meleeAttackChecker.position.x, meleeAttackChecker.position.y), meleeAttackRange);
     }
 
 }
