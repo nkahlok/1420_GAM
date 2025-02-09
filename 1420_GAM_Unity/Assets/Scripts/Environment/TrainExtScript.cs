@@ -17,14 +17,14 @@ public class TrainExtScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if(PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
+            /*if(PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
             {
                 return;
             }
             else
-            {
+            {*/
+            //}
                 tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0f);  
-            }
     
         }
 
@@ -34,16 +34,16 @@ public class TrainExtScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
+            /*if (PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
             {
                 return;
             }
             else
-            {
+            {*/
+
+            //}
 
                 tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0f);
-            }
-
         }
 
     }
@@ -52,15 +52,15 @@ public class TrainExtScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
+            /*if (PlayerManager.instance.player.transform.position.y > this.gameObject.transform.position.y)
             {
                 return;
             }
             else
-            {
-                tilemap.color = tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 1f);
-            }
+            {*/
+           // }
 
+                tilemap.color = tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 1f);
         }
 
     }
