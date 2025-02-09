@@ -1308,6 +1308,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &171739315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6953259422134094000, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_Name
+      value: ManHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8148198
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.518875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777657994778506869, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
 --- !u!1 &186317922
 GameObject:
   m_ObjectHideFlags: 0
@@ -9469,7 +9526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a04803dc1d3b341a33314d1548601d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfParallax: 0.8
+  parallaxAmtX: 0
   MainCamera: {fileID: 0}
 --- !u!1 &1761691753
 GameObject:
@@ -9686,7 +9743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a04803dc1d3b341a33314d1548601d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfParallax: 0.5
+  parallaxAmtX: 0
   MainCamera: {fileID: 0}
 --- !u!1 &1822437816
 GameObject:
@@ -9867,7 +9924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a04803dc1d3b341a33314d1548601d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfParallax: 1
+  parallaxAmtX: 0
   MainCamera: {fileID: 0}
 --- !u!1001 &1837722066
 PrefabInstance:
@@ -11757,6 +11814,8 @@ MonoBehaviour:
   playerAggroDistance: 13.55
   playerAttackDistance: 13.55
   playerAboveDistance: 5.41
+  meleeAttackChecker: {fileID: 0}
+  meleeAttackRange: 0
   aggroImg: {fileID: 0}
   counterWindowImg: {fileID: 0}
   normalAttackKnockBack: {x: 0, y: 0}
@@ -13143,6 +13202,8 @@ MonoBehaviour:
   playerAggroDistance: 13.55
   playerAttackDistance: 0.8
   playerAboveDistance: 5.41
+  meleeAttackChecker: {fileID: 0}
+  meleeAttackRange: 0
   aggroImg: {fileID: 0}
   counterWindowImg: {fileID: 0}
   normalAttackKnockBack: {x: 0, y: 0}
@@ -13323,3 +13384,4 @@ SceneRoots:
   - {fileID: 516864216}
   - {fileID: 1045475}
   - {fileID: 674982233}
+  - {fileID: 171739315}

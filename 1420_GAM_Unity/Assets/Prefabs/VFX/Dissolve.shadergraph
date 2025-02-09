@@ -489,7 +489,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "2f77bb1a42b940cdaaabb3a5fa98a39b",
     "m_Id": 0,
-    "m_DisplayName": "Dissolve",
+    "m_DisplayName": "DissolveAmt",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1490,9 +1490,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1365.0001220703125,
-            "y": 201.00001525878907,
-            "width": 119.0,
+            "x": -1434.9998779296875,
+            "y": 258.9999694824219,
+            "width": 139.9998779296875,
             "height": 34.0
         }
     },
@@ -1712,10 +1712,10 @@
     "m_Guid": {
         "m_GuidSerialized": "c7d74031-3863-4eaa-b91f-c586b7aa4744"
     },
-    "m_Name": "Dissolve",
+    "m_Name": "DissolveAmt",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Dissolve",
-    "m_DefaultReferenceName": "_Dissolve",
+    "m_RefNameGeneratedByDisplayName": "DissolveAmt",
+    "m_DefaultReferenceName": "_DissolveAmt",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
