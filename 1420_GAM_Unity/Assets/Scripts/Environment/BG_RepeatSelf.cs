@@ -8,17 +8,17 @@ public class BG_RepeatSelf : MonoBehaviour
     void Start()
     {
         //Getting the starting X position of sprite
-        startingPos = transform.position;
+        startingPos = this.gameObject.transform.position;
         //length of sprites
-        lengthOfSprite = GetComponent<SpriteRenderer>().bounds.size;
+        lengthOfSprite = GetComponentInChildren<SpriteRenderer>().bounds.size;
     }
 
     void Update()
     {
-        float movementX = transform.position.x;
+        float movementX = this.gameObject.transform.position.x;
         if (movementX > startingPos.x + lengthOfSprite.x)
         {
-            transform.position += lengthOfSprite;
+            this.gameObject.transform.position += lengthOfSprite;
         }
         else if (movementX < startingPos.x - lengthOfSprite.x)
         {
