@@ -1,4 +1,4 @@
-using UnityEditor.SearchService;
+//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,7 +23,7 @@ public class StartButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SceneManager.LoadScene(sceneName: "Level 2");
+        SceneManager.LoadScene(sceneName: "Alpha");
     }
 
 }

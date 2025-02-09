@@ -7,6 +7,10 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
+    //for alpha use onli
+    [HideInInspector] public bool timeStopOnce;
+    public GameObject counterAttackTutCanvas;
+    //ends here
 
     public StateMachine stateMachine { get; private set; }
     public PlayerState playerState { get; private set; }
@@ -150,6 +154,7 @@ public class Player : MonoBehaviour
         manholeAvailable = true;
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
+        counterAttackTutCanvas.SetActive(false);
 
 
     }
@@ -164,6 +169,12 @@ public class Player : MonoBehaviour
         ComboCounterUI();     
         AirBorneNoMovement();
 
+        //code onli for alpha
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            Time.timeScale = 1f;
+            counterAttackTutCanvas.SetActive(false);
+        }
      
     }
 

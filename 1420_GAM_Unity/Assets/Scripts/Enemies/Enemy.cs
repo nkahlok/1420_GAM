@@ -115,7 +115,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
         player = PlayerManager.instance.player;
         enemyStateMachine.Initialize(enemyMoveState);
         knockedDown = false;
@@ -181,7 +181,9 @@ public class Enemy : MonoBehaviour
         isWall = Physics2D.Raycast(wallChecker.position, Vector2.right*facingDir, wallCheckDistance, wallLayer);
         isGround = Physics2D.Raycast(groundChecker.position, Vector2.down, groundCheckDistance, groundLayer);
         isPlayer = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance, playerLayer);
-        isPlayerAbove = Physics2D.Raycast(playerChecker.position, Vector2.up, playerAboveDistance, playerLayer);    
+        isPlayerAbove = Physics2D.Raycast(playerChecker.position, Vector2.up, playerAboveDistance, playerLayer);  
+        
+   
     }
     public void KnockBack(string attackType)
     {
@@ -295,6 +297,14 @@ public class Enemy : MonoBehaviour
     {
         canBeCountered = true;
         counterWindowImg.SetActive(true);
+
+        if (!player.timeStopOnce)
+        {
+            Time.timeScale = 0f;
+            player.counterAttackTutCanvas.SetActive(true);
+        }
+
+        player.timeStopOnce = true;
     }
     public void CounterWindowOff()
     {
