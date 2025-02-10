@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f2dbb238df6fe47af7e7234b8cd358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 10
+  movSpeed: 6
 --- !u!61 &44479302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17187,7 +17187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f2dbb238df6fe47af7e7234b8cd358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 20
+  movSpeed: 13
 --- !u!61 &535374106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39846,7 +39846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f2dbb238df6fe47af7e7234b8cd358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 13
+  movSpeed: 8
 --- !u!61 &1481460282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41666,7 +41666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f2dbb238df6fe47af7e7234b8cd358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 17
+  movSpeed: 10
 --- !u!61 &2086154276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48716,7 +48716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f2dbb238df6fe47af7e7234b8cd358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 8
+  movSpeed: 4
 --- !u!4 &1778297692179468587
 Transform:
   m_ObjectHideFlags: 0
@@ -49069,7 +49069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f2dbb238df6fe47af7e7234b8cd358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movSpeed: 6
+  movSpeed: 2
 --- !u!212 &3709412336433824677
 SpriteRenderer:
   m_ObjectHideFlags: 0
