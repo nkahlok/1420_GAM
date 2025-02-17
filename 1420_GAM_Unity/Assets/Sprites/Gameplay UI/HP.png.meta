@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b2b9b4c6e18a6044ea53a5230c9ead3b
+guid: abfdd3db51780dd45aa48bda292d186a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7814584210313634848
-    second: Paper_3_With_Words_0
+      213: -902086654454736923
+    second: HP_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paper_3_With_Words_0
+      name: HP_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 161
-        width: 482
-        height: 761
+        x: 0
+        y: 0
+        width: 1174
+        height: 862
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 024ee139feaf27c60800000000000000
-      internalID: 7814584210313634848
+      spriteID: 5e7da9c97f42b73f0800000000000000
+      internalID: -902086654454736923
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Paper_3_With_Words_0: 7814584210313634848
+      HP_0: -902086654454736923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
