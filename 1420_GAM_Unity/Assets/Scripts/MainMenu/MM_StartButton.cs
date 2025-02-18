@@ -1,10 +1,8 @@
-//using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class MM_StartButton : MonoBehaviour
 {
-    //deprecated, use MM_StartButton script
     public Animator anim;
     public BoxCollider box;
     private void Start()
@@ -14,17 +12,16 @@ public class StartButton : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        anim.Play("HStart");
+        anim.Play("MM_HStartButton");
         Debug.Log("I am being hovered over");
     }
     private void OnMouseExit()
     {
-        anim.Play("IStart");
+        anim.Play("MM_IStartButton");
         Debug.Log("I am not being hovered over");
     }
     private void OnMouseDown()
     {
         SceneManager.LoadScene(sceneName: "Alpha");
     }
-
 }
