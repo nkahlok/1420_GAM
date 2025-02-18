@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 691517916}
   - component: {fileID: 691517917}
   - component: {fileID: 691517918}
+  - component: {fileID: 691517919}
   m_Layer: 0
   m_Name: Options_button_0
   m_TagString: Untagged
@@ -1043,6 +1044,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.429999, y: 1.1, z: 0.2}
   m_Center: {x: -0.0000010728836, y: 0.00000023841858, z: 0}
+--- !u!95 &691517919
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691517915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3775e41fa3a8794d93ffe607d4f6b69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &698016607
 GameObject:
   m_ObjectHideFlags: 0
