@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 8562923692314260799
     second: Spikes_2
+  - first:
+      213: -4810244237682102619
+    second: Spikes_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,10 +112,10 @@ TextureImporter:
       name: Spikes_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 22
-        width: 31
-        height: 105
+        x: 0
+        y: 3
+        width: 17
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +134,10 @@ TextureImporter:
       name: Spikes_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 22
-        width: 31
-        height: 105
+        x: 15
+        y: 3
+        width: 17
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +156,10 @@ TextureImporter:
       name: Spikes_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 22
-        width: 59
-        height: 105
+        x: 32
+        y: 3
+        width: 17
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,6 +170,28 @@ TextureImporter:
       bones: []
       spriteID: f35fa27dabd95d670800000000000000
       internalID: 8562923692314260799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spikes_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 3
+        width: 17
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aea6120a549e3db0800000000000000
+      internalID: -4810244237682102619
       vertices: []
       indices: 
       edges: []
@@ -188,6 +213,7 @@ TextureImporter:
       Spikes_0: 6723963429988506304
       Spikes_1: -7010832575621253078
       Spikes_2: 8562923692314260799
+      Spikes_3: -4810244237682102619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
