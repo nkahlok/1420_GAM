@@ -126,6 +126,12 @@ public class ManHolePhysics : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if(collision.gameObject.layer == 3)
+        {
+            player.manholeAvailable = true;
+            Destroy(gameObject);
+        }
+
     }
 
 }

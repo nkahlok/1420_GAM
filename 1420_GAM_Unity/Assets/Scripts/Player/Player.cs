@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
     //for alpha use onli
     [HideInInspector] public bool timeStopOnce;
-    public GameObject counterAttackTutCanvas;
+    [HideInInspector] public GameObject counterAttackTutCanvas;
     //ends here
 
     public StateMachine stateMachine { get; private set; }
@@ -31,10 +31,20 @@ public class Player : MonoBehaviour
     private bool waitingForHitStop;
     private SpriteRenderer sprite;
     private Color color;
+    public GameObject mainCam;
 
+    [Space]
+    [Header("Combo Graphics")]
     public Text comboUI;
     public Text comboNamesUI;
-    public GameObject mainCam;
+    public GameObject[] comboNamesSprites;
+    public GameObject[] comboBarMeter;
+    float fill;
+
+    [Space]
+    [Header("Combo Names & Counter")]
+    public string[] comboNames;
+    public int[] comboNum;
 
     [Space]
     [Header("VFX")]
@@ -46,10 +56,6 @@ public class Player : MonoBehaviour
     #endregion
 
 
-    [Space]
-    [Header("Combo Names & Counter")]
-    public string[] comboNames;
-    public int[] comboNum;
 
     [Space]
     #region [Graphics]
@@ -170,11 +176,11 @@ public class Player : MonoBehaviour
         AirBorneNoMovement();
 
         //code onli for alpha
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        /*if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             Time.timeScale = 1f;
             counterAttackTutCanvas.SetActive(false);
-        }
+        }*/
      
     }
 
@@ -317,33 +323,71 @@ public class Player : MonoBehaviour
         switch (comboHits) 
         {
             case int x when x>= comboNum[0] && x< comboNum[1]:
-                comboNamesUI.gameObject.SetActive(true);
-                comboNamesUI.text = comboNames[0];
+                //comboNamesUI.gameObject.SetActive(true);
+                //comboNamesUI.text = comboNames[0];
+                comboNamesSprites[0].SetActive(true);
+                comboNamesSprites[1].SetActive(false);
+                comboNamesSprites[2].SetActive(false);
+                comboNamesSprites[3].SetActive(false);               
                 break;
             case int x when x >= comboNum[1] && x < comboNum[2]:
-                comboNamesUI.gameObject.SetActive(true);
-                comboNamesUI.text = comboNames[1];
+                //comboNamesUI.gameObject.SetActive(true);
+                //comboNamesUI.text = comboNames[1];
+                comboNamesSprites[1].SetActive(true);
+                comboNamesSprites[0].SetActive(false);
+                comboNamesSprites[2].SetActive(false);
+                comboNamesSprites[3].SetActive(false);
                 break;
             case int x when x >= comboNum[2] && x < comboNum[3]:
-                comboNamesUI.gameObject.SetActive(true);
-                comboNamesUI.text = comboNames[2];
+                //comboNamesUI.gameObject.SetActive(true);
+                //comboNamesUI.text = comboNames[2];
+                comboNamesSprites[2].SetActive(true);
+                comboNamesSprites[1].SetActive(false);
+                comboNamesSprites[0].SetActive(false);
+                comboNamesSprites[3].SetActive(false);
                 break;
             case int x when x >= comboNum[3]:
-                comboNamesUI.gameObject.SetActive(true);
-                comboNamesUI.text = comboNames[3];
+                //comboNamesUI.gameObject.SetActive(true);
+                //comboNamesUI.text = comboNames[3];
+                comboNamesSprites[3].SetActive(true);
+                comboNamesSprites[1].SetActive(false);
+                comboNamesSprites[2].SetActive(false);
+                comboNamesSprites[0].SetActive(false);
+                //
+                comboBarMeter[1].SetActive(false);
+                comboBarMeter[2].SetActive(true);
                 break;
                 default:
-                comboNamesUI.gameObject.SetActive(false);   
+                comboNamesUI.gameObject.SetActive(false);
+                comboNamesSprites[0].SetActive(false);
+                comboNamesSprites[1].SetActive(false);
+                comboNamesSprites[2].SetActive(false);
+                comboNamesSprites[3].SetActive(false);
                 break;
 
         }
 
         if(comboHits == 0)
+        {
             comboUI.gameObject.SetActive(false);
-        else 
-            comboUI.gameObject.SetActive(true);
+            comboBarMeter[0].SetActive(false);
+            comboBarMeter[1].SetActive(false);
+            comboBarMeter[2].SetActive(false);
+        }
+        else
+        {
+            //comboUI.gameObject.SetActive(true);
+            comboBarMeter[0].SetActive(true);
+            comboBarMeter[1].SetActive(true);
+        }
 
-        comboUI.text = $"Combo {comboHits}";
+        fill = (float)comboHits / (float)comboNum[3];
+
+        Debug.Log(fill);
+
+        comboBarMeter[1].GetComponent<Image>().fillAmount = fill;
+
+        //comboUI.text = $"Combo {comboHits}";
 
         comboHitCount -= Time.deltaTime;
     }

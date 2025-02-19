@@ -13,10 +13,10 @@ public class EnemyTypeModifier : MonoBehaviour
     private Color color;
     public Text rankName;
     private Player player;
-    /*public GameObject D;
+    public GameObject D;
     public GameObject C;
     public GameObject B;
-    public GameObject A;*/
+    public GameObject A;
 
     // Start is called before the first frame update
     void Start()
@@ -31,26 +31,26 @@ public class EnemyTypeModifier : MonoBehaviour
             case 1:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 1.5f, this.transform.localScale.y * 1.5f);
                 hits = player.comboNum[0];
-                rankName.text = player.comboNames[0];
-                //D.SetActive(true);
+                //rankName.text = player.comboNames[0];
+                D.SetActive(true);
                 break;
             case 2:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2f, this.transform.localScale.y * 2f);
                 hits = player.comboNum[1];
-                rankName.text = player.comboNames[1];
-                //C.SetActive(true);
+                //rankName.text = player.comboNames[1];
+                C.SetActive(true);
                 break;
             case 3:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 2.5f, this.transform.localScale.y * 2.5f);
                 hits = player.comboNum[2];
-                rankName.text = player.comboNames[2];
-                //B.SetActive(true);
+                //rankName.text = player.comboNames[2];
+                B.SetActive(true);
                 break;
             case 4:
                 //this.transform.localScale = new Vector2(this.transform.localScale.x * 3f, this.transform.localScale.y * 3f);
                 hits = player.comboNum[3];
-                rankName.text = player.comboNames[3];
-                //A.SetActive(true);
+                //rankName.text = player.comboNames[3];
+                A.SetActive(true);
                 break;
                 default:
                 hits = 1000;
@@ -64,7 +64,7 @@ public class EnemyTypeModifier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerManager.instance.player.comboHitCount < 0)
+        if(PlayerManager.instance.player.comboHits == 0)
         {
             hits = storedHits;
         }
@@ -73,27 +73,31 @@ public class EnemyTypeModifier : MonoBehaviour
 
         if(hits == 0 && Time.timeScale != 0)
         {
+            //PlayerManager.instance.player.comboHits = 0;
             Destroy(this.gameObject); 
         }
 
-        rankName.gameObject.transform.rotation = Quaternion.identity;   
+        A.gameObject.transform.rotation = Quaternion.identity;
+        B.gameObject.transform.rotation = Quaternion.identity;
+        C.gameObject.transform.rotation = Quaternion.identity;
+        D.gameObject.transform.rotation = Quaternion.identity;
 
-        if(hits == player.comboNum[0])
-        {
-            rankName.text = player.comboNames[0];
-        }
-        else if(hits == player.comboNum[1])
-        {
-            rankName.text = player.comboNames[1];
-        }
-        else if (hits == player.comboNum[2])
-        {
-            rankName.text = player.comboNames[2];
-        }
-        else if((hits == player.comboNum[3]))
-        {
-            rankName.text = player.comboNames[3];
-        }
+        /* if(hits == player.comboNum[0])
+         {
+             rankName.text = player.comboNames[0];
+         }
+         else if(hits == player.comboNum[1])
+         {
+             rankName.text = player.comboNames[1];
+         }
+         else if (hits == player.comboNum[2])
+         {
+             rankName.text = player.comboNames[2];
+         }
+         else if((hits == player.comboNum[3]))
+         {
+             rankName.text = player.comboNames[3];
+         }*/
 
     }
 

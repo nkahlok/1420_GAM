@@ -298,13 +298,13 @@ public class Enemy : MonoBehaviour
         canBeCountered = true;
         counterWindowImg.SetActive(true);
 
-        if (!player.timeStopOnce)
+        /*if (!player.timeStopOnce)
         {
             Time.timeScale = 0f;
             player.counterAttackTutCanvas.SetActive(true);
         }
 
-        player.timeStopOnce = true;
+        player.timeStopOnce = true;*/
     }
     public void CounterWindowOff()
     {
