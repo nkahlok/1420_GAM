@@ -289,7 +289,8 @@ public class Player : MonoBehaviour
             
         }
 
-        if((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround)|| (Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && SkillManager.instance.launchSkill.launchDown))
+        //if((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround)|| (Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && SkillManager.instance.launchSkill.launchDown))
+        if ((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround) || (Input.GetKeyUp(KeyCode.Q) && !isBusy && caneWpn && isGround))
         {
             SkillManager.instance.launchSkill.SkillAvailable();
         }
@@ -298,7 +299,7 @@ public class Player : MonoBehaviour
     private void WeaponSwap()
     {
 
-        if (Input.mouseScrollDelta.y != 0 && !isBusy && manholeAvailable)
+        if (Input.GetKeyDown(KeyCode.E) && !isBusy && manholeAvailable)
         {
             caneWpn = !caneWpn;
         }

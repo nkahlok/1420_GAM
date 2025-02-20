@@ -1,0 +1,2067 @@
+fileFormatVersion: 2
+guid: afeab125c867c7f4a8f32a1420830250
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5703452942973343679
+    second: MeleeAtk_0
+  - first:
+      213: -5147875045537004297
+    second: MeleeAtk_1
+  - first:
+      213: 1668219632192077506
+    second: MeleeAtk_2
+  - first:
+      213: -153179535884855428
+    second: MeleeAtk_3
+  - first:
+      213: -8937106285096551828
+    second: MeleeAtk_4
+  - first:
+      213: 1819515073375433882
+    second: MeleeAtk_5
+  - first:
+      213: 350771186009561289
+    second: MeleeAtk_6
+  - first:
+      213: -6982164495625361420
+    second: MeleeAtk_7
+  - first:
+      213: 7732294923327042819
+    second: MeleeAtk_8
+  - first:
+      213: -6433597287923956428
+    second: MeleeAtk_9
+  - first:
+      213: 8500896369473089969
+    second: MeleeAtk_10
+  - first:
+      213: 3595460365762114217
+    second: MeleeAtk_11
+  - first:
+      213: -1739565988959868599
+    second: MeleeAtk_12
+  - first:
+      213: 194966578565393152
+    second: MeleeAtk_13
+  - first:
+      213: 7684558445438571822
+    second: MeleeAtk_14
+  - first:
+      213: -6156183640837957116
+    second: MeleeAtk_15
+  - first:
+      213: 3099709514792274867
+    second: MeleeAtk_16
+  - first:
+      213: 6116833196966260308
+    second: MeleeAtk_17
+  - first:
+      213: -8337316746090991464
+    second: MeleeAtk_18
+  - first:
+      213: 4192634656184027288
+    second: MeleeAtk_19
+  - first:
+      213: -5339552067289420771
+    second: MeleeAtk_20
+  - first:
+      213: -3370646556513550524
+    second: MeleeAtk_21
+  - first:
+      213: -6016394223136085059
+    second: MeleeAtk_22
+  - first:
+      213: -5609085674607207785
+    second: MeleeAtk_23
+  - first:
+      213: -1653789304634295455
+    second: MeleeAtk_24
+  - first:
+      213: 3099102677277094159
+    second: MeleeAtk_25
+  - first:
+      213: 6430344472239792015
+    second: MeleeAtk_26
+  - first:
+      213: 4710452031855274629
+    second: MeleeAtk_27
+  - first:
+      213: -2863590854948527224
+    second: MeleeAtk_28
+  - first:
+      213: -25180344286656326
+    second: MeleeAtk_29
+  - first:
+      213: -4181527049902774685
+    second: MeleeAtk_30
+  - first:
+      213: -2660800906175741527
+    second: MeleeAtk_31
+  - first:
+      213: -2646696262149811128
+    second: MeleeAtk_32
+  - first:
+      213: -868020380550176707
+    second: MeleeAtk_33
+  - first:
+      213: 7831284835604436361
+    second: MeleeAtk_34
+  - first:
+      213: -8416432187605408564
+    second: MeleeAtk_35
+  - first:
+      213: 1738603751444062122
+    second: MeleeAtk_36
+  - first:
+      213: 2687116802379934848
+    second: MeleeAtk_37
+  - first:
+      213: 5494809156803289141
+    second: MeleeAtk_38
+  - first:
+      213: 7655744033642516092
+    second: MeleeAtk_39
+  - first:
+      213: -619239740835110345
+    second: MeleeAtk_40
+  - first:
+      213: 2084887341169802960
+    second: MeleeAtk_41
+  - first:
+      213: -7894602839358862145
+    second: MeleeAtk_42
+  - first:
+      213: -3968481869443464014
+    second: MeleeAtk_43
+  - first:
+      213: -4966604332876008947
+    second: MeleeAtk_44
+  - first:
+      213: 7914344286274583947
+    second: MeleeAtk_45
+  - first:
+      213: 8772149337136555054
+    second: MeleeAtk_46
+  - first:
+      213: 3812450146002907357
+    second: MeleeAtk_47
+  - first:
+      213: -4618084883041148987
+    second: MeleeAtk_48
+  - first:
+      213: 8352367171341362397
+    second: MeleeAtk_49
+  - first:
+      213: 8451450259430478383
+    second: MeleeAtk_50
+  - first:
+      213: -1401463067569267122
+    second: MeleeAtk_51
+  - first:
+      213: -5110997700133814455
+    second: MeleeAtk_52
+  - first:
+      213: -307357207698539462
+    second: MeleeAtk_53
+  - first:
+      213: 5495372854822694260
+    second: MeleeAtk_54
+  - first:
+      213: 887077085668302364
+    second: MeleeAtk_55
+  - first:
+      213: -6168880871773780216
+    second: MeleeAtk_56
+  - first:
+      213: 5606160597249413424
+    second: MeleeAtk_57
+  - first:
+      213: -4366265739322128375
+    second: MeleeAtk_58
+  - first:
+      213: -8411919996019248512
+    second: MeleeAtk_59
+  - first:
+      213: -6132295300719203181
+    second: MeleeAtk_60
+  - first:
+      213: -5585642593806361961
+    second: MeleeAtk_61
+  - first:
+      213: 2172518223752547417
+    second: MeleeAtk_62
+  - first:
+      213: -2251866292732893668
+    second: MeleeAtk_63
+  - first:
+      213: 3271923743278666255
+    second: MeleeAtk_64
+  - first:
+      213: 6763985141984316640
+    second: MeleeAtk_65
+  - first:
+      213: -6355044950788342139
+    second: MeleeAtk_66
+  - first:
+      213: 3899024920943838003
+    second: MeleeAtk_67
+  - first:
+      213: 3436652265230014455
+    second: MeleeAtk_68
+  - first:
+      213: -3722473383598132023
+    second: MeleeAtk_69
+  - first:
+      213: 4462388868684199835
+    second: MeleeAtk_70
+  - first:
+      213: -9018031756643068904
+    second: MeleeAtk_71
+  - first:
+      213: -5482737855174139020
+    second: MeleeAtk_72
+  - first:
+      213: -7229625993603863906
+    second: MeleeAtk_73
+  - first:
+      213: 4392978334809575874
+    second: MeleeAtk_74
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MeleeAtk_0
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 899
+        width: 274
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148eaec34c349d0b0800000000000000
+      internalID: -5703452942973343679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_1
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1133
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f44ba2bbe21f88b0800000000000000
+      internalID: -5147875045537004297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_2
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 904
+        width: 186
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce3428bae4b62710800000000000000
+      internalID: 1668219632192077506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_3
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 898
+        width: 305
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7759b0160ccfddf0800000000000000
+      internalID: -153179535884855428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_4
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 904
+        width: 173
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ab8ec3f2509f380800000000000000
+      internalID: -8937106285096551828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_5
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 904
+        width: 80
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94f20ca157304910800000000000000
+      internalID: 1819515073375433882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_6
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 769
+        width: 168
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8da8309803ed400800000000000000
+      internalID: 350771186009561289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_7
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 897
+        width: 102
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7e7e2626e5a1f90800000000000000
+      internalID: -6982164495625361420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_8
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 898
+        width: 153
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305f67be341ae4b60800000000000000
+      internalID: 7732294923327042819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_9
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 898
+        width: 182
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43540617a5547b6a0800000000000000
+      internalID: -6433597287923956428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_10
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 898
+        width: 103
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1f9d6553049f570800000000000000
+      internalID: 8500896369473089969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_11
+      rect:
+        serializedVersion: 2
+        x: 2716
+        y: 898
+        width: 131
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a23f313724a5e130800000000000000
+      internalID: 3595460365762114217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_12
+      rect:
+        serializedVersion: 2
+        x: 3139
+        y: 898
+        width: 182
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94922bc13f1dbd7e0800000000000000
+      internalID: -1739565988959868599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_13
+      rect:
+        serializedVersion: 2
+        x: 3336
+        y: 898
+        width: 102
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ba67af119a4b200800000000000000
+      internalID: 194966578565393152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_14
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 898
+        width: 102
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25181c013905aa60800000000000000
+      internalID: 7684558445438571822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_15
+      rect:
+        serializedVersion: 2
+        x: 3562
+        y: 898
+        width: 153
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a58c37897d09aa0800000000000000
+      internalID: -6156183640837957116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_16
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 904
+        width: 187
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb87187161640b20800000000000000
+      internalID: 3099709514792274867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_17
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 454
+        width: 72
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ead7f526b53e450800000000000000
+      internalID: 6116833196966260308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_18
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 454
+        width: 158
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890b459a796eb4c80800000000000000
+      internalID: -8337316746090991464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_19
+      rect:
+        serializedVersion: 2
+        x: 3777
+        y: 449
+        width: 154
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89847da910b3f2a30800000000000000
+      internalID: 4192634656184027288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_20
+      rect:
+        serializedVersion: 2
+        x: 4315
+        y: 454
+        width: 168
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ce2895fa916e5b0800000000000000
+      internalID: -5339552067289420771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_21
+      rect:
+        serializedVersion: 2
+        x: 4667
+        y: 661
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fbd97b0de0931d0800000000000000
+      internalID: -3370646556513550524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 117
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbe24d8459718ca0800000000000000
+      internalID: -6016394223136085059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_23
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 454
+        width: 167
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a1e421c468822b0800000000000000
+      internalID: -5609085674607207785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_24
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 449
+        width: 118
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bbeebb36f8c09e0800000000000000
+      internalID: -1653789304634295455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_25
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 449
+        width: 126
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0130991779320b20800000000000000
+      internalID: 3099102677277094159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_26
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 449
+        width: 163
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fdf336a3c2d3950800000000000000
+      internalID: 6430344472239792015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_27
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 449
+        width: 92
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a204a7a23ee5140800000000000000
+      internalID: 4710452031855274629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_28
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 449
+        width: 118
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8836cb41a4b7248d0800000000000000
+      internalID: -2863590854948527224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_29
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 449
+        width: 134
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8c87b3c9a86aff0800000000000000
+      internalID: -25180344286656326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_30
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 454
+        width: 168
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366abd38d4b38f5c0800000000000000
+      internalID: -4181527049902774685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_31
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 449
+        width: 137
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a18b516cafe21bd0800000000000000
+      internalID: -2660800906175741527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_32
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 454
+        width: 107
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844d43ab5cb054bd0800000000000000
+      internalID: -2646696262149811128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_33
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 454
+        width: 263
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30e187101c24f3f0800000000000000
+      internalID: -868020380550176707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_34
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 449
+        width: 134
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9851b19e0105eac60800000000000000
+      internalID: 7831284835604436361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_35
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 449
+        width: 134
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4ad9d7483d23b80800000000000000
+      internalID: -8416432187605408564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_36
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 449
+        width: 92
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf1cf186e2c02810800000000000000
+      internalID: 1738603751444062122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_37
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 449
+        width: 92
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ce6dbae7e8a4520800000000000000
+      internalID: 2687116802379934848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_38
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 449
+        width: 134
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530e2dbb0db714c40800000000000000
+      internalID: 5494809156803289141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_39
+      rect:
+        serializedVersion: 2
+        x: 2825
+        y: 449
+        width: 126
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e049003aaae3a60800000000000000
+      internalID: 7655744033642516092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_40
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 449
+        width: 126
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732e7b09cb40867f0800000000000000
+      internalID: -619239740835110345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_41
+      rect:
+        serializedVersion: 2
+        x: 3335
+        y: 449
+        width: 137
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de72279df10fec10800000000000000
+      internalID: 2084887341169802960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_42
+      rect:
+        serializedVersion: 2
+        x: 3493
+        y: 454
+        width: 263
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc89358b8cb07290800000000000000
+      internalID: -7894602839358862145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_43
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 449
+        width: 137
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b48e3204ce1de8c0800000000000000
+      internalID: -3968481869443464014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_44
+      rect:
+        serializedVersion: 2
+        x: 4175
+        y: 449
+        width: 126
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0272076ca3131bb0800000000000000
+      internalID: -4966604332876008947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_45
+      rect:
+        serializedVersion: 2
+        x: 4505
+        y: 449
+        width: 134
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8df985423665dd60800000000000000
+      internalID: 7914344286274583947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_46
+      rect:
+        serializedVersion: 2
+        x: 4653
+        y: 454
+        width: 72
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24e3b4685fecb970800000000000000
+      internalID: 8772149337136555054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_47
+      rect:
+        serializedVersion: 2
+        x: 4747
+        y: 454
+        width: 167
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0b364653b88e430800000000000000
+      internalID: 3812450146002907357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_48
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 4
+        width: 237
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf1bbb344449efb0800000000000000
+      internalID: -4618084883041148987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_49
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 4
+        width: 168
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4af6980b199e370800000000000000
+      internalID: 8352367171341362397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_50
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 211
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f229c36bb35994570800000000000000
+      internalID: 8451450259430478383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_51
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 4
+        width: 158
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e54bbe3c00d8ce0800000000000000
+      internalID: -1401463067569267122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_52
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 0
+        width: 154
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f7fa3cba61219b0800000000000000
+      internalID: -5110997700133814455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_53
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 0
+        width: 161
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3cf8ff7f3c0cbbf0800000000000000
+      internalID: -307357207698539462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_54
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 211
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47de708ee7c734c40800000000000000
+      internalID: 5495372854822694260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_55
+      rect:
+        serializedVersion: 2
+        x: 4237
+        y: 211
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ed5a3d8e78f4c00800000000000000
+      internalID: 887077085668302364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_56
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 4
+        width: 72
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807c830088bb36aa0800000000000000
+      internalID: -6168880871773780216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_57
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 0
+        width: 92
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031d7d84c551dcd40800000000000000
+      internalID: 5606160597249413424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_58
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 0
+        width: 134
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9080fbc8178e763c0800000000000000
+      internalID: -4366265739322128375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_59
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 0
+        width: 92
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0827446f45bd24b80800000000000000
+      internalID: -8411919996019248512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_60
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 0
+        width: 92
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ca5de0ae5b5eaa0800000000000000
+      internalID: -6132295300719203181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_61
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 0
+        width: 134
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a51e9a7afcb72b0800000000000000
+      internalID: -5585642593806361961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_62
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 0
+        width: 126
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c45d260d5562e10800000000000000
+      internalID: 2172518223752547417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_63
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 0
+        width: 126
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16eaf3a983cfb0e0800000000000000
+      internalID: -2251866292732893668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_64
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 0
+        width: 134
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f029a422f45386d20800000000000000
+      internalID: 3271923743278666255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_65
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 4
+        width: 168
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eccef546a08edd50800000000000000
+      internalID: 6763985141984316640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_66
+      rect:
+        serializedVersion: 2
+        x: 2822
+        y: 0
+        width: 118
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58efe98a9485ec7a0800000000000000
+      internalID: -6355044950788342139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_67
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 0
+        width: 163
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333c047f18e1c1630800000000000000
+      internalID: 3899024920943838003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_68
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 0
+        width: 92
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7939de60171bf20800000000000000
+      internalID: 3436652265230014455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_69
+      rect:
+        serializedVersion: 2
+        x: 3330
+        y: 0
+        width: 118
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c479cc1e2e175cc0800000000000000
+      internalID: -3722473383598132023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_70
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 4
+        width: 72
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97349788079ded30800000000000000
+      internalID: 4462388868684199835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_71
+      rect:
+        serializedVersion: 2
+        x: 3814
+        y: 4
+        width: 168
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814191c95e389d280800000000000000
+      internalID: -9018031756643068904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_72
+      rect:
+        serializedVersion: 2
+        x: 4075
+        y: 0
+        width: 134
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47322c138f669e3b0800000000000000
+      internalID: -5482737855174139020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_73
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 4
+        width: 72
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9aaf4886753bab90800000000000000
+      internalID: -7229625993603863906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAtk_74
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 4
+        width: 107
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c1df40458ef6fc30800000000000000
+      internalID: 4392978334809575874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MeleeAtk_0: -5703452942973343679
+      MeleeAtk_1: -5147875045537004297
+      MeleeAtk_10: 8500896369473089969
+      MeleeAtk_11: 3595460365762114217
+      MeleeAtk_12: -1739565988959868599
+      MeleeAtk_13: 194966578565393152
+      MeleeAtk_14: 7684558445438571822
+      MeleeAtk_15: -6156183640837957116
+      MeleeAtk_16: 3099709514792274867
+      MeleeAtk_17: 6116833196966260308
+      MeleeAtk_18: -8337316746090991464
+      MeleeAtk_19: 4192634656184027288
+      MeleeAtk_2: 1668219632192077506
+      MeleeAtk_20: -5339552067289420771
+      MeleeAtk_21: -3370646556513550524
+      MeleeAtk_22: -6016394223136085059
+      MeleeAtk_23: -5609085674607207785
+      MeleeAtk_24: -1653789304634295455
+      MeleeAtk_25: 3099102677277094159
+      MeleeAtk_26: 6430344472239792015
+      MeleeAtk_27: 4710452031855274629
+      MeleeAtk_28: -2863590854948527224
+      MeleeAtk_29: -25180344286656326
+      MeleeAtk_3: -153179535884855428
+      MeleeAtk_30: -4181527049902774685
+      MeleeAtk_31: -2660800906175741527
+      MeleeAtk_32: -2646696262149811128
+      MeleeAtk_33: -868020380550176707
+      MeleeAtk_34: 7831284835604436361
+      MeleeAtk_35: -8416432187605408564
+      MeleeAtk_36: 1738603751444062122
+      MeleeAtk_37: 2687116802379934848
+      MeleeAtk_38: 5494809156803289141
+      MeleeAtk_39: 7655744033642516092
+      MeleeAtk_4: -8937106285096551828
+      MeleeAtk_40: -619239740835110345
+      MeleeAtk_41: 2084887341169802960
+      MeleeAtk_42: -7894602839358862145
+      MeleeAtk_43: -3968481869443464014
+      MeleeAtk_44: -4966604332876008947
+      MeleeAtk_45: 7914344286274583947
+      MeleeAtk_46: 8772149337136555054
+      MeleeAtk_47: 3812450146002907357
+      MeleeAtk_48: -4618084883041148987
+      MeleeAtk_49: 8352367171341362397
+      MeleeAtk_5: 1819515073375433882
+      MeleeAtk_50: 8451450259430478383
+      MeleeAtk_51: -1401463067569267122
+      MeleeAtk_52: -5110997700133814455
+      MeleeAtk_53: -307357207698539462
+      MeleeAtk_54: 5495372854822694260
+      MeleeAtk_55: 887077085668302364
+      MeleeAtk_56: -6168880871773780216
+      MeleeAtk_57: 5606160597249413424
+      MeleeAtk_58: -4366265739322128375
+      MeleeAtk_59: -8411919996019248512
+      MeleeAtk_6: 350771186009561289
+      MeleeAtk_60: -6132295300719203181
+      MeleeAtk_61: -5585642593806361961
+      MeleeAtk_62: 2172518223752547417
+      MeleeAtk_63: -2251866292732893668
+      MeleeAtk_64: 3271923743278666255
+      MeleeAtk_65: 6763985141984316640
+      MeleeAtk_66: -6355044950788342139
+      MeleeAtk_67: 3899024920943838003
+      MeleeAtk_68: 3436652265230014455
+      MeleeAtk_69: -3722473383598132023
+      MeleeAtk_7: -6982164495625361420
+      MeleeAtk_70: 4462388868684199835
+      MeleeAtk_71: -9018031756643068904
+      MeleeAtk_72: -5482737855174139020
+      MeleeAtk_73: -7229625993603863906
+      MeleeAtk_74: 4392978334809575874
+      MeleeAtk_8: 7732294923327042819
+      MeleeAtk_9: -6433597287923956428
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

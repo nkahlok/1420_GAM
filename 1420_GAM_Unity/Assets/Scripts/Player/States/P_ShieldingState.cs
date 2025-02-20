@@ -10,12 +10,14 @@ public class P_ShieldingState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        player.isBusy = true;
         player.isShield = true;
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.isBusy = false;
         player.isShield = false;
     }
 

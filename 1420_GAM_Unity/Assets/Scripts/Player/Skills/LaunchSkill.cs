@@ -26,7 +26,8 @@ public class LaunchSkill : Skill
 
         
 
-        if (Input.GetAxisRaw("Vertical") == 1 && player.isGround)
+        //if (Input.GetAxisRaw("Vertical") == 1 && player.isGround)
+        if(Input.GetKeyDown(KeyCode.Q)|| Input.GetKeyUp(KeyCode.Q))
         {
 
             StartCoroutine(launchDirRetain(1f, 1));
@@ -34,7 +35,7 @@ public class LaunchSkill : Skill
         else if (Input.GetAxisRaw("Vertical") == -1 && !player.isGround)
         {
 
-            StartCoroutine(launchDirRetain(1f, -1));
+            //StartCoroutine(launchDirRetain(1f, -1));
         }
      
      
