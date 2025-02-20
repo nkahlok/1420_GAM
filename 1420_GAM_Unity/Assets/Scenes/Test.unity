@@ -3255,22 +3255,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 973956202168856941, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Name
-      value: E
-      objectReference: {fileID: 0}
-    - target: {fileID: 2583103182974969209, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7faeac1e7ac3c294493ab66b366bee08, type: 3}
-    - target: {fileID: 3337734335403137097, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Name
-      value: E
-      objectReference: {fileID: 0}
-    - target: {fileID: 5212540649585461502, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Name
-      value: Q
-      objectReference: {fileID: 0}
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 94.31687
@@ -3311,22 +3295,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6534323001814401396, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803947769871674541, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803947769871674541, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_FillMethod
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6956941051478243941, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7faeac1e7ac3c294493ab66b366bee08, type: 3}
     - target: {fileID: 7094210720992846804, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_Name
       value: 'Player '
@@ -3335,14 +3303,6 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 146092485}
-    - target: {fileID: 7136981053173152156, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8985584420221020643, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b07b5d1131a6b3e4ea5313ac3eeeb73e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8110,6 +8070,10 @@ PrefabInstance:
     - target: {fileID: 2398054369358401820, guid: 598a70cf5a9a1c04380c7d9b001fee16, type: 3}
       propertyPath: m_Name
       value: Rat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2398054369358401820, guid: 598a70cf5a9a1c04380c7d9b001fee16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7409917015422925383, guid: 598a70cf5a9a1c04380c7d9b001fee16, type: 3}
       propertyPath: m_LocalPosition.x
