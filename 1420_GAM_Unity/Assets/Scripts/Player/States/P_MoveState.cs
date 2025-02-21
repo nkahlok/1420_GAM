@@ -30,7 +30,7 @@ public class P_MoveState : P_GroundedState
     {
         base.Update();
 
-        Debug.Log("Im moving");
+        //Debug.Log("Im moving");
 
 
         if (player.cannotBeKnocked)

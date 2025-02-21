@@ -384,7 +384,7 @@ public class Player : MonoBehaviour
 
         fill = (float)comboHits / (float)comboNum[3];
 
-        Debug.Log(fill);
+        //Debug.Log(fill);
 
         comboBarMeter[1].GetComponent<Image>().fillAmount = fill;
 

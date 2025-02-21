@@ -16,7 +16,7 @@ public class ShockwaveManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("shockwave");
             CallShockwave();
@@ -26,7 +26,9 @@ public class ShockwaveManager : MonoBehaviour
     public void CallShockwave() //calls shockwave
     {
         _shockwaveCoroutine = StartCoroutine(ShockwaveAction(-0.1f, 1f));
+
     }
+
     private IEnumerator ShockwaveAction(float startPos, float endPos)
     {
         _material.SetFloat(_waveDistanceFromCenter, startPos);
@@ -35,7 +37,8 @@ public class ShockwaveManager : MonoBehaviour
         while (elapsedTime < _shockwavetime)
         {
             elapsedTime += Time.deltaTime;
-            lerpedAmount = Mathf.Lerp(startPos, endPos,(elapsedTime/_shockwavetime));
+            lerpedAmount = Mathf.Lerp(startPos, endPos, (elapsedTime / _shockwavetime));
+            _material.SetFloat(_waveDistanceFromCenter, lerpedAmount);
             yield return null;
         }
     }
