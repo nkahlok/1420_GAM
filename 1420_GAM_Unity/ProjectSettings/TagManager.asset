@@ -59,5 +59,8 @@ TagManager:
   - name: Player
     uniqueID: 1265534369
     locked: 0
+  - name: CameraSortingLayer(For VFX)
+    uniqueID: 2258027089
+    locked: 0
   m_RenderingLayers:
   - Default

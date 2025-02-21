@@ -5,7 +5,6 @@ using UnityEngine;
 public class P_AttackState : PlayerState
 
 {
-    
     protected float stateDur;
 
 
@@ -28,7 +27,6 @@ public class P_AttackState : PlayerState
 
 
         anim.SetInteger("ComboCounter1", player.comboCounter);
-        
 
         player.comboCount = player.comboTime;
           

@@ -15,6 +15,7 @@ public class P_JumpState : PlayerState
         player.coyoteEnabled = false;
         player.doubleJumpEnabled = !player.doubleJumpEnabled;
         player.jumpFeathers.Play();
+        player.shockwaveManager.CallShockwave();
     }
 
     public override void Exit()
