@@ -11,6 +11,7 @@ public class RavenousVfxManager : MonoBehaviour
     [SerializeField] private Material _material;
     [SerializeField] private float intensityStartAmt = 2.25f;
     [SerializeField] private float powerStartAmt = 1.25f;
+    [SerializeField] private ParticleSystem feathers, feathers2;
 
     private int _intensity = Shader.PropertyToID("_VignetteIntensity");
     private int _power = Shader.PropertyToID("_VignettePower");
@@ -21,26 +22,32 @@ public class RavenousVfxManager : MonoBehaviour
         _fullScreenVFX.SetActive(false);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            PlayRavenousEffect();
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            DisableRavenousEffect();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.L))
+    //    {
+    //        PlayRavenousEffect();
+            
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.K))
+    //    {
+    //        DisableRavenousEffect();
+            
+    //    }
+    //}
 
     public void PlayRavenousEffect()
     {
         StartCoroutine(PlayFullscreenEffect()); //play effect
+        feathers.Play();
+        feathers2.Play();
     }
 
     public void DisableRavenousEffect()
     {
         StartCoroutine(DisableFullscreenEffect()); //disable effect
+        feathers2.Stop();
+        feathers.Stop();
     }
 
     private IEnumerator PlayFullscreenEffect()

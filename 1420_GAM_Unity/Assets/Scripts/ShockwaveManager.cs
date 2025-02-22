@@ -14,14 +14,14 @@ public class ShockwaveManager : MonoBehaviour
         _material = GetComponent<SpriteRenderer>().material;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Debug.Log("shockwave");
-            CallShockwave();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.P))
+    //    {
+    //        Debug.Log("shockwave");
+    //        CallShockwave();
+    //    }
+    //}
 
     public void CallShockwave() //calls shockwave
     {
