@@ -270,10 +270,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0403d3088c6b40845923198ef98f23dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _displayTime: 1.5
-  _fadeOutTime: 0.5
+  _duration: 0.5
   _fullScreenVFX: {fileID: 2811922155097543852, guid: 825d6135c8583884884d344d4ecaea26, type: 2}
   _material: {fileID: 2100000, guid: 99359eed858af5743aae07aa769091e9, type: 2}
+  intensityStartAmt: 2.25
+  powerStartAmt: 1.25
 --- !u!4 &434964733
 Transform:
   m_ObjectHideFlags: 0

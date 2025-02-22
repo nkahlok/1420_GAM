@@ -6,17 +6,15 @@ using UnityEngine.Rendering.Universal;
 
 public class RavenousVfxManager : MonoBehaviour
 {
-    [SerializeField] private float _displayTime = 1.5f;
-    [SerializeField] private float _fadeOutTime = 0.5f;
+    [SerializeField] private float _duration = 0.5f;
     [SerializeField] private ScriptableRendererFeature _fullScreenVFX;
     [SerializeField] private Material _material;
+    [SerializeField] private float intensityStartAmt = 2.25f;
+    [SerializeField] private float powerStartAmt = 1.25f;
 
     private int _intensity = Shader.PropertyToID("_VignetteIntensity");
     private int _power = Shader.PropertyToID("_VignettePower");
     private int _noiseSpeed = Shader.PropertyToID("_NoiseSpeed");
-
-    private const float intensityStartAmt = 1.25f;
-    private const float powerStartAmt = 1.25f;
 
     private void Start()
     {
@@ -27,23 +25,62 @@ public class RavenousVfxManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            StartCoroutine(PlayFullscreenEffect());
+            PlayRavenousEffect();
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            DisableRavenousEffect();
+        }
+    }
+
+    public void PlayRavenousEffect()
+    {
+        StartCoroutine(PlayFullscreenEffect()); //play effect
+    }
+
+    public void DisableRavenousEffect()
+    {
+        StartCoroutine(DisableFullscreenEffect()); //disable effect
     }
 
     private IEnumerator PlayFullscreenEffect()
     {
         _fullScreenVFX.SetActive(true);
-        _material.SetFloat(_intensity, intensityStartAmt);
-        _material.SetFloat(_power, powerStartAmt);
-        yield return new WaitForSeconds(_displayTime);
+        _material.SetFloat(_intensity, 0f);
+        _material.SetFloat(_power, 0f);
         float elapsedTime = 0f;
-        while (elapsedTime < _fadeOutTime)
+
+        while (elapsedTime < _duration)
         {
             elapsedTime += Time.deltaTime;
-            float lerpedIntensity = Mathf.Lerp(intensityStartAmt, 0f, (elapsedTime / _fadeOutTime));
-            float lerpedPower = Mathf.Lerp(powerStartAmt, 0f, (elapsedTime / _fadeOutTime));
+            float lerpedIntensity = Mathf.Lerp(0f, intensityStartAmt, (elapsedTime / _duration));
+            float lerpedPower = Mathf.Lerp(0f, powerStartAmt, (elapsedTime / _duration));
+            _material.SetFloat(_power, lerpedPower);
+            _material.SetFloat(_intensity, lerpedIntensity);
+            yield return null;
+        }
 
+        //while (elapsedTime < _fadeOutTime)
+        //{
+        //    elapsedTime += Time.deltaTime;
+        //    float lerpedIntensity = Mathf.Lerp(intensityStartAmt, 0f, (elapsedTime / _fadeOutTime));
+        //    float lerpedPower = Mathf.Lerp(powerStartAmt, 0f, (elapsedTime / _fadeOutTime));
+
+        //    _material.SetFloat(_power, lerpedPower);
+        //    _material.SetFloat(_intensity, lerpedIntensity);
+        //    yield return null;
+        //}
+    }
+
+    private IEnumerator DisableFullscreenEffect()
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < _duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float lerpedIntensity = Mathf.Lerp(intensityStartAmt, 0f, (elapsedTime / _duration));
+            float lerpedPower = Mathf.Lerp(powerStartAmt, 0f, (elapsedTime / _duration));
             _material.SetFloat(_power, lerpedPower);
             _material.SetFloat(_intensity, lerpedIntensity);
             yield return null;
