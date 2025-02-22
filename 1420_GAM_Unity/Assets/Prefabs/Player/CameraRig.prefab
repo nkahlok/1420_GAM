@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c5f0d8ef6581347839cca283f54768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shockwavetime: 0.7
+  _shockwavetime: 1
 --- !u!1 &4267362520822139434
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ TagManager:
   - ManHole
   - Bullet
   - CheckPoint
+  - Spike
   layers:
   - Default
   - TransparentFX

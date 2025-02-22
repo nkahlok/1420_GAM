@@ -40,11 +40,11 @@ public class BulletPhysics : MonoBehaviour
                 {
                     player.KnockBack(knockbackForce.x, knockbackForce.y);
                 }
-                
-                player.Damage(bulletDmg);    
+
+                Debug.Log("bullet hit");
+                player.Damage(bulletDmg/2);    
             }
-
-
+            
             Destroy(this.gameObject);
         }
         else if(collision.gameObject.layer == 3 || collision.gameObject.layer == 6)

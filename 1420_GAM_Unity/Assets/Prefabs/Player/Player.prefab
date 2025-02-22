@@ -3908,8 +3908,6 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: 99359eed858af5743aae07aa769091e9, type: 2}
   intensityStartAmt: 2.25
   powerStartAmt: 1.25
-  feathers: {fileID: 0}
-  feathers2: {fileID: 0}
 --- !u!1 &5466395541028453216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,7 +5354,6 @@ MonoBehaviour:
   cannotBeKnocked: 0
   mainCam: {fileID: 0}
   maxHP: 100
-  hp: 100
   hpBar: {fileID: 4008066607982792618}
   checkPoint: {x: 0, y: 0}
   comboUI: {fileID: 2159609838684995293}
@@ -5381,6 +5378,8 @@ MonoBehaviour:
   dustEffect: {fileID: 3233907173032734590}
   dashEffect: {fileID: 5997280480172260537}
   slashEffect: {fileID: 2886691040697452756}
+  feathers: {fileID: 0}
+  feathers2: {fileID: 0}
   manholeIndicator: {fileID: 5320128407778271423}
   caneEquipped: {fileID: 7136981053173152156}
   manholeEquipped: {fileID: 6534323001814401396}
@@ -5414,7 +5413,7 @@ MonoBehaviour:
   coyoteTime: 1
   coyoteCount: 0
   coyoteEnabled: 0
-  comboTime: 2
+  comboTime: 4
   comboCount: 0
   comboHitCount: 0
   airBorneTime: 0.4

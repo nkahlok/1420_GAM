@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     [Space]
     [Header("HP")]
     public int maxHP;
-    public int hp;
+    private int hp;
     public GameObject hpBar;
     float hpFill;
     public Vector2 checkPoint;
@@ -463,10 +463,15 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("CheckPoint"))
+        if(collision.gameObject.CompareTag("CheckPoint"))
         {
             Debug.Log("Checkpoint found");
             checkPoint = new Vector2(collision.transform.position.x, collision.transform.position.y);
+        }
+
+        if (collision.gameObject.CompareTag("Spike"))
+        {
+            hp = 0;
         }
 
     }
