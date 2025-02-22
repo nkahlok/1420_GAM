@@ -4763,6 +4763,75 @@ RectTransform:
   m_AnchoredPosition: {x: 488.6, y: -27.000015}
   m_SizeDelta: {x: 148.919, y: 148.91898}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &6376849483777205904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7523618332674510403}
+  - component: {fileID: 2307902469808991079}
+  m_Layer: 7
+  m_Name: isTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7523618332674510403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376849483777205904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5449961213010567264}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &2307902469808991079
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376849483777205904}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.18341373, y: -0.15212174}
+  m_Size: {x: 0.767423, y: 1.512465}
+  m_Direction: 0
 --- !u!1 &6447496209830028319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,7 +5293,6 @@ GameObject:
   - component: {fileID: 7111812626490515750}
   - component: {fileID: 420120035111687624}
   - component: {fileID: 6648789519445190568}
-  - component: {fileID: 8443333137562124473}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -5245,6 +5313,7 @@ Transform:
   m_LocalScale: {x: 0.564612, y: 0.564612, z: 0.564612}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7523618332674510403}
   - {fileID: 5107303999870038144}
   - {fileID: 7152702517217175160}
   - {fileID: 9167468676496030665}
@@ -5272,6 +5341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStopOnce: 0
   counterAttackTutCanvas: {fileID: 5310509194191213691}
+  shockwaveManager: {fileID: 0}
+  ravenousVfxManager: {fileID: 3360469717901582664}
   rb: {fileID: 0}
   anim: {fileID: 0}
   comboHits: 0
@@ -5411,43 +5482,6 @@ CapsuleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.18946739, y: -0.09139121}
   m_Size: {x: 1.1469928, y: 1.9138651}
-  m_Direction: 0
---- !u!70 &8443333137562124473
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7094210720992846804}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.18341373, y: -0.15212174}
-  m_Size: {x: 0.767423, y: 1.512465}
   m_Direction: 0
 --- !u!1 &7118582235298747586
 GameObject:

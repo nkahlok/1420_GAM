@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool canBeCountered;
     [HideInInspector] public bool countered;
     private bool waitingForHitStop;
+    public ShockwaveManager shockwaveManager;
 
     #region[Enemy States]
     public EnemyStateMachine enemyStateMachine { get; private set; }
@@ -104,7 +105,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();       
-        enemyStateMachine = new EnemyStateMachine();
+        enemyStateMachine = new EnemyStateMachine(); 
         enemyMoveState = new EnemyMoveState(this, enemyStateMachine, "Move");
         enemyIdleState = new EnemyIdleState(this, enemyStateMachine, "Idle");
         enemyAggroState = new EnemyAggroState(this, enemyStateMachine, "Aggro");
@@ -234,6 +235,7 @@ public class Enemy : MonoBehaviour
                 //rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
                 countered = true;
                 knockedDown = true;
+                shockwaveManager.CallShockwave();
                 StartCoroutine("BusySwitch", 0);
                 player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
                 HitStop(player.counterHitStop);

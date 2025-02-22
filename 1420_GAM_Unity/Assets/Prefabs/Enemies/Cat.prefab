@@ -698,6 +698,7 @@ MonoBehaviour:
   launchDown: 0
   canBeCountered: 0
   countered: 0
+  shockwaveManager: {fileID: 0}
   isCat: 1
   isRat: 0
   moveSpeed: 2
@@ -732,6 +733,7 @@ MonoBehaviour:
   aggroImg: {fileID: 274061245205820752}
   counterWindowImg: {fileID: 8611785871940033742}
   normalAttackKnockBack: {x: 3, y: 3}
+  catDamage: 10
   firingDur: 0
   reloadTime: 0
   bulletSpeed: 0

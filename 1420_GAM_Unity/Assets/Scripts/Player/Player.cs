@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 //using UnityEngine.UIElements;
 
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour
 
     public StateMachine stateMachine { get; private set; }
     public PlayerState playerState { get; private set; }
+    public ShockwaveManager shockwaveManager;
+    public RavenousVfxManager ravenousVfxManager;
     private IEnumerator defaultGravity;
 
     #region[Player Components]
@@ -63,9 +66,11 @@ public class Player : MonoBehaviour
     public ParticleSystem dustEffect;
     public ParticleSystem dashEffect;
     public ParticleSystem slashEffect;
+    public ParticleSystem feathers;
+    public ParticleSystem feathers2;
     #endregion
 
- 
+
 
     [Space]
     #region [Graphics]
@@ -141,7 +146,6 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-
         stateMachine = new StateMachine();
         idle = new P_IdleState(this, stateMachine, "Idle");
         move = new P_MoveState(this, stateMachine, "Move");
@@ -193,7 +197,13 @@ public class Player : MonoBehaviour
             Time.timeScale = 1f;
             counterAttackTutCanvas.SetActive(false);
         }*/
-     
+        
+        if(comboHits == comboNum[3])
+        {
+            feathers.Play();
+            feathers2.Play();
+        }
+
     }
 
     public void Damage(int dmg)
@@ -392,6 +402,8 @@ public class Player : MonoBehaviour
                 //
                 comboBarMeter[1].SetActive(false);
                 comboBarMeter[2].SetActive(true);
+                //
+                ravenousVfxManager.PlayRavenousEffect();
                 break;
                 default:
                 comboNamesUI.gameObject.SetActive(false);
@@ -399,6 +411,9 @@ public class Player : MonoBehaviour
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
                 comboNamesSprites[3].SetActive(false);
+                ravenousVfxManager.DisableRavenousEffect();
+                feathers.Stop();
+                feathers2.Stop();
                 break;
 
         }
