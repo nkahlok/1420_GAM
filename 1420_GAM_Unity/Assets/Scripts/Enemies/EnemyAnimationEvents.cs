@@ -19,7 +19,8 @@ public class EnemyAnimationEvents : MonoBehaviour
         {
             if (collider.GetComponent<Player>() != null)
             {
-                player.Damage();
+                player.Damage(enemy.catDamage);
+
                 if (this.gameObject.transform.position.x > player.transform.position.x && player.facingDir == -1)
                 {
                     player.KnockBack(-1 * enemy.normalAttackKnockBack.x, enemy.normalAttackKnockBack.y);

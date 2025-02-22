@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackForce: {x: 3, y: 3}
+  bulletDmg: 5
 --- !u!50 &5343248355259228111
 Rigidbody2D:
   serializedVersion: 5

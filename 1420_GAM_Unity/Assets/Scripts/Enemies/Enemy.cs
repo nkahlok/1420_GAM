@@ -79,6 +79,7 @@ public class Enemy : MonoBehaviour
     [Space]
     [Header("Cat stats")]
     public Vector2 normalAttackKnockBack;
+    public int catDamage;
 
     #region Rat
     [Header("Rat specific")]
