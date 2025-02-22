@@ -53,8 +53,8 @@ Material:
     - _Fullscreen_DstColorBlend: 10
     - _Fullscreen_SrcAlphaBlend: 1
     - _Fullscreen_SrcColorBlend: 5
-    - _VignetteIntensity: 2.25
-    - _VignettePower: 1.25
+    - _VignetteIntensity: 0.054290324
+    - _VignettePower: 0.030161291
     m_Colors:
     - _Color: {r: 0.8392157, g: 0.12742242, b: 0.105882324, a: 1}
     - _Color2: {r: 0, g: 0, b: 0, a: 0}

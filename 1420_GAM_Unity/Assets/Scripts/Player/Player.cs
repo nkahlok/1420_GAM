@@ -202,6 +202,7 @@ public class Player : MonoBehaviour
         {
             feathers.Play();
             feathers2.Play();
+            shockwaveManager.CallShockwave();   
         }
 
     }
@@ -406,14 +407,14 @@ public class Player : MonoBehaviour
                 ravenousVfxManager.PlayRavenousEffect();
                 break;
                 default:
+                ravenousVfxManager.DisableRavenousEffect();
+                feathers.Stop();
+                feathers2.Stop();
                 comboNamesUI.gameObject.SetActive(false);
                 comboNamesSprites[0].SetActive(false);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
                 comboNamesSprites[3].SetActive(false);
-                ravenousVfxManager.DisableRavenousEffect();
-                feathers.Stop();
-                feathers2.Stop();
                 break;
 
         }
