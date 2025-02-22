@@ -33,13 +33,23 @@ public class Player : MonoBehaviour
     private Color color;
     public GameObject mainCam;
 
+    #region [HP]
+    [Space]
+    [Header("HP")]
+    public int maxHP;
+    public int hp;
+    public GameObject hpBar;
+    float hpFill;
+    public Vector2 checkPoint;
+    #endregion
+
     [Space]
     [Header("Combo Graphics")]
     public Text comboUI;
     public Text comboNamesUI;
     public GameObject[] comboNamesSprites;
     public GameObject[] comboBarMeter;
-    float fill;
+    float comboFill;
 
     [Space]
     [Header("Combo Names & Counter")]
@@ -55,7 +65,7 @@ public class Player : MonoBehaviour
     public ParticleSystem slashEffect;
     #endregion
 
-
+ 
 
     [Space]
     #region [Graphics]
@@ -161,7 +171,7 @@ public class Player : MonoBehaviour
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
         counterAttackTutCanvas.SetActive(false);
-
+        hp = maxHP;
 
     }
 
@@ -174,6 +184,8 @@ public class Player : MonoBehaviour
         WeaponSwap();
         ComboCounterUI();     
         AirBorneNoMovement();
+        HpBarFill();    
+        Death();
 
         //code onli for alpha
         /*if(Input.GetKeyDown(KeyCode.Mouse1))
@@ -184,12 +196,35 @@ public class Player : MonoBehaviour
      
     }
 
-    public void Damage()
+    public void Damage(int dmg)
     {
+        hp -= dmg;  
         StartCoroutine("SpriteHit", 0.2f);
         HitStop(normalHitStop);
         mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake2");
 
+    }
+
+    private void HpBarFill()
+    {
+        hpFill = (float)hp;
+        hpBar.GetComponent<Image>().fillAmount = hpFill/100f;
+    }
+
+    private void Death()
+    {
+        if(hp <= 0)
+        {
+            hp = maxHP;
+            if(checkPoint == null)
+            {
+                this.gameObject.transform.position = new Vector2(0, 0);
+            }
+            else
+            {
+                this.gameObject.transform.position = checkPoint;
+            }
+        }
     }
 
     public void HitStop(float duration)
@@ -382,11 +417,11 @@ public class Player : MonoBehaviour
             comboBarMeter[1].SetActive(true);
         }
 
-        fill = (float)comboHits / (float)comboNum[3];
+        comboFill = (float)comboHits / (float)comboNum[3];
 
         //Debug.Log(fill);
 
-        comboBarMeter[1].GetComponent<Image>().fillAmount = fill;
+        comboBarMeter[1].GetComponent<Image>().fillAmount = comboFill;
 
         //comboUI.text = $"Combo {comboHits}";
 
@@ -410,8 +445,13 @@ public class Player : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("CheckPoint"))
+        {
+            Debug.Log("Checkpoint found");
+            checkPoint = new Vector2(collision.transform.position.x, collision.transform.position.y);
+        }
 
     }
 

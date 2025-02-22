@@ -4,6 +4,7 @@ public class BulletPhysics : MonoBehaviour
 {
     private Player player;
     public Vector2 knockbackForce;
+    public int bulletDmg;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class BulletPhysics : MonoBehaviour
                     player.KnockBack(knockbackForce.x, knockbackForce.y);
                 }
                 
-                player.Damage();    
+                player.Damage(bulletDmg);    
             }
 
 

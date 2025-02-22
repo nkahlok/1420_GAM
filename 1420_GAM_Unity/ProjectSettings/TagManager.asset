@@ -10,6 +10,7 @@ TagManager:
   - AudioManager
   - ManHole
   - Bullet
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
