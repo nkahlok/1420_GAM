@@ -24,7 +24,15 @@ public class BulletPhysics : MonoBehaviour
         {
             if ((player.isShield && player.facingDir == 1 && this.gameObject.transform.position.x > player.transform.position.x) || (player.isShield && player.facingDir == -1 && this.gameObject.transform.position.x < player.transform.position.x))
             {
-                player.hitEffect.Play();
+                if(player.facingDir == 1)
+                {
+                    player.blockHitRight.Play(); 
+                }
+                else if(player.facingDir == -1)
+                {
+                    player.blockHitLeft.Play();
+
+                }
             }
             else 
             {
@@ -42,6 +50,7 @@ public class BulletPhysics : MonoBehaviour
                 }
 
                 Debug.Log("bullet hit");
+                player.hitEffect.Play();
                 player.Damage(bulletDmg/2);    
             }
             

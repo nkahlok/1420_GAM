@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     #region[Enemy type]
     public bool isCat;
     public bool isRat;
+    public bool isBoss;
     #endregion
 
     #region[Enemy Stats]

@@ -63,6 +63,8 @@ public class Player : MonoBehaviour
     [Header("VFX")]
     public ParticleSystem jumpFeathers;
     public ParticleSystem hitEffect;
+    public ParticleSystem blockHitRight;
+    public ParticleSystem blockHitLeft;
     public ParticleSystem dustEffect;
     public ParticleSystem dashEffect;
     public ParticleSystem slashEffect;
