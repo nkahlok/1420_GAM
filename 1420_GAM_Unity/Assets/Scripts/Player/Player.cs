@@ -67,7 +67,8 @@ public class Player : MonoBehaviour
     public ParticleSystem blockHitLeft;
     public ParticleSystem dustEffect;
     public ParticleSystem dashEffect;
-    public ParticleSystem slashEffect;
+    public ParticleSystem slashEffectRight;
+    public ParticleSystem slashEffectLeft;
     public ParticleSystem feathers;
     public ParticleSystem feathers2;
     #endregion

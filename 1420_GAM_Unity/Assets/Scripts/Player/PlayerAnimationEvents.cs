@@ -25,6 +25,15 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         ComboHardCode();
 
+        /*if(player.facingDir == 1)
+        {
+            player.slashEffectRight.Play();
+        }
+        else if (player.facingDir == -1)
+        {
+            player.slashEffectLeft.Play();
+        }*/
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
         foreach (Collider2D collider in colliders)
         {

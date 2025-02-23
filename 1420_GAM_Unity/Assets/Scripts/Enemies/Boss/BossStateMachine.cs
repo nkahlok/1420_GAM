@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossStateMachine : MonoBehaviour
+public class BossStateMachine 
 {
     public BossState currentState;
 
