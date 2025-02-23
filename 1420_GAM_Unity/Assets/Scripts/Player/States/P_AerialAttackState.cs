@@ -51,6 +51,11 @@ public class P_AerialAttackState : P_AttackState
                 enemy.KnockBack("Aerial");
 
             }
+            else if(collider.GetComponent<Boss>() != null)
+            {
+                Boss boss = collider.GetComponent<Boss>();
+                boss.KnockBack("Aerial");
+            }
         }
 
         rb.gravityScale = 0;

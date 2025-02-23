@@ -11,6 +11,8 @@ public class BossState
     protected SpriteRenderer sprite;
     protected Color tempColor;
 
+    
+
     public BossState(Boss _boss, BossStateMachine _stateMachine, string _animBool)
     {
         this.boss = _boss;

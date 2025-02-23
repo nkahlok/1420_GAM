@@ -11,6 +11,7 @@ public class BossSummonState : BossState
     public override void Enter()
     {
         base.Enter();
+        boss.counterWindow.SetActive(false);
         boss.summonTimer = boss.summonDur;
         boss.transform.position = boss.leftPoint.position;
         tempInterval = 0f;
@@ -19,11 +20,16 @@ public class BossSummonState : BossState
         {
             boss.Flip();
         }
+
+
+        boss.modifier.canBeDamaged = true;
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        boss.modifier.canBeDamaged = false;
     }
 
     public override void Update()
@@ -43,6 +49,8 @@ public class BossSummonState : BossState
             boss.SpawnCrowProjectiles();
             tempInterval = boss.crowProjectileIntervals;
         }
+
+        boss.SetVelocity(0,0);
 
     }
 }

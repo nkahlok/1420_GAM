@@ -113,6 +113,14 @@ public class ManHolePhysics : MonoBehaviour
             canHitEnemy = !canHitEnemy;
             
         }
+        else if(collision.gameObject.GetComponent<Boss>() && canHitEnemy)
+        {
+            bounceCount++;
+            newSpeed *= 1.2f;
+            rb.linearVelocity = new Vector2(newSpeed * player.manHoleAim.xThrow * -1, newSpeed * player.manHoleAim.yThrow * -1);
+            canHitEnemy = !canHitEnemy;
+
+        }
         if (collision.gameObject.GetComponent<EnemyTypeModifier>())
         {
             player.comboHitCount = player.comboTime;

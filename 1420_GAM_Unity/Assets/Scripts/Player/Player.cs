@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool doubleJumpEnabled;
     [HideInInspector] public bool isShield;
     [HideInInspector] public bool cannotBeKnocked;
+    [HideInInspector] public bool canBeDamaged;
     private bool waitingForHitStop;
     private SpriteRenderer sprite;
     private Color color;
@@ -179,7 +180,7 @@ public class Player : MonoBehaviour
         manholeEquipped.SetActive(false);
         counterAttackTutCanvas.SetActive(false);
         hp = maxHP;
-
+        canBeDamaged = true;
     }
 
     
@@ -212,6 +213,9 @@ public class Player : MonoBehaviour
 
     public void Damage(int dmg)
     {
+        if (!canBeDamaged)
+            return;
+
         hp -= dmg;  
         StartCoroutine("SpriteHit", 0.2f);
         HitStop(normalHitStop);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [HideInInspector] public EnemyTypeModifier modifier;
     [HideInInspector] public Animator anim;
     [HideInInspector] public bool wasAttacked;
     [HideInInspector] public bool knockedDown;
@@ -28,7 +29,6 @@ public class Enemy : MonoBehaviour
     #region[Enemy type]
     public bool isCat;
     public bool isRat;
-    public bool isBoss;
     #endregion
 
     #region[Enemy Stats]
@@ -104,6 +104,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        modifier = GetComponent<EnemyTypeModifier>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();       
         enemyStateMachine = new EnemyStateMachine(); 
@@ -127,7 +128,8 @@ public class Enemy : MonoBehaviour
         countered = false;
         waitingForHitStop = false;
         aggroImg.SetActive(false); 
-        counterWindowImg.SetActive(false);  
+        counterWindowImg.SetActive(false);
+        modifier.canBeDamaged = true;
     
     }
 

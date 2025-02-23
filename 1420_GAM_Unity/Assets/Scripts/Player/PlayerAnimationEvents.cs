@@ -101,6 +101,19 @@ public class PlayerAnimationEvents : MonoBehaviour
         }
     }
 
+    public void IFrame()
+    {
+        StartCoroutine("IFrameCorountine", 0.5f);
+    }
+
+    IEnumerator IFrameCorountine(float seconds)
+    {
+        player.canBeDamaged = false;
+        yield return new WaitForSecondsRealtime(seconds);
+        player.canBeDamaged = true;
+    }
+ 
+
     public void ComboHardCode()
     {
         if(player.comboCounter == 0)

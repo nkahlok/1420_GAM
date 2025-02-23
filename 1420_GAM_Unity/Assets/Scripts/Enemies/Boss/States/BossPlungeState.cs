@@ -3,6 +3,7 @@ using UnityEngine;
 public class BossPlungeState : BossState
 {
     int hitCount;
+
     public BossPlungeState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
     {
     }
@@ -12,31 +13,14 @@ public class BossPlungeState : BossState
         base.Enter();
         boss.transform.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         hitCount = 0;
+        boss.canBeCountered = true;
+        boss.modifier.canBeDamaged = true;
+
     }
 
     public override void Exit()
     {
         base.Exit();
-        hitCount = 0;
-    }
-
-    public override void Update()
-    {
-        base.Update();
-        boss.SetVelocity(0, boss.plungeSpeed * -1);
-        if(boss.isGround)
-        {
-            stateMachine.ChangeState(boss.rest);
-        }
-
-        if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
-        {
-            boss.counterWindow.SetActive(true);
-        }
-        else
-        {
-            boss.counterWindow.SetActive(false);
-        }
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(boss.plungeAttackChecker.position, boss.plungeAttackRange);
 
@@ -65,6 +49,36 @@ public class BossPlungeState : BossState
 
             }
         }
+        hitCount = 0;
+        boss.canBeCountered = false;
+        boss.modifier.canBeDamaged = false;
+        boss.counterWindow.SetActive(false);
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+
+        boss.SetVelocity(0, boss.plungeSpeed * -1);
+
+       
+
+        if (boss.isGround)
+        {
+            stateMachine.ChangeState(boss.rest);
+        }
+
+        if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
+        {
+            boss.counterWindow.SetActive(true);
+        }
+        else
+        {
+            boss.counterWindow.SetActive(false);
+        }
+
+        
 
     }
 }

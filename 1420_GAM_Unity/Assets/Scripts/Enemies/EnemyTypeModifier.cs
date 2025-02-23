@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class EnemyTypeModifier : MonoBehaviour
 {
-
-    [Range(1,5)]public int rankModifier;
-    private int hits;
+    [HideInInspector] public bool canBeDamaged;
+    [Range(1,6)]public int rankModifier;
+    public int bossHP;
+     public int hits;
     private int storedHits;
     private SpriteRenderer spriteRenderer;
     private Color color;
@@ -52,11 +53,15 @@ public class EnemyTypeModifier : MonoBehaviour
                 //rankName.text = player.comboNames[3];
                 A.SetActive(true);
                 break;
+            case 5:
+                hits = bossHP;
+                break;
                 default:
                 hits = 1000;
                 break;
 
         }
+
 
         storedHits = hits;
     }
@@ -64,7 +69,7 @@ public class EnemyTypeModifier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerManager.instance.player.comboHits == 0)
+        if(PlayerManager.instance.player.comboHits == 0 && rankModifier != 5)
         {
             hits = storedHits;
         }
@@ -103,6 +108,9 @@ public class EnemyTypeModifier : MonoBehaviour
 
     public void Damage(int hitsMultiplier)
     {
+        if(!canBeDamaged)
+            return;
+
         Debug.Log("Damaged");
         PlayerManager.instance.player.comboHits++;
         hits = hits - hitsMultiplier;

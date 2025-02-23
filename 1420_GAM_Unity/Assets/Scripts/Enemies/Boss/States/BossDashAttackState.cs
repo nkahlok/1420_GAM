@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BossDashAttackState : BossState
 {
-    protected int hitCount;
+    int hitCount;
     public BossDashAttackState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
     {
     }
@@ -29,6 +29,8 @@ public class BossDashAttackState : BossState
         boss.canBeCountered = true;
 
         hitCount = 0;
+
+        boss.modifier.canBeDamaged = true;
     }
 
     public override void Exit()
@@ -38,6 +40,12 @@ public class BossDashAttackState : BossState
         hitCount = 0;
 
         boss.canBeCountered = false;
+
+        boss.counterWindow.SetActive(false);
+
+        boss.modifier.canBeDamaged = false;
+
+         
     }
 
     public override void Update()

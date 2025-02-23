@@ -5355,6 +5355,7 @@ MonoBehaviour:
   doubleJumpEnabled: 0
   isShield: 0
   cannotBeKnocked: 0
+  canBeDamaged: 0
   mainCam: {fileID: 0}
   maxHP: 100
   hpBar: {fileID: 4008066607982792618}
@@ -5419,7 +5420,7 @@ MonoBehaviour:
   coyoteTime: 1
   coyoteCount: 0
   coyoteEnabled: 0
-  comboTime: 10
+  comboTime: 5
   comboCount: 0
   comboHitCount: 0
   airBorneTime: 0.4

@@ -12,7 +12,7 @@ public class P_LaunchAttackState : PlayerState
     {
         base.Enter();
         player.isBusy = true;
-
+       
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
      
@@ -34,6 +34,14 @@ public class P_LaunchAttackState : PlayerState
                     //Debug.Log("Knocked dis bitch up");
 
 
+                }
+                else if(collider.GetComponent<Boss>() != null)
+                {
+                    Boss boss = collider.GetComponent<Boss>();
+                    boss.isBusy = false;
+                    boss.KnockBack("Launch Up");
+                    if(boss.isTired)
+                        boss.knockedDown = true;
                 }
             }
         }
@@ -100,6 +108,8 @@ public class P_LaunchAttackState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
+        
 
         anim.SetBool("LaunchUp", false);
 

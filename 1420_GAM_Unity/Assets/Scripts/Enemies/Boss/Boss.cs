@@ -12,21 +12,27 @@ public class Boss : MonoBehaviour
     public BossPlungeState plunge { get; private set; }
     public BossSummonState summon { get; private set; }
     public BossKnockedState knocked { get; private set; }   
+    public BossTiredState tired { get; private set; }   
     public BossRestState rest { get; private set; }
     #endregion
 
     #region [Components]
     [Header("Components")]
+    [HideInInspector] public EnemyTypeModifier modifier;
     [HideInInspector] public SpriteRenderer sprite;
     [HideInInspector] public Animator anim;
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Player player;
+    [HideInInspector] public bool isBusy;
     [HideInInspector] public int facingDir;
     [HideInInspector] public bool canBeCountered;
     [HideInInspector] public bool countered;
     [HideInInspector] public bool knockedDown;
+    [HideInInspector] public int attackPatternCount;
+    [HideInInspector] public bool isTired;
+    [HideInInspector] public bool tiredTriggered;
+    [HideInInspector] public bool phaseOne;
     private bool waitingForHitStop;
-    public int attackPatternCount;
     public Transform rightPoint, leftPoint, topPoint;
     public Transform restPoint;
     #endregion
@@ -51,6 +57,15 @@ public class Boss : MonoBehaviour
     public float plungeAttackRange;
     #endregion
 
+    #region [AttackPattern]
+    [Space]
+    [Header("Attack Patterns - Phase One(Maximum 4 numbers: 0 to 3)")]
+    public int[] dashAttackPatternNumber;
+    public int[] plungeAttackPatternNumber;
+    public int[] summonAttackPatternNumber;
+
+    #endregion
+
     #region[Attack and States specs]
     [Space]
     [Header("Attack Specs")]
@@ -66,6 +81,8 @@ public class Boss : MonoBehaviour
     public float crowProjectileIntervals;
     public Transform[] crowSpawners;
     [HideInInspector] public int crowSpawnersCount;
+    public float knockedDownDur;
+    public int[] tiredHpThresholds;
     #endregion
 
     private void Awake()
@@ -76,7 +93,9 @@ public class Boss : MonoBehaviour
         plunge = new BossPlungeState(this, stateMachine, "Plunge");
         summon = new BossSummonState(this, stateMachine, "Summon");
         knocked = new BossKnockedState(this, stateMachine, "Knocked");
+        tired = new BossTiredState(this, stateMachine, "Tired");
 
+        modifier = GetComponent<EnemyTypeModifier>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
@@ -89,6 +108,9 @@ public class Boss : MonoBehaviour
         facingDir = 1;
         player = PlayerManager.instance.player;
         stateMachine.Initialize(dashAttack);
+        counterWindow.SetActive(false);
+        modifier.canBeDamaged = false;
+        phaseOne = true;
     }
 
     // Update is called once per frame
@@ -97,8 +119,9 @@ public class Boss : MonoBehaviour
         stateMachine.currentState.Update();
 
         CollisionChecks();
+        PhaseOneTired();
 
-        if(attackPatternCount > 3 )
+        if (attackPatternCount > 3 )
         {
             attackPatternCount = 0;
         }
@@ -106,6 +129,28 @@ public class Boss : MonoBehaviour
         if (knockedDown)
         {
             stateMachine.ChangeState(knocked);
+        }
+
+        
+     
+    }
+
+    public void PhaseOneTired()
+    {
+        if (modifier.hits == tiredHpThresholds[0] && !tiredTriggered)
+        {
+            stateMachine.ChangeState(tired);
+            modifier.A.SetActive(true);
+        }
+
+        if (modifier.hits == tiredHpThresholds[0] - player.comboNum[3] && phaseOne == true)
+        {
+            tiredTriggered = false;
+            isTired = false;
+            phaseOne = false;
+            attackPatternCount = 0;
+            modifier.A.SetActive(false);
+            stateMachine.ChangeState(rest);
         }
     }
 
@@ -121,28 +166,30 @@ public class Boss : MonoBehaviour
 
     public void KnockBack(string attackType)
     {
+        if (isBusy)
+            return;
 
-            if (attackType == "Launch Up")
-            {
-                rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
-                StartCoroutine("BusySwitch", 0);
-            }
-            else if (attackType == "Countered")
-            {
-                Debug.Log("Countered");
+        else if (attackType == "Launch Up" && isTired)
+        {
+            rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
+            StartCoroutine("BusySwitch", 0);
+        }
+        else if (attackType == "Countered")
+        {
+            Debug.Log("Countered");
             countered = true;
-                knockedDown = true;
-                shockwaveManager.CallShockwave();
-                StartCoroutine("BusySwitch", 0);
-                player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
-                HitStop(player.counterHitStop);
+            knockedDown = true;
+            shockwaveManager.CallShockwave();
+            StartCoroutine("BusySwitch", 0);
+            player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
+            HitStop(player.counterHitStop);
 
-            }
-            //this is the aerrial bounce code
-            else if (attackType == "Aerial")
-            {
-                rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
-            }
+        }
+        //this is the aerrial bounce code
+        else if (attackType == "Aerial" && isTired)
+        {
+            rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
+        }
     }
 
     public void HitStop(float duration)
@@ -164,6 +211,13 @@ public class Boss : MonoBehaviour
             waitingForHitStop = false;
         }
 
+    }
+
+    IEnumerator BusySwitch(float seconds)
+    {
+        isBusy = true;
+        yield return new WaitForSeconds(seconds);
+        isBusy = false;
     }
 
 
@@ -199,7 +253,7 @@ public class Boss : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ArenaBounds"))
+        if (collision.gameObject.CompareTag("ArenaBounds") && !isTired)
         {
             Flip();
             stateMachine.ChangeState(rest);

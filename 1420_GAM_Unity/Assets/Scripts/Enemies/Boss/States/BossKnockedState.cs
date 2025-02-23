@@ -11,17 +11,27 @@ public class BossKnockedState : BossState
     public override void Enter()
     {
         base.Enter();
-        knockedDur = 0.5f;
+        knockedDur = boss.knockedDownDur;
         boss.knockedDown = false;
 
+        //boss.SetVelocity(0, 0);
+
+        boss.modifier.canBeDamaged = true;
+
         if (boss.countered)
+        {
             rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * boss.facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
+            boss.modifier.Damage(1);
+        }
+       
+        
     }
 
     public override void Exit()
     {
         base.Exit();
         boss.countered = false;
+        boss.modifier.canBeDamaged = false;
     }
 
     public override void Update()
@@ -30,9 +40,14 @@ public class BossKnockedState : BossState
         
         knockedDur -= Time.deltaTime;   
 
-        if(knockedDur < 0)
+        if(knockedDur < 0 && !boss.isTired)
         {
             stateMachine.ChangeState(boss.rest);
+        }
+
+        if (boss.isTired && boss.isGround && knockedDur < 0)
+        {
+            stateMachine.ChangeState(boss.tired);
         }
     }
 }

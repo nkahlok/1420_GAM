@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BossRestState : BossState
 {
-    
+   
 
     public BossRestState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
     {
@@ -15,6 +15,7 @@ public class BossRestState : BossState
         boss.transform.position = boss.restPoint.position;
         boss.restTimer = boss.restDur;
         boss.attackPatternCount++;
+        boss.counterWindow.SetActive(false);
     }
 
     public override void Exit()
@@ -22,6 +23,8 @@ public class BossRestState : BossState
         base.Exit();
         sprite.color = new Color(1f, 1f, 1f, 1f);
         Debug.Log("Exited rest");
+        
+
     }
 
     public override void Update()
@@ -32,14 +35,30 @@ public class BossRestState : BossState
 
         if (boss.restTimer < 0f)
         {
-            if(boss.attackPatternCount == 0 || boss.attackPatternCount == 3)
+            if(boss.attackPatternCount == boss.dashAttackPatternNumber[0] || boss.attackPatternCount == boss.dashAttackPatternNumber[1])
+            {
+                
+
                 stateMachine.ChangeState(boss.dashAttack);
 
-            else if (boss.attackPatternCount == 1)
+               
+            }
+
+            else if (boss.attackPatternCount == boss.plungeAttackPatternNumber[0])
+            {
+                
+
                 stateMachine.ChangeState(boss.plunge);
+
             
-            else if(boss.attackPatternCount == 2)
+            }
+            
+            else if(boss.attackPatternCount == boss.summonAttackPatternNumber[0])
+            {
+                
                 stateMachine.ChangeState(boss.summon);
+       
+            }
         }
     }
 }
