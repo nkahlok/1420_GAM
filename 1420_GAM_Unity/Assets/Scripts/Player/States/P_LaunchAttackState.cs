@@ -79,6 +79,19 @@ public class P_LaunchAttackState : PlayerState
                         enemy.KnockBack("Forward");
                     }
                 }
+                else if (collider.GetComponent<Boss>() != null)
+                {
+                    Boss boss = collider.GetComponent<Boss>();
+
+                    if ((boss.canBeCountered))
+                    {
+                        player.comboHitCount = player.comboTime;
+                        player.hitEffect.Play();
+                        boss.KnockBack("Countered");
+                        boss.canBeCountered = false;
+                    }
+
+                }
             }
         }
 

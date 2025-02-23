@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - CheckPoint
   - Spike
+  - ArenaBounds
   layers:
   - Default
   - TransparentFX

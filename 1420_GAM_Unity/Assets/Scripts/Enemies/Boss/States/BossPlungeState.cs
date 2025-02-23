@@ -1,52 +1,33 @@
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class BossDashAttackState : BossState
+public class BossPlungeState : BossState
 {
-    protected int hitCount;
-    public BossDashAttackState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
+    int hitCount;
+    public BossPlungeState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
-        if(boss.attackPatternCount%2 == 0)
-        {
-            if (boss.facingDir == 1)
-                boss.Flip();
-            boss.transform.position = boss.rightPoint.position;
-        }
-
-        else if (boss.attackPatternCount % 2 == 1)
-        {
-            Debug.Log("odd no.");
-            if (boss.facingDir == -1)
-                boss.Flip();
-            boss.transform.position = boss.leftPoint.position;
-        }
-
-        boss.canBeCountered = true;
-
+        boss.transform.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         hitCount = 0;
     }
 
     public override void Exit()
     {
         base.Exit();
-
         hitCount = 0;
-
-        boss.canBeCountered = false;
     }
 
     public override void Update()
     {
         base.Update();
-
-        Debug.Log("Dashing");
-
-        boss.SetVelocity(boss.dashAttackSpeed * boss.facingDir, rb.linearVelocityY);
+        boss.SetVelocity(0, boss.plungeSpeed * -1);
+        if(boss.isGround)
+        {
+            stateMachine.ChangeState(boss.rest);
+        }
 
         if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
         {
@@ -57,16 +38,15 @@ public class BossDashAttackState : BossState
             boss.counterWindow.SetActive(false);
         }
 
-
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(boss.dashAttackChecker.position, boss.dashAttackRange);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(boss.plungeAttackChecker.position, boss.plungeAttackRange);
 
         foreach (Collider2D collider in colliders)
         {
-            if(collider.GetComponent<Player>() != null) 
-            { 
-                if(hitCount == 0)
+            if (collider.GetComponent<Player>() != null)
+            {
+                if (hitCount == 0)
                 {
-                    boss.player.Damage(boss.dashAttackDamage);
+                    boss.player.Damage(boss.plungeAttackDamage);
                     hitCount++;
                     if (boss.transform.position.x > boss.player.transform.position.x && boss.player.facingDir == -1)
                     {
@@ -85,7 +65,6 @@ public class BossDashAttackState : BossState
 
             }
         }
-
 
     }
 }

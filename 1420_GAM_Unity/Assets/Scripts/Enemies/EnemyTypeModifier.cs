@@ -11,7 +11,7 @@ public class EnemyTypeModifier : MonoBehaviour
     private int storedHits;
     private SpriteRenderer spriteRenderer;
     private Color color;
-    public Text rankName;
+    //public Text rankName;
     private Player player;
     public GameObject D;
     public GameObject C;

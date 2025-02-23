@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class BossState 
 {
-    Boss boss;
-    BossStateMachine stateMachine;
-    string animBool;
+    protected Boss boss;
+    protected BossStateMachine stateMachine;
+    protected string animBool;
 
     protected Animator anim;
     protected Rigidbody2D rb;
+    protected SpriteRenderer sprite;
+    protected Color tempColor;
 
     public BossState(Boss _boss, BossStateMachine _stateMachine, string _animBool)
     {
@@ -20,6 +22,8 @@ public class BossState
     {
         anim = boss.anim;
         rb = boss.rb;
+        sprite = boss.sprite;
+        tempColor = sprite.color;
         anim.SetBool(animBool, true);
     }
 
@@ -31,6 +35,6 @@ public class BossState
 
     public virtual void Update()
     {
-
+        anim.SetFloat("yVelocity", rb.linearVelocityY); 
     }
 }
