@@ -35,6 +35,6 @@ public class BossState
 
     public virtual void Update()
     {
-
+        anim.SetFloat("yVelocity", rb.linearVelocityY); 
     }
 }

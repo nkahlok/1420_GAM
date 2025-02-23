@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class Boss : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Boss : MonoBehaviour
     public BossDashAttackState dashAttack { get; private set; }
     public BossPlungeState plunge { get; private set; }
     public BossSummonState summon { get; private set; }
+    public BossKnockedState knocked { get; private set; }   
     public BossRestState rest { get; private set; }
     #endregion
 
@@ -19,9 +22,20 @@ public class Boss : MonoBehaviour
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Player player;
     [HideInInspector] public int facingDir;
-     public int attackPatternCount;
+    [HideInInspector] public bool canBeCountered;
+    [HideInInspector] public bool countered;
+    [HideInInspector] public bool knockedDown;
+    private bool waitingForHitStop;
+    public int attackPatternCount;
     public Transform rightPoint, leftPoint, topPoint;
     public Transform restPoint;
+    #endregion
+
+    #region [VFX]
+    [Space]
+    [Header("VFX")]
+    public ShockwaveManager shockwaveManager;
+    public GameObject counterWindow;
     #endregion
 
     #region [Raycasts]
@@ -31,6 +45,10 @@ public class Boss : MonoBehaviour
     public Transform groundChecker;
     public float groundDistance;
     public RaycastHit2D isGround;
+    public Transform dashAttackChecker;
+    public float dashAttackRange;
+    public Transform plungeAttackChecker;
+    public float plungeAttackRange;
     #endregion
 
     #region[Attack and States specs]
@@ -39,7 +57,9 @@ public class Boss : MonoBehaviour
     public float restDur;
     [HideInInspector] public float restTimer;
     public float dashAttackSpeed;
+    public int dashAttackDamage;
     public float plungeSpeed;
+    public int plungeAttackDamage;
     public float summonDur;
     [HideInInspector] public float summonTimer;
     public GameObject crowProjectilePrefab;
@@ -55,6 +75,7 @@ public class Boss : MonoBehaviour
         rest = new BossRestState(this, stateMachine, "Idle");
         plunge = new BossPlungeState(this, stateMachine, "Plunge");
         summon = new BossSummonState(this, stateMachine, "Summon");
+        knocked = new BossKnockedState(this, stateMachine, "Knocked");
 
         sprite = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -81,6 +102,11 @@ public class Boss : MonoBehaviour
         {
             attackPatternCount = 0;
         }
+
+        if (knockedDown)
+        {
+            stateMachine.ChangeState(knocked);
+        }
     }
 
     public void SpawnCrowProjectiles()
@@ -92,6 +118,54 @@ public class Boss : MonoBehaviour
 
         crowSpawnersCount++;
     }
+
+    public void KnockBack(string attackType)
+    {
+
+            if (attackType == "Launch Up")
+            {
+                rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[0].x, SkillManager.instance.launchSkill.launchVelocity[0].y);
+                StartCoroutine("BusySwitch", 0);
+            }
+            else if (attackType == "Countered")
+            {
+                Debug.Log("Countered");
+            countered = true;
+                knockedDown = true;
+                shockwaveManager.CallShockwave();
+                StartCoroutine("BusySwitch", 0);
+                player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
+                HitStop(player.counterHitStop);
+
+            }
+            //this is the aerrial bounce code
+            else if (attackType == "Aerial")
+            {
+                rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
+            }
+    }
+
+    public void HitStop(float duration)
+    {
+        if (waitingForHitStop)
+            return;
+
+        Time.timeScale = 0.0f;
+        StartCoroutine(HitStopCorountine(duration));
+    }
+
+    IEnumerator HitStopCorountine(float seconds)
+    {
+        if (!waitingForHitStop)
+        {
+            waitingForHitStop = true;
+            yield return new WaitForSecondsRealtime(seconds);
+            Time.timeScale = 1f;
+            waitingForHitStop = false;
+        }
+
+    }
+
 
     public void SetVelocity(float xVelocity, float yVelocity)
     {
@@ -135,5 +209,7 @@ public class Boss : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(new Vector2(groundChecker.position.x, groundChecker.position.y), new Vector2(groundChecker.position.x, groundChecker.position.y - groundDistance));
+        Gizmos.DrawWireSphere(new Vector3(dashAttackChecker.position.x, dashAttackChecker.position.y), dashAttackRange);
+        Gizmos.DrawWireSphere(new Vector3(plungeAttackChecker.position.x, plungeAttackChecker.position.y), plungeAttackRange);
     }
 }

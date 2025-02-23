@@ -14,6 +14,11 @@ public class BossSummonState : BossState
         boss.summonTimer = boss.summonDur;
         boss.transform.position = boss.leftPoint.position;
         tempInterval = 0f;
+
+        if(boss.facingDir == -1)
+        {
+            boss.Flip();
+        }
     }
 
     public override void Exit()
