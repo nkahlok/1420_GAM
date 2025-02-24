@@ -30,6 +30,8 @@ public class BossDashAttackState : BossState
 
         hitCount = 0;
 
+        boss.dashDust.Play();
+
         boss.modifier.canBeDamaged = true;
     }
 
@@ -45,7 +47,7 @@ public class BossDashAttackState : BossState
 
         boss.modifier.canBeDamaged = false;
 
-         
+        boss.dashDust.Stop();
     }
 
     public override void Update()

@@ -41,6 +41,7 @@ public class Boss : MonoBehaviour
     [Header("VFX")]
     public ShockwaveManager shockwaveManager;
     public GameObject counterWindow;
+    public ParticleSystem dashDust;
     #endregion
 
     #region [Raycasts]

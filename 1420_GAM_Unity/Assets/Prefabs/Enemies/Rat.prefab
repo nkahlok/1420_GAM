@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c0e8d9186e51d42b7aa9cebd116a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modifier: {fileID: 0}
   anim: {fileID: 0}
   wasAttacked: 0
   knockedDown: 0
@@ -368,7 +369,6 @@ MonoBehaviour:
   shockwaveManager: {fileID: 0}
   isCat: 0
   isRat: 1
-  isBoss: 0
   moveSpeed: 3
   idleTime: 2
   facingDir: 1
@@ -486,8 +486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37288db0f67f07949bf4b4bc733fe390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canBeDamaged: 0
   rankModifier: 4
-  rankName: {fileID: 0}
+  bossHP: 0
+  hits: 0
   D: {fileID: 837046125350005219}
   C: {fileID: 3871996853321329477}
   B: {fileID: 2383510525266976000}
@@ -692,7 +694,7 @@ Transform:
   m_GameObject: {fileID: 4146724151562305676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1510025, y: 1.81, z: 0}
+  m_LocalPosition: {x: -0.1510025, y: 2.066, z: 0}
   m_LocalScale: {x: 0.2487, y: 0.2487, z: 0.2487}
   m_ConstrainProportionsScale: 0
   m_Children: []
