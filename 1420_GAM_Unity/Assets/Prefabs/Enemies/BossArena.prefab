@@ -1852,7 +1852,6 @@ MonoBehaviour:
   attackPatternCount: 0
   isTired: 0
   tiredTriggered: 0
-  phaseOne: 0
   rightPoint: {fileID: 2609693426166016470}
   leftPoint: {fileID: 8624413652757051446}
   topPoint: {fileID: 589571354575547065}
@@ -1868,9 +1867,14 @@ MonoBehaviour:
   dashAttackRange: 0.37
   plungeAttackChecker: {fileID: 6863977262405534895}
   plungeAttackRange: 0.9
-  dashAttackPatternNumber: 0000000003000000
-  plungeAttackPatternNumber: 01000000
-  summonAttackPatternNumber: 02000000
+  phaseOne: 0
+  dashAttackPatternNumberOne: 0000000003000000
+  plungeAttackPatternNumberOne: 01000000
+  summonAttackPatternNumberOne: 02000000
+  phaseTwo: 0
+  dashAttackPatternNumberTwo: 01000000
+  plungeAttackPatternNumberTwo: 0200000003000000
+  summonAttackPatternNumberTwo: 00000000
   restDur: 0.5
   restTimer: 0
   dashAttackSpeed: 20
@@ -1891,7 +1895,7 @@ MonoBehaviour:
   - {fileID: 2433515957272305552}
   crowSpawnersCount: 0
   knockedDownDur: 0.5
-  tiredHpThresholds: 5a0000005000000046000000
+  tiredHpThresholds: 5f0000005000000046000000
 --- !u!114 &8767070995978550759
 MonoBehaviour:
   m_ObjectHideFlags: 0
