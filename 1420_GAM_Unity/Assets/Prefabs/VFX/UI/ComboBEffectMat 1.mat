@@ -49,8 +49,8 @@ Material:
     - _Size: 0.09
     - _XRatio: 1.777
     m_Colors:
-    - _Color: {r: 6.140519, g: 5.4297934, b: 1.419271, a: 1}
-    - _EffectSpeed: {r: 0, g: 0.5, b: 0, a: 0}
+    - _Color: {r: 3.1458266, g: 3.1458266, b: 3.1458266, a: 1}
+    - _EffectSpeed: {r: 0, g: 1.2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8120530693121745342
