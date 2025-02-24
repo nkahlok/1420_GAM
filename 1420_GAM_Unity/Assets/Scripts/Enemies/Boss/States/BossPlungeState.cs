@@ -66,7 +66,7 @@ public class BossPlungeState : BossState
 
         if (boss.isGround)
         {
-            if(boss.phaseTwo)
+            if(boss.phaseTwo || boss.phaseThree)
                 boss.SpawnShockwave();
 
             stateMachine.ChangeState(boss.rest);

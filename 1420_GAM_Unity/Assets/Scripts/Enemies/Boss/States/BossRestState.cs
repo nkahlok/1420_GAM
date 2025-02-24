@@ -39,6 +39,8 @@ public class BossRestState : BossState
                 PhaseOneAttackPattern(); 
             if(boss.phaseTwo)
                 PhaseTwoAttackPattern();
+            if(boss.phaseThree)
+                PhaseThreeAttackPattern();
         }
     }
 
@@ -91,6 +93,34 @@ public class BossRestState : BossState
         }
 
         else if (boss.attackPatternCount == boss.summonAttackPatternNumberTwo[0])
+        {
+
+            stateMachine.ChangeState(boss.summon);
+
+        }
+    }
+
+    public void PhaseThreeAttackPattern()
+    {
+        if (boss.attackPatternCount == boss.dashAttackPatternNumberThree[0])
+        {
+
+
+            stateMachine.ChangeState(boss.dashAttack);
+
+
+        }
+
+        else if (boss.attackPatternCount == boss.plungeAttackPatternNumberThree[0])
+        {
+
+
+            stateMachine.ChangeState(boss.plunge);
+
+
+        }
+
+        else if (boss.attackPatternCount == boss.summonAttackPatternNumberThree[0] || boss.attackPatternCount == boss.summonAttackPatternNumberThree[1])
         {
 
             stateMachine.ChangeState(boss.summon);

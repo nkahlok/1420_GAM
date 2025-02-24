@@ -101,6 +101,13 @@ public class Boss : MonoBehaviour
     public Transform shockwaveProjectileSpawner;
     #endregion
 
+    #region[Phase Three Attack and States specs]
+    [Space]
+    [Header("Phase Two and States specs")]
+    public GameObject birdwallPrefab;
+    public Transform birdwallSpawner;
+    #endregion
+
     private void Awake()
     {
         stateMachine = new BossStateMachine();
@@ -194,6 +201,11 @@ public class Boss : MonoBehaviour
 
 
 
+    }
+
+    public void SpawnBirdWall()
+    {
+        GameObject newBirdWall = Instantiate(birdwallPrefab, birdwallSpawner.position, birdwallSpawner.rotation);
     }
 
     public void SpawnCrowProjectiles()

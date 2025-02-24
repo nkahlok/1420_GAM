@@ -13081,110 +13081,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 841382736893680004, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 984009097504447728, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1135559031396868689, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372132550905777327, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574351377628198908, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574351377628198908, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791592901361614658, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791592901361614658, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 2433515957272305552, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2433515957272305552, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 2666664833770150661, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2753463071672495698, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2837461289657014722, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 2837461289657014722, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805942940377991415, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4629248337441946812, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4806667618008001617, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
       propertyPath: m_Name
       value: BossArena
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883880949283194441, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5595016230506495153, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423095601604564181, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 6423095601604564181, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 6582983254253903241, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6996262621696363085, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
       propertyPath: shockwaveManager
       value: 
       objectReference: {fileID: 909082297}
-    - target: {fileID: 6996262621696363085, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: tiredHpThresholds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996262621696363085, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: 'tiredHpThresholds.Array.data[0]'
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996262621696363085, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: 'tiredHpThresholds.Array.data[1]'
-      value: 17
-      objectReference: {fileID: 0}
     - target: {fileID: 7307050418068300760, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.020004
@@ -13224,30 +13128,6 @@ PrefabInstance:
     - target: {fileID: 7307050418068300760, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7451020209316981163, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7497728947682836988, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7497728947682836988, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 8003145150166816347, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8767070995978550759, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: bossHP
-      value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 8908558892829643906, guid: d821cf29c162187429227ecdb36b9c6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
