@@ -466,6 +466,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2915240527672330313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3389533371837608538}
+  m_Layer: 8
+  m_Name: ShockwaveSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3389533371837608538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915240527672330313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: -1.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6145652882747877508}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3367678334460554601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1854,7 @@ Transform:
   - {fileID: 6901614464009117022}
   - {fileID: 6863977262405534895}
   - {fileID: 5424657391511493586}
+  - {fileID: 3389533371837608538}
   - {fileID: 5743041258495535026}
   - {fileID: 841499504102343993}
   m_Father: {fileID: 7307050418068300760}
@@ -1896,6 +1928,10 @@ MonoBehaviour:
   crowSpawnersCount: 0
   knockedDownDur: 0.5
   tiredHpThresholds: 5f0000005000000046000000
+  shockwaveProjectilePrefab:
+  - {fileID: 8109850198923393151, guid: 3c2cb4d32184b2b4d9b4522e9747c2b4, type: 3}
+  - {fileID: 2770713298081058313, guid: 45376ebea1f2af844971b7f37cdf3a59, type: 3}
+  shockwaveProjectileSpawner: {fileID: 3389533371837608538}
 --- !u!114 &8767070995978550759
 MonoBehaviour:
   m_ObjectHideFlags: 0

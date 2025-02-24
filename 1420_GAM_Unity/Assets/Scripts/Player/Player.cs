@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool isShield;
     [HideInInspector] public bool cannotBeKnocked;
     [HideInInspector] public bool canBeDamaged;
+    [HideInInspector] public bool feathersOn;
     private bool waitingForHitStop;
     private SpriteRenderer sprite;
     private Color color;
@@ -202,11 +203,12 @@ public class Player : MonoBehaviour
             counterAttackTutCanvas.SetActive(false);
         }*/
         
-        if(comboHits == comboNum[3])
+        if(comboHits >= comboNum[3] && !feathersOn)
         {
             feathers.Play();
             feathers2.Play();
-            shockwaveManager.CallShockwave();   
+            shockwaveManager.CallShockwave();
+            feathersOn = true;
         }
 
     }
@@ -417,6 +419,7 @@ public class Player : MonoBehaviour
                 ravenousVfxManager.DisableRavenousEffect();
                 feathers.Stop();
                 feathers2.Stop();
+                feathersOn = false;
                 comboNamesUI.gameObject.SetActive(false);
                 comboNamesSprites[0].SetActive(false);
                 comboNamesSprites[1].SetActive(false);
