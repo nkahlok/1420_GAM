@@ -47,7 +47,11 @@ public class BossSummonState : BossState
         if(tempInterval < 0)
         {
             boss.SpawnCrowProjectiles();
-            tempInterval = boss.crowProjectileIntervals;
+
+            if(boss.phaseOne)
+                tempInterval = boss.crowProjectileIntervals;
+            else if(boss.phaseTwo)
+                tempInterval = boss.crowProjectileIntervals/2;
         }
 
         boss.SetVelocity(0,0);

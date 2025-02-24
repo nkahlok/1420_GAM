@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8ecdc89a5779e48b71981c083de3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 2
+  cooldown: 1
   player: {fileID: 0}
   DashDur: 0.2
   dashSpeed: 30

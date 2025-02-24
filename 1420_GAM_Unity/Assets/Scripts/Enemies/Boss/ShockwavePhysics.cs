@@ -16,7 +16,7 @@ public class ShockwavePhysics : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = PlayerManager.instance.player;
 
-        if (!isRight)
+        if (isRight)
         {
             this.gameObject.transform.Rotate(0, 180, 0);
         }

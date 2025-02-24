@@ -33,7 +33,7 @@ public class Boss : MonoBehaviour
     [HideInInspector] public bool tiredTriggered;
     private bool waitingForHitStop;
     public Transform rightPoint, leftPoint, topPoint;
-    public Transform restPoint;
+    public Transform restPoint, tiredPoint;
     #endregion
 
     #region [VFX]
@@ -68,6 +68,11 @@ public class Boss : MonoBehaviour
     public int[] dashAttackPatternNumberTwo;
     public int[] plungeAttackPatternNumberTwo;
     public int[] summonAttackPatternNumberTwo;
+    [Header("Attack Patterns - Phase Three(Maximum 4 numbers: 0 to 3)")]
+    [HideInInspector] public bool phaseThree;
+    public int[] dashAttackPatternNumberThree;
+    public int[] plungeAttackPatternNumberThree;
+    public int[] summonAttackPatternNumberThree;
     #endregion
 
     #region[Attack and States specs]
@@ -131,6 +136,7 @@ public class Boss : MonoBehaviour
 
         CollisionChecks();
         PhaseOneTired();
+        PhaseTwoTired();
 
         if (attackPatternCount > 3 )
         {
@@ -164,6 +170,30 @@ public class Boss : MonoBehaviour
             modifier.A.SetActive(false);
             stateMachine.ChangeState(rest);
         }
+    }
+
+    public void PhaseTwoTired()
+    {
+        if(modifier.hits == tiredHpThresholds[1] && !tiredTriggered)
+        {
+            stateMachine.ChangeState(tired);
+            modifier.A.SetActive(true);
+        }
+
+        if(modifier.hits == tiredHpThresholds[1] - player.comboNum[3] && phaseTwo == true)
+        {
+            tiredTriggered = false;
+            isTired = false;
+            phaseTwo = false;
+            phaseThree = true;  
+            attackPatternCount = 0;
+            modifier.A.SetActive(false);
+            stateMachine.ChangeState(rest);
+        }
+
+
+
+
     }
 
     public void SpawnCrowProjectiles()

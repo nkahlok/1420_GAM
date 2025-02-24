@@ -12,7 +12,7 @@ public class BossTiredState : BossState
         boss.isTired = true;
         boss.tiredTriggered = true;
         boss.modifier.canBeDamaged = true;
-        boss.transform.position = boss.leftPoint.position;
+        boss.transform.position = boss.tiredPoint.position;
         boss.SetVelocity(0,0);
     }
 
