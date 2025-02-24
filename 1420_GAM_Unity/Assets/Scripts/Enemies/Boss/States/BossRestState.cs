@@ -35,30 +35,67 @@ public class BossRestState : BossState
 
         if (boss.restTimer < 0f)
         {
-            if(boss.attackPatternCount == boss.dashAttackPatternNumber[0] || boss.attackPatternCount == boss.dashAttackPatternNumber[1])
-            {
-                
-
-                stateMachine.ChangeState(boss.dashAttack);
-
-               
-            }
-
-            else if (boss.attackPatternCount == boss.plungeAttackPatternNumber[0])
-            {
-                
-
-                stateMachine.ChangeState(boss.plunge);
-
-            
-            }
-            
-            else if(boss.attackPatternCount == boss.summonAttackPatternNumber[0])
-            {
-                
-                stateMachine.ChangeState(boss.summon);
-       
-            }
+            if(boss.phaseOne)
+                PhaseOneAttackPattern(); 
+            if(boss.phaseTwo)
+                PhaseTwoAttackPattern();
         }
     }
+
+    public void PhaseOneAttackPattern()
+    {
+        if (boss.attackPatternCount == boss.dashAttackPatternNumberOne[0] || boss.attackPatternCount == boss.dashAttackPatternNumberOne[1])
+        {
+
+
+            stateMachine.ChangeState(boss.dashAttack);
+
+
+        }
+
+        else if (boss.attackPatternCount == boss.plungeAttackPatternNumberOne[0])
+        {
+
+
+            stateMachine.ChangeState(boss.plunge);
+
+
+        }
+
+        else if (boss.attackPatternCount == boss.summonAttackPatternNumberOne[0])
+        {
+
+            stateMachine.ChangeState(boss.summon);
+
+        }
+    }
+
+    public void PhaseTwoAttackPattern()
+    {
+        if (boss.attackPatternCount == boss.dashAttackPatternNumberTwo[0])
+        {
+
+
+            stateMachine.ChangeState(boss.dashAttack);
+
+
+        }
+
+        else if (boss.attackPatternCount == boss.plungeAttackPatternNumberTwo[0] || boss.attackPatternCount == boss.plungeAttackPatternNumberTwo[1])
+        {
+
+
+            stateMachine.ChangeState(boss.plunge);
+
+
+        }
+
+        else if (boss.attackPatternCount == boss.summonAttackPatternNumberTwo[0])
+        {
+
+            stateMachine.ChangeState(boss.summon);
+
+        }
+    }
+
 }

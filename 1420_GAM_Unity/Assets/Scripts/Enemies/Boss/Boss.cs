@@ -31,7 +31,6 @@ public class Boss : MonoBehaviour
     [HideInInspector] public int attackPatternCount;
     [HideInInspector] public bool isTired;
     [HideInInspector] public bool tiredTriggered;
-    [HideInInspector] public bool phaseOne;
     private bool waitingForHitStop;
     public Transform rightPoint, leftPoint, topPoint;
     public Transform restPoint;
@@ -60,10 +59,15 @@ public class Boss : MonoBehaviour
     #region [AttackPattern]
     [Space]
     [Header("Attack Patterns - Phase One(Maximum 4 numbers: 0 to 3)")]
-    public int[] dashAttackPatternNumber;
-    public int[] plungeAttackPatternNumber;
-    public int[] summonAttackPatternNumber;
-
+    [HideInInspector] public bool phaseOne;
+    public int[] dashAttackPatternNumberOne;
+    public int[] plungeAttackPatternNumberOne;
+    public int[] summonAttackPatternNumberOne;
+    [Header("Attack Patterns - Phase Two(Maximum 4 numbers: 0 to 3)")]
+    [HideInInspector] public bool phaseTwo;
+    public int[] dashAttackPatternNumberTwo;
+    public int[] plungeAttackPatternNumberTwo;
+    public int[] summonAttackPatternNumberTwo;
     #endregion
 
     #region[Attack and States specs]
@@ -83,6 +87,13 @@ public class Boss : MonoBehaviour
     [HideInInspector] public int crowSpawnersCount;
     public float knockedDownDur;
     public int[] tiredHpThresholds;
+    #endregion
+
+    #region[Phase Two Attack and States specs]
+    [Space]
+    [Header("Phase Two and States specs")]
+    public GameObject[] shockwaveProjectilePrefab;
+    public Transform shockwaveProjectileSpawner;
     #endregion
 
     private void Awake()
@@ -142,12 +153,13 @@ public class Boss : MonoBehaviour
             stateMachine.ChangeState(tired);
             modifier.A.SetActive(true);
         }
-
+        //when phase one ends
         if (modifier.hits == tiredHpThresholds[0] - player.comboNum[3] && phaseOne == true)
         {
             tiredTriggered = false;
             isTired = false;
             phaseOne = false;
+            phaseTwo = true;
             attackPatternCount = 0;
             modifier.A.SetActive(false);
             stateMachine.ChangeState(rest);
@@ -162,6 +174,12 @@ public class Boss : MonoBehaviour
         GameObject newCrowProjectile = Instantiate(crowProjectilePrefab, crowSpawners[crowSpawnersCount].position, crowSpawners[crowSpawnersCount].rotation);
 
         crowSpawnersCount++;
+    }
+
+    public void SpawnShockwave()
+    {
+        GameObject newShockwaveProjectile = Instantiate(shockwaveProjectilePrefab[0], shockwaveProjectileSpawner.position, shockwaveProjectileSpawner.rotation);
+        GameObject newShockwaveProjectile2 = Instantiate(shockwaveProjectilePrefab[1], shockwaveProjectileSpawner.position, shockwaveProjectileSpawner.rotation);
     }
 
     public void KnockBack(string attackType)
