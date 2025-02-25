@@ -74,7 +74,7 @@ public class P_LaunchAttackState : PlayerState
                     if (enemy.canBeCountered && collider.GetComponent<EnemyTypeModifier>() != null)
                     {
 
-                        collider.GetComponent<EnemyTypeModifier>().Damage(2);
+                        collider.GetComponent<EnemyTypeModifier>().Damage(1);
                         player.comboHitCount = player.comboTime;
                         player.hitEffect.Play();
 

@@ -653,7 +653,7 @@ RectTransform:
   m_GameObject: {fileID: 91850947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.73748, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1855332085}
@@ -696,7 +696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reload
+  m_Text: Main Menu
 --- !u!222 &91850950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10804,7 +10804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &244255169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31140,7 +31140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &887471639
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47270,6 +47270,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 853738017}
+    - target: {fileID: 6662083042452212390, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 7094210720992846804, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -47578,7 +47582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1327512673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52155,8 +52159,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1855332089}
-        m_TargetAssemblyTypeName: RestartBtn, Assembly-CSharp
-        m_MethodName: RestartScene
+        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
+        m_MethodName: MainMenuScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

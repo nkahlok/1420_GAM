@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartBtn : MonoBehaviour
+public class BtnManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,6 +17,14 @@ public class RestartBtn : MonoBehaviour
 
     public void RestartScene()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName: "Alpha");
     }
+
+    public void MainMenuScene()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(sceneName: "Menu");
+    }
+
 }
