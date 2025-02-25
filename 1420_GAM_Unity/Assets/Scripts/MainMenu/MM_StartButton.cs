@@ -5,6 +5,7 @@ public class MM_StartButton : MonoBehaviour
 {
     public Animator anim;
     public BoxCollider box;
+    public LevelLoaderScript levelLoader;
     private void Start()
     {
         box = GetComponent<BoxCollider>();
@@ -22,6 +23,6 @@ public class MM_StartButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SceneManager.LoadScene(sceneName: "Alpha");
+        levelLoader.LoadNextLevel();
     }
 }
