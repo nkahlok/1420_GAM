@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class Boss : MonoBehaviour
@@ -28,7 +29,7 @@ public class Boss : MonoBehaviour
     [HideInInspector] public bool canBeCountered;
     [HideInInspector] public bool countered;
     [HideInInspector] public bool knockedDown;
-     public int attackPatternCount;
+    [HideInInspector] public int attackPatternCount;
     [HideInInspector] public bool isTired;
     [HideInInspector] public bool tiredTriggered;
     private bool waitingForHitStop;
@@ -156,7 +157,11 @@ public class Boss : MonoBehaviour
             stateMachine.ChangeState(knocked);
         }
 
-        
+        if (modifier.hits == 0)
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(sceneName: "Menu");
+        }
      
     }
 

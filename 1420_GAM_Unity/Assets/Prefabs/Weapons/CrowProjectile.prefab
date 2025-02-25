@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
-  bulletDmg: 5
+  bulletDmg: 3
   projectileSpeed: 10
   knockbackForce: {x: 1, y: 1}
 --- !u!50 &8081553718899107362

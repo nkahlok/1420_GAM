@@ -8211,6 +8211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1463471088}
+  - component: {fileID: 1463471089}
   m_Layer: 0
   m_Name: DialogueSpriteRavie
   m_TagString: Untagged
@@ -8235,6 +8236,18 @@ Transform:
   - {fileID: 1249161147}
   m_Father: {fileID: 5449961213886546567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1463471089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463471087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2a711798f002846b2b0bae9c23c0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1477111874
 GameObject:
   m_ObjectHideFlags: 0
@@ -34205,9 +34218,9 @@ MonoBehaviour:
   restDur: 0.5
   restTimer: 0
   dashAttackSpeed: 17.5
-  dashAttackDamage: 10
+  dashAttackDamage: 5
   plungeSpeed: 12
-  plungeAttackDamage: 15
+  plungeAttackDamage: 7
   summonDur: 5
   summonTimer: 0
   crowProjectilePrefab: {fileID: 4131671323336949676, guid: 629bf46eebe42204b9379f9a7b805419, type: 3}
