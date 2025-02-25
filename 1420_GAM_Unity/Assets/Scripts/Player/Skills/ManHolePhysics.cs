@@ -140,6 +140,12 @@ public class ManHolePhysics : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("ArenaBounds"))
+        {
+            player.manholeAvailable = true;
+            Destroy(gameObject);
+        }
+
     }
 
 }

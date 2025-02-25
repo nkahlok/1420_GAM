@@ -14,8 +14,9 @@ public class BossRestState : BossState
         sprite.color = new Color(1f, 1f, 1f, 0f);
         boss.transform.position = boss.restPoint.position;
         boss.restTimer = boss.restDur;
-        boss.attackPatternCount++;
+        
         boss.counterWindow.SetActive(false);
+        boss.attackPatternCount++;
     }
 
     public override void Exit()
@@ -52,7 +53,7 @@ public class BossRestState : BossState
 
             stateMachine.ChangeState(boss.dashAttack);
 
-
+            
         }
 
         else if (boss.attackPatternCount == boss.plungeAttackPatternNumberOne[0])
@@ -61,15 +62,16 @@ public class BossRestState : BossState
 
             stateMachine.ChangeState(boss.plunge);
 
-
+          
         }
 
         else if (boss.attackPatternCount == boss.summonAttackPatternNumberOne[0])
         {
 
             stateMachine.ChangeState(boss.summon);
-
+          
         }
+
     }
 
     public void PhaseTwoAttackPattern()
@@ -79,7 +81,7 @@ public class BossRestState : BossState
 
 
             stateMachine.ChangeState(boss.dashAttack);
-
+         
 
         }
 
@@ -88,7 +90,7 @@ public class BossRestState : BossState
 
 
             stateMachine.ChangeState(boss.plunge);
-
+            
 
         }
 
@@ -96,7 +98,7 @@ public class BossRestState : BossState
         {
 
             stateMachine.ChangeState(boss.summon);
-
+           
         }
     }
 
@@ -107,7 +109,7 @@ public class BossRestState : BossState
 
 
             stateMachine.ChangeState(boss.dashAttack);
-
+           
 
         }
 
@@ -116,7 +118,7 @@ public class BossRestState : BossState
 
 
             stateMachine.ChangeState(boss.plunge);
-
+            
 
         }
 
@@ -124,7 +126,7 @@ public class BossRestState : BossState
         {
 
             stateMachine.ChangeState(boss.summon);
-
+            
         }
     }
 

@@ -27,7 +27,7 @@ public class LaunchSkill : Skill
         
 
         //if (Input.GetAxisRaw("Vertical") == 1 && player.isGround)
-        if(Input.GetKeyDown(KeyCode.Q)|| Input.GetKeyUp(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.W)|| Input.GetKeyUp(KeyCode.W))
         {
 
             StartCoroutine(launchDirRetain(1f, 1));

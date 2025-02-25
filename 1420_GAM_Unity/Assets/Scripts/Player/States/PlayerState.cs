@@ -49,6 +49,7 @@ public class PlayerState
 
 
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
+        anim.SetFloat("xVelocity", rb.linearVelocity.x);
     }
 
 

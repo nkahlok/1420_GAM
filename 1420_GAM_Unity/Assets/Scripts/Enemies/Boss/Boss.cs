@@ -28,7 +28,7 @@ public class Boss : MonoBehaviour
     [HideInInspector] public bool canBeCountered;
     [HideInInspector] public bool countered;
     [HideInInspector] public bool knockedDown;
-    [HideInInspector] public int attackPatternCount;
+     public int attackPatternCount;
     [HideInInspector] public bool isTired;
     [HideInInspector] public bool tiredTriggered;
     private bool waitingForHitStop;

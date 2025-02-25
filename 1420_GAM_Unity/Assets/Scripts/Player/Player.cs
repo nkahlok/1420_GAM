@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 //using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer sprite;
     private Color color;
     public GameObject mainCam;
+    public bool bossLvl;
 
     #region [HP]
     [Space]
@@ -233,7 +235,7 @@ public class Player : MonoBehaviour
 
     private void Death()
     {
-        if(hp <= 0)
+        if(hp <= 0 && !bossLvl)
         {
             hp = maxHP;
             if(checkPoint == null)
@@ -244,6 +246,11 @@ public class Player : MonoBehaviour
             {
                 this.gameObject.transform.position = checkPoint;
             }
+        }
+        else if(hp <= 0 && bossLvl)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -345,7 +352,7 @@ public class Player : MonoBehaviour
         }
 
         //if((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround)|| (Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && SkillManager.instance.launchSkill.launchDown))
-        if ((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround) || (Input.GetKeyUp(KeyCode.Q) && !isBusy && caneWpn && isGround))
+        if ((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround) || (Input.GetKeyUp(KeyCode.W) && !isBusy && caneWpn && isGround))
         {
             SkillManager.instance.launchSkill.SkillAvailable();
         }
