@@ -29044,7 +29044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeDamaged: 0
   rankModifier: 5
-  bossHP: 46
+  bossHP: 39
   hits: 0
   D: {fileID: 383151440393618129}
   C: {fileID: 2352195386551140340}
@@ -34687,7 +34687,7 @@ MonoBehaviour:
   topPoint: {fileID: 9197033233391981024}
   restPoint: {fileID: 6351647833195458355}
   tiredPoint: {fileID: 7447568832810773676}
-  shockwaveManager: {fileID: 0}
+  shockwaveManager: {fileID: 4770128972834407726}
   counterWindow: {fileID: 3703384948115616038}
   dashDust: {fileID: 210606838551301961}
   ground:
@@ -34714,9 +34714,9 @@ MonoBehaviour:
   restDur: 0.5
   restTimer: 0
   dashAttackSpeed: 17.5
-  dashAttackDamage: 5
+  dashAttackDamage: 1
   plungeSpeed: 12
-  plungeAttackDamage: 7
+  plungeAttackDamage: 1
   summonDur: 5
   summonTimer: 0
   crowProjectilePrefab: {fileID: 4131671323336949676, guid: 629bf46eebe42204b9379f9a7b805419, type: 3}
@@ -34731,7 +34731,7 @@ MonoBehaviour:
   - {fileID: 6217620762829251785}
   crowSpawnersCount: 0
   knockedDownDur: 0.5
-  tiredHpThresholds: 2400000011000000
+  tiredHpThresholds: 200000000f000000
   shockwaveProjectilePrefab:
   - {fileID: 2770713298081058313, guid: 37f88e961c6a3824ba0a0acf23f46361, type: 3}
   - {fileID: 2770713298081058313, guid: 45376ebea1f2af844971b7f37cdf3a59, type: 3}
