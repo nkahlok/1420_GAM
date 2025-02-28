@@ -205,10 +205,10 @@ TextureImporter:
       - {x: 30, y: -30}
     customData: 
     physicsShape:
-    - - {x: 24, y: -24}
-      - {x: 24, y: 8}
-      - {x: -25, y: 8}
-      - {x: -25, y: -24}
+    - - {x: 23, y: -24}
+      - {x: 23, y: -5}
+      - {x: -24, y: -5}
+      - {x: -24, y: -24}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 1537655665

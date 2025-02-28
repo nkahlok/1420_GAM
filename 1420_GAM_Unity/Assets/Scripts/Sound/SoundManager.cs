@@ -2,17 +2,20 @@ using UnityEngine;
 
 public enum SoundType
 {
-    WALK,
-    ATTACK,
-    JUMP,
-    UPPERCUT,
-    HURT,
-    DEATH
+    PLAYERWALK,
+    PLAYERATTACK,
+    PLAYERATTACKSUC,
+    PLAYERJUMP,
+    PLAYERDASH,
+    PLAYERLUNGE,
+    PLAYERUPPERCUT,
+    PLAYERHURT,
+    PLAYERDEATH
 }
-
+[RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip soundList;
+    [SerializeField] private AudioClip[] soundList;
     private static SoundManager instance;
     private AudioSource audioSource;
     private void Awake()
@@ -27,6 +30,6 @@ public class SoundManager : MonoBehaviour
 
     public static void PlaySound(SoundType sound, float volume = 1)
     {
-
+        instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
     }
 }
