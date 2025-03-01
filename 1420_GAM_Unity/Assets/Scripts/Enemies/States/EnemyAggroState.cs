@@ -87,9 +87,11 @@ public class EnemyAggroState : EnemyState
             enemyStateMachine.Changestate(enemy.enemyIdleState);
         }
 
+      
         if (enemy.ray.distance <= enemy.playerAttackDistance && enemy.isPlayer && enemy.attackCount < 0)
         {
             enemyStateMachine.Changestate(enemy.enemyAttackState);
+            
         }
         else if (enemy.ray.distance <= enemy.playerAttackDistance && enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
         {

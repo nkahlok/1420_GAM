@@ -141,7 +141,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 25fae8714d8e0ef44822e45ae8434b59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -290,7 +290,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: a955c07d8400c4a409ef6c965a723335, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -312,9 +312,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7409917015422925383}
   - component: {fileID: 211698303001267599}
+  - component: {fileID: 5973126707309660803}
   - component: {fileID: 7632103856263910589}
   - component: {fileID: 5466811483279750421}
-  - component: {fileID: 5973126707309660803}
   m_Layer: 8
   m_Name: Rat
   m_TagString: Untagged
@@ -392,12 +392,14 @@ MonoBehaviour:
   playerChecker: {fileID: 8514335982138911620}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 136
+  lineOfSightPlayer: 0
   playerAggroDistance: 13.55
   playerAttackDistance: 13.55
   playerAboveDistance: 5.41
   meleeAttackChecker: {fileID: 924121909057507715}
   meleeAttackRange: 0
+  isPlayer: 0
   aggroImg: {fileID: 4146724151562305676}
   counterWindowImg: {fileID: 9131702220972726643}
   normalAttackKnockBack: {x: 0, y: 0}
@@ -410,6 +412,26 @@ MonoBehaviour:
   rb: {fileID: 0}
   player: {fileID: 0}
   isBusy: 0
+--- !u!114 &5973126707309660803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398054369358401820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37288db0f67f07949bf4b4bc733fe390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeDamaged: 0
+  rankModifier: 2
+  bossHP: 0
+  hits: 0
+  D: {fileID: 837046125350005219}
+  C: {fileID: 3871996853321329477}
+  B: {fileID: 2383510525266976000}
+  A: {fileID: 3814598209865701418}
 --- !u!50 &7632103856263910589
 Rigidbody2D:
   serializedVersion: 5
@@ -474,26 +496,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.1296196, y: 0.020960867}
   m_Size: {x: 0.6419754, y: 1.5187262}
   m_Direction: 0
---- !u!114 &5973126707309660803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2398054369358401820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37288db0f67f07949bf4b4bc733fe390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canBeDamaged: 0
-  rankModifier: 4
-  bossHP: 0
-  hits: 0
-  D: {fileID: 837046125350005219}
-  C: {fileID: 3871996853321329477}
-  B: {fileID: 2383510525266976000}
-  A: {fileID: 3814598209865701418}
 --- !u!1 &3814598209865701418
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +571,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 30c39666c030f794ebdda1b673f95931, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -656,7 +658,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 9ef609996beb665448e493aa6a94d677, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -934,7 +936,7 @@ Transform:
   m_GameObject: {fileID: 7149340848075332528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1489975, y: -0.43, z: 0}
+  m_LocalPosition: {x: -0.046, y: -0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

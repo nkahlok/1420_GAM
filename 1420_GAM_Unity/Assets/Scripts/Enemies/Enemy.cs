@@ -58,8 +58,9 @@ public class Enemy : MonoBehaviour
     [Space]
     public Transform playerChecker;
     public LayerMask playerLayer;
+    //public LayerMask enemyLayer;
     [HideInInspector] public RaycastHit2D ray;
-    [HideInInspector] public bool lineOfSightPlayer;
+    public bool lineOfSightPlayer;
     public float playerAggroDistance;
     public float playerAttackDistance;
     public float playerAboveDistance;
@@ -68,7 +69,7 @@ public class Enemy : MonoBehaviour
     public float meleeAttackRange;
     [HideInInspector] public RaycastHit2D isWall;
     [HideInInspector] public RaycastHit2D isGround;
-    [HideInInspector] public bool isPlayer;
+    public bool isPlayer;
     [HideInInspector] public RaycastHit2D isPlayerAbove;
     #endregion
 
@@ -185,20 +186,27 @@ public class Enemy : MonoBehaviour
 
     public void CollisionChecks()
     {
-        ray = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance);
+        ray = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance, playerLayer);
         if(ray.collider != null)
         {
             lineOfSightPlayer = ray.collider.CompareTag("Player");
             if (lineOfSightPlayer)
             {
-                Debug.DrawRay(playerChecker.position, Vector2.right * facingDir, Color.green);
+                Debug.Log("I detect player");
                 isPlayer = true;
+                
             }
-            else
+            else if(!lineOfSightPlayer)
             {
+                Debug.Log("I detect player");
                 isPlayer = false;
             }
 
+        }
+        else
+        {
+            lineOfSightPlayer = false;
+            isPlayer = false;
         }
 
         isWall = Physics2D.Raycast(wallChecker.position, Vector2.right*facingDir, wallCheckDistance, wallLayer);

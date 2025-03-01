@@ -24,7 +24,7 @@ public class EnemyMoveState : EnemyState
     {
         base.Update();
 
-        /*if(enemy.wasAttacked == true)
+        if(enemy.wasAttacked == true)
         {
 
             if((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1)|| (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
@@ -35,7 +35,7 @@ public class EnemyMoveState : EnemyState
             }
    
         }
-        else*/
+        else
         {
             enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
           

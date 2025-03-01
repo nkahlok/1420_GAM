@@ -38,7 +38,7 @@ public class EnemyIdleState : EnemyState
 
     public void CatUpdate()
     {
-        if (enemy.isPlayer && enemy.isGround|| Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance * 4 && enemy.isGround)
+        if (enemy.isPlayer && enemy.isGround|| Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance && enemy.isGround)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
         }
