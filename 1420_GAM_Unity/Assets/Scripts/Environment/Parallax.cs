@@ -3,7 +3,7 @@
 public class Parallax : MonoBehaviour
 {
     private float startingPos; //starting position of sprites
-    private float lengthOfSprite;    //length of sprites
+    float repeatWidth;    //length of sprites
     public float parallaxAmtX;  //amount of parallax scroll on x
     public PlayerCam MainCamera;   //reference of the camera
 
@@ -12,7 +12,7 @@ public class Parallax : MonoBehaviour
         //Getting the starting X position of sprite
         startingPos = transform.position.x;
         //length of sprites
-        lengthOfSprite = GetComponent<SpriteRenderer>().bounds.size.x;
+        repeatWidth = GetComponent<BoxCollider2D>().size.x / 3;
     }
 
     void FixedUpdate()
@@ -23,13 +23,13 @@ public class Parallax : MonoBehaviour
         transform.position = new Vector3(startingPos + distanceX, transform.position.y, transform.position.z);
 
         //if background has reached end of length adjust its position
-        if (movementX > startingPos + lengthOfSprite)
+        if (movementX > startingPos + repeatWidth)
         {
-            startingPos += lengthOfSprite;
+            startingPos += repeatWidth;
         }
-        else if (movementX < startingPos - lengthOfSprite)
+        else if (movementX < startingPos - repeatWidth)
         {
-            startingPos -= lengthOfSprite;
+            startingPos -= repeatWidth;
         }
     }
 }
