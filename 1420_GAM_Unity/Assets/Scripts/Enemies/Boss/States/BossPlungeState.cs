@@ -24,6 +24,8 @@ public class BossPlungeState : BossState
 
         delayDur = 0.3f;
 
+        
+
     }
 
     public override void Exit()
@@ -70,6 +72,7 @@ public class BossPlungeState : BossState
 
         if(delayDur < 0)
         {
+            boss.counterWindow.SetActive(true);
             boss.topPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             sprite.enabled = true;
             boss.SetVelocity(0, boss.plungeSpeed * -1);
@@ -85,14 +88,14 @@ public class BossPlungeState : BossState
             stateMachine.ChangeState(boss.rest);
         }
 
-        if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
+       /* if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
         {
-            boss.counterWindow.SetActive(true);
+            
         }
         else
         {
             boss.counterWindow.SetActive(false);
-        }
+        }*/
 
         delayDur -= Time.deltaTime;
 

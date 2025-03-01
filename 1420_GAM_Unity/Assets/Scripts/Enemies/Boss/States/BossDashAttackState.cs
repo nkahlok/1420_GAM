@@ -12,7 +12,10 @@ public class BossDashAttackState : BossState
     public override void Enter()
     {
         base.Enter();
-        if(boss.attackPatternCount%2 == 0)
+
+        
+
+        if (boss.attackPatternCount%2 == 0)
         {
             if (boss.facingDir == 1)
                 boss.Flip();
@@ -59,6 +62,8 @@ public class BossDashAttackState : BossState
         boss.rightPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
         boss.leftPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        boss.counterWindow.SetActive(false);
     }
 
     public override void Update()
@@ -69,19 +74,20 @@ public class BossDashAttackState : BossState
 
         if(delayDur < 0f)
         {
+            boss.counterWindow.SetActive(true);
             sprite.enabled = true;
             boss.SetVelocity(boss.dashAttackSpeed * boss.facingDir, rb.linearVelocityY);
         }
 
 
-        if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
+        /*if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
         {
             boss.counterWindow.SetActive(true);
         }
         else
         {
-            boss.counterWindow.SetActive(false);
-        }
+            
+        }*/
 
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(boss.dashAttackChecker.position, boss.dashAttackRange);
