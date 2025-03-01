@@ -162,6 +162,8 @@ public class Boss : MonoBehaviour
             Time.timeScale = 1;
             SceneManager.LoadScene(sceneName: "Menu");
         }
+
+        //topPoint.position = new Vector2(player.transform.position.x, topPoint.position.y);
      
     }
 
@@ -205,8 +207,6 @@ public class Boss : MonoBehaviour
         }
 
 
-
-
     }
 
     public void SpawnBirdWall()
@@ -219,6 +219,7 @@ public class Boss : MonoBehaviour
         if (crowSpawnersCount == crowSpawners.Length)
             crowSpawnersCount = 0;
 
+        crowSpawners[crowSpawnersCount].gameObject.GetComponent<SpriteRenderer>().enabled = true;
         GameObject newCrowProjectile = Instantiate(crowProjectilePrefab, crowSpawners[crowSpawnersCount].position, crowSpawners[crowSpawnersCount].rotation);
 
         crowSpawnersCount++;

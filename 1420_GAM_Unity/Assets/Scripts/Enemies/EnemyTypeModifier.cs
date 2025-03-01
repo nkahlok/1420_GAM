@@ -119,6 +119,7 @@ public class EnemyTypeModifier : MonoBehaviour
 
     IEnumerator SpriteHit(float seconds)
     {
+
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(seconds);
         spriteRenderer.color = color;

@@ -1,8 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossPlungeState : BossState
 {
     int hitCount;
+    float delayDur;
 
     public BossPlungeState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
     {
@@ -11,10 +13,16 @@ public class BossPlungeState : BossState
     public override void Enter()
     {
         base.Enter();
+        boss.topPoint.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         boss.transform.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
+        boss.topPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         hitCount = 0;
         boss.canBeCountered = true;
         boss.modifier.canBeDamaged = true;
+
+        sprite.enabled = false;
+
+        delayDur = 0.3f;
 
     }
 
@@ -53,14 +61,19 @@ public class BossPlungeState : BossState
         boss.canBeCountered = false;
         boss.modifier.canBeDamaged = false;
         boss.counterWindow.SetActive(false);
+        
     }
 
     public override void Update()
     {
         base.Update();
 
-
-        boss.SetVelocity(0, boss.plungeSpeed * -1);
+        if(delayDur < 0)
+        {
+            boss.topPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            sprite.enabled = true;
+            boss.SetVelocity(0, boss.plungeSpeed * -1);
+        }
 
        
 
@@ -81,7 +94,7 @@ public class BossPlungeState : BossState
             boss.counterWindow.SetActive(false);
         }
 
-        
+        delayDur -= Time.deltaTime;
 
     }
 }

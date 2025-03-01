@@ -11,7 +11,7 @@ public class BossRestState : BossState
     public override void Enter()
     {
         base.Enter();
-        sprite.color = new Color(1f, 1f, 1f, 0f);
+        sprite.enabled = false;
         boss.transform.position = boss.restPoint.position;
         boss.restTimer = boss.restDur;
         
@@ -22,7 +22,7 @@ public class BossRestState : BossState
     public override void Exit()
     {
         base.Exit();
-        sprite.color = new Color(1f, 1f, 1f, 1f);
+        sprite.enabled = true;
         Debug.Log("Exited rest");
         
 

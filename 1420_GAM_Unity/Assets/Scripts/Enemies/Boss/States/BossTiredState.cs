@@ -14,6 +14,7 @@ public class BossTiredState : BossState
         boss.modifier.canBeDamaged = true;
         boss.transform.position = boss.tiredPoint.position;
         boss.SetVelocity(0,0);
+        
     }
 
     public override void Exit()
@@ -21,10 +22,12 @@ public class BossTiredState : BossState
         base.Exit();
         boss.modifier.canBeDamaged = false;
         boss.SetVelocity(rb.linearVelocityX, rb.linearVelocityY);
+        
     }
 
     public override void Update()
     {
+        
         base.Update();
     }
 }
