@@ -5362,6 +5362,7 @@ MonoBehaviour:
   canBeDamaged: 0
   feathersOn: 0
   mainCam: {fileID: 0}
+  bossLvl: 0
   maxHP: 100
   hpBar: {fileID: 4008066607982792618}
   checkPoint: {x: 0, y: 0}
@@ -5420,7 +5421,7 @@ MonoBehaviour:
   meleeAttackRange: 0.75
   manholeThrowChecker: {fileID: 3532598030139398252}
   manHoleThrowRange: 10
-  jumpBufferTime: 0.5
+  jumpBufferTime: 0.2
   jumpBufferCount: 0
   coyoteTime: 1
   coyoteCount: 0

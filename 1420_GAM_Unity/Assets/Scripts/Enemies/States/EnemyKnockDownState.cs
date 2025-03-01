@@ -69,7 +69,7 @@ public class EnemyKnockDownState : EnemyState
         if(enemy.isGround && stateDur < 0 && !enemy.countered || stayKnockedDown < 0)
         {
 
-            enemy.enemyStateMachine.Changestate(enemy.enemyMoveState); 
+            enemy.enemyStateMachine.Changestate(enemy.enemyAggroState); 
         }
         
         stateDur -= Time.deltaTime; 

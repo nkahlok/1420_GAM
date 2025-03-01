@@ -24,19 +24,21 @@ public class EnemyMoveState : EnemyState
     {
         base.Update();
 
-        if(enemy.wasAttacked == true)
+        /*if(enemy.wasAttacked == true)
         {
 
             if((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1)|| (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
             {
                 enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir *-1, rb.linearVelocity.y);
                 enemy.wasAttacked = false;
+                Debug.Log("cat moving1");
             }
    
         }
-        else
+        else*/
         {
             enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir, rb.linearVelocity.y);
+          
         }
 
         if(enemy.isWall || !enemy.isGround)
@@ -45,7 +47,7 @@ public class EnemyMoveState : EnemyState
             enemyStateMachine.Changestate(enemy.enemyIdleState);
         }
 
-        //Debug.Log("Am moving");
+      
 
         if (enemy.isCat)
             CatUpdate();
@@ -58,15 +60,20 @@ public class EnemyMoveState : EnemyState
 
     public void CatUpdate()
     {
-        if (enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance * 4)
+        if (enemy.isPlayer)
         {
             enemyStateMachine.Changestate(enemy.enemyAggroState);
+        }
+        else if (Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+            
         }
     }
 
     public void RatUpdate() 
     { 
-        if(enemy.isPlayer && !enemy.isWall || Vector2.Distance(player.transform.position, enemy.transform.position) < 2 && !enemy.isWall)
+        if(enemy.isPlayer && !enemy.isWall || Vector2.Distance(player.transform.position, enemy.transform.position) < 1 && !enemy.isWall)
         {
 
             enemyStateMachine.Changestate(enemy.enemyAggroState);

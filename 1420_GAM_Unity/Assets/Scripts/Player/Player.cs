@@ -241,10 +241,12 @@ public class Player : MonoBehaviour
             if(checkPoint == null)
             {
                 this.gameObject.transform.position = new Vector2(0, 0);
+                SetVelocity(0,0);   
             }
             else
             {
                 this.gameObject.transform.position = checkPoint;
+                SetVelocity(0, 0);
             }
         }
         else if(hp <= 0 && bossLvl)
