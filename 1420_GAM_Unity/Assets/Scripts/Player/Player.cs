@@ -490,7 +490,8 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Spike"))
         {
-            hp = 0;
+            Damage(10);
+            KnockBack(3, 10);
         }
 
     }
