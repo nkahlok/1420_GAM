@@ -4,6 +4,7 @@ using UnityEngine;
 public class BossDashAttackState : BossState
 {
     int hitCount;
+    float delayDur;
     public BossDashAttackState(Boss _boss, BossStateMachine _stateMachine, string _animBool) : base(_boss, _stateMachine, _animBool)
     {
     }
@@ -11,11 +12,15 @@ public class BossDashAttackState : BossState
     public override void Enter()
     {
         base.Enter();
-        if(boss.attackPatternCount%2 == 0)
+
+        
+
+        if (boss.attackPatternCount%2 == 0)
         {
             if (boss.facingDir == 1)
                 boss.Flip();
             boss.transform.position = boss.rightPoint.position;
+            boss.rightPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
 
         else if (boss.attackPatternCount % 2 == 1)
@@ -24,6 +29,7 @@ public class BossDashAttackState : BossState
             if (boss.facingDir == -1)
                 boss.Flip();
             boss.transform.position = boss.leftPoint.position;
+            boss.leftPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
 
         boss.canBeCountered = true;
@@ -33,6 +39,10 @@ public class BossDashAttackState : BossState
         boss.dashDust.Play();
 
         boss.modifier.canBeDamaged = true;
+
+        delayDur = 0.3f;
+
+        sprite.enabled = false;
     }
 
     public override void Exit()
@@ -48,6 +58,12 @@ public class BossDashAttackState : BossState
         boss.modifier.canBeDamaged = false;
 
         boss.dashDust.Stop();
+
+        boss.rightPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        boss.leftPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        boss.counterWindow.SetActive(false);
     }
 
     public override void Update()
@@ -56,16 +72,22 @@ public class BossDashAttackState : BossState
 
         Debug.Log("Dashing");
 
-        boss.SetVelocity(boss.dashAttackSpeed * boss.facingDir, rb.linearVelocityY);
+        if(delayDur < 0f)
+        {
+            boss.counterWindow.SetActive(true);
+            sprite.enabled = true;
+            boss.SetVelocity(boss.dashAttackSpeed * boss.facingDir, rb.linearVelocityY);
+        }
 
-        if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
+
+        /*if (Vector2.Distance(boss.player.transform.position, boss.transform.position) < 5)
         {
             boss.counterWindow.SetActive(true);
         }
         else
         {
-            boss.counterWindow.SetActive(false);
-        }
+            
+        }*/
 
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(boss.dashAttackChecker.position, boss.dashAttackRange);
@@ -96,6 +118,6 @@ public class BossDashAttackState : BossState
             }
         }
 
-
+        delayDur -= Time.deltaTime; 
     }
 }

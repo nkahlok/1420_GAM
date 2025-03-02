@@ -2805,7 +2805,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 21
   m_TargetDisplay: 0
 --- !u!114 &3794312761820044157
 MonoBehaviour:
@@ -5362,6 +5362,7 @@ MonoBehaviour:
   canBeDamaged: 0
   feathersOn: 0
   mainCam: {fileID: 0}
+  bossLvl: 0
   maxHP: 100
   hpBar: {fileID: 4008066607982792618}
   checkPoint: {x: 0, y: 0}
@@ -5420,7 +5421,7 @@ MonoBehaviour:
   meleeAttackRange: 0.75
   manholeThrowChecker: {fileID: 3532598030139398252}
   manHoleThrowRange: 10
-  jumpBufferTime: 0.5
+  jumpBufferTime: 0.2
   jumpBufferCount: 0
   coyoteTime: 1
   coyoteCount: 0
@@ -7113,6 +7114,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2515985113437313040}
     m_Modifications:
+    - target: {fileID: 29467777582760312, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694807741192587224, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 2009047210197018849, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.136
@@ -7153,9 +7162,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4959028220858306299, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082702460008573349, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 8202882729039696821, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
       propertyPath: m_Name
       value: BlockimpactL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788159993195068197, guid: 0e19623e3f6cdba4d8a829d6251b2fbc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7384,6 +7405,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2515985113437313040}
     m_Modifications:
+    - target: {fileID: 299290652544374318, guid: f72c7499e7f1fd546bb4dcfa7c0e5631, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2324353403236802575, guid: f72c7499e7f1fd546bb4dcfa7c0e5631, type: 3}
       propertyPath: m_Name
       value: JumpFeathers
@@ -7407,6 +7432,10 @@ PrefabInstance:
     - target: {fileID: 3084949580327852546, guid: f72c7499e7f1fd546bb4dcfa7c0e5631, type: 3}
       propertyPath: VelocityModule.inWorldSpace
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848458619333214087, guid: f72c7499e7f1fd546bb4dcfa7c0e5631, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7265603729342559599, guid: f72c7499e7f1fd546bb4dcfa7c0e5631, type: 3}
       propertyPath: playOnAwake
@@ -7554,6 +7583,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2515985113437313040}
     m_Modifications:
+    - target: {fileID: 29467777582760312, guid: 99a9995de0122f64dbd11268774ef4e1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694807741192587224, guid: 99a9995de0122f64dbd11268774ef4e1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 2009047210197018849, guid: 99a9995de0122f64dbd11268774ef4e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.613
@@ -7593,6 +7630,10 @@ PrefabInstance:
     - target: {fileID: 2009047210197018849, guid: 99a9995de0122f64dbd11268774ef4e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082702460008573349, guid: 99a9995de0122f64dbd11268774ef4e1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 8202882729039696821, guid: 99a9995de0122f64dbd11268774ef4e1, type: 3}
       propertyPath: m_Name

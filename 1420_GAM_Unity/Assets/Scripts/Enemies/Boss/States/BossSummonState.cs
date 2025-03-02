@@ -42,7 +42,6 @@ public class BossSummonState : BossState
 
             boss.SpawnBirdWall();
         }
-      
 
         boss.modifier.canBeDamaged = true;
     }
@@ -52,6 +51,11 @@ public class BossSummonState : BossState
         base.Exit();
 
         boss.modifier.canBeDamaged = false;
+
+        for(int i = 0; i < boss.crowSpawners.Length; i++) 
+        {
+            boss.crowSpawners[i].gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     public override void Update()
@@ -91,8 +95,8 @@ public class BossSummonState : BossState
                     tempInterval = boss.crowProjectileIntervals / 2;
             }
         }
-     
 
+        //sprite.color = new Color(1f, 1f, 1f, 1f);
         boss.SetVelocity(0,0);
 
     }

@@ -87,11 +87,13 @@ public class EnemyAggroState : EnemyState
             enemyStateMachine.Changestate(enemy.enemyIdleState);
         }
 
-        if (enemy.isPlayer.distance <= enemy.playerAttackDistance && enemy.isPlayer && enemy.attackCount < 0)
+      
+        if (enemy.ray.distance <= enemy.playerAttackDistance && enemy.isPlayer && enemy.attackCount < 0)
         {
             enemyStateMachine.Changestate(enemy.enemyAttackState);
+            
         }
-        else if (enemy.isPlayer.distance <= enemy.playerAttackDistance && enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
+        else if (enemy.ray.distance <= enemy.playerAttackDistance && enemy.isPlayer || Vector2.Distance(player.transform.position, enemy.transform.position) < enemy.playerAttackDistance)
         {
             enemy.SetVelocity(0, rb.linearVelocity.y);
         }
@@ -119,7 +121,7 @@ public class EnemyAggroState : EnemyState
             enemy.Flip();
         }     
 
-        if (enemy.isPlayer.distance <= enemy.playerAttackDistance && enemy.isPlayer)
+        if (enemy.ray.distance <= enemy.playerAttackDistance && enemy.isPlayer)
         {
             enemyStateMachine.Changestate(enemy.enemyAttackState);
         }

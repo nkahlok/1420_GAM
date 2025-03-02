@@ -58,6 +58,9 @@ public class Enemy : MonoBehaviour
     [Space]
     public Transform playerChecker;
     public LayerMask playerLayer;
+    //public LayerMask enemyLayer;
+    [HideInInspector] public RaycastHit2D ray;
+    public bool lineOfSightPlayer;
     public float playerAggroDistance;
     public float playerAttackDistance;
     public float playerAboveDistance;
@@ -66,7 +69,7 @@ public class Enemy : MonoBehaviour
     public float meleeAttackRange;
     [HideInInspector] public RaycastHit2D isWall;
     [HideInInspector] public RaycastHit2D isGround;
-    [HideInInspector] public RaycastHit2D isPlayer;
+    public bool isPlayer;
     [HideInInspector] public RaycastHit2D isPlayerAbove;
     #endregion
 
@@ -183,9 +186,32 @@ public class Enemy : MonoBehaviour
 
     public void CollisionChecks()
     {
+        ray = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance, playerLayer);
+        if(ray.collider != null)
+        {
+            lineOfSightPlayer = ray.collider.CompareTag("Player");
+            if (lineOfSightPlayer)
+            {
+                Debug.Log("I detect player");
+                isPlayer = true;
+                
+            }
+            else if(!lineOfSightPlayer)
+            {
+                Debug.Log("I detect player");
+                isPlayer = false;
+            }
+
+        }
+        else
+        {
+            lineOfSightPlayer = false;
+            isPlayer = false;
+        }
+
         isWall = Physics2D.Raycast(wallChecker.position, Vector2.right*facingDir, wallCheckDistance, wallLayer);
         isGround = Physics2D.Raycast(groundChecker.position, Vector2.down, groundCheckDistance, groundLayer);
-        isPlayer = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance, playerLayer);
+        //isPlayer = Physics2D.Raycast(playerChecker.position, Vector2.right * facingDir, playerAggroDistance, playerLayer);
         isPlayerAbove = Physics2D.Raycast(playerChecker.position, Vector2.up, playerAboveDistance, playerLayer);  
         
    

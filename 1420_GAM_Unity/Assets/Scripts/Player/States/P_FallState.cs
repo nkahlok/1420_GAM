@@ -29,7 +29,7 @@ public class P_FallState : PlayerState
 
         if (xInput != 0)
         {
-            player.SetVelocity(xInput * player.moveSpeed * 0.5f, rb.linearVelocity.y);
+            player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
         }
 
         if (Input.GetButtonDown("Jump"))

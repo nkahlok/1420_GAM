@@ -27,21 +27,45 @@ public class P_LaunchAttackState : PlayerState
                 {
                     Enemy enemy = collider.GetComponent<Enemy>();
                     enemy.isBusy = false;
-                    enemy.KnockBack("Launch Up");
-                    enemy.airborneCount = enemy.airborneTime;
-                    enemy.knockedDown = true;                   
+                    
                     //enemy.enemyStateMachine.Changestate(enemy.enemyKnockDownState);
                     //Debug.Log("Knocked dis bitch up");
 
+                    if ((enemy.canBeCountered))
+                    {
+                        player.comboHitCount = player.comboTime;
+                        player.hitEffect.Play();
+                        enemy.KnockBack("Countered");
+                        enemy.canBeCountered = false;
+                    }
+                    else
+                    {
+                        enemy.KnockBack("Launch Up");
+                        enemy.airborneCount = enemy.airborneTime;
+                        enemy.knockedDown = true;
+                    }
 
                 }
                 else if(collider.GetComponent<Boss>() != null)
                 {
                     Boss boss = collider.GetComponent<Boss>();
                     boss.isBusy = false;
-                    boss.KnockBack("Launch Up");
-                    if(boss.isTired)
-                        boss.knockedDown = true;
+                    
+
+                    if ((boss.canBeCountered))
+                    {
+                        player.comboHitCount = player.comboTime;
+                        player.hitEffect.Play();
+                        boss.KnockBack("Countered");
+                        boss.canBeCountered = false;
+                    }
+                    else
+                    {
+                        boss.KnockBack("Launch Up");
+                        if (boss.isTired)
+                            boss.knockedDown = true;
+                    }
+
                 }
             }
         }
@@ -128,7 +152,28 @@ public class P_LaunchAttackState : PlayerState
     {
         base.Update();
 
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(player.meleeAttackChecker.position, player.meleeAttackRange);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.GetComponent<Boss>() != null)
+            {
+                if (SkillManager.instance.launchSkill.launchUp == true)
+                {
+                    Boss boss = collider.GetComponent<Boss>();
+                    boss.isBusy = false;
 
-      
+
+                    if ((boss.canBeCountered))
+                    {
+                        player.comboHitCount = player.comboTime;
+                        player.hitEffect.Play();
+                        boss.KnockBack("Countered");
+                        boss.canBeCountered = false;
+                    }
+
+                }
+            }
+        }
+
     }
 }

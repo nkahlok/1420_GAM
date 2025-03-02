@@ -11,7 +11,7 @@ public class P_JumpState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.SetVelocity(rb.linearVelocity.x, player.jumpForce);
+        player.SetVelocity(0, player.jumpForce);
         player.coyoteEnabled = false;
         player.doubleJumpEnabled = !player.doubleJumpEnabled;
         player.jumpFeathers.Play();
@@ -33,13 +33,14 @@ public class P_JumpState : PlayerState
 
         if (Input.GetButtonUp("Jump"))
         {
-            player.SetVelocity(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            player.SetVelocity(0, rb.linearVelocity.y * 0.5f);
         }
 
         if (xInput != 0)
         {
-            player.SetVelocity(xInput * player.moveSpeed * 0.5f, rb.linearVelocity.y);
+            player.SetVelocity(xInput * player.moveSpeed, rb.linearVelocity.y);
         }
+  
 
         if (Input.GetButtonDown("Jump") && player.doubleJumpEnabled == true)
         {
