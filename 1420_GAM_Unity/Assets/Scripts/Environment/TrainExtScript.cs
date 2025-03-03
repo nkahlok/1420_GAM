@@ -60,7 +60,9 @@ public class TrainExtScript : MonoBehaviour
 
             //}
 
-            StartCoroutine("alphaFade");
+            //StartCoroutine("alphaFadeIn");
+
+            tilemap.color = new Color(tilemap.color.r, tilemap.color.g, tilemap.color.b, 0f);
 
             characterLight.color = new Color(characterLight.color.r, characterLight.color.g, characterLight.color.b, 1f);
         }
