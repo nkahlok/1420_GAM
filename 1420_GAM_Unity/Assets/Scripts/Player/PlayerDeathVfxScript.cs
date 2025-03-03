@@ -1,33 +1,21 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class PlayerDeathVfxScript : MonoBehaviour
 {
     [SerializeField] private float _duration = 0.5f;
-    [SerializeField] private ScriptableRendererFeature _fullScreenVFX;
     [SerializeField] private Material pDeathEffectMaterial;
-    [SerializeField] private float powerEndAmt = 10f;
-    [SerializeField] private float intensityEndAmt = 0f;
+    [SerializeField] private float powerStartAmt = 15f;
+    [SerializeField] private float powerEndAmt = 0f;
+    [SerializeField] private float intensityStartAmt = 1f;
+    [SerializeField] private float intensityEndAmt = 1f;
     private int _intensity = Shader.PropertyToID("_VignetteIntensity");
     private int _power = Shader.PropertyToID("_VignettePower");
     private void Start()
     {
-        _fullScreenVFX.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Debug.Log("Dead");
-            PlayDeathEffect();
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Debug.Log("NotDead");
-            ReverseDeathEffect();
-        }
+        pDeathEffectMaterial.SetFloat(_intensity, intensityStartAmt);
+        pDeathEffectMaterial.SetFloat(_power, powerStartAmt);
     }
 
     public void PlayDeathEffect()
@@ -42,17 +30,16 @@ public class PlayerDeathVfxScript : MonoBehaviour
 
     private IEnumerator PlayFullscreenEffect()
     {
-        _fullScreenVFX.SetActive(true);
-        pDeathEffectMaterial.SetFloat(_intensity, 0f);
+        pDeathEffectMaterial.SetFloat(_intensity, 10f);
         pDeathEffectMaterial.SetFloat(_power, 0f);
         float elapsedTime = 0f;
         while (elapsedTime < _duration)
         {
             elapsedTime += Time.deltaTime;
-            float lerpedIntensity = Mathf.Lerp(0f, intensityEndAmt, (elapsedTime / _duration));
-            float lerpedPower = Mathf.Lerp(0f, powerEndAmt, (elapsedTime / _duration));
+            //float lerpedIntensity = Mathf.Lerp(, (elapsedTime / _duration));
+            float lerpedPower = Mathf.Lerp(powerStartAmt, powerEndAmt, (elapsedTime / _duration));
             pDeathEffectMaterial.SetFloat(_power, lerpedPower);
-            pDeathEffectMaterial.SetFloat(_intensity, lerpedIntensity);
+            //pDeathEffectMaterial.SetFloat(_intensity, lerpedIntensity);
             yield return null;
         }
     }
@@ -71,6 +58,6 @@ public class PlayerDeathVfxScript : MonoBehaviour
             pDeathEffectMaterial.SetFloat(_intensity, lerpedIntensity);
             yield return null;
         }
-        _fullScreenVFX.SetActive(true);
+
     }
 }

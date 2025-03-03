@@ -9119,7 +9119,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1ed18ee5807a3ad489aa97ecc6f8d7d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75582,7 +75582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 0.5
   _fullScreenVFX: {fileID: 2811922155097543852, guid: 825d6135c8583884884d344d4ecaea26, type: 2}
-  _material: {fileID: 2100000, guid: 99359eed858af5743aae07aa769091e9, type: 2}
+  _ravenousEffectMaterial: {fileID: 2100000, guid: 99359eed858af5743aae07aa769091e9, type: 2}
   intensityStartAmt: 2.25
   powerStartAmt: 1.25
 --- !u!4 &3364069700684328844
@@ -134086,6 +134086,7 @@ MonoBehaviour:
   counterAttackTutCanvas: {fileID: 5310509193320281756}
   shockwaveManager: {fileID: 4770128972834407726}
   ravenousVfxManager: {fileID: 3360469716886913967}
+  playerDeathVfx: {fileID: 0}
   rb: {fileID: 0}
   anim: {fileID: 0}
   comboHits: 0
@@ -166058,7 +166059,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1ed18ee5807a3ad489aa97ecc6f8d7d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
