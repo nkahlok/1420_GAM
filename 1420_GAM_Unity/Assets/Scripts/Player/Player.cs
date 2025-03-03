@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public PlayerState playerState { get; private set; }
     public ShockwaveManager shockwaveManager;
     public RavenousVfxManager ravenousVfxManager;
+    public PlayerDeathVfxScript playerDeathVfx;
     private IEnumerator defaultGravity;
 
     #region[Player Components]
@@ -240,11 +241,13 @@ public class Player : MonoBehaviour
             hp = maxHP;
             if(checkPoint == null)
             {
+                playerDeathVfx.PlayDeathEffect();//plays death effect
                 this.gameObject.transform.position = new Vector2(0, 0);
                 SetVelocity(0,0);   
             }
             else
             {
+                playerDeathVfx.PlayDeathEffect();
                 this.gameObject.transform.position = checkPoint;
                 SetVelocity(0, 0);
             }

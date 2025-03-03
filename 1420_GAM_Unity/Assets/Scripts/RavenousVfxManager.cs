@@ -24,15 +24,16 @@ public class RavenousVfxManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Keyboard.current.lKey.wasPressedThisFrame)
         {
+
             PlayRavenousEffect();
-            
+
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
+            Debug.Log("press k");
             DisableRavenousEffect();
-            
         }
     }
 
@@ -56,9 +57,9 @@ public class RavenousVfxManager : MonoBehaviour
         _ravenousEffectMaterial.SetFloat(_intensity, 0f);
         _ravenousEffectMaterial.SetFloat(_power, 0f);
         float elapsedTime = 0f;
-
         while (elapsedTime < _duration)
         {
+            Debug.Log("im inside the while loop");
             elapsedTime += Time.deltaTime;
             float lerpedIntensity = Mathf.Lerp(0f, intensityStartAmt, (elapsedTime / _duration));
             float lerpedPower = Mathf.Lerp(0f, powerStartAmt, (elapsedTime / _duration));
