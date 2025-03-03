@@ -8,7 +8,7 @@ public class RavenousVfxManager : MonoBehaviour
 {
     [SerializeField] private float _duration = 0.5f;
     [SerializeField] private ScriptableRendererFeature _fullScreenVFX;
-    [SerializeField] private Material _material;
+    [SerializeField] private Material _ravenousEffectMaterial;
     [SerializeField] private float intensityStartAmt = 2.25f;
     [SerializeField] private float powerStartAmt = 1.25f;
     //[SerializeField] private ParticleSystem feathers, feathers2;
@@ -53,8 +53,8 @@ public class RavenousVfxManager : MonoBehaviour
     private IEnumerator PlayFullscreenEffect()
     {
         _fullScreenVFX.SetActive(true);
-        _material.SetFloat(_intensity, 0f);
-        _material.SetFloat(_power, 0f);
+        _ravenousEffectMaterial.SetFloat(_intensity, 0f);
+        _ravenousEffectMaterial.SetFloat(_power, 0f);
         float elapsedTime = 0f;
 
         while (elapsedTime < _duration)
@@ -62,8 +62,8 @@ public class RavenousVfxManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float lerpedIntensity = Mathf.Lerp(0f, intensityStartAmt, (elapsedTime / _duration));
             float lerpedPower = Mathf.Lerp(0f, powerStartAmt, (elapsedTime / _duration));
-            _material.SetFloat(_power, lerpedPower);
-            _material.SetFloat(_intensity, lerpedIntensity);
+            _ravenousEffectMaterial.SetFloat(_power, lerpedPower);
+            _ravenousEffectMaterial.SetFloat(_intensity, lerpedIntensity);
             yield return null;
         }
 
@@ -88,8 +88,8 @@ public class RavenousVfxManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float lerpedIntensity = Mathf.Lerp(intensityStartAmt, 0f, (elapsedTime / _duration));
             float lerpedPower = Mathf.Lerp(powerStartAmt, 0f, (elapsedTime / _duration));
-            _material.SetFloat(_power, lerpedPower);
-            _material.SetFloat(_intensity, lerpedIntensity);
+            _ravenousEffectMaterial.SetFloat(_power, lerpedPower);
+            _ravenousEffectMaterial.SetFloat(_intensity, lerpedIntensity);
             yield return null;
         }
         _fullScreenVFX.SetActive(false);

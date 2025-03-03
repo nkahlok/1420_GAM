@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: -3831800166808106319
     second: IMG_0998_0
-  - first:
-      213: 8788192001069890752
-    second: IMG_0998_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,10 +103,10 @@ TextureImporter:
       name: IMG_0998_0
       rect:
         serializedVersion: 2
-        x: 286
-        y: 73
-        width: 1714
-        height: 2509
+        x: 484
+        y: 100
+        width: 846
+        height: 1889
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,28 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 1bace1fcc06b2dac0800000000000000
       internalID: -3831800166808106319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_0998_1
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 19
-        width: 49
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cc33b9201ee5f970800000000000000
-      internalID: 8788192001069890752
       vertices: []
       indices: 
       edges: []
@@ -161,7 +136,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       IMG_0998_0: -3831800166808106319
-      IMG_0998_1: 8788192001069890752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
