@@ -27,7 +27,8 @@ public class PlayerDeathVfxScript : MonoBehaviour
 
     public void PlayDeathEffect()
     {
-        StartCoroutine(DeathEffect());
+        animator.Play("HoleCloseAnim");
+        deathFeathers.Play();
     }
 
     public void ReverseDeathEffect()
@@ -36,10 +37,4 @@ public class PlayerDeathVfxScript : MonoBehaviour
         animator.Play("HoleOpenAnim");
     }
 
-    private IEnumerator DeathEffect()
-    {
-        animator.Play("HoleCloseAnim");
-        deathFeathers.Play();
-        yield return null;
-    }
 }
