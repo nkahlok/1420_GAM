@@ -264,7 +264,7 @@ public class Player : MonoBehaviour
     private IEnumerator pDeathEffect()
     {
         playerDeathVfx.PlayDeathEffect();
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1f);
         if (checkPoint == null)
         {
             this.gameObject.transform.position = new Vector2(0, 0);
