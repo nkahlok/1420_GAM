@@ -190,6 +190,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+
         stateMachine.currentState.Update();
         CollisionChecks();
         UseSkill();
@@ -241,22 +242,41 @@ public class Player : MonoBehaviour
             hp = maxHP;
             if(checkPoint == null)
             {
-                playerDeathVfx.PlayDeathEffect();//plays death effect
-                this.gameObject.transform.position = new Vector2(0, 0);
-                SetVelocity(0,0);   
+                StartCoroutine(pDeathEffect()); //plays death effect
+                //this.gameObject.transform.position = new Vector2(0, 0);
+                //SetVelocity(0,0);   
             }
             else
             {
-                playerDeathVfx.PlayDeathEffect();
-                this.gameObject.transform.position = checkPoint;
-                SetVelocity(0, 0);
+                StartCoroutine(pDeathEffect());
+                //this.gameObject.transform.position = checkPoint;
+                //SetVelocity(0, 0);
             }
         }
         else if(hp <= 0 && bossLvl)
         {
             Time.timeScale = 1f;
+            StartCoroutine(pDeathEffect());
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    private IEnumerator pDeathEffect()
+    {
+        playerDeathVfx.PlayDeathEffect();
+        yield return new WaitForSeconds(1.7f);
+        if (checkPoint == null)
+        {
+            this.gameObject.transform.position = new Vector2(0, 0);
+            SetVelocity(0, 0);
+        }
+        else
+        {
+            this.gameObject.transform.position = checkPoint;
+            SetVelocity(0, 0);
+        }
+        playerDeathVfx.ReverseDeathEffect();
+
     }
 
     public void HitStop(float duration)
