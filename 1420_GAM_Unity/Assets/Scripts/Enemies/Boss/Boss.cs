@@ -110,6 +110,7 @@ public class Boss : MonoBehaviour
     public Transform birdwallSpawner;
     #endregion
 
+    public LevelLoaderScript levelLoader;
     private void Awake()
     {
         stateMachine = new BossStateMachine();
@@ -160,7 +161,9 @@ public class Boss : MonoBehaviour
         if (modifier.hits == 0)
         {
             Time.timeScale = 1;
-            SceneManager.LoadScene(sceneName: "Menu");
+            //SceneManager.LoadScene(sceneName: "Menu");
+            levelLoader.LoadNextLevel();
+            
         }
 
         //topPoint.position = new Vector2(player.transform.position.x, topPoint.position.y);

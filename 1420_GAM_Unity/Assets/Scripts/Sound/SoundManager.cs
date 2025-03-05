@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 public enum SoundType
 {
+    BGM,
     PLAYERWALK,
     PLAYERATTACK,
     PLAYERATTACKSUC,
@@ -17,7 +19,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioClip[] soundList;
     private static SoundManager instance;
-    private AudioSource audioSource;
+    private AudioSource sfxSource;
     private void Awake()
     {
         instance = this;
@@ -25,11 +27,17 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        PlaySfx(SoundType.BGM);
+    }
+    
+    public static void PlaySfx(SoundType sound, float volume = 1)
+    {
+        instance.sfxSource.PlayOneShot(instance.soundList[(int)sound], volume);
     }
 
-    public static void PlaySound(SoundType sound, float volume = 1)
+    public static void PlayMusic(SoundType sound, float volume = 1)
     {
-        instance.audioSource.PlayOneShot(instance.soundList[(int)sound], volume);
+        instance.sfxSource.PlayOneShot(instance.soundList[(int)sound], volume);
     }
+
 }

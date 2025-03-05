@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelLoaderScript : MonoBehaviour
@@ -11,11 +12,21 @@ public class LevelLoaderScript : MonoBehaviour
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
-
+    public void LoadMenu()
+    {
+        StartCoroutine(LoadingMenu());
+    }
     IEnumerator LoadLevel (int levelIndex)
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(levelIndex);
+    }
+
+    IEnumerator LoadingMenu()
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneName: "Menu");
     }
 }
