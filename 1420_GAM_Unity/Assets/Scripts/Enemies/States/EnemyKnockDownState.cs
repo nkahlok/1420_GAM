@@ -27,7 +27,7 @@ public class EnemyKnockDownState : EnemyState
     {
         base.Exit();
         Debug.Log("out");
-        enemy.wasAttacked = true;     
+        enemy.damaged = true;     
         enemy.launchDown = false;   
         enemy.countered = false;
         //rb.gravityScale = 3;

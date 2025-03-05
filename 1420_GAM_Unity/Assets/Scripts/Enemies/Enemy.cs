@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool launchDown;
     [HideInInspector] public bool canBeCountered;
     [HideInInspector] public bool countered;
+    [HideInInspector] public bool damaged;
     private bool waitingForHitStop;
     public ShockwaveManager shockwaveManager;
 

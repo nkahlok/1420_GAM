@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyAggroState : EnemyState
@@ -134,8 +135,36 @@ public class EnemyAggroState : EnemyState
 
         if (!enemy.isGround)
         {
-            enemyStateMachine.Changestate(enemy.enemyIdleState);
+            enemy.Flip();
+            enemyStateMachine.Changestate(enemy.enemyMoveState);
         }
+
+        if (!enemy.isPlayer)
+        {
+            //Debug.Log("I do not detect anyone");
+
+            enemy.aggroCount -= Time.deltaTime;
+
+            if (enemy.isWall)
+            {
+                Debug.Log("I detect wall");
+                enemy.SetVelocity(0, rb.linearVelocityY);
+                if ((player.transform.position.x > enemy.transform.position.x && enemy.facingDir == -1) || (player.transform.position.x < enemy.transform.position.x && enemy.facingDir == 1))
+                {
+                    enemy.Flip();
+                }
+            }
+
+            if (enemy.aggroCount < 0)
+            {
+                enemyStateMachine.Changestate(enemy.enemyIdleState);
+            }
+        }
+        else if (enemy.isPlayer)
+        {
+            enemy.aggroCount = enemy.aggroDur;
+        }
+
     }
 
 }

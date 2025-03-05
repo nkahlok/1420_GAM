@@ -24,6 +24,12 @@ public class EnemyMoveState : EnemyState
     {
         base.Update();
 
+        if (enemy.damaged)
+        {
+            enemyStateMachine.Changestate(enemy.enemyAggroState);
+            enemy.damaged = false;  
+        }
+
         if(enemy.wasAttacked == true)
         {
 
@@ -31,7 +37,7 @@ public class EnemyMoveState : EnemyState
             {
                 enemy.SetVelocity(enemy.moveSpeed * enemy.facingDir *-1, rb.linearVelocity.y);
                 enemy.wasAttacked = false;
-                Debug.Log("cat moving1");
+           
             }
    
         }

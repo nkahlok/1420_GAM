@@ -45,6 +45,11 @@ public class PlayerAnimationEvents : MonoBehaviour
                 player.mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake");
             }
 
+            if (collider.GetComponent<Enemy>() != null)
+            {
+                collider.GetComponent<Enemy>().damaged = true;
+            }
+
         }        
     }
 

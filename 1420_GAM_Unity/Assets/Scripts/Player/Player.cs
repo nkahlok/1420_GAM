@@ -380,10 +380,17 @@ public class Player : MonoBehaviour
         }
 
         //if((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround)|| (Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && SkillManager.instance.launchSkill.launchDown))
-        if ((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround) || (Input.GetKeyUp(KeyCode.W) && !isBusy && caneWpn && isGround))
+        if ((Input.GetKeyUp(KeyCode.Mouse1) && !isBusy && caneWpn && isGround))
         {
+            SkillManager.instance.launchSkill.jabAttack = true;
             SkillManager.instance.launchSkill.SkillAvailable();
         }
+        else if((Input.GetKeyUp(KeyCode.W) && !isBusy && caneWpn && isGround))
+        {
+            StartCoroutine(SkillManager.instance.launchSkill.launchDirRetain(1f, 1));
+            SkillManager.instance.launchSkill.SkillAvailable();
+        }
+        
     }
 
     private void WeaponSwap()

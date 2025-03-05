@@ -82,9 +82,11 @@ public class P_LaunchAttackState : PlayerState
                 }
             }
         }
-        else
+        else if(SkillManager.instance.launchSkill.jabAttack == true)
         {
             player.SetVelocity(SkillManager.instance.launchSkill.launchVelocity[2].x*player.facingDir, SkillManager.instance.launchSkill.launchVelocity[2].y);
+
+            SkillManager.instance.launchSkill.jabAttack = false;
 
             foreach (Collider2D collider in colliders)
             {
