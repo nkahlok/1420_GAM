@@ -239,7 +239,7 @@ public class Player : MonoBehaviour
     {
         if(hp <= 0 && !bossLvl)
         {
-            hp = maxHP;
+            
             if(checkPoint == null)
             {
                 StartCoroutine(pDeathEffect()); //plays death effect
@@ -263,10 +263,12 @@ public class Player : MonoBehaviour
 
     private IEnumerator pDeathEffect()
     {
+        Time.timeScale = 1f;
         playerDeathVfx.PlayDeathEffect();
         yield return new WaitForSeconds(1f);
         if (checkPoint == null)
         {
+
             this.gameObject.transform.position = new Vector2(0, 0);
             SetVelocity(0, 0);
         }
@@ -276,6 +278,7 @@ public class Player : MonoBehaviour
             SetVelocity(0, 0);
         }
         playerDeathVfx.ReverseDeathEffect();
+        hp = maxHP;
 
     }
 
