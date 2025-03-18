@@ -10,7 +10,7 @@ public class PlayerAnimationEvents : MonoBehaviour
     {
         player = PlayerManager.instance.player;
         skill1 = SkillManager.instance.manholeSkill;
-        
+
     }
 
     public void EndAttack()
@@ -39,6 +39,8 @@ public class PlayerAnimationEvents : MonoBehaviour
         {
             if(collider.GetComponent<EnemyTypeModifier>() != null)
             {
+                //this is where the player's hitbox connects with the enemy
+                SoundManager.PlaySfx(SoundType.PLAYERATTACKSUCCESS);
                 collider.GetComponent<EnemyTypeModifier>().Damage(1);
                 player.comboHitCount = player.comboTime;
                 player.hitEffect.Play();

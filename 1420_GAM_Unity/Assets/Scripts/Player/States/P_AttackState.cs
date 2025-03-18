@@ -20,11 +20,11 @@ public class P_AttackState : PlayerState
 
         //player.slashEffect.Play();
 
+        SoundManager.PlaySfx(SoundType.PLAYERATTACK);
         if (player.comboCounter > 2 || player.comboCount < 0)
         {
             player.comboCounter = 0;
         }
-
 
         anim.SetInteger("ComboCounter1", player.comboCounter);
 

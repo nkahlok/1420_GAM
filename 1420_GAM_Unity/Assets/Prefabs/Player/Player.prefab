@@ -11572,6 +11572,7 @@ GameObject:
   - component: {fileID: 200476587925912484}
   - component: {fileID: 4716453856194917909}
   - component: {fileID: 6443747424999709878}
+  - component: {fileID: 8633472037784986047}
   m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
@@ -11681,6 +11682,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 435fa5797b9eeb047a2a6d1391e82c13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8633472037784986047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496874115417419599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5f5f7a51a601648b6c77de39c6c129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8717990718294865787

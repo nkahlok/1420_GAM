@@ -15,6 +15,8 @@ public class P_DashState : PlayerState
         skill2 = SkillManager.instance.dashSkill;
         skill2.DashDurCount = skill2.DashDur;
         player.dashEffect.Play();
+        SoundManager.PlaySfx(SoundType.PLAYERDASH);
+        SoundManager.PlaySfx(SoundType.PLAYERFEATHERS);
         base.Enter();
     }
 

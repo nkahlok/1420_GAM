@@ -366,6 +366,7 @@ MonoBehaviour:
   launchDown: 0
   canBeCountered: 0
   countered: 0
+  damaged: 0
   shockwaveManager: {fileID: 0}
   isCat: 0
   isRat: 1
@@ -800,6 +801,7 @@ GameObject:
   - component: {fileID: 622657903533152326}
   - component: {fileID: 4260268070430849701}
   - component: {fileID: 5797576563106758538}
+  - component: {fileID: 2308910562876506675}
   m_Layer: 8
   m_Name: Animator
   m_TagString: Untagged
@@ -909,6 +911,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 177cd4e33c8ae594e92b1f872b6076ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2308910562876506675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829718761571411917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f58123224af349419639393bfc96788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7149340848075332528

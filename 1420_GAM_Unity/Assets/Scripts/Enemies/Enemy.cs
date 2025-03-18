@@ -204,7 +204,6 @@ public class Enemy : MonoBehaviour
                 Debug.Log("I detect player");
                 isPlayer = false;
             }
-
         }
         else
         {

@@ -224,7 +224,9 @@ public class Player : MonoBehaviour
         if (!canBeDamaged)
             return;
 
-        hp -= dmg;  
+        hp -= dmg;
+       
+        SoundManager.PlaySfx(SoundType.PLAYERHURT);
         StartCoroutine("SpriteHit", 0.2f);
         HitStop(normalHitStop);
         mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake2");
@@ -261,12 +263,13 @@ public class Player : MonoBehaviour
         {
             Time.timeScale = 1f;
             stateMachine.Changestate(death);
+            SoundManager.PlaySfx(SoundType.PLAYERDEATH);
             StartCoroutine(pDeathEffect());
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
-    private IEnumerator pDeathEffect()
+    private IEnumerator pDeathEffect() //player dies
     {
         Time.timeScale = 1f;
         playerDeathVfx.PlayDeathEffect();
@@ -310,7 +313,7 @@ public class Player : MonoBehaviour
 
     }
 
-    IEnumerator SpriteHit(float seconds)
+    IEnumerator SpriteHit(float seconds) //player gets hit
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(seconds);
@@ -437,6 +440,7 @@ public class Player : MonoBehaviour
             case int x when x>= comboNum[0] && x< comboNum[1]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[0];
+                //SoundManager.PlaySfx(SoundType.COMBOUP); //bugged, do a coroutine
                 comboNamesSprites[0].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -445,6 +449,7 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[1] && x < comboNum[2]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[1];
+                //SoundManager.PlaySfx(SoundType.COMBOUP); //bugged
                 comboNamesSprites[1].SetActive(true);
                 comboNamesSprites[0].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -453,6 +458,7 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[2] && x < comboNum[3]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[2];
+                //SoundManager.PlaySfx(SoundType.COMBOUP); //bugged
                 comboNamesSprites[2].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[0].SetActive(false);
@@ -461,6 +467,7 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[3]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[3];
+                //SoundManager.PlaySfx(SoundType.COMBORAVENOUS); bugged
                 comboNamesSprites[3].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -537,6 +544,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Spike"))
         {
+            SoundManager.PlaySfx(SoundType.PLAYERHURTSPIKES);
             Damage(5);
             KnockBack(3, 10);
         }

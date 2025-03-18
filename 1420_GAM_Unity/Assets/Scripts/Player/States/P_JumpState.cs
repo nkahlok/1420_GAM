@@ -14,6 +14,8 @@ public class P_JumpState : PlayerState
         player.SetVelocity(0, player.jumpForce);
         player.coyoteEnabled = false;
         player.doubleJumpEnabled = !player.doubleJumpEnabled;
+        SoundManager.PlaySfx(SoundType.PLAYERJUMP);
+        SoundManager.PlaySfx(SoundType.PLAYERFEATHERS);
         player.jumpFeathers.Play();
     }
 
