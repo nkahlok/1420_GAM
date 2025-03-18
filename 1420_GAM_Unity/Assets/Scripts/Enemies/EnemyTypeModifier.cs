@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyTypeModifier : MonoBehaviour
 {
     [HideInInspector] public bool canBeDamaged;
+    private Enemy enemy;
     [Range(1,6)]public int rankModifier;
     public int bossHP;
      public int hits;
@@ -26,6 +27,7 @@ public class EnemyTypeModifier : MonoBehaviour
         color = spriteRenderer.color;
 
         player = PlayerManager.instance.player;
+        enemy = GetComponent<Enemy>();  
         
         switch (rankModifier)
         {
@@ -79,7 +81,8 @@ public class EnemyTypeModifier : MonoBehaviour
         if(hits == 0 && Time.timeScale != 0)
         {
             //PlayerManager.instance.player.comboHits = 0;
-            Destroy(this.gameObject); 
+            enemy.enemyStateMachine.Changestate(enemy.enemyDeathState);
+            canBeDamaged = false;
         }
 
         A.gameObject.transform.rotation = Quaternion.identity;

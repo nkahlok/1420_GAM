@@ -44,6 +44,11 @@ public class EnemyAnimationEvents : MonoBehaviour
         enemy.enemyStateMachine.Changestate(enemy.enemyAggroState);
     }
 
+    public void DeathEnd()
+    {
+        Destroy(this.transform.parent.gameObject);
+    }
+
     private void CounterWindowOn() => enemy.CounterWindowOn();
 
     private void CounterWindowOff() => enemy.CounterWindowOff();

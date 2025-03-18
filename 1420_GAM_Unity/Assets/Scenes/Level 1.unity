@@ -274,7 +274,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3199,7 +3199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.11
+      value: -9.19
       objectReference: {fileID: 0}
     - target: {fileID: 5449961213010567264, guid: f18f632a0768b094ab190dce45ece47d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50263,7 +50263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3354627764387997057, guid: a97ad206059fdb2419045180b0fe25ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 81.7
+      value: 80.76
       objectReference: {fileID: 0}
     - target: {fileID: 3354627764387997057, guid: a97ad206059fdb2419045180b0fe25ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53897,6 +53897,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2098193409}
     m_Modifications:
+    - target: {fileID: 637343852603453843, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2690973137974688169, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
       propertyPath: m_Name
       value: Cat (3)
@@ -77168,6 +77172,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2690973137974688169, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207866079529116979, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}
+      propertyPath: moveSpeed
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4207866079529116979, guid: 50bf0b515f61aad4f9223515cf1c1b58, type: 3}

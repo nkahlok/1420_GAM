@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
     public P_LaunchAttackState launchAttack { get; private set; }   
     public P_AerialAttackState aerialAttack { get; private set; }
     public P_ShieldingState shielding { get; private set; }
+    public P_DeathState death {  get; private set; }
 
     #endregion
 
@@ -165,6 +166,7 @@ public class Player : MonoBehaviour
         manHoleAim = new P_ManHoleAimingState(this, stateMachine, "Aiming");
         launchAttack = new P_LaunchAttackState(this, stateMachine, "Launch");
         shielding = new P_ShieldingState(this, stateMachine, "Shield");
+        death = new P_DeathState(this, stateMachine, "Death");
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
@@ -242,12 +244,14 @@ public class Player : MonoBehaviour
             
             if(checkPoint == null)
             {
+                stateMachine.Changestate(death);
                 StartCoroutine(pDeathEffect()); //plays death effect
                 //this.gameObject.transform.position = new Vector2(0, 0);
                 //SetVelocity(0,0);   
             }
             else
             {
+                stateMachine.Changestate(death);
                 StartCoroutine(pDeathEffect());
                 //this.gameObject.transform.position = checkPoint;
                 //SetVelocity(0, 0);
@@ -256,6 +260,7 @@ public class Player : MonoBehaviour
         else if(hp <= 0 && bossLvl)
         {
             Time.timeScale = 1f;
+            stateMachine.Changestate(death);
             StartCoroutine(pDeathEffect());
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -269,13 +274,15 @@ public class Player : MonoBehaviour
         if (checkPoint == null)
         {
 
+            SetVelocity(0, -1);
             this.gameObject.transform.position = new Vector2(0, 0);
-            SetVelocity(0, 0);
+            stateMachine.Changestate(fall);
         }
         else
         {
+            SetVelocity(0, -1);
             this.gameObject.transform.position = checkPoint;
-            SetVelocity(0, 0);
+            stateMachine.Changestate(fall);
         }
         playerDeathVfx.ReverseDeathEffect();
         hp = maxHP;
@@ -523,7 +530,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Spike"))
         {
-            Damage(10);
+            Damage(5);
             KnockBack(3, 10);
         }
 

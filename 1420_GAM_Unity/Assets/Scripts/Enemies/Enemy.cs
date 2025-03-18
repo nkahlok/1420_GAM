@@ -24,7 +24,8 @@ public class Enemy : MonoBehaviour
     public EnemyAggroState enemyAggroState { get; private set;}
     public EnemyAttackState enemyAttackState { get; private set;}
     public EnemyKnockDownState enemyKnockDownState { get; set; }
-    public RatEnemyReloadState ratEnemyReloadState { get; set; }    
+    public RatEnemyReloadState ratEnemyReloadState { get; set; }   
+    public EnemyDeathState enemyDeathState { get; set; }
     #endregion
 
     #region[Enemy type]
@@ -118,6 +119,7 @@ public class Enemy : MonoBehaviour
         enemyAttackState = new EnemyAttackState(this, enemyStateMachine, "Attack");
         enemyKnockDownState = new EnemyKnockDownState(this, enemyStateMachine, "Knocked");
         ratEnemyReloadState = new RatEnemyReloadState(this, enemyStateMachine, "Reload");
+        enemyDeathState = new EnemyDeathState(this, enemyStateMachine, "Death");
     }
 
     // Start is called before the first frame update

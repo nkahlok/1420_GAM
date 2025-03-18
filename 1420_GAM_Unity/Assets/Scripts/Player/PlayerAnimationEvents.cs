@@ -111,6 +111,11 @@ public class PlayerAnimationEvents : MonoBehaviour
         StartCoroutine("IFrameCorountine", 0.5f);
     }
 
+    public void DeathEnd()
+    {
+        //player.stateMachine.Changestate(player.idle);
+    }
+
     IEnumerator IFrameCorountine(float seconds)
     {
         player.canBeDamaged = false;
