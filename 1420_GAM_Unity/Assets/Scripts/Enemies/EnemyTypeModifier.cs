@@ -81,7 +81,9 @@ public class EnemyTypeModifier : MonoBehaviour
         if(hits == 0 && Time.timeScale != 0)
         {
             //PlayerManager.instance.player.comboHits = 0;
-            enemy.enemyStateMachine.Changestate(enemy.enemyDeathState);
+            if(rankModifier != 5) 
+                enemy.enemyStateMachine.Changestate(enemy.enemyDeathState);
+
             canBeDamaged = false;
         }
 
