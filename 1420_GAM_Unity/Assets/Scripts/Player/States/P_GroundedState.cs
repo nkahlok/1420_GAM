@@ -14,6 +14,7 @@ public class P_GroundedState : PlayerState
     {
         base.Enter();
         player.doubleJumpEnabled = false;
+        player.isBusy = false;
     }
 
     public override void Exit()
@@ -63,11 +64,11 @@ public class P_GroundedState : PlayerState
             stateMachine.Changestate(player.attack);
         }
 
-        if (!player.caneWpn && Input.GetKeyDown(KeyCode.Mouse0))
+        /*if (!player.caneWpn && Input.GetKeyDown(KeyCode.Mouse0))
         {
             stateMachine.Changestate(player.shielding);
         }
-
+        */
   
      
     }

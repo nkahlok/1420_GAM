@@ -294,12 +294,23 @@ public class Enemy : MonoBehaviour
             }//this is the aerrial bounce code
             else if(attackType == "Aerial")
             {
-                rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
+                if(anim.GetBool("Knocked") == true)
+                    rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
             }
             else if (attackType == "Manhole")
             {
-                rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x, SkillManager.instance.manholeSkill.knockBackForce.y);
-                StartCoroutine("BusySwitch", 0.2);
+                if (player.transform.position.x < this.transform.position.x)
+                {
+
+                    rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x , SkillManager.instance.manholeSkill.knockBackForce.y);
+                    StartCoroutine("BusySwitch", 0.2);
+                }
+                else if (player.transform.position.x > this.transform.position.x)
+                {
+                    rb.linearVelocity = new Vector2(SkillManager.instance.manholeSkill.knockBackForce.x * -1, SkillManager.instance.manholeSkill.knockBackForce.y);
+                    StartCoroutine("BusySwitch", 0.2);
+                }
+                   
             }
 
         }

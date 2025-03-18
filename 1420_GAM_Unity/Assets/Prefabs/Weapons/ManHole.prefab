@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2040743783504430042}
   - component: {fileID: 3526828605466807259}
   - component: {fileID: 5312929860550429681}
-  - component: {fileID: 2313928221475191166}
   - component: {fileID: 772309178459991002}
+  - component: {fileID: 4102408591180515711}
   m_Layer: 6
   m_Name: ManHole
   m_TagString: ManHole
@@ -165,20 +165,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &2313928221475191166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6953259422134094000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7fc5ca9be804e458a1972a51eb219e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  canHitEnemy: 0
 --- !u!251 &772309178459991002
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -198,6 +184,19 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &4102408591180515711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953259422134094000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47aec48b52252fd46b084447c11888e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
 --- !u!1001 &8572790256538698537
 PrefabInstance:
   m_ObjectHideFlags: 0

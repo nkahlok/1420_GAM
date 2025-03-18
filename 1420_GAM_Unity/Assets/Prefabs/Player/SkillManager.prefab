@@ -62,13 +62,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ef095328b613840a36391531bca9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 4
+  cooldownTimer: 0
   player: {fileID: 0}
   prefab: {fileID: 6953259422134094000, guid: 09fbfa10c9112744c848e8dd72ee8382, type: 3}
   newPrefab: {fileID: 0}
   manHoleDur: 10
   manHoleCount: 0
-  manholeSpeed: 2
+  manholeSpeed: 10
   knockBackForce: {x: 5, y: 5}
   maxBounces: 5
 --- !u!114 &3189425016150229521
@@ -84,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
+  cooldownTimer: 0
   player: {fileID: 0}
   DashDur: 0.2
   dashSpeed: 30
@@ -101,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 1
+  cooldownTimer: 0
   player: {fileID: 0}
   launchVelocity:
   - {x: 0, y: 15}
@@ -109,3 +112,4 @@ MonoBehaviour:
   - {x: 5, y: 10}
   launchUp: 0
   launchDown: 0
+  jabAttack: 0

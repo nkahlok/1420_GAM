@@ -374,11 +374,11 @@ public class Player : MonoBehaviour
 
     private void UseSkill()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !isBusy && isGround && !caneWpn)
+       /* if (Input.GetKeyDown(KeyCode.Mouse1) && !isBusy && isGround && !caneWpn)
         {
             
             SkillManager.instance.manholeSkill.SkillAvailable();
-        }
+        }*/
 
         if (Input.GetButtonDown("Fire3"))
         {
@@ -406,6 +406,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !isBusy && manholeAvailable)
         {
             caneWpn = !caneWpn;
+            stateMachine.Changestate(shielding);
+        }
+
+        if(Input.GetKeyUp(KeyCode.E) && !caneWpn)
+        {
+            caneWpn = !caneWpn;
+            stateMachine.Changestate(idle);
         }
 
         if (caneWpn)

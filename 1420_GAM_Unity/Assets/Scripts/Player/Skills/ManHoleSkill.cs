@@ -24,7 +24,7 @@ public class ManHoleSkill : Skill
 
         //Debug.Log("Skill 1 is used");
 
-        PlayerManager.instance.player.stateMachine.Changestate(PlayerManager.instance.player.manHoleAim);
+   
         
        
 
@@ -53,8 +53,8 @@ public class ManHoleSkill : Skill
 
         newPrefab = prefab;
         Instantiate(newPrefab, player.manholeThrowChecker.position, player.manholeThrowChecker.rotation);
-        
 
+        cooldownTimer = cooldown;
         
         //newPrefab.transform.position = new Vector2(player.transform.position.x + player.facingDir*2f, player.transform.position.y);
         //newPrefab.transform.position = new Vector2(player.manholeThrowChecker.position.x, player.manholeThrowChecker.position.y);

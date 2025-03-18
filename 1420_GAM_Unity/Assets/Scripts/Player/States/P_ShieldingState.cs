@@ -25,12 +25,23 @@ public class P_ShieldingState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            stateMachine.Changestate(player.idle);
+            player.transform.Rotate(0, 180, 0);
+            player.facingDir *= -1;
         }
 
-        if(xInput != 0)
+        if (Input.GetKeyUp(KeyCode.Mouse1) && SkillManager.instance.manholeSkill.cooldownTimer < 0)
+        {
+            SkillManager.instance.manholeSkill.ThrowManHole();
+            anim.SetBool("Throw", true);
+            //stateMachine.Changestate(player.idle);
+            player.caneWpn = !player.caneWpn;
+            player.isBusy = true;
+
+        }
+
+        if (xInput != 0)
         {
            player.rb.linearVelocity = new Vector2(player.moveSpeed * 0.4f * xInput, rb.linearVelocityY);
         }
