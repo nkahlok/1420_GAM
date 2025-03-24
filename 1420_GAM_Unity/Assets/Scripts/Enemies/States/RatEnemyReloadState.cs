@@ -11,6 +11,7 @@ public class RatEnemyReloadState : EnemyState
     {
         base.Enter();
         stateDur = enemy.reloadTime;
+        SoundManager.PlaySfx(SoundType.RATRELOAD);
         enemy.aggroImg.SetActive(true);
     }
 

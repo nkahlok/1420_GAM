@@ -14,6 +14,7 @@ public class EnemyAggroState : EnemyState
         base.Enter();
         enemy.aggroCount = enemy.aggroDur;
         enemy.aggroImg.SetActive(true);
+        SoundManager.PlaySfx(SoundType.ENEMYAGGRO);
     }
 
     public override void Exit()

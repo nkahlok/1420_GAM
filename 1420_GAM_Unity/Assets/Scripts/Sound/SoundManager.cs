@@ -13,21 +13,25 @@ public enum SoundType //list of sounds, e.g. to use SoundManager.PlaySfx(SoundTy
     PLAYERPARRY,
     PLAYERUPPERCUT,
     PLAYERPARRYSUCCESS,
+    PLAYEREQUIPSWAP,
+    PLAYERBLOCKSUCCESS,
+    PLAYERBRIEFCASETHROW,
     PLAYERHURT,
     PLAYERHURTSPIKES,
     PLAYERDEATH,
     COMBOUP,
     COMBORAVENOUS,
+    ENEMYAGGRO,
     CATWALK,
     CATATTACK,
     CATATTACKSUCCESS,
-    CATHURT,
     CATDEATH,
     RATWALK,
     RATSHOOT,
     RATSHOOTHIT,
-    RATHURT,
+    RATRELOAD,
     RATDEATH
+    
 }
 [RequireComponent(typeof(AudioSource))/*, ExecuteInEditMode*/]
 public class SoundManager : MonoBehaviour
@@ -35,7 +39,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private SoundList[] soundList;
     private static SoundManager instance;
     private AudioSource sfxSource;
-    public static float sfxVolume = 1.0f;
+    public static float sfxVolume = 0.3f;
     private void Awake()
     {
         if (instance == null)

@@ -400,7 +400,7 @@ public class Player : MonoBehaviour
             StartCoroutine(SkillManager.instance.launchSkill.launchDirRetain(1f, 1));
             SkillManager.instance.launchSkill.SkillAvailable();
         }
-        
+
     }
 
     private void WeaponSwap()
@@ -412,7 +412,7 @@ public class Player : MonoBehaviour
             stateMachine.Changestate(shielding);
         }
 
-        if(Input.GetKeyUp(KeyCode.E) && !caneWpn)
+        if (Input.GetKeyUp(KeyCode.E) && !caneWpn)
         {
             caneWpn = !caneWpn;
             stateMachine.Changestate(idle);
@@ -421,13 +421,22 @@ public class Player : MonoBehaviour
         if (caneWpn)
         {
             caneEquipped.SetActive(true);
+            //SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); bugged
             manholeEquipped.SetActive(false);
         }
         else
         {
             caneEquipped.SetActive(false);
+            //SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); bugged
             manholeEquipped.SetActive(true);
         }
+    }
+
+    private IEnumerator pWeaponSwap() //player swaps wpn
+    {
+        SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); // need help
+        yield return null;
+
     }
 
     private void ComboCounterUI()
@@ -440,7 +449,7 @@ public class Player : MonoBehaviour
             case int x when x>= comboNum[0] && x< comboNum[1]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[0];
-                //SoundManager.PlaySfx(SoundType.COMBOUP); //bugged, do a coroutine
+                //StartCoroutine(PlayComboSFX());
                 comboNamesSprites[0].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -449,7 +458,7 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[1] && x < comboNum[2]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[1];
-                //SoundManager.PlaySfx(SoundType.COMBOUP); //bugged
+                //StartCoroutine(PlayComboSFX());
                 comboNamesSprites[1].SetActive(true);
                 comboNamesSprites[0].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -458,7 +467,7 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[2] && x < comboNum[3]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[2];
-                //SoundManager.PlaySfx(SoundType.COMBOUP); //bugged
+                //StartCoroutine(PlayComboSFX()); //bugged
                 comboNamesSprites[2].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[0].SetActive(false);
@@ -516,6 +525,21 @@ public class Player : MonoBehaviour
 
         comboHitCount -= Time.deltaTime;
     }
+
+    //IEnumerator PlayComboSFX()
+    //{
+    //    if (!comboNamesSprites[0].activeSelf)
+    //    {
+    //        SoundManager.PlaySfx(SoundType.COMBOUP);
+    //        yield return new WaitForSeconds(2f);
+    //    }
+    //    else
+    //    {
+    //        SoundManager.PlaySfx(SoundType.COMBORAVENOUS);
+    //        yield return new WaitForSeconds(2f);
+    //    }
+        
+    //}
 
 
     public void GravityCoroutine()

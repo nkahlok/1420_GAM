@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimationEvents : MonoBehaviour
@@ -54,6 +55,21 @@ public class PlayerAnimationEvents : MonoBehaviour
 
         }        
     }
+
+    public void PlayerParry()
+    {
+        SoundManager.PlaySfx(SoundType.PLAYERPARRY);
+    }
+
+    public void PlayerUppercut()
+    {
+        SoundManager.PlaySfx(SoundType.PLAYERUPPERCUT);
+    }
+
+    //public void PlayerFall() - not implementing
+    //{
+    //    SoundManager.PlaySfx(SoundType.PLAYERFALL);
+    //}
 
     public void NormalHitStop()
     {

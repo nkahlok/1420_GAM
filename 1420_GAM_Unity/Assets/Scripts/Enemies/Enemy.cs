@@ -259,9 +259,10 @@ public class Enemy : MonoBehaviour
                     //HitStop(player.forwardHitStop);
                 }
             }
-            else if (attackType == "Countered")
+            else if (attackType == "Countered") //parry success sfx goes here
             {
                 Debug.Log("Countered");
+                SoundManager.PlaySfx(SoundType.PLAYERPARRYSUCCESS);
                 //velocity code moved to knock down state
                 //rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
                 countered = true;
