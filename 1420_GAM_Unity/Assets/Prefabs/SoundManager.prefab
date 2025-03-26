@@ -78,6 +78,15 @@ MonoBehaviour:
   - name: PLAYERPARRYSUCCESS
     sounds:
     - {fileID: 8300000, guid: fe43cd6a8bfdb9943897491c56a99e59, type: 3}
+  - name: PLAYEREQUIPSWAP
+    sounds:
+    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+  - name: PLAYERBLOCKSUCCESS
+    sounds:
+    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+  - name: PLAYERBRIEFCASETHROW
+    sounds:
+    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
   - name: PLAYERHURT
     sounds:
     - {fileID: 8300000, guid: 1fe26463236cb2442bb0b32441de6861, type: 3}
@@ -93,6 +102,9 @@ MonoBehaviour:
   - name: COMBORAVENOUS
     sounds:
     - {fileID: 8300000, guid: 429769966cb76894f893250737341060, type: 3}
+  - name: ENEMYAGGRO
+    sounds:
+    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
   - name: CATWALK
     sounds:
     - {fileID: 8300000, guid: 3229dc29e9d517c4f88ab006a22b15fa, type: 3}
@@ -112,9 +124,36 @@ MonoBehaviour:
   - name: RATSHOOT
     sounds:
     - {fileID: 8300000, guid: a7e37a85ebc79cf4e9dc0f231c112601, type: 3}
+  - name: RATSHOOTHIT
+    sounds:
+    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+  - name: RATRELOAD
+    sounds: []
   - name: RATDEATH
     sounds:
     - {fileID: 8300000, guid: 834c12ab55e135443a437720fcd31bcb, type: 3}
+  - name: BOSSDASHATK
+    sounds:
+    - {fileID: 8300000, guid: cc50673ced8535c49bd17c8a4bb7ac32, type: 3}
+    - {fileID: 8300000, guid: a4b4d68ec885d8c40b5d55c2c81a9f38, type: 3}
+  - name: BOSSFALLATKIMPACT
+    sounds:
+    - {fileID: 8300000, guid: 2eef5753d7f28394d93fd2510f826a89, type: 3}
+  - name: BOSSPROJATK
+    sounds:
+    - {fileID: 8300000, guid: 2741862e32667e04badaf1613f2d44f9, type: 3}
+    - {fileID: 8300000, guid: 7adb521a68bd5844b8b517a5da672abb, type: 3}
+    - {fileID: 8300000, guid: 29b86fbc6675f724c97667be10032cb1, type: 3}
+  - name: BOSSMULTPROJATK
+    sounds:
+    - {fileID: 8300000, guid: deccb57670863154b90f17c07422f6d7, type: 3}
+    - {fileID: 8300000, guid: 1f8d29096c5bcbb43947ae2d46fee3df, type: 3}
+  - name: BOSSHURT
+    sounds:
+    - {fileID: 8300000, guid: 52c78848c08c6254db9ca87e12331574, type: 3}
+  - name: 'BOSSDEATH '
+    sounds:
+    - {fileID: 8300000, guid: 19bf11f38bad0544aa84c39ceb6901a1, type: 3}
 --- !u!82 &461043192890899854
 AudioSource:
   m_ObjectHideFlags: 0

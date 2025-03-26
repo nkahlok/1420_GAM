@@ -13,6 +13,7 @@ public class BossPlungeState : BossState
     public override void Enter()
     {
         base.Enter();
+        SoundManager.PlaySfx(SoundType.BOSSDASHATK);
         boss.topPoint.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         boss.transform.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         boss.topPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;

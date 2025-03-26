@@ -55,14 +55,14 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.45021906, y: 0.5120437}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 177, y: 19, z: 229, w: 8}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -109,12 +109,12 @@ TextureImporter:
       name: Volume_Button_0
       rect:
         serializedVersion: 2
-        x: 178
-        y: 19
-        width: 62
-        height: 94
+        x: 0
+        y: 0
+        width: 61
+        height: 92
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: Volume_Button_1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 38
+        x: 60
+        y: 18
         width: 20
         height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Volume_Button_2
       rect:
         serializedVersion: 2
-        x: 251
-        y: 19
-        width: 20
-        height: 84
+        x: 72
+        y: 0
+        width: 19
+        height: 83
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,25 +171,12 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: 22, y: -35}
-      - {x: 22, y: 43}
-      - {x: 12, y: 44}
-      - {x: 8, y: 43}
-      - {x: 5, y: 35}
-      - {x: 10, y: 23}
-      - {x: 1, y: 25}
-      - {x: -8, y: 51}
-      - {x: -28, y: 49}
-      - {x: -73, y: 33}
-      - {x: -73, y: -26}
-      - {x: -48, y: -44}
-      - {x: 19, y: -44}
+    outline: []
     customData: 
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []

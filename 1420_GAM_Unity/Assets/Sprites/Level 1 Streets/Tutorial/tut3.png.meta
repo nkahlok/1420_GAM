@@ -103,9 +103,9 @@ TextureImporter:
       name: tut3_0
       rect:
         serializedVersion: 2
-        x: 78
+        x: 69
         y: 0
-        width: 325
+        width: 366
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      tut3_0: -6380088679316388736
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

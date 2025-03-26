@@ -13,8 +13,8 @@ public class BossDashAttackState : BossState
     {
         base.Enter();
 
-        
 
+        SoundManager.PlaySfx(SoundType.BOSSDASHATK);
         if (boss.attackPatternCount%2 == 0)
         {
             if (boss.facingDir == 1)

@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum SoundType //list of sounds, e.g. to use SoundManager.PlaySfx(SoundType.PLAYERWALK);
 {
@@ -30,16 +31,22 @@ public enum SoundType //list of sounds, e.g. to use SoundManager.PlaySfx(SoundTy
     RATSHOOT,
     RATSHOOTHIT,
     RATRELOAD,
-    RATDEATH
-    
+    RATDEATH,
+    BOSSDASHATK,
+    BOSSFALLATKIMPACT,
+    BOSSPROJATK,
+    BOSSMULTPROJATK,
+    BOSSHURT,
+    BOSSDEATH
 }
 [RequireComponent(typeof(AudioSource))/*, ExecuteInEditMode*/]
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private SoundList[] soundList;
+    public Slider volumeSlider;
     private static SoundManager instance;
     private AudioSource sfxSource;
-    public static float sfxVolume = 0.3f;
+    public static float sfxVolume = 0.7f;
     private void Awake()
     {
         if (instance == null)
@@ -57,10 +64,18 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        //look into playerprefs for saveable volume if you have time.
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
         sfxSource.volume = sfxVolume;
+        volumeSlider.value = sfxVolume;
     }
-    
+
+    private void Update()
+    {
+        sfxSource.volume = sfxVolume;
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        PlayerPrefs.Save();
+    }
+
     public static void PlaySfx(SoundType sound)
     {
         AudioClip[] clips = instance.soundList[(int)sound].Sounds;

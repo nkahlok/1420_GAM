@@ -162,12 +162,19 @@ public class Boss : MonoBehaviour
         {
             Time.timeScale = 1;
             //SceneManager.LoadScene(sceneName: "Menu");
+            StartCoroutine(BossDeathCoroutine());
             levelLoader.LoadNextLevel();
             
         }
 
         //topPoint.position = new Vector2(player.transform.position.x, topPoint.position.y);
      
+    }
+
+    private IEnumerator BossDeathCoroutine()
+    {
+        SoundManager.PlaySfx(SoundType.BOSSDEATH);
+        yield return new WaitForSeconds(3f);
     }
 
     public void PhaseOneTired()
@@ -214,6 +221,7 @@ public class Boss : MonoBehaviour
 
     public void SpawnBirdWall()
     {
+        SoundManager.PlaySfx(SoundType.BOSSMULTPROJATK);
         GameObject newBirdWall = Instantiate(birdwallPrefab, birdwallSpawner.position, birdwallSpawner.rotation);
     }
 
@@ -223,6 +231,7 @@ public class Boss : MonoBehaviour
             crowSpawnersCount = 0;
 
         crowSpawners[crowSpawnersCount].gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        SoundManager.PlaySfx(SoundType.BOSSPROJATK);
         GameObject newCrowProjectile = Instantiate(crowProjectilePrefab, crowSpawners[crowSpawnersCount].position, crowSpawners[crowSpawnersCount].rotation);
 
         crowSpawnersCount++;
@@ -230,6 +239,7 @@ public class Boss : MonoBehaviour
 
     public void SpawnShockwave()
     {
+        SoundManager.PlaySfx(SoundType.BOSSFALLATKIMPACT);
         GameObject newShockwaveProjectile = Instantiate(shockwaveProjectilePrefab[0], shockwaveProjectileSpawner.position, shockwaveProjectileSpawner.rotation);
         GameObject newShockwaveProjectile2 = Instantiate(shockwaveProjectilePrefab[1], shockwaveProjectileSpawner.position, shockwaveProjectileSpawner.rotation);
     }
