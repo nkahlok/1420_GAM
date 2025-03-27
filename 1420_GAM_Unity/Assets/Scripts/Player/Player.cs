@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
     public ParticleSystem slashEffectLeft;
     public ParticleSystem feathers;
     public ParticleSystem feathers2;
+    public ParticleSystem pOuchR;
     #endregion
 
 
@@ -227,6 +228,9 @@ public class Player : MonoBehaviour
         hp -= dmg;
        
         SoundManager.PlaySfx(SoundType.PLAYERHURT);
+
+        pOuchR.Play();
+            
         StartCoroutine("SpriteHit", 0.2f);
         HitStop(normalHitStop);
         mainCam.GetComponentInChildren<Animator>().SetTrigger("Shake2");
