@@ -79051,6 +79051,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 206552742919484961, guid: bef241e9069ed8c4cad1a43fbceecc2d, type: 3}
+      propertyPath: 'soundList.Array.data[8].sounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e1fe951892da67e428672d0baae277aa, type: 3}
+    - target: {fileID: 206552742919484961, guid: bef241e9069ed8c4cad1a43fbceecc2d, type: 3}
       propertyPath: 'soundList.Array.data[25].sounds.Array.data[0]'
       value: 
       objectReference: {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}

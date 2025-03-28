@@ -52,7 +52,10 @@ public class SoundManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
             sfxSource = GetComponent<AudioSource>();
+            sfxSource.volume = sfxVolume;
+            volumeSlider.value = sfxVolume;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -65,12 +68,13 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
-        sfxSource.volume = sfxVolume;
-        volumeSlider.value = sfxVolume;
+        //sfxSource.volume = sfxVolume;
+        //volumeSlider.value = sfxVolume;
     }
 
     private void Update()
     {
+        sfxVolume = volumeSlider.value;
         sfxSource.volume = sfxVolume;
         PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
         PlayerPrefs.Save();
