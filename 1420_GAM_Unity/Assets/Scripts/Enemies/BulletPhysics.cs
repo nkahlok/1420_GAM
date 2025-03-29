@@ -32,7 +32,7 @@ public class BulletPhysics : MonoBehaviour
                 else if(player.facingDir == -1)
                 {
                     player.blockHitLeft.Play();
-
+                    SoundManager.PlaySfx(SoundType.PLAYERBLOCKSUCCESS);
                 }
             }
             else 
@@ -51,6 +51,7 @@ public class BulletPhysics : MonoBehaviour
                 }
 
                 Debug.Log("bullet hit");
+                //SoundManager.PlaySfx(SoundType.RATSHOOTHIT); doesnt sound good, im probably not implementing this
                 player.hitEffect.Play();
                 player.Damage(bulletDmg/2);    
             }

@@ -53,10 +53,12 @@ public class CrowProjectilePhysics : MonoBehaviour
                 if (player.facingDir == 1)
                 {
                     player.blockHitRight.Play();
+                    SoundManager.PlaySfx(SoundType.PLAYERBLOCKSUCCESS);
                 }
                 else if (player.facingDir == -1)
                 {
                     player.blockHitLeft.Play();
+                    SoundManager.PlaySfx(SoundType.PLAYERBLOCKSUCCESS);
 
                 }
             }

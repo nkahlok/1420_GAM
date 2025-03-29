@@ -7389,8 +7389,8 @@ GameObject:
   - component: {fileID: 505825566}
   - component: {fileID: 505825565}
   m_Layer: 0
-  m_Name: ScuffedBGM
-  m_TagString: Untagged
+  m_Name: MusicManager
+  m_TagString: MusicManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78273,18 +78273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
-    - target: {fileID: 4385602724562506380, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
-      propertyPath: m_Value
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385602724562506380, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
-      propertyPath: m_MaxValue
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385602724562506380, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4533656150326368725, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
+      propertyPath: musicManagerInstance
+      value: 
+      objectReference: {fileID: 505825565}
     - target: {fileID: 5553885734855865900, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -78293,10 +78285,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6761406409954668397, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 505825565}
     - target: {fileID: 7907921618520577482, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -79046,18 +79034,6 @@ PrefabInstance:
       propertyPath: volumeSlider
       value: 
       objectReference: {fileID: 4089240983015089545}
-    - target: {fileID: 206552742919484961, guid: bef241e9069ed8c4cad1a43fbceecc2d, type: 3}
-      propertyPath: soundList.Array.data[25].sounds.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 206552742919484961, guid: bef241e9069ed8c4cad1a43fbceecc2d, type: 3}
-      propertyPath: 'soundList.Array.data[8].sounds.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: e1fe951892da67e428672d0baae277aa, type: 3}
-    - target: {fileID: 206552742919484961, guid: bef241e9069ed8c4cad1a43fbceecc2d, type: 3}
-      propertyPath: 'soundList.Array.data[25].sounds.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
     - target: {fileID: 1445936929653387178, guid: bef241e9069ed8c4cad1a43fbceecc2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.18205

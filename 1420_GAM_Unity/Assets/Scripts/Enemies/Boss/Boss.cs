@@ -32,6 +32,7 @@ public class Boss : MonoBehaviour
     [HideInInspector] public int attackPatternCount;
     [HideInInspector] public bool isTired;
     [HideInInspector] public bool tiredTriggered;
+    [HideInInspector] public bool bossDeathSfxCalled = false;
     private bool waitingForHitStop;
     public Transform rightPoint, leftPoint, topPoint;
     public Transform restPoint, tiredPoint;
@@ -161,20 +162,23 @@ public class Boss : MonoBehaviour
         if (modifier.hits == 0)
         {
             Time.timeScale = 1;
-            //SceneManager.LoadScene(sceneName: "Menu");
             StartCoroutine(BossDeathCoroutine());
-            levelLoader.LoadNextLevel();
-            
         }
 
         //topPoint.position = new Vector2(player.transform.position.x, topPoint.position.y);
      
     }
 
-    private IEnumerator BossDeathCoroutine()
+    private IEnumerator BossDeathCoroutine() 
     {
-        SoundManager.PlaySfx(SoundType.BOSSDEATH);
-        yield return new WaitForSeconds(3f);
+        if (!bossDeathSfxCalled)
+        {
+            bossDeathSfxCalled = true;
+            SoundManager.PlaySfx(SoundType.BOSSDEATH);
+            //boss death anim goes here also...
+            yield return new WaitForSeconds(5f);
+            levelLoader.LoadNextLevel();
+        }
     }
 
     public void PhaseOneTired()
@@ -257,6 +261,7 @@ public class Boss : MonoBehaviour
         else if (attackType == "Countered")
         {
             Debug.Log("Countered");
+            SoundManager.PlaySfx(SoundType.PLAYERPARRYSUCCESS);
             countered = true;
             knockedDown = true;
             shockwaveManager.CallShockwave();

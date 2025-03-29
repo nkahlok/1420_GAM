@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 461043192890899854}
   m_Layer: 0
   m_Name: SoundManager
-  m_TagString: Untagged
+  m_TagString: SoundManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,16 +77,18 @@ MonoBehaviour:
     - {fileID: 8300000, guid: f9037555adc450e4fab2c546323486b7, type: 3}
   - name: PLAYERPARRYSUCCESS
     sounds:
-    - {fileID: 8300000, guid: fe43cd6a8bfdb9943897491c56a99e59, type: 3}
+    - {fileID: 8300000, guid: 6e5013c75cda9d84fb9cab274cfa2ccf, type: 3}
+    - {fileID: 8300000, guid: 419e1bde12df7d44d8edc63a22e450e7, type: 3}
+    - {fileID: 8300000, guid: 7be48a52696d3104ba5c0a153dd1bca6, type: 3}
   - name: PLAYEREQUIPSWAP
     sounds:
-    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+    - {fileID: 8300000, guid: aad1fe26e99d3f742adff625195c1f2a, type: 3}
   - name: PLAYERBLOCKSUCCESS
     sounds:
-    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+    - {fileID: 8300000, guid: 898a4728310bedf4086af65bc8b2c321, type: 3}
   - name: PLAYERBRIEFCASETHROW
     sounds:
-    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+    - {fileID: 8300000, guid: 9a1746c45e0d9f04aa514a3aed73b8b3, type: 3}
   - name: PLAYERHURT
     sounds:
     - {fileID: 8300000, guid: 1fe26463236cb2442bb0b32441de6861, type: 3}
@@ -95,7 +97,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2ad42a3464a093941ae3360c21d357e9, type: 3}
   - name: PLAYERDEATH
     sounds:
-    - {fileID: 8300000, guid: 19bf11f38bad0544aa84c39ceb6901a1, type: 3}
+    - {fileID: 8300000, guid: 834c12ab55e135443a437720fcd31bcb, type: 3}
   - name: COMBOUP
     sounds:
     - {fileID: 8300000, guid: 06a9d84d0a6b6f24ea92481d510219a5, type: 3}
@@ -104,7 +106,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 429769966cb76894f893250737341060, type: 3}
   - name: ENEMYAGGRO
     sounds:
-    - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
+    - {fileID: 8300000, guid: eef6fb6cd6bdd6a47bf529e3f58f2b6f, type: 3}
   - name: CATWALK
     sounds:
     - {fileID: 8300000, guid: 3229dc29e9d517c4f88ab006a22b15fa, type: 3}
@@ -128,7 +130,8 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: ac04ca4169edc204a907374327c7f251, type: 3}
   - name: RATRELOAD
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 70ea6e6ab6de73449ba857b44527fde2, type: 3}
   - name: RATDEATH
     sounds:
     - {fileID: 8300000, guid: 834c12ab55e135443a437720fcd31bcb, type: 3}
@@ -154,6 +157,7 @@ MonoBehaviour:
   - name: 'BOSSDEATH '
     sounds:
     - {fileID: 8300000, guid: 19bf11f38bad0544aa84c39ceb6901a1, type: 3}
+  volumeSlider: {fileID: 0}
 --- !u!82 &461043192890899854
 AudioSource:
   m_ObjectHideFlags: 0
@@ -167,7 +171,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0

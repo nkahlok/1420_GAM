@@ -182,7 +182,7 @@ public class Enemy : MonoBehaviour
     public void SpawnBullets()
     {
         GameObject newBulletPrefab = Instantiate(bulletPrefab, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-
+        SoundManager.PlaySfx(SoundType.RATSHOOT);
         newBulletPrefab.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(bulletSpeed * facingDir, 0);
 
     }
@@ -374,6 +374,23 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawLine(new Vector2(playerChecker.position.x, playerChecker.position.y), new Vector2(playerChecker.position.x, playerChecker.position.y + playerAboveDistance));
         Gizmos.DrawWireSphere(new Vector2(meleeAttackChecker.position.x, meleeAttackChecker.position.y), meleeAttackRange);
     }
+
+    //public void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "EnemyFootStep")
+    //    {
+    //        Debug.Log("footstep true");
+    //        CatFootStep.playerSFXTriggerCollided = true;
+    //    }
+    //}
+    //public void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "EnemyFootStep")
+    //    {
+    //        Debug.Log("footstep false");
+    //        CatFootStep.playerSFXTriggerCollided = false;
+    //    }
+    //}
 
 }
 

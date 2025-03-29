@@ -30,6 +30,11 @@ public class Player : MonoBehaviour
     [HideInInspector] public int facingDir = 1;
     [HideInInspector] public bool isBusy;
     [HideInInspector] public bool caneWpn;
+    [HideInInspector] public bool wpnSwapSFXCalled; //weapon swap sfx
+    [HideInInspector] public int comboUpSFXCalledD = 0; //combo up sfx
+    [HideInInspector] public int comboUpSFXCalledC = 0; //combo up sfx
+    [HideInInspector] public int comboUpSFXCalledB = 0; //combo up sfx
+    [HideInInspector] public int comboUpSFXCalledR = 0; //combo up sfx
     [HideInInspector] public bool doubleJumpEnabled;
     [HideInInspector] public bool isShield;
     [HideInInspector] public bool cannotBeKnocked;
@@ -182,6 +187,7 @@ public class Player : MonoBehaviour
         color = sprite.color;
         stateMachine.Initialize(idle);
         caneWpn = true;
+        wpnSwapSFXCalled = false;
         manholeAvailable = true;
         caneEquipped.SetActive(false);
         manholeEquipped.SetActive(false);
@@ -425,23 +431,31 @@ public class Player : MonoBehaviour
         if (caneWpn)
         {
             caneEquipped.SetActive(true);
-            //SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); bugged
+            //if (!wpnSwapSFXCalled)
+            //{
+            //    wpnSwapSFXCalled = true;
+            //    SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP);
+            //}
             manholeEquipped.SetActive(false);
         }
         else
         {
             caneEquipped.SetActive(false);
-            //SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); bugged
+            //if (wpnSwapSFXCalled)
+            //{
+            //    wpnSwapSFXCalled = false;
+            //    SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP);
+            //}
             manholeEquipped.SetActive(true);
         }
     }
 
-    private IEnumerator pWeaponSwap() //player swaps wpn
-    {
-        SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); // need help
-        yield return null;
+    //private IEnumerator pWeaponSwap() //player swaps wpn
+    //{
+    //    SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP); // need help
+    //    yield return null;
 
-    }
+    //}
 
     private void ComboCounterUI()
     {
@@ -451,18 +465,18 @@ public class Player : MonoBehaviour
         switch (comboHits) 
         {
             case int x when x>= comboNum[0] && x< comboNum[1]:
-                //comboNamesUI.gameObject.SetActive(true);
-                //comboNamesUI.text = comboNames[0];
-                //StartCoroutine(PlayComboSFX());
+                comboUpSFXCalledD++;
+                PlayComboSFX();
                 comboNamesSprites[0].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
-                comboNamesSprites[3].SetActive(false);               
+                comboNamesSprites[3].SetActive(false);
                 break;
             case int x when x >= comboNum[1] && x < comboNum[2]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[1];
-                //StartCoroutine(PlayComboSFX());
+                comboUpSFXCalledC++;
+                PlayComboSFX();
                 comboNamesSprites[1].SetActive(true);
                 comboNamesSprites[0].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -471,7 +485,8 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[2] && x < comboNum[3]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[2];
-                //StartCoroutine(PlayComboSFX()); //bugged
+                comboUpSFXCalledB++;
+                PlayComboSFX();
                 comboNamesSprites[2].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[0].SetActive(false);
@@ -480,7 +495,8 @@ public class Player : MonoBehaviour
             case int x when x >= comboNum[3]:
                 //comboNamesUI.gameObject.SetActive(true);
                 //comboNamesUI.text = comboNames[3];
-                //SoundManager.PlaySfx(SoundType.COMBORAVENOUS); bugged
+                comboUpSFXCalledR++;
+                PlayComboSFX();
                 comboNamesSprites[3].SetActive(true);
                 comboNamesSprites[1].SetActive(false);
                 comboNamesSprites[2].SetActive(false);
@@ -496,6 +512,10 @@ public class Player : MonoBehaviour
                 feathers.Stop();
                 feathers2.Stop();
                 feathersOn = false;
+                comboUpSFXCalledD = 0;
+                comboUpSFXCalledB = 0;
+                comboUpSFXCalledC = 0;
+                comboUpSFXCalledR = 0;
                 comboNamesUI.gameObject.SetActive(false);
                 comboNamesSprites[0].SetActive(false);
                 comboNamesSprites[1].SetActive(false);
@@ -530,20 +550,26 @@ public class Player : MonoBehaviour
         comboHitCount -= Time.deltaTime;
     }
 
-    //IEnumerator PlayComboSFX()
-    //{
-    //    if (!comboNamesSprites[0].activeSelf)
-    //    {
-    //        SoundManager.PlaySfx(SoundType.COMBOUP);
-    //        yield return new WaitForSeconds(2f);
-    //    }
-    //    else
-    //    {
-    //        SoundManager.PlaySfx(SoundType.COMBORAVENOUS);
-    //        yield return new WaitForSeconds(2f);
-    //    }
-        
-    //}
+
+    public void PlayComboSFX()
+    {
+        if (comboUpSFXCalledD == 1)
+        {
+            SoundManager.PlaySfx(SoundType.COMBOUP);
+        }
+        else if (comboUpSFXCalledC == 1)
+        {
+            SoundManager.PlaySfx(SoundType.COMBOUP);
+        }
+        else if (comboUpSFXCalledB == 1)
+        {
+            SoundManager.PlaySfx(SoundType.COMBOUP);
+        }
+        else if (comboUpSFXCalledR == 1)
+        {
+            SoundManager.PlaySfx(SoundType.COMBORAVENOUS);
+        }
+    }
 
 
     public void GravityCoroutine()

@@ -10,6 +10,7 @@ public class P_ShieldingState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        SoundManager.PlaySfx(SoundType.PLAYEREQUIPSWAP);
         player.isBusy = true;
         player.isShield = true;
     }

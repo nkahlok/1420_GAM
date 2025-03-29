@@ -43,19 +43,20 @@ public enum SoundType //list of sounds, e.g. to use SoundManager.PlaySfx(SoundTy
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private SoundList[] soundList;
-    public Slider volumeSlider;
+    //public Slider volumeSlider;
     private static SoundManager instance;
     private AudioSource sfxSource;
-    public static float sfxVolume = 0.7f;
+    public static float sfxVolume;
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
             sfxSource = GetComponent<AudioSource>();
+            sfxVolume = 0.7f;
             sfxSource.volume = sfxVolume;
-            volumeSlider.value = sfxVolume;
+            //volumeSlider.value = sfxVolume;
+            PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -74,7 +75,7 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
-        sfxVolume = volumeSlider.value;
+        //sfxVolume = volumeSlider.value;
         sfxSource.volume = sfxVolume;
         PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
         PlayerPrefs.Save();

@@ -13,6 +13,9 @@ TagManager:
   - CheckPoint
   - Spike
   - ArenaBounds
+  - EnemyFootStep
+  - SoundManager
+  - MusicManager
   layers:
   - Default
   - TransparentFX
