@@ -30,18 +30,18 @@ public class MusicManager : MonoBehaviour
     {
         musicVolumeToHit = PlayerPrefs.GetFloat("musicVolume");
         //musicVolume = PlayerPrefs.GetFloat("musicVolume", musicVolume);
-        StartCoroutine(MusicFadeIn());
+        //StartCoroutine(MusicFadeIn());
     }
 
-    private IEnumerator MusicFadeIn()
-    {
-        musicVolume = 0f;
-        while (musicVolume < musicVolumeToHit)
-        {
-            musicVolume += Time.deltaTime / 0.7f;
-        }
-            yield return null;
-    }
+    //private IEnumerator MusicFadeIn()
+    //{
+    //    musicVolume = 0f;
+    //    while (musicVolume < musicVolumeToHit)
+    //    {
+    //        musicVolume += Time.deltaTime / 0.7f;
+    //    }
+    //        yield return null;
+    //}
 
 
 
