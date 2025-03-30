@@ -7,6 +7,7 @@ public class VolumeSlider : MonoBehaviour
     private SoundManager sfxManagerInstance;
     public GameObject musicManager;
     private MusicManager musicManagerInstance;
+    pruvate Audio
     //public AudioSource musicSource;
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
@@ -23,6 +24,7 @@ public class VolumeSlider : MonoBehaviour
         sfxManagerInstance = sfxManager.GetComponent<SoundManager>();
         musicManager = GameObject.FindWithTag("MusicManager");
         musicManagerInstance = sfxManager.GetComponent<MusicManager>();
+        musicSource
         if (PlayerPrefs.HasKey("sfxVolume") && PlayerPrefs.HasKey("musicVolume"))
         {
             LoadVolume();
@@ -44,6 +46,7 @@ public class VolumeSlider : MonoBehaviour
         float musicVolume = musicSlider.value;
         //MusicManager.musicVolume = musicVolume;
         MusicManager.musicVolume = musicVolume;
+        
         //PlayerPrefs.SetFloat("musicVolume", musicVolume);
     }
 
