@@ -5,20 +5,24 @@ public class VolumeSlider : MonoBehaviour
 {
     public GameObject sfxManager;
     private SoundManager sfxManagerInstance;
-    public AudioSource musicManagerInstance;
+    public GameObject musicManager;
+    private MusicManager musicManagerInstance;
+    //public AudioSource musicSource;
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
 
-    private void Awake()
-    {
-        PlayerPrefs.SetFloat("musicVolume", 0.04f);
-    }
+    //private void Awake()
+    //{
+    //    PlayerPrefs.SetFloat("musicVolume", 0.04f);
+    //}
     void Start()
     {
         //sfxSlider = GetComponent<Slider>();
         //musicSlider = GetComponent<Slider>();
         sfxManager = GameObject.FindWithTag("SoundManager");
         sfxManagerInstance = sfxManager.GetComponent<SoundManager>();
+        musicManager = GameObject.FindWithTag("MusicManager");
+        musicManagerInstance = sfxManager.GetComponent<MusicManager>();
         if (PlayerPrefs.HasKey("sfxVolume") && PlayerPrefs.HasKey("musicVolume"))
         {
             LoadVolume();
@@ -38,8 +42,9 @@ public class VolumeSlider : MonoBehaviour
     public void SetMusicVolume()
     {
         float musicVolume = musicSlider.value;
-        musicManagerInstance.volume = musicVolume;
-        PlayerPrefs.SetFloat("musicVolume",musicVolume);
+        //MusicManager.musicVolume = musicVolume;
+        MusicManager.musicVolume = musicVolume;
+        //PlayerPrefs.SetFloat("musicVolume", musicVolume);
     }
 
     public void LoadVolume()

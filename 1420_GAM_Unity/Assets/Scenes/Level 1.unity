@@ -7387,6 +7387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 505825566}
+  - component: {fileID: 505825567}
   - component: {fileID: 505825565}
   m_Layer: 0
   m_Name: MusicManager
@@ -7507,6 +7508,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &505825567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505825564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0da4c7982841804c9e4f3524ea9918d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &511956539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4326279073519732838, guid: 37651ca374f0ac2428da17b0559aa2ca, type: 3}
@@ -78273,10 +78286,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
-    - target: {fileID: 4533656150326368725, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
-      propertyPath: musicManagerInstance
-      value: 
-      objectReference: {fileID: 505825565}
     - target: {fileID: 5553885734855865900, guid: 920cf78427daf4f43a676b5f7169e704, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

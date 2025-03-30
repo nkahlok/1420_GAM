@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool cannotBeKnocked;
     [HideInInspector] public bool canBeDamaged;
     [HideInInspector] public bool feathersOn;
+    [HideInInspector] public int deathSfxCalled = 0;
     private bool waitingForHitStop;
     private SpriteRenderer sprite;
     private Color color;
@@ -282,11 +283,15 @@ public class Player : MonoBehaviour
     private IEnumerator pDeathEffect() //player dies
     {
         Time.timeScale = 1f;
-        playerDeathVfx.PlayDeathEffect();
+        deathSfxCalled++;
+        if (deathSfxCalled == 1)
+        {
+            SoundManager.PlaySfx(SoundType.PLAYERDEATH);
+            playerDeathVfx.PlayDeathEffect();
+        }
         yield return new WaitForSeconds(1f);
         if (checkPoint == null)
         {
-
             SetVelocity(0, -1);
             this.gameObject.transform.position = new Vector2(0, 0);
             stateMachine.Changestate(fall);
@@ -299,7 +304,8 @@ public class Player : MonoBehaviour
         }
         playerDeathVfx.ReverseDeathEffect();
         hp = maxHP;
-
+        yield return new WaitForSeconds(5f);
+        deathSfxCalled = 0;
     }
 
     public void HitStop(float duration)

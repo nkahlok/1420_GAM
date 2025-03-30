@@ -824,6 +824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxManager: {fileID: 0}
   musicManager: {fileID: 0}
+  musicSource: {fileID: 0}
   sfxSlider: {fileID: 4385602724562506380}
   musicSlider: {fileID: 6761406409954668397}
 --- !u!1 &2892002975924016148
