@@ -569,7 +569,7 @@ MonoBehaviour:
   isCat: 1
   isRat: 0
   moveSpeed: 2
-  idleTime: 2
+  idleTime: 1
   facingDir: 1
   aggroDur: 5
   attackCD: 1

@@ -25,7 +25,8 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueBoxes[count].SetActive(false);
             count++;
-            dialogueBoxes[count].SetActive(true);
+            if(count < dialogueBoxes.Length)
+                dialogueBoxes[count].SetActive(true);
         }
 
         if (count >= dialogueBoxes.Length)
