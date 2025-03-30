@@ -16,17 +16,29 @@ public class ShockwavePhysics : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = PlayerManager.instance.player;
 
-        if (isRight)
+        if (!isRight)
         {
-            this.gameObject.transform.Rotate(0, 180, 0);
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (isRight)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(isRight)
+        if (!isRight)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if(isRight)
+        {
+            this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        if (isRight)
         {
             rb.linearVelocity = new Vector2(shockwaveSpeed, 0);
         }

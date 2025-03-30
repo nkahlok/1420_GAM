@@ -10514,11 +10514,17 @@ MonoBehaviour:
   facingDir: 1
   isBusy: 0
   caneWpn: 0
+  wpnSwapSFXCalled: 0
+  comboUpSFXCalledD: 0
+  comboUpSFXCalledC: 0
+  comboUpSFXCalledB: 0
+  comboUpSFXCalledR: 0
   doubleJumpEnabled: 0
   isShield: 0
   cannotBeKnocked: 0
   canBeDamaged: 0
   feathersOn: 0
+  deathSfxCalled: 0
   mainCam: {fileID: 0}
   bossLvl: 0
   maxHP: 100
@@ -10557,7 +10563,7 @@ MonoBehaviour:
   manholeEquipped: {fileID: 6534323001814401396}
   moveSpeed: 7
   jumpForce: 12
-  aerialBounceForce: 1.5
+  aerialBounceForce: 1
   attackMovement:
   - {x: 0.7, y: 0}
   - {x: 0.7, y: 0}

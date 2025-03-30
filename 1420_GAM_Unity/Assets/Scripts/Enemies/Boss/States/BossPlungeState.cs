@@ -13,19 +13,22 @@ public class BossPlungeState : BossState
     public override void Enter()
     {
         base.Enter();
+        rb.gravityScale = 0f;
         SoundManager.PlaySfx(SoundType.BOSSDASHATK);
         boss.topPoint.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         boss.transform.position = new Vector2(boss.player.transform.position.x, boss.topPoint.position.y);
         boss.topPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        boss.topPoint.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+        boss.indicators[2].SetActive(true);
         hitCount = 0;
         boss.canBeCountered = true;
         boss.modifier.canBeDamaged = true;
 
         sprite.enabled = false;
 
-        delayDur = 0.3f;
-
+        delayDur = 1f;
         
+
 
     }
 
@@ -71,10 +74,13 @@ public class BossPlungeState : BossState
     {
         base.Update();
 
-        if(delayDur < 0)
+        if(delayDur < 0f)
         {
+            rb.gravityScale = 3f;
             boss.counterWindow.SetActive(true);
             boss.topPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            boss.topPoint.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            boss.indicators[2].SetActive(false);
             sprite.enabled = true;
             boss.SetVelocity(0, boss.plungeSpeed * -1);
         }

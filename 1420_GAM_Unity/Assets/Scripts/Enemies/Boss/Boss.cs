@@ -15,6 +15,7 @@ public class Boss : MonoBehaviour
     public BossKnockedState knocked { get; private set; }   
     public BossTiredState tired { get; private set; }   
     public BossRestState rest { get; private set; }
+    public BossDeathState death { get; private set; }
     #endregion
 
     #region [Components]
@@ -33,9 +34,11 @@ public class Boss : MonoBehaviour
     [HideInInspector] public bool isTired;
     [HideInInspector] public bool tiredTriggered;
     [HideInInspector] public bool bossDeathSfxCalled = false;
+    [HideInInspector] public bool canBeAerialKnocked = false;
     private bool waitingForHitStop;
     public Transform rightPoint, leftPoint, topPoint;
     public Transform restPoint, tiredPoint;
+    public GameObject[] indicators;
     #endregion
 
     #region [VFX]
@@ -121,6 +124,7 @@ public class Boss : MonoBehaviour
         summon = new BossSummonState(this, stateMachine, "Summon");
         knocked = new BossKnockedState(this, stateMachine, "Knocked");
         tired = new BossTiredState(this, stateMachine, "Tired");
+        death = new BossDeathState(this, stateMachine, "Death");
 
         modifier = GetComponent<EnemyTypeModifier>();
         sprite = GetComponentInChildren<SpriteRenderer>();
@@ -161,7 +165,7 @@ public class Boss : MonoBehaviour
 
         if (modifier.hits == 0)
         {
-            Time.timeScale = 1;
+            
             StartCoroutine(BossDeathCoroutine());
         }
 
@@ -175,8 +179,10 @@ public class Boss : MonoBehaviour
         {
             bossDeathSfxCalled = true;
             SoundManager.PlaySfx(SoundType.BOSSDEATH);
-            //boss death anim goes here also...
-            yield return new WaitForSeconds(5f);
+            stateMachine.ChangeState(death);
+            Time.timeScale = 0.3f;
+            yield return new WaitForSecondsRealtime(2f);
+            Time.timeScale = 1;
             levelLoader.LoadNextLevel();
         }
     }
@@ -271,7 +277,7 @@ public class Boss : MonoBehaviour
 
         }
         //this is the aerrial bounce code
-        else if (attackType == "Aerial" && isTired)
+        else if (attackType == "Aerial" && isTired && canBeAerialKnocked)
         {
             rb.linearVelocity = new Vector2(0, player.aerialBounceForce);
         }

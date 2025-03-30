@@ -12,6 +12,7 @@ public class BossKnockedState : BossState
     {
         base.Enter();
         knockedDur = boss.knockedDownDur;
+        boss.canBeAerialKnocked = true;
         boss.knockedDown = false;
 
         //boss.SetVelocity(0, 0);
@@ -32,6 +33,7 @@ public class BossKnockedState : BossState
         base.Exit();
         boss.countered = false;
         boss.modifier.canBeDamaged = false;
+        boss.canBeAerialKnocked = false;
     }
 
     public override void Update()

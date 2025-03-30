@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: 2e150270d3555e643b91c40bbda13a88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3404626909042628062
+    second: Attack Indicator_0
+  - first:
+      213: -1146881332771865225
+    second: Attack Indicator_1
+  - first:
+      213: -3020019366408366727
+    second: Attack Indicator_2
+  - first:
+      213: -6016973346289764025
+    second: Attack Indicator_3
+  - first:
+      213: 6463269467643661722
+    second: Attack Indicator_4
+  - first:
+      213: 7917288365373432196
+    second: Attack Indicator_5
+  - first:
+      213: -5189069101082064604
+    second: Attack Indicator_6
+  - first:
+      213: -3166934195664745250
+    second: Attack Indicator_7
+  - first:
+      213: 2466421759217670976
+    second: Attack Indicator_8
+  - first:
+      213: -6420005101197682384
+    second: Attack Indicator_9
+  - first:
+      213: 2268867672899052238
+    second: Attack Indicator_10
+  - first:
+      213: 5209564455645067795
+    second: Attack Indicator_11
+  - first:
+      213: -106051321202064583
+    second: Attack Indicator_12
+  - first:
+      213: -5078999655283165137
+    second: Attack Indicator_13
+  - first:
+      213: 6123565335511251460
+    second: Attack Indicator_14
+  - first:
+      213: 3954584791969086155
+    second: Attack Indicator_15
+  - first:
+      213: -5078617912696645909
+    second: Attack Indicator_16
+  - first:
+      213: -1091546091111314209
+    second: Attack Indicator_17
+  - first:
+      213: 2361190327711525340
+    second: Attack Indicator_18
+  - first:
+      213: -585765137758302799
+    second: Attack Indicator_19
+  - first:
+      213: -542147693792135929
+    second: Attack Indicator_20
+  - first:
+      213: 4861085252630159725
+    second: Attack Indicator_21
+  - first:
+      213: -3627284926887762516
+    second: Attack Indicator_22
+  - first:
+      213: 5072044857950260673
+    second: Attack Indicator_23
+  - first:
+      213: 2070624313840131705
+    second: Attack Indicator_24
+  - first:
+      213: 5499594502176759374
+    second: Attack Indicator_25
+  - first:
+      213: 1871374260105273143
+    second: Attack Indicator_26
+  - first:
+      213: -3356585775604599036
+    second: Attack Indicator_27
+  - first:
+      213: -1851099457984419432
+    second: Attack Indicator_28
+  - first:
+      213: 3774631429023452368
+    second: Attack Indicator_29
+  - first:
+      213: -8460521902979333501
+    second: Attack Indicator_30
+  - first:
+      213: 2222236474069667995
+    second: Attack Indicator_31
+  - first:
+      213: 452970125242802324
+    second: Attack Indicator_32
+  - first:
+      213: -2643079615494503263
+    second: Attack Indicator_33
+  - first:
+      213: -4439796346494154360
+    second: Attack Indicator_34
+  - first:
+      213: -8381398178475488660
+    second: Attack Indicator_35
+  - first:
+      213: -6809545630646934267
+    second: Attack Indicator_36
+  - first:
+      213: 4450664474004964869
+    second: Attack Indicator_37
+  - first:
+      213: 697774462039685362
+    second: Attack Indicator_38
+  - first:
+      213: 3494507375232204371
+    second: Attack Indicator_39
+  - first:
+      213: 375864394839284638
+    second: Attack Indicator_40
+  - first:
+      213: 6403002656700789020
+    second: Attack Indicator_41
+  - first:
+      213: 6205081779401995304
+    second: Attack Indicator_42
+  - first:
+      213: -6948480924565512247
+    second: Attack Indicator_43
+  - first:
+      213: -5882464411487009848
+    second: Attack Indicator_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack Indicator_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a27cd5dd550c0d0800000000000000
+      internalID: -3404626909042628062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_1
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d3b9811857510f0800000000000000
+      internalID: -1146881332771865225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_2
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975dd62136cb616d0800000000000000
+      internalID: -3020019366408366727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_3
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749b76fee9a6f7ca0800000000000000
+      internalID: -6016973346289764025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_4
+      rect:
+        serializedVersion: 2
+        x: 3688
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d4782465522b950800000000000000
+      internalID: 6463269467643661722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_5
+      rect:
+        serializedVersion: 2
+        x: 4610
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481aa6a12dbdfdd60800000000000000
+      internalID: 7917288365373432196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_6
+      rect:
+        serializedVersion: 2
+        x: 5532
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4294c0b3529bcf7b0800000000000000
+      internalID: -5189069101082064604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_7
+      rect:
+        serializedVersion: 2
+        x: 6454
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc8d50d02acc04d0800000000000000
+      internalID: -3166934195664745250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack Indicator_8
+      rect:
+        serializedVersion: 2
+        x: 7376
+        y: 0
+        width: 922
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b9678b58d7a3220800000000000000
+      internalID: 2466421759217670976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 07d71148ee40a8a43a7d6866dfc8e37e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack Indicator_0: -3404626909042628062
+      Attack Indicator_1: -1146881332771865225
+      Attack Indicator_2: -3020019366408366727
+      Attack Indicator_3: -6016973346289764025
+      Attack Indicator_4: 6463269467643661722
+      Attack Indicator_5: 7917288365373432196
+      Attack Indicator_6: -5189069101082064604
+      Attack Indicator_7: -3166934195664745250
+      Attack Indicator_8: 2466421759217670976
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

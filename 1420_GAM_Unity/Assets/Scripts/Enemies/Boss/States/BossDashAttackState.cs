@@ -21,6 +21,9 @@ public class BossDashAttackState : BossState
                 boss.Flip();
             boss.transform.position = boss.rightPoint.position;
             boss.rightPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            boss.rightPoint.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            boss.indicators[0].SetActive(true);
+
         }
 
         else if (boss.attackPatternCount % 2 == 1)
@@ -30,6 +33,8 @@ public class BossDashAttackState : BossState
                 boss.Flip();
             boss.transform.position = boss.leftPoint.position;
             boss.leftPoint.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            boss.leftPoint.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            boss.indicators[1].SetActive(true);
         }
 
         boss.canBeCountered = true;
@@ -40,7 +45,7 @@ public class BossDashAttackState : BossState
 
         boss.modifier.canBeDamaged = true;
 
-        delayDur = 0.3f;
+        delayDur = 1f;
 
         sprite.enabled = false;
     }
@@ -61,7 +66,15 @@ public class BossDashAttackState : BossState
 
         boss.rightPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
+        boss.rightPoint.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+
+        
+
         boss.leftPoint.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        boss.leftPoint.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+
+        
 
         boss.counterWindow.SetActive(false);
     }
@@ -77,6 +90,8 @@ public class BossDashAttackState : BossState
             boss.counterWindow.SetActive(true);
             sprite.enabled = true;
             boss.SetVelocity(boss.dashAttackSpeed * boss.facingDir, rb.linearVelocityY);
+            boss.indicators[0].SetActive(false);
+            boss.indicators[1].SetActive(false);
         }
 
 
