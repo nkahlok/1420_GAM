@@ -6,6 +6,7 @@ public class MM_StartButton : MonoBehaviour
     public Animator anim;
     public BoxCollider box;
     public LevelLoaderScript levelLoader;
+    public GameObject optionsMenuUi;
     private void Start()
     {
         box = GetComponent<BoxCollider>();
@@ -13,16 +14,25 @@ public class MM_StartButton : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-        anim.Play("MM_HStartButton");
-        Debug.Log("I am being hovered over");
+        if (!optionsMenuUi.activeSelf)
+        {
+            anim.Play("MM_HStartButton");
+            Debug.Log("I am being hovered over");
+        }
     }
     private void OnMouseExit()
     {
-        anim.Play("MM_IStartButton");
-        Debug.Log("I am not being hovered over");
+        if (!optionsMenuUi.activeSelf)
+        {
+            anim.Play("MM_IStartButton");
+            Debug.Log("I am not being hovered over");
+        }
     }
     private void OnMouseDown()
     {
-        levelLoader.LoadNextLevel();
+        if (!optionsMenuUi.activeSelf)
+        {
+            levelLoader.LoadNextLevel();
+        }      
     }
 }

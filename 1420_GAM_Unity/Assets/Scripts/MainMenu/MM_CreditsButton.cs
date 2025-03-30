@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MM_CreditsButton : MonoBehaviour
 {
@@ -21,6 +22,6 @@ public class MM_CreditsButton : MonoBehaviour
     }
     private void OnMouseDown()
     {
-
+        SceneManager.LoadScene("CreditsScene");
     }
 }
