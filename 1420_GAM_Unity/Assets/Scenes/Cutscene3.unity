@@ -546,10 +546,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2332307564816398919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e93bbb522b08194ba180f8665d47af0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1de9090e4a461e34899c34a6bc02a8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 1646663416}
+  isCreditsScene: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
