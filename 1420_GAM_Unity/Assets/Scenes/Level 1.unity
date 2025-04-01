@@ -79020,14 +79020,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controls Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7312320508346295494, guid: e54f89ff55ae099408719bedf1c1586c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279095972901617273, guid: e54f89ff55ae099408719bedf1c1586c, type: 3}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
