@@ -181,7 +181,7 @@ public class Boss : MonoBehaviour
             SoundManager.PlaySfx(SoundType.BOSSDEATH);
             stateMachine.ChangeState(death);
             Time.timeScale = 0.3f;
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(1f);
             Time.timeScale = 1;
             levelLoader.LoadNextLevel();
         }
@@ -211,6 +211,7 @@ public class Boss : MonoBehaviour
     {
         if(modifier.hits == tiredHpThresholds[1] && !tiredTriggered)
         {
+   
             stateMachine.ChangeState(tired);
             modifier.A.SetActive(true);
         }
