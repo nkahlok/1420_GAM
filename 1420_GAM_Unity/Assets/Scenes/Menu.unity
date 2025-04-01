@@ -596,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435600090}
   - component: {fileID: 435600091}
+  - component: {fileID: 435600092}
   m_Layer: 0
   m_Name: Mainmenu Ui
   m_TagString: Untagged
@@ -650,6 +651,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &435600092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435600089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff64d44ec6bb7574fb64e82034a7c759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &475857390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,6 +3942,7 @@ GameObject:
   - component: {fileID: 5415429143857078035}
   - component: {fileID: 8527540503960931533}
   - component: {fileID: 4478118387204123648}
+  - component: {fileID: 8527540503960931534}
   m_Layer: 5
   m_Name: Optionspaper
   m_TagString: MusicManager
@@ -4716,6 +4730,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8527540503960931534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556069360163987834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff64d44ec6bb7574fb64e82034a7c759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8774005646364313972
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -161,6 +161,9 @@ MonoBehaviour:
   - name: 'BOSSDEATH '
     sounds:
     - {fileID: 8300000, guid: 19bf11f38bad0544aa84c39ceb6901a1, type: 3}
+  - name: PAPER
+    sounds:
+    - {fileID: 8300000, guid: 4fca887bc31c32a488c6d7da9c060f91, type: 3}
 --- !u!82 &461043192890899854
 AudioSource:
   m_ObjectHideFlags: 0

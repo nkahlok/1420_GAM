@@ -37,7 +37,8 @@ public enum SoundType //list of sounds, e.g. to use SoundManager.PlaySfx(SoundTy
     BOSSPROJATK,
     BOSSMULTPROJATK,
     BOSSHURT,
-    BOSSDEATH
+    BOSSDEATH,
+    PAPER
 }
 [RequireComponent(typeof(AudioSource))/*, ExecuteInEditMode*/]
 public class SoundManager : MonoBehaviour

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -59,8 +60,8 @@ public class PauseMenuScript : MonoBehaviour
         optionsMenuUI.SetActive(false);
     }
 
-    public void Quit()
+    public void QuitToMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 }

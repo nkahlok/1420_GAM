@@ -384,6 +384,7 @@ GameObject:
   - component: {fileID: 9215896807885078824}
   - component: {fileID: 3142436070222024822}
   - component: {fileID: 778802777767715248}
+  - component: {fileID: 6869059959029460523}
   m_Layer: 5
   m_Name: Folder
   m_TagString: Untagged
@@ -475,6 +476,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6869059959029460523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649381533675964645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff64d44ec6bb7574fb64e82034a7c759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2009019339569355819
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +731,7 @@ GameObject:
   - component: {fileID: 5469842546868071110}
   - component: {fileID: 8545677211906963736}
   - component: {fileID: 4533656150326368725}
+  - component: {fileID: 8687765942831166538}
   m_Layer: 5
   m_Name: Optionspaper
   m_TagString: MusicManager
@@ -826,6 +840,18 @@ MonoBehaviour:
   musicManager: {fileID: 0}
   sfxSlider: {fileID: 4385602724562506380}
   musicSlider: {fileID: 6761406409954668397}
+--- !u!114 &8687765942831166538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2573608483589985455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff64d44ec6bb7574fb64e82034a7c759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2892002975924016148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 315920922914939293}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7494343026412789751}
+        m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
+        m_MethodName: QuitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &6741009370656345067
 Animator:
   serializedVersion: 7
@@ -1488,10 +1526,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: set_volume
-        m_Mode: 0
+      - m_Target: {fileID: 4533656150326368725}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
