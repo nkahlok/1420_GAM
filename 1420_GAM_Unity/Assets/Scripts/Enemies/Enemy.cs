@@ -264,6 +264,7 @@ public class Enemy : MonoBehaviour
                 Debug.Log("Countered");
                 SoundManager.PlaySfx(SoundType.PLAYERPARRYSUCCESS);
                 //velocity code moved to knock down state
+                //velocity code moved to knock down statedeah
                 //rb.linearVelocity = new Vector2(SkillManager.instance.launchSkill.launchVelocity[3].x * facingDir * -1, SkillManager.instance.launchSkill.launchVelocity[3].y);
                 countered = true;
                 knockedDown = true;

@@ -44,6 +44,11 @@ public class EnemyAnimationEvents : MonoBehaviour
         enemy.enemyStateMachine.Changestate(enemy.enemyAggroState);
     }
 
+    public void DeathSfx()
+    {
+        SoundManager.PlaySfx(SoundType.CATDEATH);
+    }
+
     public void DeathEnd()
     {
         Destroy(this.transform.parent.gameObject);
