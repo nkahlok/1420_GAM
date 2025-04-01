@@ -52,6 +52,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0c5e7662d24295b4fb8fb7fe33876f65, type: 3}
   - name: Boss
     clip: {fileID: 8300000, guid: d92f2b86c1e21334ca30dc651e6689a7, type: 3}
+  - name: Cutscene1
+    clip: {fileID: 8300000, guid: 98d08908ace3a0d4aba7129ff6d92e98, type: 3}
+  - name: Cutscene2
+    clip: {fileID: 8300000, guid: 5750f1856186b964c88debe48248a449, type: 3}
 --- !u!82 &7523591243456259605
 AudioSource:
   m_ObjectHideFlags: 0

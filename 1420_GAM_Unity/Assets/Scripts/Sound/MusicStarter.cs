@@ -19,6 +19,14 @@ public class MusicStarter : MonoBehaviour
         {
             MusicManager.instance.PlayMusic("Boss");
         }
+        if (musicNumber == 3)
+        {
+            MusicManager.instance.PlayMusic("Cutscene1");
+        }
+        if (musicNumber == 4)
+        {
+            MusicManager.instance.PlayMusic("Cutscene2");
+        }
     }
 
     // Update is called once per frame
