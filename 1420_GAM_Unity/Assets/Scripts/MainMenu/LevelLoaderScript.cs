@@ -25,8 +25,10 @@ public class LevelLoaderScript : MonoBehaviour
 
     IEnumerator LoadingMenu()
     {
+        Time.timeScale = 1f;
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene(sceneName: "Menu");
+        SceneManager.LoadScene("Menu");
+        
     }
 }

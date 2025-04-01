@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class PauseMenuScript : MonoBehaviour
     public GameObject optionsMenuUI;
     public Animator folderAnimator;
     public Animator optionsAnimator;
-    public 
+    public LevelLoaderScript LevelLoader;
 
     void Start()
     {
@@ -62,6 +62,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public void QuitToMenu()
     {
-        SceneManager.LoadScene("Menu");
+        Debug.Log("yes i am clicked!!!!");
+        LevelLoader.LoadMenu();
     }
 }

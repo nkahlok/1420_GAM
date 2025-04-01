@@ -1,14 +1,19 @@
 using System;
-using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
+
 public class MusicManager : MonoBehaviour
 {
-    private static MusicManager instance;
+    //[SerializeField] private MusicList[] musicList;
+    public MusicTest[] musicSounds;
+    public static MusicManager instance;
     private AudioSource musicSource;
     public static float musicVolume;
     float musicVolumeToHit;
+    public static int nowPlayingNumber;
     private void Awake()
     {
         if (instance == null)
@@ -28,11 +33,17 @@ public class MusicManager : MonoBehaviour
     }
     void Start()
     {
-        musicVolumeToHit = PlayerPrefs.GetFloat("musicVolume");
+        musicVolume = PlayerPrefs.GetFloat("musicVolume");
         //musicVolume = PlayerPrefs.GetFloat("musicVolume", musicVolume);
         //StartCoroutine(MusicFadeIn());
     }
 
+    //public static void PlayMusic(MusicType music)
+    //{
+    //    AudioClip[] clips = instance.musicList[(int)music].Music;
+    //    AudioClip nowPlaying = clips[nowPlayingNumber];
+    //    instance.musicSource.Play(nowPlaying);
+    //}
     //private IEnumerator MusicFadeIn()
     //{
     //    musicVolume = 0f;
@@ -42,7 +53,20 @@ public class MusicManager : MonoBehaviour
     //    }
     //        yield return null;
     //}
+    public void PlayMusic(string name)
+    {
+        MusicTest m = Array.Find(musicSounds, x => x.name == name);
 
+        if (m == null)
+        {
+            Debug.Log("Sound not found");
+        }
+        else
+        {
+            musicSource.clip = m.clip;
+            musicSource.Play();
+        }
+    }
 
 
     private void Update()
@@ -52,4 +76,15 @@ public class MusicManager : MonoBehaviour
         PlayerPrefs.SetFloat("musicVolume", musicVolume);
         PlayerPrefs.Save();
     }
+
 }
+
+//[Serializable]
+//public struct MusicList
+//{
+//    public AudioClip[] Music { get => music; }
+//    [SerializeField] private string name;
+//    [SerializeField] private AudioClip[] music;
+//}
+
+
