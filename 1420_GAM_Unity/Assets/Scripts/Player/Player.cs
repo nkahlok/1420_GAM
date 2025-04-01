@@ -274,9 +274,7 @@ public class Player : MonoBehaviour
         {
             Time.timeScale = 1f;
             stateMachine.Changestate(death);
-            SoundManager.PlaySfx(SoundType.PLAYERDEATH);
             StartCoroutine(pDeathEffect());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -290,6 +288,10 @@ public class Player : MonoBehaviour
             playerDeathVfx.PlayDeathEffect();
         }
         yield return new WaitForSeconds(1f);
+        if (bossLvl)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         if (checkPoint == null)
         {
             SetVelocity(0, -1);

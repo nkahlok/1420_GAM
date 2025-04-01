@@ -11,6 +11,7 @@ public class RavenousVfxManager : MonoBehaviour
     [SerializeField] private Material _ravenousEffectMaterial;
     [SerializeField] private float intensityStartAmt = 2.25f;
     [SerializeField] private float powerStartAmt = 1.25f;
+    [SerializeField] public static bool disabled = false;
     //[SerializeField] private ParticleSystem feathers, feathers2;
 
     private int _intensity = Shader.PropertyToID("_VignetteIntensity");
